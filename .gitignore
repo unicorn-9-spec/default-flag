@@ -37,3 +37,6 @@ Thumbs.db
 
 # typescript incremental build info
 *.tsbuildinfo
+
+# eval embedding cache (derived; rebuilt on demand)
+eval/cache/

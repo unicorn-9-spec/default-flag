@@ -167,3 +167,66 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - `sanity dataset import` with `SANITY_AUTH_TOKEN` → "Insufficient permissions; permission "create" required". That token deploys schemas but cannot write documents. Fixed by `ingest/import.ts`, which uses `SANITY_API_WRITE_TOKEN` (the ingest token per `.env.local.example`), diffs against the dataset, and writes create/update/delete in **one transaction** (planet ↔ parameterSet references are circular). The CLI also warns the positional dataset argument is deprecated (`--dataset`).
 - **Idempotency proven:** run 1 created 310 (transaction `mpuIrjeRtdUv3cODojFk2q`); a full rerun (select → normalise → import) reported `create 0, update 0, delete 0`.
 - **Public read verified:** an anonymous GROQ query on `production` returns HTTP 200. Integrity checks in GROQ: planets without exactly one default = `[]`; defaultParameterSet not a default set = `[]`.
+
+### 12. Physics, agent, site, evaluation, CI (2026-10-04)
+
+**Decisions made without an explicit owner answer (owner said "complete it fully"):**
+- Chips: **"Density of Kepler-139 d?"** replaces the spec's K2-18 b chip. K2-18 b's composite equals its default (3.70 g/cm³ both ways), so its composite toggle would show nothing. Kepler-139 d is the one planet where both sides give a measured-radius density (5.29 vs 2.40 g/cm³). The other two chips are the spec's.
+- HD 10180 c stays in the dataset as the "a limit passed off as best mass" case; both sides refuse density, and the composite refuses because its mass carries a non-zero limit flag.
+- Values the archive flags with a non-zero limit flag are refused ("a limit, not a measurement"), never computed.
+- A density from an `Msini` mass is computed but flagged as a lower limit (the archive's own wording for M*sin(i)).
+
+**Reference values** (`ingest/data/reference.json`, imported as `constant` / `threshold` / `hzLimit`):
+- IAU 2015 B3 (arXiv:1510.07674, PDF text read locally): nominal R_sun = 6.957e8 m, T_eff,sun = 5772 K; endnote 4 quotes IAU 2012 B2: 1 au = 149 597 870 700 m exactly. R_sun/au = 0.0046504673 ✓ the spec's 0.00465047.
+- Kopparapu 2014 conservative limits: inner Runaway Greenhouse (1 M⊕), outer Maximum Greenhouse, Table 1 p. 12, valid 2600–7200 K.
+- Rogers 2015 rocky threshold 1.6 R⊕ (abstract wording).
+- **Not verified:** Earth density 5.514 g/cm³. nssdc.gsfc.nasa.gov resets the TLS connection from this machine (WebFetch ECONNRESET, curl exit 35). Stored with a note; owner to confirm.
+- Albedo 0.3 stored as an explicit modelling assumption, not a fact.
+
+**Physics** (`agent/tools/physics.ts`): density, luminosity, insolation, T_eq (stellar radius converted to AU), Kopparapu S_eff, HZ class, split-normal Monte Carlo (mulberry32, seed 20261003, 10,000 draws, rejection of non-positive draws). Tests: Earth–Sun gives 5.514 / 1 / ~255 K; S_eff equals S_eff,sun at 5780 K; determinism; **agreement with the archive's own pl_insol and pl_eqt columns: median relative difference < 5% over 500+ default rows each** (T_eq compared at A = 0, the archive's usual convention).
+
+**Live compute on the dataset** (no model): Kepler-139 d 5.29 [3.05–7.69] vs composite 2.40; Proxima Cen b refuses (no radius) vs composite **5.49 from a "Calculated Value" radius**; TOI-700 d insolation refuses (no Teff) vs composite 0.81 mixing Pass 2026 + Gilbert 2023; HD 10180 c refuses both ways; TRAPPIST-1 e inside the HZ, p = 0.96, flagged as extrapolated (2566 K).
+
+**Derived answers:** 63 `derivedAnswer` documents (every quantity each default set supports), inputs referencing their single set. Dataset now 380 documents. Import of the second run: 0 changes.
+
+**AI SDK v7 API, read from the installed .d.ts, not memory:**
+- `stepCountIs` is now an alias of `isStepCount`.
+- Tool results are `{toolName, input, output}`.
+- The MCP client has `listTools()` + `toolsFromDefinitions()`; we use these so schemas come only from the server.
+- Gemini thinking: `providerOptions.google.thinkingConfig.thinkingLevel`.
+- **Stuck:** a 20-token probe returned empty text; usage showed 74 reasoning tokens of 75. Fixed by setting `thinkingLevel: 'low'` explicitly (recorded in eval settings) and a 2,000-token cap.
+
+**Context endpoints:**
+- `defaultflag-kb` lists `initial_context, knowledge_base_read, knowledge_base_search`.
+- **`defaultflag-data` returns 404 "MCP endpoint not found"; owner must create it.**
+- Both endpoints expose `initial_context`, so discovered tools are prefixed `data_` / `kb_`.
+
+**Output guard** (`agent/guard.ts`):
+- Every number must round-match a number in a data/compute tool result of the turn.
+- **Knowledge Base results are excluded as a number source** (owner rule: the KB explains rules, never planet values).
+- Cited ids and `kb:` paths must have been read; quotes must match exactly.
+- Retry once with the violations, then withhold.
+- 9 tests.
+
+**Site:**
+- Pages: `/` (chips, cached-then-live answers, failure banner naming the component, provenance strip with mass kind and snapshot checksum, composite toggle, trace), `/planet/[slug]` (every set side by side, default highlighted, all four quantities per set, composite with its references), `/eval`, `/how-it-works`.
+- Rate limit: 6 questions/min per IP, 300-character cap.
+- **Stuck:** the screenshots showed a completely unstyled site. Cause: a `next start` left running from before a rebuild served HTML pointing at deleted CSS chunks, and the axe contrast test had "passed" against that unstyled page. Fixed by stopping the stale server. Lesson: always restart before e2e.
+- axe then found two real contrast failures (tags on the tinted default row, 4.25 and 4.31); fixed by darkening tokens.
+
+**Evaluation** (`eval/`):
+- 40 frozen questions; truth from the raw CSV via the same physics code.
+- **The scoring rule doesn't parse prose:** every arm is told to end with a `FINAL:` line (same suffix for all arms).
+- Mixing check: every input value an arm passed to compute is matched back to the snapshot rows; no single row containing all of them = mixed.
+- Baselines search the same documents (the imported NDJSON rendered as text + the archive doc pages); semantic arm uses `gemini-embedding-2`.
+- Smoke run (4 questions × 3 baseline arms) works. It caught a scoring gap: a number given to a refusal question (BM25 answered Proxima's density) was not checked for mixing. Fixed: any derived numeric answer is checked.
+- **Full run pending `defaultflag-data`.**
+
+**Failed / fixed:**
+- Node's TypeScript stripping rejects constructor parameter properties (`ERR_UNSUPPORTED_TYPESCRIPT_SYNTAX`). Rewrote two classes and enabled `erasableSyntaxOnly` so `tsc` catches it.
+- `check-dataset` falsely reported 22 violations from a mis-scoped `^.^._id`. Rewritten with dereferences; the GROQ checks are now all 0.
+
+**CI** (`.github/workflows/ci.yml`):
+- Steps: snapshot checksums, deterministic normalise (two runs, then `git diff`), typecheck, lint (54 files, 0 problems), unit tests + offline eval subset (34 tests), GROQ dataset validation, KB budget (49/150), build, then Playwright judge path + axe on desktop and mobile.
+- No secrets. `SANITY_PROJECT_ID` is a repo variable.
+- **The chip and /eval e2e tests will fail until the cached chip answers and the first full eval result are committed; both need `defaultflag-data`.**

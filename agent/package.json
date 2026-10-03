@@ -2,13 +2,20 @@
   "name": "@default-flag/agent",
   "private": true,
   "type": "module",
-  "exports": { ".": "./index.ts" },
-  "scripts": { "typecheck": "tsc --noEmit" },
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "@ai-sdk/google": "4.0.87",
     "@ai-sdk/mcp": "2.0.66",
+    "@sanity/client": "8.9.0",
     "ai": "7.0.127",
     "zod": "4.6.5"
   },
-  "devDependencies": { "typescript": "5.9.3" }
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
 }

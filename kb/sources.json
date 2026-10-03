@@ -1,0 +1,29 @@
+{
+  "knowledgeBaseId": "kbhX0D4yDJok",
+  "endpoint": "defaultflag-kb",
+  "budget": 150,
+  "purpose": "Explain how the NASA Exoplanet Archive chooses a default parameter set and how its composite table mixes references. Rule: for derived quantities, the default parameter set governs; composite values are a counterfactual only, never the answer. This Knowledge Base explains rules, not planet values.",
+  "sources": [
+    {
+      "type": "dataset",
+      "name": "Default parameter set per planet",
+      "query": "*[_type == \"planet\"]{name, \"default\": defaultParameterSet->{_id, massKind, radiusEarth, massEarth, \"paper\": publication->citation}}"
+    },
+    {
+      "type": "dataset",
+      "name": "Composite snapshot per planet",
+      "query": "*[_type == \"planet\"]{name, compositeSnapshot}"
+    },
+    {
+      "type": "files",
+      "name": "Archive documentation pages",
+      "files": [
+        "ingest/data/raw/nea-docs/faq.html",
+        "ingest/data/raw/nea-docs/pscp_calc.html",
+        "ingest/data/raw/nea-docs/transition.html",
+        "ingest/data/raw/nea-docs/API_PS_columns.html",
+        "ingest/data/raw/nea-docs/acknowledge.html"
+      ]
+    }
+  ]
+}

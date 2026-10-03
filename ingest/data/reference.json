@@ -1,0 +1,107 @@
+{
+  "_comment": "Hand-checked reference values. Each entry cites its source and where in it the value appears. See docs/BUILD_LOG.md section 12 for how each was checked.",
+  "constants": [
+    {
+      "_id": "constant-earth-density",
+      "key": "earthDensity",
+      "value": 5.514,
+      "unit": "g/cm3",
+      "source": {
+        "citation": "NASA NSSDCA, Earth Fact Sheet",
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+        "location": "Mean density (kg/m3) row, 5514",
+        "retrievedAt": "2026-10-04",
+        "note": "Value from the build spec. The agent could not reach this page (TLS reset) on 2026-10-04; owner to confirm."
+      }
+    },
+    {
+      "_id": "constant-solar-teff",
+      "key": "solarTeff",
+      "value": 5772,
+      "unit": "K",
+      "source": {
+        "citation": "IAU 2015 Resolution B3 (Mamajek et al., arXiv:1510.07674)",
+        "url": "https://arxiv.org/abs/1510.07674",
+        "location": "Solar conversion constants: nominal T_eff,sun = 5772 K",
+        "retrievedAt": "2026-10-04"
+      }
+    },
+    {
+      "_id": "constant-solar-radius-au",
+      "key": "solarRadiusAu",
+      "value": 0.00465047,
+      "unit": "AU",
+      "source": {
+        "citation": "IAU 2015 Resolution B3 (nominal R_sun = 6.957e8 m) and IAU 2012 Resolution B2 (1 au = 149 597 870 700 m), as quoted in arXiv:1510.07674",
+        "url": "https://arxiv.org/abs/1510.07674",
+        "location": "Solar conversion constants; endnote 4. 6.957e8 / 1.495978707e11 = 0.0046504673",
+        "retrievedAt": "2026-10-04"
+      }
+    },
+    {
+      "_id": "constant-bond-albedo",
+      "key": "bondAlbedo",
+      "value": 0.3,
+      "unit": "dimensionless",
+      "source": {
+        "citation": "Modelling assumption fixed by the build spec (Default Flag, Path One), applied to every planet",
+        "url": "https://github.com/unicorn-9-spec/default-flag/blob/main/Default%20Flag%20(Path%20One).md",
+        "location": "Formulas: Units",
+        "retrievedAt": "2026-10-04",
+        "note": "An assumption, not a measured property of any planet."
+      }
+    }
+  ],
+  "thresholds": [
+    {
+      "_id": "threshold-rocky-radius",
+      "key": "rockyRadiusLimit",
+      "value": 1.6,
+      "unit": "R_earth",
+      "source": {
+        "citation": "Rogers 2015, ApJ 801, 41 (arXiv:1407.4457)",
+        "url": "https://arxiv.org/abs/1407.4457",
+        "location": "Abstract: \"the majority of 1.6 Earth-radius planets are too low density to be comprised of Fe and silicates alone\"",
+        "retrievedAt": "2026-10-04"
+      }
+    }
+  ],
+  "hzLimits": [
+    {
+      "_id": "hzlimit-runaway-greenhouse-1me",
+      "name": "Runaway Greenhouse (1 M_earth)",
+      "edge": "inner",
+      "seffSun": 1.107,
+      "a": 1.332e-4,
+      "b": 1.58e-8,
+      "c": -8.308e-12,
+      "d": -1.931e-15,
+      "teffMinK": 2600,
+      "teffMaxK": 7200,
+      "source": {
+        "citation": "Kopparapu et al. 2014, ApJL 787, L29 (arXiv:1404.5292v2)",
+        "url": "https://arxiv.org/abs/1404.5292",
+        "location": "Table 1 (p. 12), Eq. (4); valid for 2600 K <= Teff <= 7200 K",
+        "retrievedAt": "2026-10-03"
+      }
+    },
+    {
+      "_id": "hzlimit-maximum-greenhouse",
+      "name": "Maximum Greenhouse",
+      "edge": "outer",
+      "seffSun": 0.356,
+      "a": 6.171e-5,
+      "b": 1.698e-9,
+      "c": -3.198e-12,
+      "d": -5.575e-16,
+      "teffMinK": 2600,
+      "teffMaxK": 7200,
+      "source": {
+        "citation": "Kopparapu et al. 2014, ApJL 787, L29 (arXiv:1404.5292v2)",
+        "url": "https://arxiv.org/abs/1404.5292",
+        "location": "Table 1 (p. 12), Eq. (4); valid for 2600 K <= Teff <= 7200 K",
+        "retrievedAt": "2026-10-03"
+      }
+    }
+  ]
+}

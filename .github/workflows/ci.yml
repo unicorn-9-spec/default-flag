@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+# No secrets are needed: the dataset is publicly readable and the evaluation subset
+# here is offline. SANITY_PROJECT_ID is a repository variable (not a secret).
+env:
+  SANITY_PROJECT_ID: ${{ vars.SANITY_PROJECT_ID }}
+  SANITY_DATASET: production
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Snapshot checksums
+        run: node ingest/verify.ts
+      - name: Ingest is deterministic (normalise twice, compare)
+        run: |
+          cd ingest
+          node normalise.ts > /dev/null && sha256sum data/out/production.ndjson > /tmp/a
+          node normalise.ts > /dev/null && sha256sum data/out/production.ndjson > /tmp/b
+          diff /tmp/a /tmp/b
+          git diff --exit-code data/out/production.ndjson
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - name: Unit tests and offline evaluation subset
+        run: pnpm test
+      - name: Dataset validation (GROQ, zero violations)
+        run: pnpm check:dataset
+      - name: Knowledge Base budget (<= 150 documents)
+        run: pnpm check:kb
+      - run: pnpm build
+
+  e2e:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Judge path + axe-core (no model credentials; chips fall back to cached answers with a visible banner)
+        run: pnpm test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/

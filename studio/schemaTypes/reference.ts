@@ -9,6 +9,7 @@ const sourceField = defineField({
     defineField({ name: 'url', type: 'url', validation: (r) => r.required() }),
     defineField({ name: 'location', type: 'string', description: 'Table, equation or page in the source.' }),
     defineField({ name: 'retrievedAt', type: 'date', validation: (r) => r.required() }),
+    defineField({ name: 'note', type: 'string', description: 'Caveats, e.g. a modelling assumption or a pending check.' }),
   ],
 })
 

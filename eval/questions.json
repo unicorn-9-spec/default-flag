@@ -1,0 +1,50 @@
+{
+  "frozen": "2026-10-04",
+  "note": "Do not edit after the first committed results file. Each question names its planet; 'paper' pins a non-default parameter set; 'expect' is the answer kind.",
+  "questions": [
+    { "id": "d01", "category": "density", "question": "What is the density of K2-18 b?", "planet": "K2-18 b", "quantity": "density", "expect": "value" },
+    { "id": "d02", "category": "density", "question": "What is the density of TRAPPIST-1 e?", "planet": "TRAPPIST-1 e", "quantity": "density", "expect": "value" },
+    { "id": "d03", "category": "density", "question": "What is the density of LHS 1140 b?", "planet": "LHS 1140 b", "quantity": "density", "expect": "value" },
+    { "id": "d04", "category": "density", "question": "What is the density of Kepler-139 d?", "planet": "Kepler-139 d", "quantity": "density", "expect": "value" },
+    { "id": "d05", "category": "density", "question": "What is the density of HD 23472 b?", "planet": "HD 23472 b", "quantity": "density", "expect": "value" },
+    { "id": "d06", "category": "density", "question": "What is the density of HD 23472 c?", "planet": "HD 23472 c", "quantity": "density", "expect": "value" },
+    { "id": "d07", "category": "density", "question": "What is the density of LTT 1445 A c?", "planet": "LTT 1445 A c", "quantity": "density", "expect": "value" },
+    { "id": "d08", "category": "density", "question": "What is the density of OGLE-TR-182 b?", "planet": "OGLE-TR-182 b", "quantity": "density", "expect": "value" },
+    { "id": "d09", "category": "density", "question": "What is the density of TOI-1408 b?", "planet": "TOI-1408 b", "quantity": "density", "expect": "value" },
+    { "id": "d10", "category": "density", "question": "What is the density of TOI-4860 b?", "planet": "TOI-4860 b", "quantity": "density", "expect": "value" },
+    { "id": "d11", "category": "density", "question": "What is the density of TOI-7510 b?", "planet": "TOI-7510 b", "quantity": "density", "expect": "value" },
+    { "id": "d12", "category": "density", "question": "What is the density of WD 1856+534 b?", "planet": "WD 1856+534 b", "quantity": "density", "expect": "value" },
+    { "id": "d13", "category": "density", "question": "What is the density of K2-18 b according to Benneke et al. 2019?", "planet": "K2-18 b", "paper": "Benneke et al. 2019", "quantity": "density", "expect": "value" },
+    { "id": "d14", "category": "density", "question": "What is the density of LHS 1140 b according to Ment et al. 2019?", "planet": "LHS 1140 b", "paper": "Ment et al. 2019", "quantity": "density", "expect": "value" },
+    { "id": "d15", "category": "density", "question": "What is the density of LTT 1445 A c according to Pass et al. 2023?", "planet": "LTT 1445 A c", "paper": "Pass et al. 2023", "quantity": "density", "expect": "value" },
+
+    { "id": "t01", "category": "insolation-teq", "question": "What is the insolation of HD 10180 c?", "planet": "HD 10180 c", "quantity": "insolation", "expect": "value" },
+    { "id": "t02", "category": "insolation-teq", "question": "What is the insolation of HD 48265 b?", "planet": "HD 48265 b", "quantity": "insolation", "expect": "value" },
+    { "id": "t03", "category": "insolation-teq", "question": "What is the equilibrium temperature of HD 68402 b?", "planet": "HD 68402 b", "quantity": "eqTemp", "expect": "value" },
+    { "id": "t04", "category": "insolation-teq", "question": "What is the insolation of HR 810 b?", "planet": "HR 810 b", "quantity": "insolation", "expect": "value" },
+    { "id": "t05", "category": "insolation-teq", "question": "What is the equilibrium temperature of Kepler-452 b?", "planet": "Kepler-452 b", "quantity": "eqTemp", "expect": "value" },
+    { "id": "t06", "category": "insolation-teq", "question": "What is the equilibrium temperature of LHS 1140 b?", "planet": "LHS 1140 b", "quantity": "eqTemp", "expect": "value" },
+    { "id": "t07", "category": "insolation-teq", "question": "What is the insolation of LTT 1445 A c?", "planet": "LTT 1445 A c", "quantity": "insolation", "expect": "value" },
+    { "id": "t08", "category": "insolation-teq", "question": "What is the insolation of Proxima Cen b?", "planet": "Proxima Cen b", "quantity": "insolation", "expect": "value" },
+    { "id": "t09", "category": "insolation-teq", "question": "What is the equilibrium temperature of TOI-1408 b?", "planet": "TOI-1408 b", "quantity": "eqTemp", "expect": "value" },
+    { "id": "t10", "category": "insolation-teq", "question": "What is the equilibrium temperature of OGLE-TR-182 b?", "planet": "OGLE-TR-182 b", "quantity": "eqTemp", "expect": "value" },
+
+    { "id": "h01", "category": "habitable-zone", "question": "Is TRAPPIST-1 e in the habitable zone?", "planet": "TRAPPIST-1 e", "quantity": "hzStatus", "expect": "hz" },
+    { "id": "h02", "category": "habitable-zone", "question": "Is K2-18 b in the habitable zone?", "planet": "K2-18 b", "quantity": "hzStatus", "expect": "hz" },
+    { "id": "h03", "category": "habitable-zone", "question": "Is LHS 1140 b in the habitable zone?", "planet": "LHS 1140 b", "quantity": "hzStatus", "expect": "hz" },
+    { "id": "h04", "category": "habitable-zone", "question": "Is Kepler-452 b in the habitable zone?", "planet": "Kepler-452 b", "quantity": "hzStatus", "expect": "hz" },
+    { "id": "h05", "category": "habitable-zone", "question": "Is Proxima Cen b in the habitable zone?", "planet": "Proxima Cen b", "quantity": "hzStatus", "expect": "hz" },
+
+    { "id": "p01", "category": "provenance", "question": "Which paper is the archive's default radius for K2-18 b from?", "planet": "K2-18 b", "field": "radius", "expect": "paper" },
+    { "id": "p02", "category": "provenance", "question": "Which paper is the archive's default radius for TRAPPIST-1 e from?", "planet": "TRAPPIST-1 e", "field": "radius", "expect": "paper" },
+    { "id": "p03", "category": "provenance", "question": "Which paper is the archive's default mass for HD 10180 c from?", "planet": "HD 10180 c", "field": "mass", "expect": "paper" },
+    { "id": "p04", "category": "provenance", "question": "Which paper is the archive's default mass for Kepler-139 d from?", "planet": "Kepler-139 d", "field": "mass", "expect": "paper" },
+    { "id": "p05", "category": "provenance", "question": "Which paper is the archive's default radius for LHS 1140 b from?", "planet": "LHS 1140 b", "field": "radius", "expect": "paper" },
+
+    { "id": "r01", "category": "refusal", "question": "What is the density of Proxima Cen b?", "planet": "Proxima Cen b", "quantity": "density", "expect": "refusal" },
+    { "id": "r02", "category": "refusal", "question": "What is the insolation of TOI-700 d?", "planet": "TOI-700 d", "quantity": "insolation", "expect": "refusal" },
+    { "id": "r03", "category": "refusal", "question": "What is the density of Kepler-452 b?", "planet": "Kepler-452 b", "quantity": "density", "expect": "refusal" },
+    { "id": "r04", "category": "refusal", "question": "What is the density of HD 10180 c?", "planet": "HD 10180 c", "quantity": "density", "expect": "refusal" },
+    { "id": "r05", "category": "refusal", "question": "What is the insolation of HD 142 b?", "planet": "HD 142 b", "quantity": "insolation", "expect": "refusal" }
+  ]
+}

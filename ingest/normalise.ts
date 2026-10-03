@@ -7,6 +7,9 @@ import {
   parseRef, readManifest, sha256, slugify, text, verifyManifest,
 } from './lib/archive.ts'
 import type { Measurement, ParsedRef, Row } from './lib/archive.ts'
+import { CODE_VERSION, QUANTITIES, computeFromInputs, quantityLabel } from '../agent/tools/compute.ts'
+import type { Field, Inputs, Reference } from '../agent/tools/compute.ts'
+import type { Constants, HzLimit } from '../agent/tools/physics.ts'
 
 type Doc = { _id: string; _type: string; [k: string]: unknown }
 const ref = (id: string) => ({ _type: 'reference', _ref: id })
@@ -58,6 +61,13 @@ for (const m of manifest) {
     retrievedAt: m.retrievedAtUtc,
   })
 }
+
+// Hand-checked constants, thresholds and habitable-zone limits, each with its source.
+const reference: Record<'constants' | 'thresholds' | 'hzLimits', Doc[]> =
+  JSON.parse(fs.readFileSync(new URL('./data/reference.json', import.meta.url), 'utf8'))
+for (const d of reference.constants) put({ ...d, _type: 'constant' })
+for (const d of reference.thresholds) put({ ...d, _type: 'threshold' })
+for (const d of reference.hzLimits) put({ ...d, _type: 'hzLimit' })
 
 function publication(raw: string): string {
   const p = parseRef(raw)
@@ -193,6 +203,43 @@ for (const sel of selection.planets) {
     compositeSnapshot,
     selection: { rules: sel.rules, reasons: sel.reasons },
   })
+}
+
+// Derived answers: every quantity the default set supports, computed by the same
+// deterministic code the agent uses. Each input points at the one set it came from.
+const refData: Reference = {
+  constants: Object.fromEntries(reference.constants.map((c) => [c.key, c.value])) as unknown as Constants,
+  inner: reference.hzLimits.find((h) => h.edge === 'inner') as unknown as HzLimit,
+  outer: reference.hzLimits.find((h) => h.edge === 'outer') as unknown as HzLimit,
+  rockyRadiusEarth: reference.thresholds[0]!.value as number,
+  sourceIds: [],
+}
+for (const planet of [...docs.values()].filter((d) => d._type === 'planet')) {
+  const setId = (planet.defaultParameterSet as { _ref: string })._ref
+  const set = docs.get(setId)!
+  const star = set.stellarSolution ? docs.get((set.stellarSolution as { _ref: string })._ref) : undefined
+  const own = { kind: 'parameterSet' as const, id: setId, setId }
+  const inputs: Inputs = { massKind: set.massKind as string | undefined }
+  const take = (field: Field, m: unknown) => { if (m) inputs[field] = { ...(m as Measurement), provenance: own } }
+  take('massEarth', set.massEarth)
+  take('radiusEarth', set.radiusEarth)
+  take('semiMajorAxisAu', set.semiMajorAxisAu)
+  take('stellarRadiusSun', star?.radiusSun)
+  take('stellarTeffK', star?.teffK)
+  for (const quantity of QUANTITIES) {
+    const r = computeFromInputs(quantity, inputs, refData, planet.name as string)
+    if (!r.ok) continue
+    put({
+      _id: `answer-${(planet.slug as { current: string }).current}-${quantity.toLowerCase()}`,
+      _type: 'derivedAnswer',
+      question: `${quantityLabel(quantity)} of ${planet.name}`,
+      parameterSet: ref(setId),
+      quantity,
+      inputs: r.inputs.map((i) => ({ _key: i.field, field: i.field, value: i.value, set: ref(setId) })),
+      result: { median: r.result.median, p16: r.result.p16, p84: r.result.p84 },
+      codeVersion: CODE_VERSION,
+    })
+  }
 }
 
 function sortKeys(value: unknown): unknown {
