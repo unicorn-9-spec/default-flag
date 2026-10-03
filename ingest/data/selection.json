@@ -1,0 +1,270 @@
+{
+  "snapshot": [
+    {
+      "file": "nea-ps.csv",
+      "sha256": "bbb513419ed5d36078221641517730d8ca3b83e32006554aae640fc5fa35a711"
+    },
+    {
+      "file": "nea-pscomppars.csv",
+      "sha256": "75d9a617442b876babf088bbef3a7095e8c5725c70a363d082081faa9331503c"
+    }
+  ],
+  "rules": {
+    "owner-pinned-mass-swap": "Pinned by the owner as the flagship mass-provenance case.",
+    "mass-swap-measured": "Composite best mass differs from the default row and comes from another reference, composite limit flag 0, <=5 sets; top 6 by |ln(composite/default)|.",
+    "mass-swap-with-measured-radius": "Mass swap where default and composite both carry a measured radius (limit flag 0).",
+    "spec-well-known": "Named in the spec.",
+    "spec-refusal": "Named in the spec as a refusal case.",
+    "set-choice-changes-density": "Default is a true mass with measured radius and complete orbit/stellar inputs, <=3 sets, >=2 measured sets; top 8 by max/min density."
+  },
+  "totals": {
+    "planets": 22,
+    "parameterSets": 97,
+    "swapPopulation": 100,
+    "swapPopulationMeasured": 75
+  },
+  "planets": [
+    {
+      "name": "BD+63 1405 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 1258.60049172 M_earth (Msini, Dalal et al. 2021) vs composite 3305.4154328 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 2.63"
+      ],
+      "parameterSets": 2,
+      "defaults": 1
+    },
+    {
+      "name": "HD 10180 c",
+      "rules": [
+        "owner-pinned-mass-swap"
+      ],
+      "reasons": [
+        "default 13.221728 M_earth (Msini, Kane & Gelino 2014) vs composite 2741.58783878 M_earth (Mass, limit flag 1, Kiefer et al. 2021); ratio 207.35"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "HD 142 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 396.96768034 M_earth (Msini, Feng et al. 2022) vs composite 2256.5816897 M_earth (Mass, limit flag 0, Gaia Collaboration et al. 2023); ratio 5.68"
+      ],
+      "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "HD 23472 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 5.73-15.06 g/cm3 (default 5.73), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "HD 23472 c",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 2.88-9.55 g/cm3 (default 2.88), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "HD 32963 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 222.481 M_earth (Msini, Rowan et al. 2016) vs composite 657.90480249 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 2.96"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "HD 48265 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 484.69075 M_earth (Msini, Barbato et al. 2018) vs composite 2351.9302118 M_earth (Mass, limit flag 0, Wu et al. 2026); ratio 4.85"
+      ],
+      "parameterSets": 4,
+      "defaults": 1
+    },
+    {
+      "name": "HD 68402 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 975.7381 M_earth (Msini, Jenkins et al. 2017) vs composite 2510.8444153 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 2.57"
+      ],
+      "parameterSets": 2,
+      "defaults": 1
+    },
+    {
+      "name": "HR 810 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 721.4741 M_earth (Msini, Stassun et al. 2017) vs composite 1970.5361234 M_earth (Mass, limit flag 0, Gaia Collaboration et al. 2023); ratio 2.73"
+      ],
+      "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "K2-18 b",
+      "rules": [
+        "spec-well-known"
+      ],
+      "reasons": [
+        "named in spec planet selection rule 2"
+      ],
+      "parameterSets": 11,
+      "defaults": 1
+    },
+    {
+      "name": "Kepler-139 d",
+      "rules": [
+        "mass-swap-with-measured-radius"
+      ],
+      "reasons": [
+        "default 4.65807623 M_earth (Msini, Weiss et al. 2024) vs composite 2 M_earth (Mass, limit flag 0, Lammers & Winn 2025); ratio 0.43; both rows have a measured radius, so both give a density"
+      ],
+      "parameterSets": 10,
+      "defaults": 1
+    },
+    {
+      "name": "Kepler-452 b",
+      "rules": [
+        "spec-well-known"
+      ],
+      "reasons": [
+        "named in spec planet selection rule 2"
+      ],
+      "parameterSets": 6,
+      "defaults": 1
+    },
+    {
+      "name": "LHS 1140 b",
+      "rules": [
+        "spec-well-known"
+      ],
+      "reasons": [
+        "named in spec planet selection rule 2"
+      ],
+      "parameterSets": 7,
+      "defaults": 1
+    },
+    {
+      "name": "LTT 1445 A c",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 1.35-6.17 g/cm3 (default 5.63), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "OGLE-TR-182 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 0.42-0.87 g/cm3 (default 0.87), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "Proxima Cen b",
+      "rules": [
+        "spec-refusal"
+      ],
+      "reasons": [
+        "5 parameter sets, 0 with a radius"
+      ],
+      "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-1408 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 0.21-0.62 g/cm3 (default 0.21), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-4860 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 0.73-1.93 g/cm3 (default 0.73), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-700 d",
+      "rules": [
+        "spec-well-known"
+      ],
+      "reasons": [
+        "named in spec planet selection rule 2"
+      ],
+      "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-7510 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 0.11-0.26 g/cm3 (default 0.26), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "TRAPPIST-1 e",
+      "rules": [
+        "spec-well-known"
+      ],
+      "reasons": [
+        "named in spec planet selection rule 2"
+      ],
+      "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "WD 1856+534 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 7.64-21.50 g/cm3 (default 21.50), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    }
+  ]
+}

@@ -3,10 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "fetch": "node --env-file-if-exists=../.env.local fetch.ts",
+    "verify": "node verify.ts",
     "select": "node select.ts",
     "normalise": "node normalise.ts",
+    "import": "node import.ts",
+    "ingest": "node verify.ts && node select.ts && node normalise.ts && node import.ts",
     "typecheck": "tsc --noEmit"
   },
-  "devDependencies": { "typescript": "5.9.3" }
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "@sanity/client": "8.9.0",
+    "csv-parse": "7.0.3",
+    "entities": "8.1.0"
+  }
 }

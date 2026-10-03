@@ -134,3 +134,36 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - `archive-dois.html` (the IPAC DOI listing) is present although intended to be skipped, and it embeds a Rails CSRF `authenticity_token` issued at fetch time. Excluded from the first commit pending an owner decision. **Not a KB source.**
 - Long TAP URLs got mangled by terminal wrapping in chat. **Fix: URLs live in `ingest/sources.json`** (generated in code from the column lists; each URL is checked to decode back to its ADQL; `TOP 5` probe → HTTP 200). Rule: never send long URLs through chat.
 - Process note: the owner downloads all external sources; the agent only verifies status codes, probes and checksums.
+
+### 10. KB endpoint live (owner-built, owner-verified)
+
+- Endpoint `defaultflag-kb`, Knowledge Base mode, KB id `kbhX0D4yDJok`, 7 entries (e.g. parameter_provenance, composite_parameters, derived_quantities, table_schema). URL pattern as in §2, org-scoped.
+- Tools reported by `tools/list`: `initial_context`, **`knowledge_base_search`**, `knowledge_base_read`. `knowledge_base_search` was **not** on the docs' KB-mode tool list read in §2, so the docs lag the service again. Runtime discovery stays mandatory.
+- **Sanity's generated connect snippet is wrong for KB-mode endpoints:** it lists dataset-mode tools (`schema_explorer`, `groq_query`, `array_field_reader`) and suggests `SANITY_API_READ_TOKEN`. A project read token is rejected by Context; only the org token (Context Viewer) works. The snippet is the same boilerplate for every endpoint regardless of mode. Ignore it.
+- Rules: never hardcode tool schemas or KB entry paths (best-track saw every path renamed on a rebuild); resolve via `knowledge_base_search` / `initial_context`. **The KB explains rules only; never quote a planet parameter from it.** Every number comes from the snapshot via the dataset endpoint (after ingest).
+
+### 11. Schema, schema deploy, ingest (2026-10-03)
+
+**Table snapshot** (`ingest/data/raw/nea-tables/`, owner-fetched): both CSVs match MANIFEST size + SHA-256, row counts match (ps 40,194; pscomppars 6,375), and each MANIFEST `source_url` is byte-identical to `ingest/sources.json`.
+
+**HD 10180 c — checked against the snapshot, flagship framing corrected:**
+- The archive's own column definition explains the swap: `pl_bmasse` is the "Best planet mass estimate available, in order of preference: Mass, M*sin(i)/sin(i), or M*sin(i)" (`nea-docs/txt/API_PS_columns.txt`). The composite picks a `Mass` from another paper over the default's `Msini`; that is a documented rule, not an archive bug. The same file describes M*sin(i) as the "lower limit of the measured planet mass".
+- The composite's 2741.59 M⊕ (Kiefer et al. 2021) has **`pl_bmasselim = 1` and no uncertainties**. It is a limit, not a measurement. Neither the snapshotted docs nor the TAP schema (`description = "...Limit Flag"`) define the sign convention; a web-search summary claimed +1 = '>', but no archive page we fetched states it. **Unconfirmed; do not interpret.** If +1 means an upper limit, then "≥13.2 (Msini) and ≤2741.6" are *consistent*, not contradictory.
+- HD 10180 c has **no radius in any row or in the composite**, so no density can be computed from either side. The "density wrong by ~207×" claim does not hold.
+- Population: all 100 swaps go from a default `Msini`; 95 to `Mass`, 5 to `Msin(i)/sin(i)`. 25 of the 100 composite values carry limit flag 1 (all Kiefer et al. 2021 here) and 75 are flag 0 (measured). Only one swap planet has a measured radius on both sides: **Kepler-139 d** (default 4.66 M⊕ Msini, Weiss et al. 2024 → composite 2.00 M⊕ Mass, Lammers & Winn 2025; R = 1.695 R⊕ both; density 5.27 vs 2.26 g/cm³).
+- Strongest measured swaps (limit flag 0): ups And c 629.6 → 4443.2 M⊕ (McArthur et al. 2010, 7.1×), gam Cep b 5.8×, HD 142 b 5.7×. Their composite radii are all "Calculated Value" (Chen & Kipping relation applied to the swapped mass), so a composite density for them is built from a mass from one paper and a radius *derived from that mass*.
+
+**Document ids — spec scheme changed.** Sanity docs: "All documents that contain a `.` in their _id can only be accessed when a user is logged in or a valid authentication token is provided." The spec's `pset.k2-18-b.<ref>` would hide every document from anonymous judges. Ids use hyphens: `planet-<slug>`, `pset-<planet>-<ref>`, `pub-<ref>`, `star-<host>`, `stsol-<host>-<ref>`, `snapshot-<file>`. Publication slugs come from the citation text; if two papers share a citation text, every one of them gets its bibcode appended (decided over all refs in both tables, so ids don't depend on the selection).
+
+**Schema** (`studio/schemaTypes/`): the spec types plus `snapshot` (one doc per raw file: sha256, rows, source URL, retrieval time) and two objects: `measurement` (value, errPlus, errMinus as non-negative magnitudes, limitFlag verbatim) and `compositeValue` (measurement + publication ref or `calculated: true` + reference text). `parameterSet` carries `massKind` (pl_bmassprov verbatim), archive insolation/Teq (for formula tests only) and a SHA-256 of its source CSV row. A planet's `defaultParameterSet` has a Studio validation rule enforcing exactly one default; `derivedAnswer.inputs` rejects any input from another set. `constant`, `threshold` and `hzLimit` are defined but **not seeded**: each needs a source URL + location, and the constants' sources are not verified yet.
+
+**Selection** (`ingest/select.ts` → `ingest/data/selection.json`): 22 planets, 97 parameter sets. Rules: owner-pinned HD 10180 c; top 6 measured mass swaps (≤5 sets); swaps with a measured radius on both sides (Kepler-139 d); the spec's 5 named planets; the spec refusal (Proxima Cen b: 5 sets, 0 with a radius); top 8 planets where the choice of self-consistent set changes density (≤3 sets). Over the spec's "under about 90 sets": the 6 spec-named planets + Kepler-139 d alone are 49 sets.
+
+**Ingest results:** 310 documents (97 parameterSet, 86 stellarSolution, 82 publication, 22 planet, 21 star, 2 snapshot). `normalise.ts` is byte-identical across runs (NDJSON sha256 `1a009c94…`). 6 parameter sets use a stellar reference different from their planet reference; both are stored.
+
+**Stuck → fixed:**
+- Bash heredoc with nested quotes failed to parse and wrote nothing → wrote schema files with the editor tool.
+- `sanity` not on PATH when the wrapper ran outside pnpm → wrapper prepends `studio/node_modules/.bin`.
+- `sanity dataset import` with `SANITY_AUTH_TOKEN` → "Insufficient permissions; permission "create" required". That token deploys schemas but cannot write documents. Fixed by `ingest/import.ts`, which uses `SANITY_API_WRITE_TOKEN` (the ingest token per `.env.local.example`), diffs against the dataset, and writes create/update/delete in **one transaction** (planet ↔ parameterSet references are circular). The CLI also warns the positional dataset argument is deprecated (`--dataset`).
+- **Idempotency proven:** run 1 created 310 (transaction `mpuIrjeRtdUv3cODojFk2q`); a full rerun (select → normalise → import) reported `create 0, update 0, delete 0`.
+- **Public read verified:** an anonymous GROQ query on `production` returns HTTP 200. Integrity checks in GROQ: planets without exactly one default = `[]`; defaultParameterSet not a default set = `[]`.

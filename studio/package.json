@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "sanity dev --port 3334",
-    "build": "sanity build --yes",
-    "deploy": "sanity deploy",
-    "schema:deploy": "sanity schema deploy",
+    "dev": "node scripts/sanity-env.mjs dev --port 3334",
+    "build": "node scripts/sanity-env.mjs build --yes",
+    "deploy": "node scripts/sanity-env.mjs deploy",
+    "schema:deploy": "node scripts/sanity-env.mjs schema deploy",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
