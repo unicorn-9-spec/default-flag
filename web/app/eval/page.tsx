@@ -6,7 +6,7 @@ interface Metrics {
   mixedProvenanceRate: number; correctRefusals: number; refusalQuestions: number; validCitationRate: number
 }
 interface Row { id: string; category: string; question: string; answer: string; correct: boolean; mixed: boolean | null; citationsValid: boolean; cause?: string; truth: unknown; final: unknown; matchingRows: string[] }
-interface Results { date: string; model: string; responseModelIds: string[]; embeddingModel: string; arms: Record<string, { metrics: Metrics; results: Row[] }> }
+interface Results { date: string; model: string; modelVersion: string; responseModelIds: string[]; embeddingModel: string; arms: Record<string, { metrics: Metrics; results: Row[] }> }
 
 const LABEL: Record<string, string> = {
   structured: 'Structured agent (Sanity Context)', semantic: 'Semantic search', bm25: 'Keyword (BM25)', none: 'No content',
@@ -37,7 +37,7 @@ export default function EvalPage() {
       ) : (
         <>
           <p className="muted">
-            Model <code>{r.model}</code> (provider reported {r.responseModelIds.join(', ')}) · run {r.date.slice(0, 10)} · semantic arm embeddings{' '}
+            Model <code>{r.model}</code>, version <code>{r.modelVersion}</code> (responses reported {r.responseModelIds.join(', ')}) · run {r.date.slice(0, 10)} · semantic arm embeddings{' '}
             <code>{r.embeddingModel}</code>
           </p>
           <div className="table-wrap">

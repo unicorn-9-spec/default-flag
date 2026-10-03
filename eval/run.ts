@@ -87,9 +87,19 @@ async function pool<T, R>(items: T[], n: number, fn: (t: T) => Promise<R>): Prom
   return out
 }
 
+async function modelVersion(): Promise<string> {
+  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL_ID}`, {
+    headers: { 'x-goog-api-key': process.env.GEMINI_API_KEY ?? '' },
+  })
+  const body = (await res.json()) as { version?: string }
+  if (!res.ok || !body.version) throw new Error(`could not read the version of ${MODEL_ID} (HTTP ${res.status})`)
+  return body.version
+}
+
 const results: Results = {
   date: new Date().toISOString(),
   model: MODEL_ID,
+  modelVersion: await modelVersion(),
   responseModelIds: [],
   embeddingModel: EMBEDDING_MODEL,
   settings: { maxSteps: MAX_STEPS, maxOutputTokens: MAX_OUTPUT_TOKENS, providerOptions: PROVIDER_OPTIONS },

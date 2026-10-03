@@ -43,3 +43,13 @@ Decisions for review:
 - Lead examples: Proxima Cen b (default refuses for lack of a radius; composite answers 5.49 g/cm³ from a calculated radius) and Kepler-139 d (5.29 vs 2.40).
 - Values carrying a non-zero archive limit flag are refused, not computed.
 - Earth density 5.514 is unconfirmed: the NASA fact sheet is unreachable from this machine.
+
+## 2026-10-04T00:05Z — agent
+STATE: F21 applied (model pin now gemini-3.7-flash, version recorded per run); F15 noted; everything else that remains needs the data endpoint.
+BLOCKED_ON: owner: (1) create `defaultflag-data` (dataset mode, `production`); (2) decision on `nea-docs/archive-dois.*` (CI checksum step stays red until then); (3) Growth trial expiry date from Manage → Plan (not exposed by the project API); (4) KB conflict screenshots → `web/public/conflict/`.
+
+- F21 confirmed independently: models.get gives version "3.0" for gemini-3.8-flash and "3.7-flash-08-2026" for gemini-3.7-flash. Switched; thinkingLevel 'low' works on 3.7.
+- F5: tried the project API; no plan or trial field. Needs a human to read it.
+- F15: written into BUILD_LOG §13 and the post draft. The structured arm's advantage is GROQ + single-set compute, not KB search.
+- No finding in GUIDANCE contradicts what I observed.
+- Once `defaultflag-data` exists I will, in order: probe it, run `eval/cache-chips.ts`, run the full 4-arm eval, commit results, and confirm CI e2e passes.

@@ -64,6 +64,8 @@ Studio validation and CI GROQ checks enforce one default per planet, and single-
 
 **Knowledge Base conflict.** <BEFORE/AFTER SCREENSHOTS + which planet + Keep/Accept choice + the answer that changed>
 
+Where the advantage comes from: the Knowledge Base's own search tool is BM25 keyword search, so the structured agent's edge over the BM25 baseline is not better KB retrieval. It is GROQ over typed documents plus a compute tool that can only read one parameter set.
+
 The KB's Purpose states the rule: for derived quantities the default set governs, and composite values are a counterfactual. It rests on the archive's own words, not mine. The KB explains rules only; the output guard refuses to treat any number from it as a source.
 
 **Public GROQ:** `https://<PROJECT_ID>.api.sanity.io/v2026-10-03/data/query/production?query=*[_type=="planet"][0...5]`

@@ -39,6 +39,8 @@ export interface Metrics {
 export interface Results {
   date: string
   model: string
+  /** Version string from the provider's models.get at run time, e.g. 3.7-flash-08-2026. */
+  modelVersion: string
   responseModelIds: string[]
   embeddingModel: string
   settings: Record<string, unknown>
@@ -76,7 +78,7 @@ export const ARM_LABEL: Record<string, string> = {
 
 export function toMarkdown(r: Results): string {
   const lines = [
-    `Model: \`${r.model}\` (provider reported: ${r.responseModelIds.join(', ') || 'n/a'}) · ${r.date.slice(0, 10)} · embeddings for semantic arm: \`${r.embeddingModel}\``,
+    `Model: \`${r.model}\`, version \`${r.modelVersion}\` (responses reported: ${r.responseModelIds.join(', ') || 'n/a'}) · ${r.date.slice(0, 10)} · embeddings for semantic arm: \`${r.embeddingModel}\``,
     '',
     '| Arm | Accuracy | Mixed-provenance rate | Correct refusals | Valid citations |',
     '| --- | --- | --- | --- | --- |',

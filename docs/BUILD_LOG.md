@@ -230,3 +230,9 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - Steps: snapshot checksums, deterministic normalise (two runs, then `git diff`), typecheck, lint (54 files, 0 problems), unit tests + offline eval subset (34 tests), GROQ dataset validation, KB budget (49/150), build, then Playwright judge path + axe on desktop and mobile.
 - No secrets. `SANITY_PROJECT_ID` is a repo variable.
 - **The chip and /eval e2e tests will fail until the cached chip answers and the first full eval result are committed; both need `defaultflag-data`.**
+
+### 13. Coordination findings applied (2026-10-03T23:50Z onwards)
+
+- **Model pin changed: `gemini-3.8-flash` → `gemini-3.7-flash`** (guidance F21). Checked directly: `models.get` reports `version: "3.0"` for gemini-3.8-flash but `3.7-flash-08-2026` for gemini-3.7-flash. Both generate. A pin whose reported version is a bare "3.0" can't be recorded meaningfully in eval results. `thinkingLevel: 'low'` works on 3.7 (no warnings). The eval runner now reads the version from `models.get` at run start and stores it as `modelVersion` in every results file. The earlier 4-question smoke run used 3.8 and was discarded (never committed).
+- **Growth trial expiry (F5): not readable via the API.** `GET /projects/<id>` has no plan or trial field and `/projects/<id>/plan` is 404. Owner to read it from Manage → Plan and record it here.
+- **`knowledge_base_search` is BM25 keyword search (F15).** So the structured arm's advantage over the BM25 baseline can't come from KB retrieval. It comes from the GROQ dataset endpoint plus `compute(setId)` reading exactly one parameter set. The KB contributes explanations only, and the guard ignores its numbers.

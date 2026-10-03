@@ -2,8 +2,8 @@
 import fs from 'node:fs'
 import { createGoogleGenerativeAI } from '@ai-sdk/google'
 
-/** Pinned model: every evaluation arm uses this exact id (checked against models.list on 2026-10-03). */
-export const MODEL_ID = 'gemini-3.8-flash'
+/** Pinned model: every evaluation arm uses this exact id. models.get reports version 3.7-flash-08-2026 (checked 2026-10-03); gemini-3.8-flash reports only "3.0", so it is not used. */
+export const MODEL_ID = 'gemini-3.7-flash'
 
 export function loadEnv(): void {
   const file = new URL('../.env.local', import.meta.url)
