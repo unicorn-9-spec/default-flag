@@ -1,0 +1,2659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Planetary Systems and Planetary Systems Composite Parameters Data Column Definitions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/fixed.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/docs.css" />
+	<script type="text/javascript" src="/js/local/util.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="bbox">
+	<div class="b2box">
+
+<!-- begin drop down menu banner -->
+<!-- START EXO_BANNER.HTML -->
+<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/css/menu_icons.css" />
+
+<script type="text/javascript" src="/js/navigation.js"></script>
+
+<div id="banner">
+ <a href="/index.html"><img src="/images/nsted_banner.jpg" alt="Exoplanet Archive banner" /></a>
+</div> <!-- end banner -->
+
+<!-- begin navigation.html -->
+<nav id="exo-hrmenu" class="exo-hrmenu" aria-label="Primary">
+   <ul role="list">
+      <li>
+         <a href="/index.html">Home</a>
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-about" href="/docs/about.html">About Us</button>
+         <div class="exo-hrsub" id="exo-hrsub-about">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/intro.html">
+                         <i class="exoplanet-icon-book-borderless"></i>
+                         Overview</a></li>
+                     <li><a href="/docs/holdings.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Holdings</a></li>
+                     <li><a href="/docs/counts_detail.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Exoplanet Counts</a></li>
+                     <li><a href="/docs/users_group.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         User Panel</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/faq.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         FAQ</a></li>
+                     <li><a href="/docs/acknowledge.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Acknowledgements</a></li>
+                     <li><a href="/docs/privacy.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Privacy Notice</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-data" href="/docs/data.html">Data</button>
+         <div class="exo-hrsub" id="exo-hrsub-data">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <h4>Planetary Systems</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems Composite Data</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Stellar Hosts</a></li>
+                     <li><a href="/cgi-bin/atmospheres/nph-firefly?atmospheres">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Atmospheric Spectroscopy</a></li>
+                    <li><a href="/cgi-bin/observations/nph-firefly?data">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         NExoList </a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Microlensing Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=directimaging&constraint=immodeldef=1">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Direct Imaging Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Transiting Planets</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Kepler</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (Cumulative List)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (All Lists)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score>0.3">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Positional Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         False Positive Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                        Certified False Positives</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Threshold-Crossing Events</a></li>
+                     <li><a href="/docs/Kepler_completeness_reliability.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Completeness and Reliability</a></li>
+                     <li><a href="/docs/KeplerSimulated.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Simulated Data</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Kepler Stellar</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Kepler Confirmed Names</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Transit Surveys</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TESS Project Candidates</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=k2targets">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         K2 Targets</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Planets and Candidates</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Confirmed Names</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_astero_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRot Astero-Seismology</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_exo_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRoT Exoplanet</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         SuperWASP Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         KELT Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KELT Praesepe</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/XO">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         XO</a></li>
+                     <li><a href="/applications/ETSS/HATNet_index.html">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HATNet</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/Cluster">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Cluster</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/TrES">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TrES</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Other</h4>
+                  <ul role="list">
+                      <li><a href="/cgi-bin/observations/nph-firefly?datta">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         JWST Observations</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         UKIRT Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/MOA/nph-firefly?MOA">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         MOA Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/ROME/nph-firefly?data&filter=True">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         ROME/REA Microlensing Survey</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=gjstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Gliese-Jahreiss Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=DI_STARS_EXEP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HWO ExEP Precursor Science Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=missionstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=mission_exocat">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars+ExoCat</a></li>
+                     <li><a href="/cgi-bin/FDL/nph-fdl">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Frontier Development Lab Datasets</a></li>
+                     <li><a href="/cgi-bin/CUBESAT/nph-cubesat?cute">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         CUTE Mission</a></li>
+                     <li><a href="/docs/ASTERIAMission.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ASTERIA Mission</a></li>
+                     <li><a href="/docs/contributed_data.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         Contributed Data Sets</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Tables Search and File Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+            &nbsp;<p/><center><i class="exoplanet-icon-table-borderless"></i>&nbsp;&nbsp; <i>Full table display</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="exoplanet-icon-search-borderless"></i>&nbsp;&nbsp;<i>Database search</i></center><p/>
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-tools" href="/docs/tools.html">Tools</button>
+         <div class="exo-hrsub" id="exo-hrsub-tools">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/Inventory/search.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Explore the Archive</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Table Search and File Upload</a></li>
+                     <li><a href="/cgi-bin/TransitView/nph-visibletbls?dataset=transits">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Transit and Ephemeris Service</a></li>
+                     <li><a href="/cgi-bin/CalcQty/nph-calcqty">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Predicted Observables for Exoplanets (POE)</a></li>
+                     <li><a href="/cgi-bin/Pgram/nph-pgram">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Periodogram</a></li>
+                     <li><a href="/ScatterPlot/?config=scatter&table=PS_output.csv&columns=PS_columns.tbl&theme=pres&x=pl_orbper&y=pl_bmassj&symbol-color=discoverymethod&symbol-size-min=8&legendpos=bottomright&link=1">
+                         <i class="exoplanet-icon-plot-simple-borderless"></i>&nbsp;
+                         Confirmed Planets Plotting Tool</a></li>
+                     <li><a href="/cgi-bin/ExoFAST/nph-exofast">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         EXOFAST: Transit and RV Fitting</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="https://astrofetch.ipac.caltech.edu" target="_blank">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         AstroFetch AI</a></li>
+                     <li><a href="/docs/TAP/usingTAP.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                        Table Access Protocol (TAP) Interface</a></li>
+                     <li><a href="/docs/program_interfaces.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                         Application Programming Interface (API)</a></li>
+                     <li><a href="/bulk_data_download">
+                         <i class="exoplanet-icon-download-borderless"></i>&nbsp;
+                         Bulk Data Download</a></li>
+                     <li><a href="https://exofop.ipac.caltech.edu/">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ExoFOP</a></li>
+                     <li><a href="/exoplanetplots/">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Pre-generated Plots</a></li>
+                    <li><a href="/support/upload_param/">
+                         <i class="exoplanet-icon-upload-borderless"></i>&nbsp;
+                         Published Data Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-support" href="/docs/help.html">Support</button>
+         <div class="exo-hrsub" id="exo-hrsub-support">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&startdoc=item_1_01">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Documentation Index</a></li>
+                     <li><a href="/docs/KeplerMission.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Kepler Documentation</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/connect.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Social Media and Newsletter</a></li>
+                     <li><a href="/applications/Helpdesk" target="_blank">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Contact Us</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" id="loginID" aria-live="polite" style="appearance: none; background: none; border: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; padding: 3px 1.5em;">-</button>
+      </li>
+  </ul>
+</nav>
+<!-- end navigation.html -->
+
+<!-- END EXO_BANNER.HTML -->
+
+<!-- end drop down menu banner -->
+<div class="docs">
+<h1>Planetary Systems and Planetary Systems Composite Parameters Table Definitions</h1>
+
+  <p>This page describes the parameters available in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems</a> (<code>PS</code>) and <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters</a> (<code>PSCompPars</code>) interactive tables. These parameters can also be retrieved programmatically through the archive's <a href="/docs/TAP/usingTAP.html">Table Access Protocol (TAP)</a> service. </p>
+  
+
+  <p>_______________________________________________</p>
+ <strong>Skip to a subsection:</strong> 
+  
+<p>
+<a href="#choose">Choosing the Right Table For Your Needs</a><br />
+<a href="#tap">Query-based Table Access</a><br />
+<a href="#columns">Data Column Definitions</a><br />
+<a href="#addtldefault">Additional Default Columns</a><br />
+<a href="#names">Names</a><br />
+<a href="#syscomp">System Composition</a><br />
+<a href="#planetdisc">Planet Discovery</a><br />
+<a href="#detect">Detections</a><br />
+<a href="#planetparam">Planet Parameters</a><br />
+<a href="#stellardata">Stellar Data</a><br />
+<a href="#sysdata">System Data</a><br />
+<a href="#position">Position</a><br />
+<a href="#photometry">Photometry</a><br />
+<a href="#dates">Dates</a><br />
+<a href="#addtldata">Additional Data</a><br />
+<a href="#atmos">Amospheric Spectroscopy Table</a><br />
+<a href="#nexolist">NExoList</a></p>
+  
+<p>_______________________________________________</p>  
+  
+ 
+ <a name="choose"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+  <h1>Choosing the Right Table For Your Needs</h1>
+  <p>Choosing data from the PS or PSCompPars tables depends on your use case:</p>
+  <ul class="spaced_list">
+    <li><strong>PS </strong>provides a single table view of the all of the ingested planetary systems for each known exoplanet with each row containing a self-contained set of parameters (planet + stellar + system) for each reference. <strong>The PS Table contains one row per planet per reference.</strong></li>
+    <li><strong>PSCompPars </strong>is a more filled-in table, with only one row per planet, enabling a more statistical view of the known exoplanet population and their host environments.  <strong>This table provides a more complete, though not necessarily self-consistent, set of parameters.</strong> 
+      <ul>
+        <li>For an explanation on how the archive calculates values for this table, read <a href="/docs/pscp_calc.html">How the Archive Calculates Values in the Planetary Systems Composite Table</a></li>
+      </ul>
+    </li>
+  </ul>
+<p>For a comparison between the PS and PSComPars tables, see the following graphic:</p>
+ (<em>Click to enlarge</em>)</p>
+<p><a href="/images/help/ps-pscp-graphic.png"><img src="/images/help/ps-pscp-graphic.png" width="75%"></a></p>
+
+<a name="tap"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>  
+  <h1>Query-based Table Access</h1>
+<p>The PS and PSCompPars tables replaced the Confirmed Planets, Composite Parameters, and Extended Planet Data tables that were retired in April 2021. (For details, see the <a href="/docs/transition.html">Transition page</a>.)   
+<p>If you were using the archive's application programming interface (API) to retrieve data from the retired tables, you need to create a new query to work with the archive's <a href="/docs/TAP/using_TAP.html">TAP service</a> that points to one of the new tables. Please note the database column names have also changed; refer to the following documents to identify the appropriate database names for your scripts/queries:
+
+<ul>
+<li>Master list of columns in the PS, PSCompPars, Confirmed Planets, Extended Planet Data, and Composite Parameters tables: <a href="/docs/Exoplanet_Archive_Column_Mapping.pdf" target="_blank">PDF</a>&nbsp;&nbsp; <a href="/docs/Exoplanet_Archive_Column_Mapping_CSV.csv" target="_blank">CSV</a></li>
+
+
+<li>Column mapping between the new PS Table and the retired Confirmed Planets and Extended Planet Data tables</a>:  <a href="/docs/ps-conf-ext-mapping.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/ps-conf-ext-mapping.csv" target="_blank">CSV</a></li>
+
+
+<li>Column mapping between the new PSCompPars Table and the retired Composite Parameters Table: <a href="/docs/old-comp-new-comp-mapping.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/old-comp-new-comp-mapping.csv" target="_blank">CSV</a></li>
+
+
+<li>Parameters that were in the retired Confirmed Planets, Extended Planet Data and Composite Parameters tables, but NOT in the PS Table: <a href="/docs/conf-comp-ext-not-in-ps.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/conf-comp-ext-not-in-ps.csv" target="_blank">CSV</a></li>
+</ul>
+  
+<a name="columns"></a>
+<h1>Data Column Definitions</h1>    
+<a name="addtldefault"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>Additional Default Columns</h2>
+<p>The parameters in this section are displayed when the interactive table is first loaded, when <strong>Reset Filters</strong> is clicked, or when a TAP query when all default columns are retrieved, but do not fit in any of the other categories listed on this page. All default columns on this page are noted with a &dagger;.</p>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+  <tr class="column" id="default_flag">
+    <td class="name">default_flag&dagger;</td>
+    <td class="label">Default Parameter Set</td>
+    <td class="description">
+      Boolean flag indicating whether given set of planet 
+      parameters has been selected as default (1=yes, 0=no)</td>
+    <td class="centered">X</td>
+    <td class="centered">&nbsp;</td>
+    </tr>
+  <tr class="column" id="soltype">
+    <td class="name">soltype&dagger;</td>
+    <td class="label">Solution Type</td>
+    <td class="description">
+      Disposition of planet according to given planet parameter set</td>
+    <td class="centered">X</td>
+    <td class="centered">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_controv_flag">
+    <td class="label">pl_controv_flag&dagger;</td>
+    <td class="label">Controversial Flag</td>
+    <td class="description">
+      Flag indicating whether the confirmation status of a planet 
+      has been questioned in the published literature (1=yes, 0=no) </td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+</table>
+<p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+  <br />
+  <br />
+  
+  <a name="names"></a>
+</p>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>Names </h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+    <tr class="column" id="pl_name">
+      <td class="label">pl_name&dagger;</td>
+      <td class="label">Planet Name</td>
+      <td class="description">
+        Planet name most commonly used in the literature</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+      <tr class="column" id="hostname">
+        <td class="label">hostname&dagger;</td>
+      <td class="label">Host Name</td>
+      <td class="description">
+        Stellar name most commonly used in the literature</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+      </tr>
+      <tr class="column" id="pl_letter">
+        <td class="label">pl_letter</td>
+      <td class="label">Planet Letter</td>
+     <td class="description">
+       Letter assigned to the planetary component of a planetary system</td>
+     <td class="centered">X</td>
+     <td class="centered">X</td>
+      </tr>
+    <tr class="column" id="hd_name">
+      <td class="label">hd_name</td>
+      <td class="label">HD ID</td>
+      <td class="description">
+        Name of the star as given by the Henry Draper Catalog</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+      <tr class="column" id="hip_name">
+        <td class="label">hip_name</td>
+      <td class="label">HIP ID</td>
+      <td class="description">
+        Name of the star as given by the Hipparcos Catalog</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+      </tr>
+     <tr class="column" id="tic_id">
+       <td class="label">tic_id</td>
+      <td class="label">TIC ID</td>
+      <td class="description">
+        Name of the star as given by the TESS Input Catalog</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="gaia_dr2_id">
+       <td class="label">gaia_dr2_id</td>
+       <td class="label">Gaia DR2 ID</td>
+       <td class="description">Name of the star as given by the Gaia DR2 Catalog</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="gaia_dr3_id">
+       <td class="label">gaia_dr3_id</td>
+       <td class="label">Gaia DR3 ID</td>
+       <td class="description">Name of the star as given by the Gaia DR3 Catalog</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+</table> 
+    <p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+  </p>
+    <br />
+<a name="syscomp"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+    <h2>System Composition</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+      <tr class="column" id="sy_snum">
+        <td class="label">sy_snum&dagger;</td>
+        <td class="label">
+Number of Stars</td>
+        <td class="description">Number of gravitationally bound stars in the planetary system</td>
+        <td class="centered">X</td>
+        <td class="centered">X</td>
+     </tr>
+      <tr class="column" id="sy_pnum">
+        <td class="label">sy_pnum&dagger;</td>
+        <td class="label">Number of Planets</td>
+        <td class="description">
+Number of confirmed planets in the planetary system</td>
+        <td class="centered">X</td>
+        <td class="centered">X</td>
+     </tr>
+      <tr class="column" id="sy_mnum">
+        <td class="label">sy_mnum</td>
+        <td class="label">Number of Moons</td>
+        <td class="description">
+Number of moons in the planetary system</td>
+        <td class="centered">X</td>
+        <td class="centered">X</td>
+     </tr>
+      <tr class="column" id="cb_flag">
+        <td class="label">cb_flag</td>
+        <td class="label">Circumbinary Flag</td>
+        <td class="description">
+Flag indicating whether the planet orbits a binary system (1=yes, 0=no)</td>
+        <td class="centered">X</td>
+        <td class="centered">X</td>
+      </tr>
+</table>
+<p>&dagger; <strong>Default column: </strong>These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+<br />
+    
+<a name="planetdisc"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+  </p>
+    <h2>Planet Discovery</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+    
+      <tr class="column" id="discoverymethod">
+        <td class="label">discoverymethod&dagger;</td>
+      <td class="label">Discovery Method</td>
+      <td class="description">
+        Method by which the planet was first identified</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+      </tr> 
+    <tr class="column" id="disc_year">
+      <td class="label">disc_year&dagger;</td>
+      <td class="label">Discovery Year</td>
+      <td class="description">
+        Year the planet was discovered </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="disc_refname">
+      <td class="label">disc_refname</td>
+      <td class="label">Discovery Reference</td>
+      <td class="description">
+        Reference name for discovery publication </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+  
+    <tr class="column" id="disc_pubdate">
+      <td class="label">disc_pubdate</td>
+      <td class="label">Discovery Publication Date</td>
+      <td class="description">
+        Publication Date of the planet discovery referee publication </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="disc_locale">
+      <td class="label">disc_locale</td>
+      <td class="label">Discovery Locale</td>
+      <td class="description">
+        Location of observation of planet discovery (Ground or Space) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="disc_facility">
+      <td class="label">disc_facility&dagger;</td>
+      <td class="label">Discovery Facility</td>
+      <td class="description">
+        Name of facility of planet discovery observations </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="disc_telescope">
+      <td class="label">disc_telescope</td>
+      <td class="label">Discovery Telescope</td>
+      <td class="description">
+        Name of telescope of planet discovery observations </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="disc_instrument">
+      <td class="label">disc_instrument</td>
+      <td class="label">Discovery Instrument</td>
+      <td class="description">
+        Name of instrument of planet discovery observations </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+  </table>
+<br />
+<br />
+    
+<a name="detect"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>Detections</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+      <tr class="column" id="rv_flag">
+        <td class="label">rv_flag</td>
+        <td class="label">Detections by Radial Velocity Variations</td>
+        <td class="description">
+          Flag indicating if the planet host star exhibits 
+          radial velocity variations due to the planet (1=yes, 0=no) </td>
+        <td class="centered">X</td>
+        <td class="centered">X</td>
+     </tr>
+       <tr class="column" id="pul_flag">
+         <td class="label">pul_flag</td>
+      <td class="label">Detected by Pulsar Timing Variations</td>
+      <td class="description">
+        Boolean flag indicating if the planet host star exhibits 
+        pulsar timing variations due to the planet (1=yes, 0=no)</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+       </tr>
+     <tr class="column" id="ptv_flag">
+       <td class="label">ptv_flag</td>
+      <td class="label">Detected by Pulsation Timing Variations</td>
+      <td class="description">
+        Boolean flag indicating if the planet host star exhibits 
+        pulsation timing variations due to the planet (1=yes, 0=no)</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr> 
+    <tr class="column" id="tran_flag">
+      <td class="label">tran_flag</td>
+      <td class="label">Detected by Transits</td>
+      <td class="description">
+        Flag indicating if the planet transits its host star (1=yes, 0=no)</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    
+    <tr class="column" id="ast_flag">
+      <td class="label">ast_flag</td>
+      <td class="label">Detected by Astrometric Variations</td>
+      <td class="description">
+        Flag indicating if the planet host star exhibits 
+        astrometrical variations due to the planet (1=yes, 0=no) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="obm_flag">
+      <td class="label">obm_flag</td>
+      <td class="label">Detected by Orbital Brightness Modulations</td>
+      <td class="description">
+        Flag indicating whether the planet exhibits orbital 
+        modulations on the phase curve (1=yes, 0=no) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="micro_flag">
+      <td class="label">micro_flag</td>
+      <td class="label">Detected by Microlensing</td>
+      <td class="description">
+        Boolean flag indicating if the planetary system acted as 
+        a lens during an observed microlensing event (1=yes, 0=no) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="etv_flag">
+      <td class="label">etv_flag</td>
+      <td class="label">Detected by Eclipse Timing Variations</td>
+      <td class="description">
+Flag indicating whether a circumbinary planet that orbits 
+an eclipsing binary induces eclipse timing variations (ETVs) 
+in the binary pair (1=yes, 0=no) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="ima_flag">
+      <td class="label">ima_flag</td>
+      <td class="label">Detected by Imaging</td>
+      <td class="description">
+        Flag indicating if the planet has been observed 
+        via imaging techniques (1=yes, 0=no) </td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+<!--   
+ <tr class="column" id="">
+      <td class="label">Detection by Transit Timing Variations</td>
+      <td class="description">Boolean flag indicating if the planet induces transit timing variations on the orbit of another another planet in the system. (1=yes, 0=no) </td>
+    </tr>
+-->     
+    <tr class="column" id="dkin_flag">
+      <td class="label">dkin_flag</td>
+      <td class="label">Detection by Disk Kinematics</td>
+      <td class="description">
+        Boolean flag indicating if the presence of the 
+        planet was inferred due to its kinematic influence 
+        on the protoplanetary disk of its host star (1=yes, 0=no)</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr> 
+ 
+</table>
+    <br />
+<br />
+    
+<a name="planetparam"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+
+<h2>Planet Parameters </h2>
+   <table width="785" border="1" cellspacing="3" cellpadding="1">
+    <tr>
+      <th width="120">Database Column Name</th>
+      <th width="107">Table Label</th>
+      <th width="172" scope="col">Description</th>
+      <th width="111">Uncertainties Column<br />
+        (positive +) <br />
+        (negative -)</th>
+      <th width="92">Limit Column</th>
+      <th width="38">In PS Table</th>
+      <th width="91">In PSCompPars Table</th>
+     </tr>
+  <tr class="column" id="pl_refname">
+    <td class="label">pl_refname&dagger;</td>
+    <td class="label"><span class="name">Planetary Parameter Reference</span></td>
+    <td class="description">
+Reference of publication used for given planet parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_orbper">
+    <td class="label">pl_orbper&dagger;</td>
+    <td class="label">Orbital Period [days]</td>
+    <td class="label">
+Time the planet takes to make a complete orbit 
+around the host star or system</td>
+    <td class="uncertainty">(+) pl_orbpererr1<br />
+      (-) pl_orbpererr2</td>
+    <td class="label">pl_orbperlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_orbper_reflink">
+    <td class="label">pl_orbper_reflink</td>
+    <td class="label">Orbital Period Reference</td>
+    <td class="description">
+Reference of publication used for given planet parameter set</td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_orbsmax">
+    <td class="label">pl_orbsmax&dagger;</td>
+    <td class="label">Orbit Semi-Major Axis [au]</td>
+    <td class="description">
+The longest radius of an elliptic orbit, or, for exoplanets 
+detected via gravitational microlensing or direct imaging, 
+the projected separation in the plane of the sky</td>
+    <td class="uncertainty">(+) pl_orbsmaxerr1<br />
+      (-) pl_orbsmaxerr2</td>
+    <td class="label">pl_orbsmaxlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_orbsmax_reflink">
+    <td class="label">pl_orbsmax_reflink</td>
+    <td class="label">Orbit Semi-Major Axis Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_angsep">
+    <td class="label">pl_angsep</td>
+    <td class="label">Angular Separation [mas]</td>
+    <td class="description">
+Angular separation on the sky between the star and planet. 
+<br />
+<br />
+<strong>Note:</strong> This may be derived in several ways, 
+but is typically either an actual reported angular separation at 
+a given epoch (for which the literature source will be provided 
+in the reference column), or a calculated angular separation 
+using the semi-major axis and the distance to the system (which 
+may or may not be equivalent to the maximum angular separation, 
+depending on orbital eccentricity and orientation). Refer to 
+original data source for further information.</p></td>
+    <td class="uncertainty">(+) pl_angseperr1<br />
+(-) pl_angseperr2</td>
+    <td class="label">pl_angseplim</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_angsep_reflink">
+    <td class="label">pl_angsep_reflink</td>
+    <td class="label">Angular Separation Reference</td>
+    <td class="description">Reference of publication used for given parameter set</td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_rade">
+    <td class="label">pl_rade&dagger;</td>
+    <td class="label">Planet Radius [Earth Radius]</td>
+    <td class="description">
+      Length of a line segment from the center of the planet to 
+      its surface, measured in units of radius of the Earth</td>
+    <td class="uncertainty">(+) pl_radeerr1<br />
+      (-) pl_radeerr2</td>
+    <td class="label">pl_radelim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_rade_reflink">
+    <td class="label">pl_rade_reflink</td>
+    <td class="label">Planet Radius [Earth Radius] Reference</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_radj">
+    <td class="label">pl_radj&dagger;</td>
+    <td class="label">Planet Radius [Jupiter Radius]</td>
+    <td class="description">
+Length of a line segment from the center of the planet 
+to its surface, measured in units of radius of Jupiter</td>
+    <td class="uncertainty">(+) pl_radjerr1<br />
+      (-) pl_radjerr2</td>
+    <td class="label">pl_radjlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_radj_reflink">
+    <td class="label">pl_radj_reflink</td>
+    <td class="label">Planet Radius [Jupiter Radius] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_masse">
+    <td class="label">pl_masse</td>
+    <td class="label">Planet Mass [Earth Mass]</td>
+    <td class="description">
+Amount of matter contained in the planet, 
+measured in units of masses of the Earth</td>
+    <td class="uncertainty">(+) pl_masseerr1<br />
+      (-) pl_masseerr2</td>
+    <td class="label">pl_masselim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_massj">
+    <td class="label">pl_massj</td>
+    <td class="label">Planet Mass [Jupiter Mass]</td>
+    <td class="description">
+Amount of matter contained in the planet, 
+measured in units of masses of Jupiter</td>
+    <td class="uncertainty">(+) pl_massjerr1<br />
+      (-) pl_massjerr2</td>
+    <td class="label">pl_massjlim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_msinie">
+    <td class="label">pl_msinie</td>
+    <td class="label">Planet Mass*sin(i) [Earth Mass]</td>
+    <td class="description">
+Minimum mass of a planet as measured by radial velocity, 
+measured in units of masses of the Earth</td>
+    <td class="uncertainty">(+) pl_msinieerr1<br />
+      (-) pl_msinieerr2</td>
+    <td class="label">pl_msinielim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_msinij">
+    <td class="label">pl_msinij</td>
+    <td class="label">Planet Mass*sin(i) [Jupiter Mass]</td>
+    <td class="description">
+Minimum mass of a planet as measured by radial velocity, 
+measured in units of masses of Jupiter</td>
+    <td class="uncertainty">(+) pl_msinijerr1<br />
+      (-) pl_msinijerr2</td>
+    <td class="label">pl_msinijlim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_cmasse">
+    <td class="label">pl_cmasse</td>
+    <td class="label">Planet Mass*sin(i)/sin(i) [Earth Mass]</td>
+    <td class="description">
+A calculated quantity indicating the quotient of the lower limit 
+of the measured planet mass, denoted as its mass times the sine 
+of its inclination, and the sine of its inclination, measured in 
+units of the mass of the Earth. This is specified for references 
+in which the inclination is provided as well as the planet mass 
+limit, but the true mass is not reported. </td>
+    <td class="uncertainty">(+) pl_cmasseerr1<br />
+      (-) pl_cmasseerr2</td>
+    <td class="label">pl_cmasselim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_cmassj">
+    <td class="label">pl_cmassj</td>
+    <td class="label">Planet Mass*sin(i)/sin(i) [Jupiter Mass]</td>
+    <td class="description">
+A calculated quantity indicating the quotient of the 
+lower limit of the measured planet mass, denoted as its 
+mass times the sine of its inclination, and the sine of 
+its inclination, measured in units of the mass of Jupiter. 
+This is specified for references in which the inclination 
+is provided as well as the planet mass limit, but the true 
+mass is not reported. </td>
+    <td class="uncertainty">(+) pl_cmassjerr1<br />
+      (-) pl_cmassjerr2</td>
+    <td class="label">pl_cmassjlim</td>
+    <td class="centered">X</td>
+    <td class="label">&nbsp;</td>
+    </tr>
+  <tr class="column" id="pl_bmasse">
+    <td class="label">pl_bmasse&dagger;</td>
+    <td class="label">Planet Mass or Mass*sin(i) [Earth Mass]</td>
+    <td class="description">
+Best planet mass estimate available, in order of preference: 
+Mass, M*sin(i)/sin(i), or M*sin(i), depending on availability, 
+and measured in Earth masses</td>
+    <td class="uncertainty">(+) pl_bmasseerr1<br />
+      (-) pl_bmasseerr2</td>
+    <td class="label">pl_bmasselim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_bmasse_reflink">
+    <td class="label">pl_bmasse_reflink</td>
+    <td class="label">Planet Mass or Mass*sin(i) [Earth Mass] Reference</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_bmassj">
+    <td class="label">pl_bmassj&dagger;</td>
+    <td class="label">Planet Mass or Mass*sin(i) [Jupiter Mass]</td>
+    <td class="description">
+Best planet mass estimate available, in order of preference: 
+Mass, M*sin(i)/sin(i), or M*sin(i), depending on availability, 
+and measured in Jupiter masses</td>
+    <td class="uncertainty">(+) pl_bmassjerr1<br />
+      (-) pl_bmassjerr2</td>
+    <td class="label">pl_bmassjlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_bmassj_reflink">
+    <td class="label">pl_bmassj_reflink</td>
+    <td class="label">Planet Mass or Mass*sin(i) [Jupiter Mass] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_bmassprov">
+    <td class="label">pl_bmassprov&dagger;</td>
+    <td class="label">Planet Mass or Mass*sin(i) Provenance</td>
+    <td class="description">
+Provenance of the measurement of the best mass. 
+Options are: Mass, M*sin(i)/sin(i), and M*sini</td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_dens">
+    <td class="label">pl_dens</td>
+    <td class="label">Planet Density [g/cm**3]</td>
+    <td class="description">
+Amount of mass per unit of volume of the planet</td>
+    <td class="uncertainty">(+) pl_denserr1<br />
+      (-) pl_denserr2</td>
+    <td class="label">pl_denslim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_dens_reflink">
+    <td class="label">pl_dens_reflink</td>
+    <td class="label">Planet Density [g/cm**3] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+  </tr>
+  <tr class="column" id="pl_orbeccen">
+    <td class="label">pl_orbeccen&dagger;</td>
+    <td class="label">Eccentricity</td>
+    <td class="description">
+Amount by which the orbit of the planet deviates from a perfect circle</td>
+    <td class="uncertainty">(+) pl_orbeccenerr1<br />
+      (-) pl_orbeccenerr2</td>
+    <td class="label">pl_orbeccenlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_orbeccen_reflink">
+    <td class="label">pl_orbeccen_reflink</td>
+    <td class="label">Eccentricity  Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+  </tr>
+  <tr class="column" id="pl_insol">
+    <td class="label">pl_insol&dagger;</td>
+    <td class="label">Insolation Flux [Earth Flux]</td>
+    <td class="description">
+Insolation flux is another way to give the equilibrium temperature. 
+It's given in units relative to those measured for the Earth from the Sun.</td>
+    <td class="uncertainty">(+) pl_insolerr1<br />
+      (-) pl_insolerr2</td>
+    <td class="label">pl_insollim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_insol_reflink">
+    <td class="label">pl_insol_reflink</td>
+    <td class="label">Insolation Flux [Earth Flux] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_eqt">
+    <td class="label">pl_eqt&dagger;</td>
+    <td class="label">Equilibrium Temperature [K]</td>
+    <td class="description">
+The equilibrium temperature of the planet as modeled 
+by a black body heated only by its host star, or for 
+directly imaged planets, the effective temperature 
+of the planet required to match the measured luminosity 
+if the planet were a black body</td>
+    <td class="uncertainty">(+) pl_eqterr1<br />
+      (-) pl_eqterr2</td>
+    <td class="label">pl_eqtlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_eqt_reflink">
+    <td class="label">pl_eqt_reflink</td>
+    <td class="label">Equilibrium Temperature [K] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_orbincl">
+    <td class="label">pl_orbincl</td>
+    <td class="label">Inclination [deg]</td>
+    <td class="description">
+Angle of the plane of the orbit relative to the plane 
+perpendicular to the line-of-sight from Earth to the object </td>
+    <td class="uncertainty">(+) pl_orbinclerr1<br />
+      (-) pl_orbinclerr2</td>
+    <td class="label">pl_orbincllim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_tranmid">
+    <td class="label">pl_tranmid</td>
+    <td class="label">Time of Conjunction (Transit Midpoint) [days]</td>
+    <td class="description">
+The time given by the average of the time the planet 
+begins to cross the stellar limb and the time the planet 
+finishes crossing the stellar limb. </td>
+    <td class="uncertainty">(+) pl_tranmiderr1<br />
+      (-) pl_tranmiderr2</td>
+    <td class="label">pl_tranmidlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+ 
+  <tr class="column" id="pl_tranmid_systemref">
+    <td class="label">pl_tranmid_systemref</td>
+    <td class="label">Transit Midpoint Time Reference Frame and Standard</td>
+    <td class="description"> Time system basis for time of conjunction (Transit Midpoint)</td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr> 
+ 
+  <tr class="column" id="pl_tranmid_reflink">
+    <td class="label">pl_tranmid_reflink</td>
+    <td class="label">Time of Conjunction (Transit Midpoint) Reference</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+   <tr class="column" id="pl_tsystemref">
+    <td class="label">pl_tsystemref</td>
+    <td class="label">Time Reference Frame and Standard</td>
+    <td class="description">
+Time system basis for temporal and orbital parameters</td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+    <td class="centered">&nbsp;</td>
+    </tr>
+  <tr class="column" id="ttv_flag">
+    <td class="label">ttv_flag&dagger;</td>
+    <td class="label">Data show Transit Timing Variations</td>
+    <td class="description">
+<p>Flag indicating if the planet orbit exhibits transit 
+timing variations from another planet in the system (1=yes, 0=no).</p>
+<p><strong>Note: </strong>Non-transiting planets discovered 
+via the transit timing variations of another planet in the 
+system will not have their TTV flag set, since they do not 
+themselves demonstrate TTVs.</p></td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_imppar">
+    <td class="label">pl_imppar</td>
+    <td class="label">Impact Parameter</td>
+    <td class="description">
+The sky-projected distance between the center of the 
+stellar disc and the center of the planet disc at 
+conjunction, normalized by the stellar radius </td>
+    <td class="uncertainty">(+) pl_impparerr1<br />
+      (-) pl_impparerr2</td>
+    <td class="label">pl_impparlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_imppar_reflink">
+    <td class="label">pl_imppar_reflink</td>
+    <td class="label">Impact Parameter Reference</td>
+    <td class="description">
+    Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_trandep">
+    <td class="label">pl_trandep</td>
+    <td class="label">Transit Depth [%]</td>
+    <td class="description">
+The size of the relative flux decrement caused by 
+the orbiting body transiting in front of the star </td>
+    <td class="uncertainty">(+) pl_trandeperr1<br />
+      (-) pl_trandeperr2</td>
+    <td class="label">pl_trandeplim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_trandep_reflink">
+    <td class="label">pl_trandep_reflink</td>
+    <td class="label">Transit Depth [%] Reference</td>
+    <td class="description">
+ Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_trandur">
+    <td class="label">pl_trandur</td>
+    <td class="label">Transit Duration [hrs]</td>
+    <td class="description">
+The length of time from the moment the planet begins 
+to cross the stellar limb to the moment the planet 
+finishes crossing the stellar limb</td>
+    <td class="uncertainty">(+) pl_trandurerr1<br />
+      (-) pl_trandurerr2</td>
+    <td class="label">pl_trandurlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_trandur_reflink">
+    <td class="label">pl_trandur_reflink</td>
+    <td class="label">Transit Duration [hrs] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_ratdor">
+    <td class="label">pl_ratdor</td>
+    <td class="label">Ratio of Semi-Major Axis to Stellar Radius</td>
+    <td class="description">
+The distance between the planet and the star at 
+mid-transit divided by the stellar radius. For 
+the case of zero orbital eccentricity, the distance 
+at mid-transit is the semi-major axis of the planetary orbit. </td>
+    <td class="uncertainty">(+) pl_ratdorerr1<br />
+      (-) pl_ratdorerr2</td>
+    <td class="label">pl_ratdorlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_ratdor_reflink">
+    <td class="label">pl_ratdor_reflink</td>
+    <td class="label">Ratio of Semi-Major Axis to Stellar Radius Reference</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_ratror">
+    <td class="label">pl_ratror</td>
+    <td class="label">Ratio of Planet to Stellar Radius</td>
+    <td class="description">
+The planet radius divided by the stellar radius </td>
+    <td class="uncertainty">(+) pl_ratrorerr1<br />
+      (-) pl_ratrorerr2</td>
+    <td class="label">pl_ratrorlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_ratror_reflink">
+    <td class="label">pl_ratror_reflink</td>
+    <td class="label">Ratio of Planet to Stellar Radius Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_occdep">
+    <td class="label">pl_occdep</td>
+    <td class="label">Occultation Depth [%]</td>
+    <td class="description">
+Depth of occultation of secondary eclipse </td>
+    <td class="uncertainty">(+) pl_occdeperr1<br />
+      (-) pl_occdeperr2</td>
+    <td class="label">pl_occdeplim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_occdep_reflink">
+    <td class="label">pl_occdep_reflink</td>
+    <td class="label">Occultation Depth [%] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_orbtper">
+    <td class="label">pl_orbtper</td>
+    <td class="label">Epoch of Periastron [deg]</td>
+    <td class="description">
+The time of the planet's periastron passage</td>
+    <td class="uncertainty">(+) pl_orbtpererr1<br />
+      (-) pl_orbtpererr2</td>
+    <td class="label">pl_orbtperlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_orbtper_reflink">
+    <td class="label">pl_orbtper_reflink</td>
+    <td class="label">Epoch of Periastron [deg] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_orblper">
+    <td class="label">pl_orblper</td>
+    <td class="label">Argument of Periastron [deg]</td>
+    <td class="description">
+The angular separation between the orbit's ascending node and periastron. 
+Note: there are a varying conventions in the exoplanet literature regarding 
+argument of periastron (or periapsis). For example, some publications refer 
+the planet's orbit, others to the host star's reflex orbit, which differs by 
+180 deg. The values in the Exoplanet Archive are not corrected to a 
+standardized system, but are as-reported for each publication.</td>
+    <td class="uncertainty">(+) pl_orblpererr1<br />
+      (-) pl_orblpererr2</td>
+    <td class="label">pl_orblperlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_rvamp">
+    <td class="label">pl_rvamp</td>
+    <td class="label">Radial Velocity Amplitude [m/s]</td>
+    <td class="description">
+Half the peak-to-peak amplitude of variability 
+in the stellar radial velocity </td>
+    <td class="uncertainty">(+) pl_rvamperr1<br />
+      (-) pl_rvamperr2</td>
+    <td class="label">pl_rvamplim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_rvamp_reflink">
+    <td class="label">pl_rvamp_reflink</td>
+    <td class="label">Radial Velocity Amplitude Reference [m/s]</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_projobliq">
+    <td class="label">pl_projobliq</td>
+    <td class="label">Projected Obliquity [deg]</td>
+    <td class="description">
+The angle between the angular momentum vector of the rotation 
+of the host star and the angular momentum vector of the orbit 
+of the planet, projected into the plane of the sky. Depending 
+on the choice of coordinate system, projected obliquity is 
+represented in the literature as either lambda (&lambda;) or 
+beta (&beta;), where &lambda; is defined as the negative of &beta; (i.e.,  &lambda; = -&beta;). Since &lambda; is reported more often 
+than &beta;, all values of &beta; have been converted to &lambda;.</td>
+    <td class="uncertainty">(+) pl_projobliqerr1<br />
+      (-) pl_projobliqerr2</td>
+    <td class="label">pl_projobliqlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_projobliq_reflink">
+    <td class="label">pl_projobliq_reflink</td>
+    <td class="label">Projected Obliquity [deg] Reference</td>
+    <td class="description">
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  <tr class="column" id="pl_trueobliq">
+    <td class="label">pl_trueobliq</td>
+    <td class="label">True Obliquity [deg]</td>
+    <td class="description">
+The angle between the angular momentum vector of the 
+rotation of the host star and the angular momentum 
+vector of the orbit of the planet </td>
+    <td class="uncertainty">(+) pl_trueobliqerr1<br />
+      (-) pl_trueobliqerr2</td>
+    <td class="label">pl_trueobliqlim</td>
+    <td class="centered">X</td>
+    <td class="centered">X</td>
+    </tr>
+  <tr class="column" id="pl_trueobliq_reflink">
+    <td class="label">pl_trueobliq_reflink</td>
+    <td class="label">True Obliquity [deg] Reference</td>
+    <td class="description"> 
+Reference of publication used for given parameter set </td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+
+  <tr class="column" id="pl_tsm">
+    <td class="label">pl_tsm</td>
+    <td class="label">Transmission Spectroscopy Metric</td>
+    <td class="description">
+Transmission Spectroscopy Metric from <a href="https://iopscience.iop.org/article/10.1088/1538-3873/aadf6f/pdf" target="_blank">Kempton+2018</a>; see <a href="/docs/pscp_calc.html" target="_blank">calculations page</a></td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>
+  
+  <tr class="column" id="pl_esm">
+    <td class="label">pl_esm </td>
+    <td class="label">Emission Spectroscopy Metric</td>
+    <td class="description"> 
+Emission Spectroscopy Metric from <a href="https://iopscience.iop.org/article/10.1088/1538-3873/aadf6f/pdf" target="_blank">Kempton+2018</a>, see <a href="/docs/pscp_calc.html" target="_blank">calculations page</a></td>
+    <td class="uncertainty">&nbsp;</td>
+    <td class="label">&nbsp;</td>
+    <td class="centered">&nbsp;</td>
+    <td class="centered">X</td>
+  </tr>  
+
+  
+</table>
+<p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+</p>
+ 
+    <br />
+<a name="stellardata"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+  
+</p>
+<h2>Stellar Data</h2>
+   <table width="785" border="1" cellspacing="3" cellpadding="1">
+    <tr>
+      <th width="117">Database Column Name</th>
+      <th width="125">Table Label</th>
+      <th width="163" scope="col">Description</th>
+      <th width="109">Uncertainties Column<br />
+        (positive +) <br />
+        (negative -)</th>
+      <th width="84">Limit Column</th>
+      <th width="42">In PS Table</th>
+      <th width="91">In PSCompPars Table</th>
+     </tr>
+     <tr class="column" id="st_refname">
+       <td class="label">st_refname&dagger;</td>
+      <td class="label">Stellar Parameter Reference</td>
+      <td class="description">
+Reference of publication used for given stellar parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">X</td>
+      <td class="centered">&nbsp;</td>
+     </tr>
+    <tr class="column" id="st_spectype">
+      <td class="label">st_spectype</td>
+      <td class="label">Spectral Type</td>
+      <td class="description">
+Classification of the star based on their spectral 
+characteristics following the Morgan-Keenan system</td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_spectype_reflink">
+      <td class="label">st_spectype_reflink</td>
+      <td class="label">Spectral Type Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_teff">
+      <td class="label">st_teff&dagger;</td>
+      <td class="label">Stellar Effective Temperature [K]</td>
+      <td class="description">
+Temperature of the star as modeled by a black body 
+emitting the same total amount of electromagnetic radiation</td>
+      <td class="uncertainty">(+) st_tefferr1<br />
+        (-) st_tefferr2</td>
+      <td class="label">st_tefflim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_teff_reflink">
+      <td class="label">st_teff_reflink</td>
+      <td class="label">Stellar Effective Temperature [K] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_rad">
+      <td class="label">st_rad&dagger;</td>
+      <td class="label">Stellar Radius [Solar Radius]</td>
+      <td class="description">
+Length of a line segment from the center of the star 
+to its surface, measured in units of radius of the Sun</td>
+      <td class="uncertainty">(+) st_raderr1<br />
+        (-) st_raderr2</td>
+      <td class="label">st_radlim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_rad_reflink">
+      <td class="label">st_rad_reflink</td>
+      <td class="label">Stellar Radius [Solar Radius] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_mass">
+      <td class="label">st_mass&dagger;</td>
+      <td class="label">Stellar Mass [Solar mass]</td>
+      <td class="description">
+Amount of matter contained in the star, 
+measured in units of masses of the Sun</td>
+      <td class="uncertainty">(+) st_masserr1<br />
+        (-) st_masserr2</td>
+      <td class="label">st_masslim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_mass_reflink">
+      <td class="label">st_mass_reflink</td>
+      <td class="label">Stellar Mass [Solar mass] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_met">
+      <td class="label">st_met&dagger;</td>
+      <td class="label">Stellar Metallicity [dex]</td>
+      <td class="description">
+Measurement of the metal content of the photosphere 
+of the star as compared to the hydrogen content</td>
+      <td class="uncertainty">(+) st_meterr1<br />
+        (-) st_meterr2</td>
+      <td class="label">st_metlim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_met_reflink">
+      <td class="label">st_met_reflink</td>
+      <td class="label">Stellar Metallicity [dex] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_metratio">
+      <td class="label">st_metratio&dagger;</td>
+      <td class="label">Stellar Metallicity Ratio</td>
+      <td class="description">
+Ratio for the Metallicity Value ([Fe/H] denotes iron 
+abundance, [M/H] refers to a general metal content) </td>
+      <td class="uncertainty">(+) st_metratioerr1<br />
+        (-) st_metratioerr2</td>
+      <td class="label">st_metratiolim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_lum">
+      <td class="label">st_lum</td>
+      <td class="label">Stellar Luminosity [log10(Solar)]</td>
+      <td class="description">
+Amount of energy emitted by a star per unit time, 
+measured in units of solar luminosities</td>
+      <td class="uncertainty">(+) st_lumerr1<br />
+        (-) st_lumerr2</td>
+      <td class="label">st_lumlim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_lum_reflink">
+      <td class="label">st_lum_reflink</td>
+      <td class="label">Stellar Luminosity [log10(Solar)] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_logg">
+      <td class="label">st_logg&dagger;</td>
+      <td class="label">Stellar Surface Gravity [log10(cm/s**2)]</td>
+      <td class="description">
+Gravitational acceleration experienced at the stellar surface </td>
+      <td class="uncertainty">(+) st_loggerr1<br />
+        (-) st_loggerr2</td>
+      <td class="label">st_logglim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_logg_reflink">
+      <td class="label">st_logg_reflink</td>
+      <td class="label">Stellar Surface Gravity [log10(cm/s**2)] Reference</td>
+      <td class="description"> 
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_age">
+      <td class="label">st_age</td>
+      <td class="label">Stellar Age [Gyr]</td>
+      <td class="description">
+The age of the host star</td>
+      <td class="uncertainty">(+) st_ageerr1<br />
+        (-) st_ageerr2</td>
+      <td class="label">st_agelim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_age_reflink">
+      <td class="label">st_age_reflink</td>
+      <td class="label">Stellar Age [Gyr] Reference</td>
+      <td class="description"> 
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_dens">
+      <td class="label">st_dens</td>
+      <td class="label">Stellar Density [g/cm**3]</td>
+      <td class="description">
+Amount of mass per unit of volume of the star</td>
+      <td class="uncertainty">(+) st_denserr1<br />
+        (-) st_denserr2</td>
+      <td class="label">st_denslim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_dens_reflink">
+      <td class="label">st_dens_reflink</td>
+      <td class="label">Stellar Density [g/cm**3] Reference</td>
+      <td class="description"> 
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_vsin">
+      <td class="label">st_vsin</td>
+      <td class="label">Stellar Rotational Velocity [km/s]</td>
+      <td class="description">
+Rotational velocity at the equator of the star 
+multiplied by the sine of the inclination </td>
+      <td class="uncertainty">(+) st_vsinerr1<br />
+        (-) st_vsinerr2</td>
+      <td class="label">st_vsinlim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_vsin_reflink">
+      <td class="label">st_vsin_reflink</td>
+      <td class="label">Stellar Rotational Velocity [km/s]</td>
+      <td class="description"> 
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_rotp">
+      <td class="label">st_rotp</td>
+      <td class="label">Stellar Rotational Period [days]</td>
+      <td class="description">
+The time required for the planet host star to 
+complete one rotation, assuming it is a solid body </td>
+      <td class="uncertainty">(+) st_rotperr1<br />
+        (-) st_rotperr2</td>
+      <td class="label">st_rotplim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_rotp_reflink">
+      <td class="label">st_rotp_reflink</td>
+      <td class="label">Stellar Rotational Period [days] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+    <tr class="column" id="st_radv">
+      <td class="label">st_radv</td>
+      <td class="label">Systemic Radial Velocity [km/s]</td>
+      <td class="description">
+Velocity of the star in the direction of the line of sight</td>
+      <td class="uncertainty">(+) st_radverr1<br />
+        (-) st_radverr2</td>
+      <td class="label">st_radvlim</td>
+      <td class="centered">X</td>
+      <td class="centered">X</td>
+     </tr>
+    <tr class="column" id="st_radv_reflink">
+      <td class="label">st_radv_reflink</td>
+      <td class="label">Systemic Radial Velocity [km/s] Reference</td>
+      <td class="description">
+Reference of publication used for given parameter set </td>
+      <td class="uncertainty">&nbsp;</td>
+      <td class="label">&nbsp;</td>
+      <td class="centered">&nbsp;</td>
+      <td class="centered">X</td>
+    </tr>
+</table>
+
+
+   <p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+   </p>
+<br />
+    
+<a name="sysdata"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+   <h2>System Data</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+   <tr>
+       <th width="107">Database Column Name</th>
+       <th width="126">Table Label</th>
+       <th width="263" scope="col">Description</th>
+       <th width="110">Uncertainties Column<br />
+         (positive +) <br />
+         (negative -)</th>
+       <th width="41">In PS Table</th>
+       <th width="91">In PSCompPars Table</th>
+     </tr>
+     <tr class="column" id="sy_refname">
+       <td class="label">sy_refname&dagger;</td>
+       <td class="label">System Parameter Reference</td>
+       <td class="description">
+Reference of publication used for given system parameter set</td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">X</td>
+       <td class="centered">&nbsp;</td>
+     <tr class="column" id="sy_pm">
+       <td class="label">sy_pm</td>
+       <td class="label">Total Proper Motion [mas/yr]</td>
+       <td class="description">
+Angular change in position over time as seen 
+from the center of mass of the Solar System</td>
+       <td class="uncertainty">(+) sy_pmerr1<br />
+         (-) sy_pmerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+       <tr class="column" id="sy_pm_reflink">
+         <td class="label">sy_pm_reflink</td>
+         <td class="label">Total Proper Motion [mas/yr] Reference</td>
+         <td class="description"> 
+Reference of publication used for given parameter set </td>
+         <td class="uncerainty">&nbsp;</td>
+         <td class="centered">&nbsp;</td>
+         <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_pmra">
+       <td class="label">sy_pmra</td>
+       <td class="label">Proper Motion (RA) [mas/yr]</td>
+       <td class="description">
+Angular change in right ascension over time as 
+seen from the center of mass of the Solar System </td>
+       <td class="uncerainty">(+) sy_pmraerr1<br />
+         (-) sy_pmraerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_pmra_reflink">
+         <td class="label">sy_pmra_reflink</td>
+         <td class="label">Proper Motion (RA) [mas/yr] Reference</td>
+         <td class="description">
+Reference of publication used for given parameter set</td>
+         <td class="uncertainty">&nbsp;</td>
+         <td class="centered">&nbsp;</td>
+         <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_pmdec">
+       <td class="label">sy_pmdec</td>
+       <td class="label">Proper Motion (Dec) [mas/yr]</td>
+       <td class="description">
+Angular change in declination over time as seen 
+from the center of mass of the Solar System </td>
+       <td class="uncertainty">(+) sy_pmdecerr1<br />
+         (-) sy_pmdecerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_pmdec_reflink">
+         <td class="label">sy_pmdec_reflink</td>
+         <td class="label">Proper Motion (Dec) [mas/yr]</td>
+         <td class="description"> 
+Reference of publication used for given parameter set </td>
+         <td class="uncertainty">&nbsp;</td>
+         <td class="centered">&nbsp;</td>
+         <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_dist">
+       <td class="label">sy_dist&dagger;</td>
+       <td class="label">Distance [pc]</td>
+       <td class="description">
+Distance to the planetary system in units of parsecs</td>
+       <td class="uncertainty">(+) sy_disterr1<br />
+         (-) sy_disterr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_dist_reflink">
+         <td class="label">sy_dist_reflink</td>
+         <td class="label">Distance [pc] Reference</td>
+         <td class="description"> 
+Reference of publication used for given parameter set </td>
+         <td class="uncertainty">&nbsp;</td>
+         <td class="centered">&nbsp;</td>
+         <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_plx">
+       <td class="label">sy_plx</td>
+       <td class="label">Parallax [mas]</td>
+       <td class="description">
+Difference in the angular position of a star as measured 
+at two opposite positions within the Earth's orbit </td>
+       <td class="uncertainty">(+) sy_plxerr1<br />
+         (-) sy_plxerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="sy_plx_reflink">
+         <td class="label">sy_plx_reflink</td>
+         <td class="label">Parallax [mas] Reference</td>
+         <td class="description"> 
+Reference of publication used for given parameter set </td>
+         <td class="uncertainty">&nbsp;</td>
+         <td class="centered">&nbsp;</td>
+         <td class="centered">X</td>
+       </tr>
+       <tr class="column" id="pl_nnotes">
+       <td class="label">pl_nnotes</td>
+       <td class="label">Number of Notes</td>
+       <td class="description">
+Number of Notes associated with the planet. 
+View all notes in the Confirmed Planet Overview page. </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+       </tr>
+   </table>
+   <p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+   </p>
+    <br />
+<a name="position"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>   <h3>Position (System Data Subset)</h3>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+   <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="75">Uncertainties Column<br />
+         (positive +) <br />
+         (negative -)</th>
+       <th width="75">In PS Table</th>
+       <th width="75">In PSCompPars Table</th>
+     </tr>
+     <tr class="column" id="rastr">
+       <td class="label">rastr&dagger;</td>
+       <td class="label">RA [sexagesimal]</td>
+       <td class="description">
+Right Ascension of the planetary 
+system in sexagesimal format</td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="decstr">
+       <td class="label">decstr&dagger;</td>
+       <td class="label">Dec [sexagesimal]</td>
+       <td class="description">
+Declination of the planetary 
+system in sexagesimal notation</td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="ra">
+       <td class="label">ra</td>
+       <td class="label">RA [decimal]</td>
+       <td class="description">
+Right Ascension of the planetary 
+system in decimal degrees</td>
+       <td class="uncertainty">(+) raerr1<br />
+         (-) raerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="ra_reflink">
+       <td class="label">ra_reflink</td>
+       <td class="label">RA [decimal] Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="uncertainty">&nbsp;</td>
+     </tr>
+     <tr class="column" id="dec">
+       <td class="label">dec</td>
+       <td class="label">Dec [decimal]</td>
+       <td class="description">
+Declination of the planetary 
+system in decimal degrees</td>
+       <td class="uncertainty">(+) decerr1<br />
+         (-) decerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="glat">
+       <td class="label">glat</td>
+       <td class="label">Galactic Latitude [deg]</td>
+       <td class="description">
+Galactic latitude of the planetary 
+system in units of decimal degrees</td>
+       <td class="uncertainty">(+) glaterr1<br />
+         (-) glaterr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="glon">
+       <td class="label">glon</td>
+       <td class="label">Galactic Longitude [deg]</td>
+       <td class="description">
+Galactic longitude of the planetary 
+system in units of decimal degrees</td>
+       <td class="uncertainty">(+) glonerr1<br />
+         (-) glonerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="elat">
+       <td class="label">elat</td>
+       <td class="label">Ecliptic Latitude [deg]</td>
+       <td class="description">
+Ecliptic latitude of the planetary 
+system in units of decimal degrees</td>
+       <td class="uncertainty">(+) elaterr1<br />
+         (-) elaterr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="elon">
+       <td class="label">elon</td>
+       <td class="label">Ecliptic Longitude [deg]</td>
+       <td class="description">
+Ecliptic longitude of the planetary system 
+in units of decimal degrees</td>
+       <td class="uncertainty">(+) elonerr1<br />
+         (-) elonerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+    
+   </table>
+   <p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.<br />
+   </p>
+<br />
+    
+<a name="photometry"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+   <h3>Photometry (System Data Subset)</h3>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+   <tr>
+       <th width="115">Database Column Name</th>
+       <th width="94">Table Label</th>
+       <th width="285" scope="col">Description</th>
+       <th width="105">Uncertainties Column<br />
+         (positive +) <br />
+         (negative -)</th>
+       <th width="48">In PS Table</th>
+       <th width="91">In PSCompPars Table</th>
+     </tr>
+
+     <tr class="column" id="sy_bmag">
+       <td class="label">sy_bmag</td>
+       <td class="label">B (Johnson) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the B (Johnson) band in units of magnitudes</td>
+       <td class="uncertainty">(+) sy_bmagerr1<br />
+         (-) sy_bmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_bymag_reflink">
+       <td class="label">sy_bymag_reflink</td>
+       <td class="label">B (Johnson) Magnitude</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_vmag">
+       <td class="label">sy_vmag&dagger;</td>
+       <td class="label">V (Johnson) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the V (Johnson) band in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_vmagerr1<br />
+         (-) sy_vmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_vmag_reflink">
+       <td class="label">sy_vmag_reflink</td>
+       <td class="label">V (Johnson) Magnitude</td>
+       <td class="description">
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_jmag">
+       <td class="label">sy_jmag</td>
+       <td class="label">J (2MASS) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the J (2MASS) band in units of magnitudes</td>
+       <td class="uncertainty">(+) sy_jmagerr1<br />
+         (-) sy_jmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_jmag_reflink">
+       <td class="label">sy_jmag_reflink</td>
+       <td class="label">J (2MASS) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_hmag">
+       <td class="label">sy_hmag</td>
+       <td class="label">H (2MASS) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the H (2MASS) band in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_hmagerr1<br />
+         (-) sy_hmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_hmag_reflink">
+       <td class="label">sy_hmag_reflink</td>
+       <td class="label">H (2MASS) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_kmag">
+       <td class="label">sy_kmag&dagger;</td>
+       <td class="label">Ks  (2MASS) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the K (2MASS) band in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_kmagerr1<br />
+         (-) sy_kmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_kmag_reflink">
+       <td class="label">sy_kmag_reflink</td>
+       <td class="label">Ks (2MASS) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_umag">
+       <td class="label">sy_umag</td>
+       <td class="label">u  (Sloan) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) u band, in units 
+of magnitudes </td>
+       <td class="uncertainty">(+) sy_umagerr1<br />
+         (-) sy_umagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_umag_reflink">
+       <td class="label">sy_umag_reflink</td>
+       <td class="label">u (Sloan) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_gmag">
+       <td class="label">sy_gmag</td>
+       <td class="label">g (Sloan) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) g band, in units 
+of magnitudes </td>
+       <td class="uncertainty">(+) sy_gmagerr1<br />
+         (-) sy_gmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_gmag_reflink">
+       <td class="label">sy_gmag_reflink</td>
+       <td class="label">g (Sloan) Magnitude</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_rmag">
+       <td class="label">sy_rmag</td>
+       <td class="label">r (Sloan) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) r band, in units 
+of magnitudes </td>
+       <td class="uncertainty">(+) sy_rmagerr1<br />
+         (-) sy_rmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_rmag_reflink">
+       <td class="label">sy_rmag_reflink</td>
+       <td class="label">r (Sloan) Magnitude</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_imag">
+       <td class="label">sy_imag</td>
+       <td class="label">i (Sloan) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) i band, in units 
+of magnitudes </td>
+       <td class="uncertainty">(+) sy_imagerr1<br />
+         (-) sy_imagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_imag_reflink">
+       <td class="label">sy_imag_reflink</td>
+       <td class="label">i (Sloan) Magnitude</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_zmag">
+       <td class="label">sy_zmag</td>
+       <td class="label">z (Sloan) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the Sloan Digital Sky Survey (SDSS) z band, 
+in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_zmagerr1<br />
+         (-) sy_zmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_zmag_reflink">
+       <td class="label">sy_zmag_reflink</td>
+       <td class="label">z (Sloan) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w1mag">
+       <td class="label">sy_w1mag</td>
+       <td class="label">W1 (WISE) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the 3.4um (WISE) band in units of magnitudes. </td>
+       <td class="uncertainty">(+) sy_w1magerr1<br />
+         (-) sy_w1magerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w1mag_reflink">
+       <td class="label">sy_w1mag_reflink</td>
+       <td class="label">W1 (WISE) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w2mag">
+       <td class="label">sy_w2mag</td>
+       <td class="label">W2 (WISE) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using the 
+4.6um (WISE) band in units of magnitudes. </td>
+       <td class="uncertainty">(+) sy_w2magerr1<br />
+         (-) sy_w2magerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w2mag_reflink">
+       <td class="label">sy_w2mag_reflink</td>
+       <td class="label">W2 (WISE) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w3mag">
+       <td class="label">sy_w3mag</td>
+       <td class="label">W3 (WISE) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the 12.um (WISE) band in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_w3magerr1<br />
+         (-) sy_w3magerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w3mag_reflink">
+       <td class="label">sy_w3mag_reflink</td>
+       <td class="label">W3 (WISE) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w4mag">
+       <td class="label">sy_w4mag</td>
+       <td class="label">W4 (WISE) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the 22.um (WISE) band in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_w4magerr1<br />
+         (-) sy_w4magerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_w4mag_reflink">
+       <td class="label">sy_w4mag_reflink</td>
+       <td class="label">W4 (WISE) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_gaiamag">
+       <td class="label">sy_gaiamag&dagger;</td>
+       <td class="label">Gaia Magnitude</td>
+       <td class="description">
+Brightness of the host star as measuring using the 
+Gaia band in units of magnitudes. Objects matched 
+to Gaia using the Hipparcos or 2MASS IDs provided 
+in Gaia DR2. </td>
+       <td class="uncertainty">(+) sy_gaiamagerr1<br />
+         (-) sy_gaiamagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_gaiamag_reflink">
+       <td class="label">sy_gaiamag_reflink</td>
+       <td class="label">Gaia Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_icmag">
+       <td class="label">sy_icmag</td>
+       <td class="label">I (Cousins) Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the I (Cousins) band in units of magnitudes. </td>
+       <td class="uncertainty">(+) sy_icmagerr1<br />
+         (-) sy_icmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_icmag_reflink">
+       <td class="label">sy_icmag_reflink</td>
+       <td class="label">I (Cousins) Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_tmag">
+       <td class="label">sy_tmag</td>
+       <td class="label">TESS Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the TESS bandpass, in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_tmagerr1<br />
+         (-) sy_tmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_tmag_reflink">
+       <td class="label">sy_tmag_reflink</td>
+       <td class="label">TESS Magnitude Reference</td>
+       <td class="description"> 
+Reference of publication used for given parameter set </td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_kepmag">
+       <td class="label">sy_kepmag</td>
+       <td class="label">Kepler Magnitude</td>
+       <td class="description">
+Brightness of the host star as measured using 
+the Kepler bandpass, in units of magnitudes </td>
+       <td class="uncertainty">(+) sy_kepmagerr1<br />
+         (-) sy_kepmagerr2</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="sy_kepmag_reflink">
+       <td class="label">sy_kepmag_reflink</td>
+       <td class="label">Kepler Magnitude Reference</td>
+       <td class="description">
+Reference of publication used for given parameter set</td>
+       <td class="uncertainty">&nbsp;</td>
+       <td class="centered">&nbsp;</td>
+       <td class="centered">X</td>
+     </tr>
+   </table>
+   <p>&dagger; <strong>Default column:</strong> These columns display in the interactive table when the table is first loaded, and when <strong>Reset Filters</strong> is clicked.</p>
+   <br />
+     
+<a name="dates"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+ 
+    <h3>Dates (System Data Subset)</h3>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+     <tr class="column" id="rowupdate">
+       <td class="label">rowupdate&dagger;</td>
+       <td class="label">Date of Last Update</td>
+       <td class="description">
+Date of last update of the planet parameters</td>
+       <td class="centered">X</td>
+       <td class="description">&nbsp;</td>
+     </tr>
+     <tr class="column" id="pl_pubdate">
+       <td class="label">pl_pubdate&dagger;</td>
+       <td class="label">Planetary Parameter Reference Publication</td>
+       <td class="description">
+Date of the publication of the given planet parameter set </td>
+       <td class="centered">X</td>
+       <td class="description">&nbsp;</td>
+     </tr>
+     <tr class="column" id="releasedate">
+       <td class="label">releasedate&dagger;</td>
+       <td class="label">Release Date</td>
+       <td class="description">
+Date that the given planet parameter set was 
+publicly released by the NASA Exoplanet Archive </td>
+       <td class="centered">X</td>
+       <td class="description">&nbsp;</td>
+     </tr>
+   </table>
+   
+  <br />
+      
+<a name="addtldata"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div> 
+   <h2>Additional Data</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+     <tr class="column" id="st_nphot">
+       <td class="label">st_nphot</td>
+       <td class="label">Number of Photometry Time Series</td>
+       <td class="description">
+Number of photometric time series records, including 
+planet transit light curves, general transit light curves, 
+and amateur light curves.</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     <tr class="column" id="st_nrvc">
+       <td class="label">st_nrvc</td>
+       <td class="label">Number of Radial Velocity Time Series</td>
+       <td class="description">
+Number of literature radial velocity curves available 
+for this star in the NASA Exoplanet Archive. </td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+    
+     <tr class="column" id="st_nspec">
+       <td class="label">st_nspec</td>
+       <td class="label">Number of Stellar Spectra Measurements</td>
+       <td class="description">
+Number of literature spectra available for 
+this star in the NASA Exoplanet Archive</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+</table>
+
+<br />
+<a name="atmos"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div> 
+   <h2>Atmospheric Spectroscopy Table Data</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>
+     
+     
+     <tr class="column" id="pl_nespec">
+       <td class="label">pl_nespec</td>
+       <td class="label">Number of Eclipse Spectra</td>
+       <td class="description">
+Number of literature eclipse spectrum measurements 
+for this planet in the NASA Exoplanet Archive
+       </td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+     
+     
+     <tr class="column" id="pl_ntranspec">
+       <td class="label">pl_ntranspec</td>
+       <td class="label">Number of Transmission Spectra</td>
+       <td class="description">
+Number of literature transmission spectrum measurements 
+for this planet in the NASA Exoplanet Archive
+       </td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+   
+     
+     <tr class="column" id="pl_ndispec">
+       <td class="label">pl_ndispec</td>
+       <td class="label">Number of Direct Imaging Spectra</td>
+       <td class="description">
+Number of literature direct imaging spectrum measurements 
+for this planet in the NASA Exoplanet Archive</td>
+       <td class="centered">X</td>
+       <td class="centered">X</td>
+     </tr>
+</table>
+
+<a name="nexolist"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div> 
+   <h2>NExoList</h2>
+   <table width="785" border="1" cellpadding="1" cellspacing="3">
+     <tr>
+       <th width="99">Database Column Name</th>
+       <th width="155">Table Label</th>
+       <th width="375" scope="col">Description</th>
+       <th width="58" scope="col">In PS Table</th>
+       <th width="58" scope="col">In PSCompPars Table</th>
+     </tr>   
+     
+     <tr class="column" id="pl_nobs_jwst_tran">
+       <td class="label">pl_nobs_jwst_tran</td>
+       <td class="label">Number of JWST Transit Observations</td>
+       <td class="description"> 
+Number of approved JWST transit observations 
+for this planet in the <a href="/cgi-bin/observations/nph-firefly?data">NExoList table</a>      
+            </td>
+       <td class="centered"></td>
+       <td class="centered">X</td>
+       
+       
+       <tr class="column" id="pl_nobs_jwst_e">
+       <td class="label">pl_nobs_jwst_e</td>
+       <td class="label">Number of JWST Eclipse Observations</td>
+       <td class="description">
+Number of approved JWST eclipse observations 
+for this planet in the <a href="/cgi-bin/observations/nph-firefly?data">NExoList table</a>   
+              </td>
+       <td class="centered"></td>
+       <td class="centered">X</td>
+     </tr>
+     
+     <tr class="column" id="pl_nobs_jwst_pc">
+       <td class="label">pl_nobs_jwst_pc</td>
+       <td class="label">Number of JWST Phase Curve Observations</td>
+       <td class="description"> 
+Number of approved JWST phase curve observations 
+for this planet in the <a href="/cgi-bin/observations/nph-firefly?data">NExoList table</a>         
+       </td>
+       <td class="centered"></td>
+       <td class="centered">X</td>
+     </tr>
+</table>
+
+
+<br />
+<br />
+
+<p>Last updated: 4 June 2026</p>
+
+</div>
+
+<div id="logoBox" class="tbox">
+  <p><a href="http://www.nasa.gov" title="National Aeronautics and Space Administration">
+        <img src="/images/logos/NASA_small.jpg" alt="NASA" width="87" height="75"/></a>
+
+    <a href="http://www.ipac.caltech.edu" title="Infrared Processing and Analysis Center">
+        <img src="/images/logos/IPAC_small.jpg" alt="IPAC" width="139" height="75" /></a>
+    <a href="http://nexsci.caltech.edu" title="NASA Exoplanet Science Institute">
+        <img src="/images/logos/logo_nexsci.gif" alt="NExScI" /></a>
+     <a href="http://www.caltech.edu" title="California Institute of Technology">
+        <img src="/images/logos/Caltech_LOGO-Orange_PMS165.jpg" alt="Caltech" width="25%" /></a></p>
+
+</div> <!-- end tbox div -->
+
+
+<div id="footerMenu" class="hbox">
+         <div class="home_box">
+           <a href="/index.html">Home</a>
+         </div>
+       
+         <div class="archive_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/about.html">About Us</a>
+         </div>
+       
+         <div class="data_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/data.html">Data</a>
+         </div>
+       
+         <div class="tool_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/tools.html">Tools</a>
+         </div>
+       
+         <div class="help_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/help.html">Support</a>
+         </div>
+           
+         <div class="clear"></div>
+</div> <!-- end hbox -->
+
+
+
+</div> <!-- end b2box -->
+</div> <!-- end bbox -->
+</body>
+</html>

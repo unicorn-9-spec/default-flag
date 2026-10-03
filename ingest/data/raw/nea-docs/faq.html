@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>NASA Exoplanet Archive Frequently Asked Questions</title>
+        <script type="text/javascript" src="/js/local/util.js"></script>
+        <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/css/fixed.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/css/docs.css" />
+</head>
+
+<body>
+	<div class="bbox">
+	<div class="b2box">
+
+<!-- begin drop down menu banner -->
+<!-- START EXO_BANNER.HTML -->
+<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/css/menu_icons.css" />
+
+<script type="text/javascript" src="/js/navigation.js"></script>
+
+<div id="banner">
+ <a href="/index.html"><img src="/images/nsted_banner.jpg" alt="Exoplanet Archive banner" /></a>
+</div> <!-- end banner -->
+
+<!-- begin navigation.html -->
+<nav id="exo-hrmenu" class="exo-hrmenu" aria-label="Primary">
+   <ul role="list">
+      <li>
+         <a href="/index.html">Home</a>
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-about" href="/docs/about.html">About Us</button>
+         <div class="exo-hrsub" id="exo-hrsub-about">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/intro.html">
+                         <i class="exoplanet-icon-book-borderless"></i>
+                         Overview</a></li>
+                     <li><a href="/docs/holdings.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Holdings</a></li>
+                     <li><a href="/docs/counts_detail.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Exoplanet Counts</a></li>
+                     <li><a href="/docs/users_group.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         User Panel</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/faq.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         FAQ</a></li>
+                     <li><a href="/docs/acknowledge.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Acknowledgements</a></li>
+                     <li><a href="/docs/privacy.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Privacy Notice</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-data" href="/docs/data.html">Data</button>
+         <div class="exo-hrsub" id="exo-hrsub-data">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <h4>Planetary Systems</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems Composite Data</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Stellar Hosts</a></li>
+                     <li><a href="/cgi-bin/atmospheres/nph-firefly?atmospheres">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Atmospheric Spectroscopy</a></li>
+                    <li><a href="/cgi-bin/observations/nph-firefly?data">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         NExoList </a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Microlensing Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=directimaging&constraint=immodeldef=1">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Direct Imaging Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Transiting Planets</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Kepler</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (Cumulative List)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (All Lists)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score>0.3">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Positional Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         False Positive Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                        Certified False Positives</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Threshold-Crossing Events</a></li>
+                     <li><a href="/docs/Kepler_completeness_reliability.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Completeness and Reliability</a></li>
+                     <li><a href="/docs/KeplerSimulated.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Simulated Data</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Kepler Stellar</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Kepler Confirmed Names</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Transit Surveys</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TESS Project Candidates</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=k2targets">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         K2 Targets</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Planets and Candidates</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Confirmed Names</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_astero_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRot Astero-Seismology</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_exo_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRoT Exoplanet</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         SuperWASP Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         KELT Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KELT Praesepe</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/XO">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         XO</a></li>
+                     <li><a href="/applications/ETSS/HATNet_index.html">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HATNet</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/Cluster">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Cluster</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/TrES">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TrES</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Other</h4>
+                  <ul role="list">
+                      <li><a href="/cgi-bin/observations/nph-firefly?datta">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         JWST Observations</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         UKIRT Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/MOA/nph-firefly?MOA">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         MOA Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/ROME/nph-firefly?data&filter=True">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         ROME/REA Microlensing Survey</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=gjstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Gliese-Jahreiss Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=DI_STARS_EXEP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HWO ExEP Precursor Science Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=missionstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=mission_exocat">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars+ExoCat</a></li>
+                     <li><a href="/cgi-bin/FDL/nph-fdl">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Frontier Development Lab Datasets</a></li>
+                     <li><a href="/cgi-bin/CUBESAT/nph-cubesat?cute">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         CUTE Mission</a></li>
+                     <li><a href="/docs/ASTERIAMission.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ASTERIA Mission</a></li>
+                     <li><a href="/docs/contributed_data.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         Contributed Data Sets</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Tables Search and File Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+            &nbsp;<p/><center><i class="exoplanet-icon-table-borderless"></i>&nbsp;&nbsp; <i>Full table display</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="exoplanet-icon-search-borderless"></i>&nbsp;&nbsp;<i>Database search</i></center><p/>
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-tools" href="/docs/tools.html">Tools</button>
+         <div class="exo-hrsub" id="exo-hrsub-tools">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/Inventory/search.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Explore the Archive</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Table Search and File Upload</a></li>
+                     <li><a href="/cgi-bin/TransitView/nph-visibletbls?dataset=transits">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Transit and Ephemeris Service</a></li>
+                     <li><a href="/cgi-bin/CalcQty/nph-calcqty">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Predicted Observables for Exoplanets (POE)</a></li>
+                     <li><a href="/cgi-bin/Pgram/nph-pgram">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Periodogram</a></li>
+                     <li><a href="/ScatterPlot/?config=scatter&table=PS_output.csv&columns=PS_columns.tbl&theme=pres&x=pl_orbper&y=pl_bmassj&symbol-color=discoverymethod&symbol-size-min=8&legendpos=bottomright&link=1">
+                         <i class="exoplanet-icon-plot-simple-borderless"></i>&nbsp;
+                         Confirmed Planets Plotting Tool</a></li>
+                     <li><a href="/cgi-bin/ExoFAST/nph-exofast">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         EXOFAST: Transit and RV Fitting</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="https://astrofetch.ipac.caltech.edu" target="_blank">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         AstroFetch AI</a></li>
+                     <li><a href="/docs/TAP/usingTAP.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                        Table Access Protocol (TAP) Interface</a></li>
+                     <li><a href="/docs/program_interfaces.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                         Application Programming Interface (API)</a></li>
+                     <li><a href="/bulk_data_download">
+                         <i class="exoplanet-icon-download-borderless"></i>&nbsp;
+                         Bulk Data Download</a></li>
+                     <li><a href="https://exofop.ipac.caltech.edu/">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ExoFOP</a></li>
+                     <li><a href="/exoplanetplots/">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Pre-generated Plots</a></li>
+                    <li><a href="/support/upload_param/">
+                         <i class="exoplanet-icon-upload-borderless"></i>&nbsp;
+                         Published Data Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-support" href="/docs/help.html">Support</button>
+         <div class="exo-hrsub" id="exo-hrsub-support">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&startdoc=item_1_01">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Documentation Index</a></li>
+                     <li><a href="/docs/KeplerMission.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Kepler Documentation</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/connect.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Social Media and Newsletter</a></li>
+                     <li><a href="/applications/Helpdesk" target="_blank">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Contact Us</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" id="loginID" aria-live="polite" style="appearance: none; background: none; border: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; padding: 3px 1.5em;">-</button>
+      </li>
+  </ul>
+</nav>
+<!-- end navigation.html -->
+
+<!-- END EXO_BANNER.HTML -->
+
+<!-- end drop down menu banner -->
+<div class="docs">
+
+<h1>NASA Exoplanet Archive Frequently Asked Questions</h1>
+<br />
+<br />
+<h2>General Archive Questions</h2>
+ 
+<ol>
+<li><a href="#ingest">How does the NASA Exoplanet Archive determine whether to ingest or include a given set of planet parameters?</a></li>
+
+<li><a href="#missing_params">What are default parameters?</a></li>
+<li><a href="#how_pick">How does the archive determine which parameter sets are  default?</a></li>
+<li><a href="#WhenIncluded"> When are planets included in the NASA Exoplanet Archive?</a></li>
+<li><a href="#candidates">Where do I find planetary candidates in the archive?</a></li>
+<li><a href="#removed">What happens to confirmed planets that are retracted or refuted?</a></li>
+
+<li><a href="#ContributeData">  How can I contribute my data to the archive?</a></li>
+
+<li><a href="#NumberPlanets">Why is the number of planets in the NASA Exoplanet Archive different from the count at the Extrasolar Planet Encyclopedia or exoplanets.org?</a></li>
+
+<li><a href="#stellar_multiple">Why are the stellar parameters listed for some multiple systems different for different planets?</a></li>
+
+<li><a href="#findtransitconfirmed">How do I find all the transiting confirmed planets?</a></li>
+
+<li><a href="#Plots">  How are the pre-generated plots created?</a></li>
+
+<li><a href="#scrollbars">Why do the scroll bars in the interactive tables seem to appear and disappear intermmitently?</a></li>
+  
+  <li><a href="#NSTED">What happened to NStED and the stellar data it contained? </a></li>
+  
+<li><a href="#cit-sci">Can I use the archive to do citizen science?</a> </li>
+  
+  <li><a href="#ttv">Why are there confirmed planets discovered by transit timing variations (TTV) that do not have their TTV flag set?</a></li>
+  
+  <li><a href="#tips">How can I keep track of what is in the archive?</a></li>
+  
+  <li><a href="#validated">How can I tell the difference between validated and confirmed planets in the archive?</a></li>
+  
+  <li><a href="#letter">Why did my planet get assigned a letter?</a></li>
+  <li><a href="stellartic">Why are some stellar distances incorrect or missing in the archive?</a></li>
+  
+</ol>
+
+<h2>Dataset-related Questions</h2>
+<ol>
+  <li><a href="#TCE">What is a TCE?</a></li>
+  <li> <a href="#KOI"> What is a KOI and how is it different from a Kepler Planetary Candidate?</a></li>
+  <li> <a href="#KeplerNumber"> How are Kepler and K2 numbers assigned? </a></li>
+  <li> <a href="#tablevalues"> Why are values for the KOI planetary radius (orbital period, etc) different
+    between the Planetary Systems table and the KOI table? </a></li>
+  <li> <a href="#Keplertable"> Why aren't all confirmed Kepler planets in the KOI table? </a></li>
+  
+  <li><a href="#koinotintbl">Some confirmed planets have KOI numbers that are not included in the KOI table. Why is this?</a></li>
+  <li><a href="#swasp">Why can't I find a particular WASP light curve in the archive?</a></li>
+  
+
+  <li><a href="#koi_radii">Why do some objects have very large radii in the KOI table, but much smaller radii in the Planetary Systems table for the same planet?</a></li>
+  <li><a href="#kelt">What is the difference between the KELT and KELT Praesepe data sets?</a></li>
+  <li><a href="#kepler452b">What is the status of Kepler-452 b in the archive?</a></li>
+
+</ol>
+ 
+<br />
+<br />
+<h1>General Archive Questions</h1>
+<br />
+<a name="ingest"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>1. How does the NASA Exoplanet Archive determine whether to ingest or include a given set of planet parameters?</h2>
+<br />
+<p>Planet parameters for confirmed planets in the archive come from two sources:  the published literature (accepted, peer-reviewed papers) and, for Kepler and TESS Objects of Interest, additional parameters from NASA mission deliveries. </p>
+<p>For the literature values, archive science staff evaluate, on a case-by-case basis, the published parameters against the existing holdings. If the new parameter set would extend (e.g., by adding parameters for which we do not currently have a value) or improve upon (by providing more precise measurements of existing values, and/or updated ephemerides) the existing holdings, we include the new parameters. Typically, a new parameter set will fulfill one of these criteria, but some publications do not, and we do not ingest those parameters. However, we are responsive to requests from the community to include parameters from published papers if they are not already in the NEA on a best-effort basis.</p>
+
+<br />
+<br />
+<a name="missing_params"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>2. What are default parameters?</h2>
+<p>Since the archive's launch in December 2011, the archive has selected a set of  default parameters for each confirmed planet drawn from a single published reference to ensure internal consistency&mdash;i.e., to avoid having, for example, a planet radius from one paper and an equilibrium temperature from a second paper that might have used a different radius in the derivation. <em>We endeavor to strike a balance between providing the most complete set of parameters available and providing parameters with the best precision.</em></p>
+<p> If the paper with the most complete set of parameters is missing a parameter shown in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PS">Planetary Systems table</a> (PS), the table cell will be blank. To view a more  filled-in table with only one row per planet, use the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters table</a>.<strong> Note: This table provides a more complete, though not necessarily self-consistent, set of parameters</strong>. </p>
+<p>Additional  values published in other papers can be found by viewing the System Overview page for a given planet, where multiple sets of parameters can be displayed. To view System Overview page, click on the planet name in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PS">Planetary Systems table</a><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS"></a>, then scroll down to the Stellar Parameters or Planetary Parameters sections for the object. Expand the sections by clicking the plus (+) signs on the right side of the page.
+<br />
+<br />
+
+<a name="how_pick"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>3. How does the archive determine which parameter sets are  default?</h2>
+
+<p>Every confirmed planet in the Exoplanet Archive has a default set of parameters. In the pre-2020 version of the archive, the  archive's designation of a default set of parameters served a more significant role. The (now retired) Confirmed Planets table only showed the default parameter set, and the Transit and Ephemeris Service used the default parameter set as its starting point for calculating target observability. The only place  users encountered non-default parameters for a given planet was on the planet's System Overview page. </p>
+<p>In the archive's current incarnation, the default selection has significantly less impact, and has two remaining purposes. The <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PS">Planetary Systems table</a> (PS)&mdash;which replaced the Confirmed Planets table&mdash;now contains all the archived parameter sets for each confirmed planet. We provide all parameter sets to allow users to filter them according to their science needs. </p>
+<p>The first purpose of the &quot;default&quot; selection is to provide an expeditious way to filter that table down to one row per planet, for general use cases. </p>
+<p>The second purpose is as a starting point for the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PSCompPars">Planetary Systems Composite Parameters table</a> (PSCompPars); in this table, we provide a single row per planet that is as maximally filled-out with values as possible. To do this, we start with the default set of parameters and then fill in the gaps with parameters from other sets in our holdings. Read more about the PSCompPars table on the <a href="/docs/pscp_about.html">About the Planetary Systems Composite Planet Data Table  page</a>.</p>
+<p>Finally, the Transit and Ephemeris Service now uses the parameter set with the most precise ephemeris, not the default parameter set, as its starting point for calculations.</p>
+
+<p>When selecting which parameter set to make the default, archive science staff consider a number of factors:</p>
+<ul>
+
+<li><em><strong>Factor 1: The completeness of the parameter set compared to the other parameter sets&mdash;how many planet parameters are provided.</strong></em>
+<p>As a starting point for a row in the Planetary Systems Composite Data table, the more parameters that are drawn from a single, self-consistent physical solution, the less inconsistent the final row may be. For instance, if a follow-up paper provides a planet mass measurement for a previously validated planet, but no (or minimal) other planet parameters, we would ingest the planet mass value (as it meets the criteria in section (a) above) but not make the parameters from the follow-up paper the new default parameter set. The new planet mass value would be available in the Planetary Systems table and on the System Overview pages, and would fill in the previously missing planet mass value in the Planetary Systems Composite Data table; the only place it would not be available would be in a version of the Planetary Systems table filtered on the default flag.</p></li>
+<br />
+<hr />
+<div style="float: left; border:0; margin-right:50"><img src="/images/icons/warning-icon-hi.png"></div>
+<p>
+  <strong>IMPORTANT:</strong> Users should note the &quot;default&quot; value for a given parameter may not necessarily be the most <em>precise</em> value published for that parameter.</p>
+<hr />
+<br />
+<li><strong><em>Factor 2: The precision of the parameter set compared to previous holdings.</em></strong>
+<p>In the pre-2020 version of the NEA this was heavily weighted by the precision of the ephemeris, due to the Transit and Ephemeris Service use case described above, but updates to that service have reduced the weight on the ephemeris to equal with the other planet parameters. Typically a new paper will present new or extended observational data, which leads to an improvement in the precision of the derived parameters. Some papers will present a set of parameters with systematically lower precision than previous analyses but provide evidence that their analysis is an improvement (by, for instance, capturing stellar variability in a more accurate way) on previous works, and we take that into consideration as well.</p></li>
+
+<br />
+<li><em><strong>Factor 3: The consideration of large, uniformly derived data sets.</strong></em> <p>Some papers will present substantial data sets, with re-evaluation of a significant number of planets and/or parameters. A typical example is the paper published at the end of a large survey, which re-analyzes the survey data to present a final set of published parameters. As well as the completeness and precision criteria above, some additional weight is given to these parameter sets, given the scientific utility of large, uniformly derived sets of parameters.</p></li>
+</ul>
+
+<br />
+<br />
+<a name="WhenIncluded"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+
+
+<h2>4. When are planets included in the NASA Exoplanet Archive?</h2>
+
+<p><strong>A: </strong>We generally add new planets and planetary and stellar data weekly, but we sometimes skip a week for various reasons, such as scheduled maintenance on our servers or we're releasing a new service. </p>
+<br />
+<br />
+<a name="candidates"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>5. Where do I find planetary candidates in the archive?</h2>
+<p><strong>A.</strong> Data for planetary candidates found by the Kepler, K2, and TESS missions are included in the archive in the following tables:</p>
+<ul class="spaced_list">
+<li>Kepler Objects of Interest (KOI): <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">Cumulative</a> and <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">All Lists (tabbed)</a></li>
+<li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">TESS Project Candidates</a></li> 
+<li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">K2 Planets and Candidates</a></li>
+</ul>
+
+<p>Additionally, some high-profile planetary candidates not associated with a specific mission, such as Proxima Cen c and d, are added to the archive on a case-by-case basis. Data for these objects are displayed on their System Overview pages, which can be accessed from the Explore the Archive search box on our home page. </p>
+
+<p><strong>Step 1:</strong> Enter the system name on the archive home page:</p>
+<img src="/images/news/explore-archive-faq-proxcen.jpg" alt="Explore the Archive search box populated with proxima centaur c" />
+
+<p><strong>Step 2:</strong> <a href="/overview/proxima%20centauri%20c">View the System Overview page</a>:</p>
+<p><img src="/images/news/sysoverview-faq-proxcen.jpg" alt="alf Cen System Overview page showing three stars orbited by one confirmed planet, two planet candidates and one refuted planet" /> 
+<br />
+<br />
+<a name="removed"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>6. What happens to confirmed planets that are retracted or refuted?</h2>
+<p><strong>A.</strong> Confirmed planets that are later refuted in the published literature are given the disposition <strong>False Positive Planet</strong> (FPP). The objects and their data  remain on their respective System Overview pages (while flagged as FPPs) and removed from the Planetary Systems and Planetary System Composite Parameters tables. Demoted K2 objects will continue to appear in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=transitspec&constraint=plntname+like+%27WASP-96+b%27">K2 Planets and Candidates table</a> with an updated False Positive Planet disposition and they are removed from the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">K2 Confirmed Names table</a>.</p>
+
+<p>Refuted objects, as well as other targets excluded from the archive for various reasons, are listed on the <a href="/docs/removed_targets.html">Excluded Targets</a> page. Note that names of false positive planets are not re-assigned.</p>
+
+<br />
+<br />
+<a name="ContributeData"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>7. How can I contribute my data to the archive?</h2>
+
+<p><strong>A:</strong> The Exoplanet Archive welcomes contributions that meet the guidelines outlined in  <a href="/docs/contribute_data.html">How to Contribute Data to the NASA Exoplanet Archive</a>.</p>
+
+<br />
+<br />
+<a name="NumberPlanets"></a> 
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>8. Why is the number of planets in the NASA Exoplanet Archive different from other exoplanet sites like the count at the Extrasolar Planet Encyclopaedia?</h2>
+
+<p><strong>A: </strong>Each exoplanet-related site has its own criteria for including  exoplanets. The NASA Exoplanet Archive includes planets for which the planetary and orbital properties are publicly available, usually through refereed publications. We also restrict our list to those objects whose detection and planetary status is unambiguous. For more information about the archive's criteria for classifying and including planetary objects, see the <a href="/docs/exoplanet_criteria.html">Exoplanet Criteria</a> page. </p>
+
+<br />
+<br />
+<a name="stellar_multiple"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>9.  Why are the stellar parameters listed for some multiple systems different for
+different planets?</h2>
+
+<p><strong>A:</strong>  The Exoplanet Archive gives the stellar parameters used to derive the planetary parameters.  If planets within a multiple system come from different papers (e.g., Kepler-186), then the stellar parameters can vary.</p>
+
+
+<br />
+<br />
+<a name="findtransitconfirmed"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>10.  How do I find all the transiting confirmed planets?</h2>
+
+      <p><strong>A:</strong> To see a list of all transiting planets, use the Detected by Transits flag (<code>tran_flag</code>) in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems</a>  (PS) and <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters</a> (PSCompPars) tables. All transiting planets will have a value of <strong>1</strong> in this column.</p>
+
+<p>This column doesn't load in the PS and PS CompPars tables by default, so you'll need to add it:</p>
+<ol>
+<li>Click <strong>Select Columns</strong></li>
+<li>Expand the <strong>Detections</strong> sub-menu.</li>
+<li>Click the <strong>Detected by Transits</strong> checkbox.</li>
+<li>Click <strong>Update</strong>.</li>
+<li>Close the Column Controls pop-up box (click the x in the upper-right corner).</li>
+<li>Filter the newly added column by entering <strong>1</strong> in the text box.</li>
+</ol>
+
+<p>Note that some transiting planets were discovered by another method, such as RV, before they were known to transit, so using the Discovery Method column will not provide a complete list.</p>
+  <br />
+  <br />
+
+<a name="Plots"></a> 
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>11. How are the pre-generated plots created?</h2>
+
+<p><strong>A: </strong>The <a href="/exoplanetplots">pre-generated plots</a> are produced by using the currently available data within the Exoplanet Archive. Thus, whenever there is an update to the archive information, the plots are re-created to ensure they are as current as possible. This purpose of these plots is to provide to the community fast access to presentation material that describe the current state of the exoplanets field in terms of their number and our understanding of their orbital and physical characteristics. </p>
+  <br />
+  <br />
+  <a name="scrollbars"></a> 
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>12.  Why do the scroll bars in the interactive tables seem to appear and disappear intermittently?</h2>
+
+<p><strong>A:</strong> Starting with OS X   Lion, Apple changed how scroll bars appear (and disappear) by default, making them fade   away when not in active use. This can make it difficult or impossible to scroll in some interfaces, including our interactive tables. This feature is often most noticeable in web browsers, but actually affects multiple programs. To change this behavior, you must change the operating system setting to <a href="http://osxdaily.com/2011/08/03/show-scroll-bars-mac-os-x-lion/" target="_blank">always show scroll bars</a>.</p>
+  <br />
+  <br />
+ 
+ <a name="NSTED"></a> 
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div> 
+<h2>13. What happened to NStED and the stellar data it contained?</h2>
+
+<p><strong>A:</strong> The NASA Stellar and Exoplanet Database (NStED) was a stellar archive created to support NASA's goals of finding and and characterizing exoplanets (<a href="https://ui.adsabs.harvard.edu/abs/2008AAS...212.1007S/abstract" target="_blank">Stauffer et al. 2008</a>). NStED was discontinued in 2011 and replaced with the NASA Exoplanet Archive, which launched on December 5, 2011. All of NStED's exoplanet data were retained and moved to the NASA Exoplanet Archive, as well the stellar parameters for exoplanet host stars and some hosted data sets. See our <a href="/docs/holdings.html">Holdings page</a> for a more complete list of the data served by the Exoplanet Archive.</p>
+<br />
+<br />
+<a name="cit-sci"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>14. Can I use the archive to do citizen science?</h2>
+  
+<p><strong>A:</strong> The Exoplanet Archive is not designed as a citizen science project, but all data contained in the archive have been published and can be used for additional research with the appropriate acknowledgements. Information on exoplanet citizen science projects can be found at the following sites:</p> 
+<ul>
+<li><a href="https://exoplanets.nasa.gov/exoplanet-watch/about-exoplanet-watch/overview/" target="_blank">NASA's Exoplanet Watch</a> uses small telescopes to observe transiting exoplanets (you don't need your own telescope to participate).</li>
+<li><a href="https://www.zooniverse.org/projects/marckuchner/planet-patrol/" target="_blank">Planet Patrol</a> identifies which planet candidates from the TESS mission are real.</li>
+<li><a href="https://www.zooniverse.org/projects/ssilverberg/disk-detective" target="_blank">Disk Detective</a> spots the disks around nearby stars where planets form.</li>
+<li><a href="https://www.zooniverse.org/projects/nora-dot-eisner/planet-hunters-tess/" target="_blank">Planet Hunters TESS</a> for finding planets in TESS mission data.</li>
+<li><a href="https://scistarter.org/panoptes" target="_blank">Project PANOPTES</a> build and use a robotic telescope.</li>
+<li><a href="https://www.zooniverse.org/projects/marckuchner/backyard-worlds-planet-9" target="_blank">Backyard Worlds: Planet 9</a> searches for brown dwarfs and planets beyond Neptune.</li>
+</ul>
+<p>More exoplanet-related citizen science programs are listed on <a href="https://science.nasa.gov/exoplanets/citizen-science/" target="_blank">NASA's website</a>.</p>
+
+
+<br />
+<br />
+<a name="ttv"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>15. Why are there confirmed planets discovered by transit timing variations (TTV) that do not have their TTV flag set? </h2>
+
+<p><strong>A:</strong> Non-transiting planets discovered via the transit timing variations of another planet in the system will not have their TTV flag set since they do not themselves demonstrate TTVs.</p>
+
+
+<br />
+<br />
+<a name="tips"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>16. How can I keep track of what is in the archive?</h2>
+<p><strong>A.</strong> In addition to providing extensive <a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&amp;startdoc=item_1_01">user documentation</a> in the form of user guides for tools and services and data release documentation, the archive announces tools and data updates on the homepage roughly every two weeks. News items are shared on NExScI's <a href="https://www.facebook.com/NExScI" target="_blank">Facebook</a> and <a href="https://x.com/NExScI_IPAC" target="_blank">X</a> (formerly Twitter)accounts, as well as our <a href="/docs/connect.html" target="_blank">email newsletter</a>. All news posted to our home page is <a href="/docs/exonews_archive.html">archived on the website</a>. Updates and enhancements to tools and services are also reported in the <a href="/docs/docs/ps-pscp_release_notes.html">Archive 2.0 release notes</a>.</p>
+  <br />
+  <br />
+  <a name="validated"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>  
+  <h2>17. How can I tell the difference between validated and confirmed planets in the archive?</h2>
+  
+  <p><strong>A.</strong> All planets added to the Exoplanet Archive are categorized as confirmed according to the archive's <a href="/docs/exoplanet_criteria.html">exoplanet criteria</a>. There is not a separate disposition for validated planets. Given that planets are predominately confirmed using mass measurements, planets in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters</a> table with calculated masses are typically validated planets.</p>
+  <br />
+  <br />
+  
+  <a name="letter"></a>
+  <h2>18. Why did my planet get assigned a letter?</h2>
+  <div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+  <p><strong>A.</strong> All confirmed and validated planets in the NASA Exoplanet Archive are assigned a lowercase letter, which captures their status as a planet. Letters are assigned alphabetically, starting from b, typically in the order the planets are published. Since this is the convention of the field, typically planets are published with a letter, and the NASA Exoplanet Archive will use the published letter unless it conflicts with a different planet in the same system having been previously published under that letter. At that point we will assign the next available letter, alphabetically, and confirm with the authors  we have done so. Where possible, we encourage authors to assign their confirmed and validated planets' letters upon publication, taking care to ensure they are not reusing previously published letters in the same system.</p>
+  
+  <p>Note: Planet letters are not displayed by default in the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems</a> and <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Data</a> tables. To add the Planet Letter column to either table:</p>
+  <ol>
+    <li>Click the <strong>Select Columns</strong> button in the upper-left corner of the table.</li>
+    <li>Check the box next to <strong>Planet Letter</strong>.</li>
+    <li>Click the <strong>Update</strong> button.</li>
+    <li>Click the <strong>x</strong> in the upper-right corner of the pop-up box to close it.</li>
+    <li>View the added column in the table (third column from the left) </li>
+</ol>
+  <p><img src="/images/help/planetletter-gif.gif" alt="this animated gif demonstrates how to add a column to the interactive table"></p>
+  
+<a name="stellartic"></a>
+  <h2>19. Why are some stellar distances incorrect or missing in the archive?</h2>
+  <div style="float: right; border:0;"><a href="#">Top</a>
+</div>  
+
+<p><strong>A:</strong> We use the <a href="https://ui.adsabs.harvard.edu/abs/2019AJ....158..138S/abstract" target="_blank">TESS Input Catalog (TIC)</a> as our point source catalog, including positions, parallaxes, distances, proper motions and photometry. These values are presented as published, so any errors or omissions in the TIC are reproduced in the NASA Exoplanet Archive values. In the future, we will supplement many columns in the TIC with updated <a href="https://www.cosmos.esa.int/web/gaia/data-release-4" target="_blank">Gaia DR4</a> values.</p>  
+<br />
+<br />
+ 
+<h1>Dataset-related Questions</h1>
+
+<a name="TCE"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>1. What is a TCE?</h2>
+
+<p><strong>A:</strong> TCE stands for Threshold Crossing Event and is identified by the Kepler pipeline.  A Threshold Crossing Event (TCE) is a sequence of transit-like features in the flux time series of a given target that resembles the signature of a transiting planet to a sufficient degree that the target is passed on for further analysis.  For more information, see the <a href="/docs/KeplerMission.html"> Kepler documentation list</a>.  The interactive TCE table is available <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">here</a>. </p>
+
+<br />
+<br />
+<a name="KOI"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>2. What is a KOI and how is it different from a Kepler Planetary Candidate?</h2>
+
+<p><strong>A:</strong> KOI stands for Kepler Object of Interest.  KOIs are identifed from the list of <a href="#TCE">TCEs</a> for further study. Some KOIs will be classified as false positives, while others will be classified as planetary candidates.  Starting with the analysis of quarter 1 to 12 data (Q1-12), the Kepler project is providing the community with the KOI list during the vetting process, so dispositions of a given KOI may change as more information is obtained or more analysis performed.
+For more information, including a list of all KOI tables, see the <a href="/docs/KeplerMission.html"> Kepler documentation list</a>. The cumulative KOI table is available <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">here</a>.</p>
+
+<br />
+<br />
+<a name="KeplerNumber"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>3. How are Kepler and K2 numbers assigned? </h2>
+
+<p><strong>A:</strong> Information on the assignment of Kepler numbers to confirmed or validated planets is available on the <a href="/docs/KeplerNumbers.html">Kepler Numbers</a> page; there is a <a href="/docs/K2Numbers.html">similar policy</a> on requesting names for K2 planets and candidates. </p>
+<p>Lists of all Kepler and K2 numbers and their corresponding KOI numbers or EPIC IDs is available as in the  <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">Kepler Confirmed Names table</a> and <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">K2 Confirmed Names table</a>.</p>
+
+ <br />
+<br />
+<a name="tablevalues"></a>
+</p><div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>4. Why are values for the KOI planetary radius (orbital period, etc.) different
+between the Planetary Systems table and the KOI table? </h2>
+
+<p><strong>A:</strong> Parameter values in the Planetary Systems (and Planetary Systems Composite Data) tables come from the published literature, while parameter values in the KOI table came from the Kepler pipeline.  Therefore, KOIs that have been published as confirmed or
+validated planets often have different parameter values in these tables.
+</p>
+
+<br />
+<br />
+<a name="Keplertable"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>5.  Why aren't all confirmed Kepler planets in the KOI table? </h2>
+
+<p><strong>A:</strong> The KOI table was produced by the Kepler project based on the process described
+<a href="/docs/ExoPlanArchPhilosophy.html">here</a>.  Some confirmed planets, for instance the circumbinary planets (such as Kepler-16 B b), were identified outside of the Kepler project or by other means and are not in the KOI table.  Confirmed or validated planets in published papers will be included in the Planetary Systems tables regardless of their status in the KOI table.  To view a list of all Kepler numbers and their corresponding KOI, consult the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">Kepler Confirmed Names table</a>.</p>
+
+
+
+<br />
+<br />
+<a name="koinotintbl"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>6.  Some confirmed planets have KOI numbers that are not included in the KOI table. Why is this?</h2>
+
+<p><strong>A:</strong> Some of these planets have KOIs that were assigned early in the Kepler mission when
+candidates were identified by hand, but these candidates were not identified by the pipeline processing that was later used to generate TCE and KOI lists. Other KOI numbers, particularly those with decimal numbers of 10 and above (e.g., KOI 244.10) were not assigned by the Kepler project, but are often used by authors to denote non-transiting planets in Kepler systems with known transiting planets or candidates.</p>
+
+<br />
+<br />
+<a name="swasp"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>7. Why can't I find a particular WASP light curve in the archive?</h2>
+
+
+<p><strong>A:</strong> The archive hosts data from the <a href="cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">first WASP public data release</a> that were acquired from 2004 to 2008. Not all confirmed WASP planet light curves were made available in the initial release, but may be included in future releases.</p>
+
+<br />
+<br />
+<a name="koi_radii"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>8.  Why do some objects have very large radii in the KOI table, but much smaller radii in the Planetary Systems table for the same planet?</h2>
+
+<p><strong>A:</strong> The values in the  Planetary Systems tables come from three major sources: the peer-reviewed literature, the Kepler planetary candidate list, and the TESS planetary candidate list.  The Solution Type (<code>soltype</code>) column indicates to which of these three sources the solution belongs:  <strong>Published Confirmed</strong>, <strong>Kepler Project Candidate</strong> or <strong>TESS Project Candidate</strong>.</p>
+
+<p>The planetary parameter values in the KOI table, including the radius, were supplied by the Kepler project from their pipeline and fitting procedures. To maintain a consistently constructed catalog, planetary candidates are not excluded from the KOI table based on their parameter values, even when those values are obviously problematic. The possible issues with these values are discussed in <a href="https://ui.adsabs.harvard.edu/abs/2015ApJS..217...31M/abstract" target="_blank">Mullally et al. 2015</a>, particularly Section 7.</p>
+
+
+<br />
+<br />
+<a name="kelt"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+ 
+<h2>9.  What is the difference between the KELT and KELT-Praesepe data sets?</h2>
+<p><strong>A</strong> Prior to May 4, 2015, the archive contained a  KELT data set that was specifically the Praesepe field, though it was referred to as "KELT" in the archive. We have since released a larger KELT data set, so <a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">KELT now refers to the larger data set</a> and the older, smaller data set is  referred to as <a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">KELT-Praesepe</a>.</p>
+
+<br />
+<br />
+<a name="kepler452b"></a>
+<div style="float: right; border:0;"><a href="#">Top</a>
+</div>
+<h2>10. What is the status of Kepler-452 b in the archive?</h2>
+<p><strong>A.</strong> Kepler-452 b is currently considered a planet and its data are <a href="/overview/kepler-452">still available in the archive</a>. The archive's official position regarding this particular target is documented <a href="/docs/kepler452b.html">here</a>.</p>
+
+ <br />
+ <br />
+ 
+<p>Last update: 1 July 2026</p>
+
+</div> <!-- end docs -->
+
+
+<div id="logoBox" class="tbox">
+  <p><a href="http://www.nasa.gov" title="National Aeronautics and Space Administration">
+        <img src="/images/logos/NASA_small.jpg" alt="NASA" width="87" height="75"/></a>
+
+    <a href="http://www.ipac.caltech.edu" title="Infrared Processing and Analysis Center">
+        <img src="/images/logos/IPAC_small.jpg" alt="IPAC" width="139" height="75" /></a>
+    <a href="http://nexsci.caltech.edu" title="NASA Exoplanet Science Institute">
+        <img src="/images/logos/logo_nexsci.gif" alt="NExScI" /></a>
+     <a href="http://www.caltech.edu" title="California Institute of Technology">
+        <img src="/images/logos/Caltech_LOGO-Orange_PMS165.jpg" alt="Caltech" width="25%" /></a></p>
+
+</div> <!-- end tbox div -->
+
+
+<div id="footerMenu" class="hbox">
+         <div class="home_box">
+           <a href="/index.html">Home</a>
+         </div>
+       
+         <div class="archive_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/about.html">About Us</a>
+         </div>
+       
+         <div class="data_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/data.html">Data</a>
+         </div>
+       
+         <div class="tool_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/tools.html">Tools</a>
+         </div>
+       
+         <div class="help_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/help.html">Support</a>
+         </div>
+           
+         <div class="clear"></div>
+</div> <!-- end hbox -->
+
+
+
+</div> <!-- end b2box -->
+</div> <!-- end bbox -->
+</body>
+</html>

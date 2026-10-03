@@ -1,0 +1,24 @@
+{
+  "retrieved_by": "owner (agent does not fetch)",
+  "verified_on": "2026-10-03",
+  "sources": [
+    {
+      "id": "nea-ps",
+      "table": "ps",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name%2chostname%2cpl_letter%2cdefault_flag%2csoltype%2cpl_controv_flag%2cpl_refname%2cst_refname%2cpl_pubdate%2creleasedate%2crowupdate%2cpl_rade%2cpl_radeerr1%2cpl_radeerr2%2cpl_radelim%2cpl_bmasse%2cpl_bmasseerr1%2cpl_bmasseerr2%2cpl_bmasselim%2cpl_bmassprov%2cpl_orbsmax%2cpl_orbsmaxerr1%2cpl_orbsmaxerr2%2cpl_orbsmaxlim%2cpl_insol%2cpl_insolerr1%2cpl_insolerr2%2cpl_insollim%2cpl_eqt%2cpl_eqterr1%2cpl_eqterr2%2cpl_eqtlim%2cst_rad%2cst_raderr1%2cst_raderr2%2cst_radlim%2cst_mass%2cst_masserr1%2cst_masserr2%2cst_masslim%2cst_teff%2cst_tefferr1%2cst_tefferr2%2cst_tefflim+from+ps+order+by+pl_name&format=csv",
+      "expected_rows": 40194,
+      "format": "csv",
+      "notes": "NASA Exoplanet Archive Planetary Systems table: every published parameter set (all rows, not only default_flag=1). Row count observed 2026-10-03; it grows as papers are added, so record the actual count in the MANIFEST. Cite DOI 10.26133/NEA12 with access date and row count. Probe with TOP 200 returned HTTP 200 on 2026-10-03; full CSV estimated ~21 MB.",
+      "query_adql": "select pl_name,hostname,pl_letter,default_flag,soltype,pl_controv_flag,pl_refname,st_refname,pl_pubdate,releasedate,rowupdate,pl_rade,pl_radeerr1,pl_radeerr2,pl_radelim,pl_bmasse,pl_bmasseerr1,pl_bmasseerr2,pl_bmasselim,pl_bmassprov,pl_orbsmax,pl_orbsmaxerr1,pl_orbsmaxerr2,pl_orbsmaxlim,pl_insol,pl_insolerr1,pl_insolerr2,pl_insollim,pl_eqt,pl_eqterr1,pl_eqterr2,pl_eqtlim,st_rad,st_raderr1,st_raderr2,st_radlim,st_mass,st_masserr1,st_masserr2,st_masslim,st_teff,st_tefferr1,st_tefferr2,st_tefflim from ps order by pl_name"
+    },
+    {
+      "id": "nea-pscomppars",
+      "table": "pscomppars",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name%2chostname%2cpl_letter%2cpl_controv_flag%2cpl_rade%2cpl_radeerr1%2cpl_radeerr2%2cpl_radelim%2cpl_rade_reflink%2cpl_bmasse%2cpl_bmasseerr1%2cpl_bmasseerr2%2cpl_bmasselim%2cpl_bmassprov%2cpl_bmasse_reflink%2cpl_orbsmax%2cpl_orbsmaxerr1%2cpl_orbsmaxerr2%2cpl_orbsmaxlim%2cpl_orbsmax_reflink%2cpl_insol%2cpl_insolerr1%2cpl_insolerr2%2cpl_insollim%2cpl_insol_reflink%2cpl_eqt%2cpl_eqterr1%2cpl_eqterr2%2cpl_eqtlim%2cpl_eqt_reflink%2cst_rad%2cst_raderr1%2cst_raderr2%2cst_radlim%2cst_rad_reflink%2cst_mass%2cst_masserr1%2cst_masserr2%2cst_masslim%2cst_mass_reflink%2cst_teff%2cst_tefferr1%2cst_tefferr2%2cst_tefflim%2cst_teff_reflink+from+pscomppars+order+by+pl_name&format=csv",
+      "expected_rows": 6375,
+      "format": "csv",
+      "notes": "NASA Exoplanet Archive Planetary Systems Composite Parameters: one row per planet, values mixed across references; each value has a <param>_reflink column (may be the literal \"Calculated Value\"). This table has no rowupdate column (including it returns HTTP 400). Cite DOI 10.26133/NEA13. Probe with TOP 200 returned HTTP 200 on 2026-10-03; full CSV estimated ~7 MB.",
+      "query_adql": "select pl_name,hostname,pl_letter,pl_controv_flag,pl_rade,pl_radeerr1,pl_radeerr2,pl_radelim,pl_rade_reflink,pl_bmasse,pl_bmasseerr1,pl_bmasseerr2,pl_bmasselim,pl_bmassprov,pl_bmasse_reflink,pl_orbsmax,pl_orbsmaxerr1,pl_orbsmaxerr2,pl_orbsmaxlim,pl_orbsmax_reflink,pl_insol,pl_insolerr1,pl_insolerr2,pl_insollim,pl_insol_reflink,pl_eqt,pl_eqterr1,pl_eqterr2,pl_eqtlim,pl_eqt_reflink,st_rad,st_raderr1,st_raderr2,st_radlim,st_rad_reflink,st_mass,st_masserr1,st_masserr2,st_masslim,st_mass_reflink,st_teff,st_tefferr1,st_tefferr2,st_tefflim,st_teff_reflink from pscomppars order by pl_name"
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>How the Archive Calculates Values in the Planetary Systems Composite Parameters Table</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/fixed.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/docs.css" />
+	<script type="text/javascript" src="/js/local/util.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+
+<body>
+<div id="MathJax_Message" style="display: none;"></div>
+	<div class="bbox">
+	<div class="b2box">
+
+<!-- begin drop down menu banner -->
+<!-- START EXO_BANNER.HTML -->
+<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/css/menu_icons.css" />
+
+<script type="text/javascript" src="/js/navigation.js"></script>
+
+<div id="banner">
+ <a href="/index.html"><img src="/images/nsted_banner.jpg" alt="Exoplanet Archive banner" /></a>
+</div> <!-- end banner -->
+
+<!-- begin navigation.html -->
+<nav id="exo-hrmenu" class="exo-hrmenu" aria-label="Primary">
+   <ul role="list">
+      <li>
+         <a href="/index.html">Home</a>
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-about" href="/docs/about.html">About Us</button>
+         <div class="exo-hrsub" id="exo-hrsub-about">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/intro.html">
+                         <i class="exoplanet-icon-book-borderless"></i>
+                         Overview</a></li>
+                     <li><a href="/docs/holdings.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Holdings</a></li>
+                     <li><a href="/docs/counts_detail.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Exoplanet Counts</a></li>
+                     <li><a href="/docs/users_group.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         User Panel</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/faq.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         FAQ</a></li>
+                     <li><a href="/docs/acknowledge.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Acknowledgements</a></li>
+                     <li><a href="/docs/privacy.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Privacy Notice</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-data" href="/docs/data.html">Data</button>
+         <div class="exo-hrsub" id="exo-hrsub-data">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <h4>Planetary Systems</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems Composite Data</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Stellar Hosts</a></li>
+                     <li><a href="/cgi-bin/atmospheres/nph-firefly?atmospheres">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Atmospheric Spectroscopy</a></li>
+                    <li><a href="/cgi-bin/observations/nph-firefly?data">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         NExoList </a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Microlensing Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=directimaging&constraint=immodeldef=1">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Direct Imaging Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Transiting Planets</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Kepler</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (Cumulative List)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (All Lists)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score>0.3">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Positional Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         False Positive Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                        Certified False Positives</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Threshold-Crossing Events</a></li>
+                     <li><a href="/docs/Kepler_completeness_reliability.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Completeness and Reliability</a></li>
+                     <li><a href="/docs/KeplerSimulated.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Simulated Data</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Kepler Stellar</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Kepler Confirmed Names</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Transit Surveys</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TESS Project Candidates</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=k2targets">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         K2 Targets</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Planets and Candidates</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Confirmed Names</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_astero_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRot Astero-Seismology</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_exo_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRoT Exoplanet</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         SuperWASP Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         KELT Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KELT Praesepe</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/XO">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         XO</a></li>
+                     <li><a href="/applications/ETSS/HATNet_index.html">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HATNet</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/Cluster">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Cluster</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/TrES">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TrES</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Other</h4>
+                  <ul role="list">
+                      <li><a href="/cgi-bin/observations/nph-firefly?datta">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         JWST Observations</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         UKIRT Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/MOA/nph-firefly?MOA">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         MOA Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/ROME/nph-firefly?data&filter=True">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         ROME/REA Microlensing Survey</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=gjstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Gliese-Jahreiss Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=DI_STARS_EXEP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HWO ExEP Precursor Science Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=missionstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=mission_exocat">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars+ExoCat</a></li>
+                     <li><a href="/cgi-bin/FDL/nph-fdl">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Frontier Development Lab Datasets</a></li>
+                     <li><a href="/cgi-bin/CUBESAT/nph-cubesat?cute">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         CUTE Mission</a></li>
+                     <li><a href="/docs/ASTERIAMission.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ASTERIA Mission</a></li>
+                     <li><a href="/docs/contributed_data.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         Contributed Data Sets</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Tables Search and File Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+            &nbsp;<p/><center><i class="exoplanet-icon-table-borderless"></i>&nbsp;&nbsp; <i>Full table display</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="exoplanet-icon-search-borderless"></i>&nbsp;&nbsp;<i>Database search</i></center><p/>
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-tools" href="/docs/tools.html">Tools</button>
+         <div class="exo-hrsub" id="exo-hrsub-tools">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/Inventory/search.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Explore the Archive</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Table Search and File Upload</a></li>
+                     <li><a href="/cgi-bin/TransitView/nph-visibletbls?dataset=transits">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Transit and Ephemeris Service</a></li>
+                     <li><a href="/cgi-bin/CalcQty/nph-calcqty">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Predicted Observables for Exoplanets (POE)</a></li>
+                     <li><a href="/cgi-bin/Pgram/nph-pgram">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Periodogram</a></li>
+                     <li><a href="/ScatterPlot/?config=scatter&table=PS_output.csv&columns=PS_columns.tbl&theme=pres&x=pl_orbper&y=pl_bmassj&symbol-color=discoverymethod&symbol-size-min=8&legendpos=bottomright&link=1">
+                         <i class="exoplanet-icon-plot-simple-borderless"></i>&nbsp;
+                         Confirmed Planets Plotting Tool</a></li>
+                     <li><a href="/cgi-bin/ExoFAST/nph-exofast">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         EXOFAST: Transit and RV Fitting</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="https://astrofetch.ipac.caltech.edu" target="_blank">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         AstroFetch AI</a></li>
+                     <li><a href="/docs/TAP/usingTAP.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                        Table Access Protocol (TAP) Interface</a></li>
+                     <li><a href="/docs/program_interfaces.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                         Application Programming Interface (API)</a></li>
+                     <li><a href="/bulk_data_download">
+                         <i class="exoplanet-icon-download-borderless"></i>&nbsp;
+                         Bulk Data Download</a></li>
+                     <li><a href="https://exofop.ipac.caltech.edu/">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ExoFOP</a></li>
+                     <li><a href="/exoplanetplots/">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Pre-generated Plots</a></li>
+                    <li><a href="/support/upload_param/">
+                         <i class="exoplanet-icon-upload-borderless"></i>&nbsp;
+                         Published Data Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-support" href="/docs/help.html">Support</button>
+         <div class="exo-hrsub" id="exo-hrsub-support">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&startdoc=item_1_01">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Documentation Index</a></li>
+                     <li><a href="/docs/KeplerMission.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Kepler Documentation</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/connect.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Social Media and Newsletter</a></li>
+                     <li><a href="/applications/Helpdesk" target="_blank">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Contact Us</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" id="loginID" aria-live="polite" style="appearance: none; background: none; border: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; padding: 3px 1.5em;">-</button>
+      </li>
+  </ul>
+</nav>
+<!-- end navigation.html -->
+
+<!-- END EXO_BANNER.HTML -->
+
+<!-- end drop down menu banner -->
+<div class="docs">
+
+
+<h1>How the Archive Calculates Values in the Planetary Systems Composite Parameters Table</h1>
+ 
+<p>The <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters</a>
+(PSCompPars) table uses data and empirically derived relationships from the 
+literature to create a near-comprehensive database of key physical 
+parameters for all confirmed exoplanets and their host stars. While the 
+full set of parameters for a given system may not be internally 
+consistent, as parameter values are often drawn from multiple 
+references, this table allows users to explore overarching demographic 
+properties. Here, we describe the underlying logic and formulae used to 
+generate this table.</p>
+ 
+
+
+<h2>Table Population Using Empirical Data from the Literature</h2>
+
+<p>The population of the Planetary Systems Composite Parameters Table  differs in one significant way from that of the  <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+Planetary Systems (PS) table</a>. In the PS table, all ingested planetary solutions are available with each row representing one reference per solution for each planet. As such, any one planet may have multiple entries in the table, but each row only represents one self-consistent solution as published in the original reference. However, any one row may have many parameters with no values, as those values were not published with the self-consistent set of planetary and stellar parameters.</p>
+
+<p>By contrast, the goal of the PSCompPars table is to provide users with a table that is as complete as possible with a single row of data per planet. This indicates the PSCompPars table will necessarily include parameters from a variety of references for a given planet, indicating the set of reported parameter values may not be internally or physically self-consistent. But, unlike the PS table, there will be only one row per planet in the PSCompPars table.</p>
+
+<p>The following info graphic illustrates the differences between the Planetary Systems and Planetary Systems Composite Parameters tables: (<em>Click to enlarge</em>)</p>
+<p><a href="/images/help/ps-pscp-graphic.png"><img src="/images/help/ps-pscp-graphic.png" width="80%"></a></p>
+
+<h2>General Algorithm for Selection of Empirical Parameter Values</h2>
+
+<p>The decision tree for populating a given parameter for a given planet
+ in the Planetary Systems Composite Parameters table with a value from the literature is as 
+follows: </p>
+<p><strong>If, for a given parameter for a given planet...</strong></p>
+
+<ol class="spaced_list">
+  <li>...a value exists and that value is attributed to the default reference in the Planetary Systems table, use that value.</li>
+<li>...there does <em>not</em> exist a value attributed to the default 
+reference in the Planetary Systems table, use the value for that 
+parameter that has the smallest absolute uncertainty. In the case of 
+asymmetric uncertainties, average the uncertainties to estimate the 
+absolute uncertainty.</li>
+<li>...there does <em>not</em> exist a value attributed to the default 
+reference in the Planetary Systems table and multiple parameter values 
+have equal absolute uncertainties, use the parameter value from the most
+ recent publication.</li>
+</ol>
+
+<h2>Table Population Using Physically Motivated Mathematical Relationships</h2>
+
+<p>Here we describe and explicitly list the formulae used to calculate 
+values for certain planetary or stellar parameters, using the 
+empirically determined values of other parameters reported in the 
+Planetary Systems Composite Parameters table as input. </p>
+<p>But first, a few notes about our 
+  parameter value calculations:</p>
+<ul class="spaced_list">
+  <li>We do not calculate a given parameter value if at least one of the
+ input parameter values required for the calculation is a limit and not a
+ central value.</li>
+  <li>We do not report uncertainties for any parameter value that has been calculated.</li>
+  <li>The associated reference column for a parameter value that has 
+been calculated reads "Calculated Value," as it is not tied to a 
+literature reference.</li>
+</ul>
+
+<h3>Angular Separation $\rho_{\mathrm{sep}}$</h3>
+
+<p>For planets for which the archive has values for both distance to the system, $d$, and orbital semi-major axis, $a$, but not an angular separation, $\rho_{\mathrm{sep}}$, we calculate the angular separation as
+$$\rho_{\mathrm{sep}} = a/d.$$</p>
+
+<p>Here, $\rho_{\mathrm{sep}}$ represents the angle subtended by an arc the length of the semi-major axis in the plane of the sky at the distance of the system. In the case of a circular orbit, this is equal to both the
+angular projected semi-major axis and the maximum angular separation
+of the planet from its host star.</p>
+
+<p>Note that values from the literature may represent closely related but distinct physical quantities&mdash;for example, the measured angular separation at a given epoch (which may vary significantly over time), or the maximum possible projected angular separation, which for eccentric orbits depends on the orientation of the orbit and may not be the same as the value that we calculate. If in doubt, refer to the original data source for further information.</p>
+
+
+
+<h3>Planet Radius $R_{p}$</h3>
+
+<p>For planets that do have an empirically determined value for the planet mass $M_{p}$ but do not have an empirically determined value for the planet radius $R_{p}$, regardless of whether the planet has an empirically determined planet density $\rho_{p}$, we  invoke the mass-radius relation of Chen &amp; Kipping (2017) to derive the planet radius $R_{p}$. Chen &amp; Kipping (2017) define a four-term piecewise power law function that spans the masses of all planetary objects in the NASA Exoplanet Archive. The form for deriving a planet radius $R_{p}$, given a planet mass $M_{p}$, is the following:</p>
+
+$$ \mathcal{R} = \mathcal{C} + \mathcal{M} \times \mathcal{S},~{\rm where} $$
+
+$\mathcal{R}$ = log$_{10}$($R_{p}$/$R_{\oplus}$), $\mathcal{C}$ = a constant term (in log$_{10}$ units), $\mathcal{M}$ = log$_{10}$($M_{p}$/$M_{\oplus}$), $\mathcal{S}$ = the slope of the power-law relation,  $R_{\oplus}$ represents the radius of the Earth, and $M_{\oplus}$ represents the mass of the Earth. We use the following parameters, which are provided in their Table 2 (or derived thereof), to compute a planet radius $R_{p}$ given an input, empirically determined planet mass $M_{p}$:
+
+$$
+
+\{\mathcal{C};~\mathcal{S}\} =
+
+\begin{cases}
+
+\{0.00346; \hspace{3.5mm} 0.2790\} & \text{if}~~~M_{p} < 2.04 M_{\oplus}   \\
+
+\{-0.0925; \hspace{2.5mm} 0.589\} & \text{if}~~~2.04 \le M_{p} / M_{\oplus} < 132   \\
+
+\{1.25; \hspace{6.2mm} -0.044\} & \text{if}~~~132 \le M_{p} / M_{\oplus} < 26600   \\
+
+\{-2.85; \hspace{6.2mm} 0.881\} & \text{if}~~~M_{p} \ge 26600 M_{\oplus}.
+
+\end{cases}
+
+$$
+
+<h3>Planet Mass $M_{p}$</h3>
+
+<p>For planets that do have an empirically determined value for the planet radius $R_{p}$ but do not have an empirically determined value for the planet mass $M_{p}$, regardless of whether the planet has an empirically determined planet density $\rho_{p}$, we rearrange the form of the mass-radius relation presented in Chen &amp; Kipping (2017) (and reproduced above) to provide a radius-mass relation. The form for deriving a planet mass $M_{p}$, given a planet radius $R_{p}$, is the following:</p>
+
+$$ \mathcal{M} = (\mathcal{R} - \mathcal{C}) / \mathcal{S}. $$
+
+<p>However, it is crucial to note that, since the third term of the mass-radius relation has a negative slope (i.e., $\mathcal{S} < 0$), there exists a regime of planet radius $R_{p}$ for which a given planet radius $R_{p}$ does not uniquely map into a single planet mass $M_{p}$. This inherently degenerate regime spans approximately ${11.1 \le R_{p} / R_{\oplus} \le 14.3}$. We thus abstain from calculating a planet mass $M_{p}$ in this regime, which spans multiple orders of magnitude (in planet mass $M_{p}$). The resulting piecewise function is thus:</p>
+
+$$
+
+\{\mathcal{C};~\mathcal{S}\} =
+
+\begin{cases}
+
+\{0.00346; \hspace{3.5mm} 0.2790\} & \text{if}~~~R_{p} < 1.23 R_{\oplus}   \\
+
+\{-0.0925; \hspace{2.5mm} 0.589\} & \text{if}~~~1.23 \le R_{p} / R_{\oplus} < 11.1   \\
+
+\{-2.85; \hspace{6.2mm} 0.881\} & \text{if}~~~R_{p} \ge 14.3 R_{\oplus}.
+
+\end{cases}
+
+$$
+
+<h3>Planet Density $\rho_{p}$</h3>
+
+<p>For planets for which the archive has both the planetary radius $R_{p}$ and the planetary mass $M_{p}$, but for which the archive does not have a planet density $\rho_{p}$, the density is calculated  from the mass and volume of the planet, assuming the planet is a sphere. The explicit functional form is:</p>
+
+  <p>  $$ \rho_{p} = 3M_{p} / (4\pi R_{p}^{3}). $$  </p>
+
+<h3>Stellar Luminosity $L_{*}$</h3>
+
+<p>For host stars for which the archive has both the stellar radius $R_{*}$ and the stellar effective temperature $T_{\rm eff}$, but for which the archive does not have a stellar luminosity $L_{*}$, we use the Stefan-Boltzmann Law. The explicit functional form is:</p>
+
+ <p>  $$ L_{*} = 4\pi R_{*}^{2} \sigma T_{\rm eff}^{4}. $$  </p>
+
+<h3>Planet Equilibrium Temperature $T_{\text{eq}}$</h3>
+
+<p>For planets for which the archive has both the stellar radius, R<sub>*</sub>, stellar effective temperature, T<sub>eff</sub>, and semi-major axis, a, but for which the archive does not have a planet equilibrium temperature, T<sub>eq</sub>, the equilibrium temperature is calculated using:</p>
+      
+   <p>$$T_{eq} = T_{\star} \sqrt{\frac{R_{\star}}{a}} \left( \frac{1}{4} \right)^{\frac{1}{4}}$$</p>
+   
+      <p>where R<sub>*</sub>  and a must have the same units (here both converted to km using IAU standards). </p>
+      
+      
+<h3>Planet Insolation Flux S</h3>  
+      
+<p>For planets for which the archive has both the stellar luminosity, L<sub>*</sub> , and semi-major axis, a, but for which the archive does not have the planet insolation flux, S, the insoluation flux is calculated using:</p>
+      
+<p>$$\frac{S}{S_{\oplus}} = \left( \frac{L_{\star}}{L_{\odot}} \right) \left( \frac{AU}{a} \right)^2$$</p>      
+
+<h3>Planet Transmission Spectroscopy Metric TSM</h3>
+      
+<p>We calculate a transmission spectroscopy metric, TSM, for every planet in the archive that is detected by transits, and when the planet equilibrium temperature, planet mass, planet radius, stellar radius, and host star apparent J-band magnitude are available, using the formula given in Equation 1 of <a href="https://ui.adsabs.harvard.edu/abs/2018PASP..130k4401K/exportcitation" target="_blank">Kempton et al. (2018)</a>.</p>
+    
+<p>$$TSM = (\text{scale factor}) \times \frac{{R_p}^3 T_{eq}}{M_p {R_{\star}}^2} \times 10^{-m_J/5}$$</p>
+
+<p>where Rp and Mp are in Earth masses, R<sub>*</sub> is in solar radii, and the scale factor is chosen based on the planet's radius using the following:</p>
+
+<p>scale factor = 0.19 for Rp &lt; 1.5 R_earth</p>
+
+<p>scale factor = 1.26 for 1.5 &lt; R<sub>p</sub>  &lt; 2.75</p> 
+
+<p>scale factor = 1.28 for 2.75 &lt; R<sub>p</sub> &lt; 4.0</p> 
+
+<p>scale factor = 1.15 for R<sub>p</sub> &gt; 4.0 </p>  
+      
+<h3>Planet Emission Spectroscopy Metric ESM</h3>
+      
+<p>We calculate an emission spectroscopy metric, ESM, for every planet in the archive when the planet equilibrium temperature, planet radius, stellar radius, and apparent K-band magnitude of the host star are available, using Equation 4 in <a href="https://ui.adsabs.harvard.edu/abs/2018PASP..130k4401K/exportcitation" target="_blank">Kempton et al. (2018)</a>.<br />
+
+      
+<p>$$ESM = 4.29 \times 10^6 \times \frac{B_{7.5}(T_{day})}{B_{7.5}(T_{\star})} \times \frac{R_p}{R_{\star}} \times 10^{-m_K/5}$$</p>      
+
+
+<p>As we do not track the dayside temperature of the planet, we make the same assumption as suggested in Kempton et al. (2018) and assume Tday = 1.1xTeq. B7.5 refers to Planck’s function evaluated for a given temperature at a representative wavelength of 7.5 &micro;m. </p>      
+
+<hr />
+<div style="float: left; border:0; margin-right:50"><img src="/images/icons/warning-icon-hi.png"></div>
+<p>
+  <blockquote><font color="#EB0000"><strong>Note:</strong></font> ESMs are calculated for all planets in the archive, even non-transiting planets that do not eclipse their host stars, since some may be suitable for phase curves or other types of direct emission spectroscopy.</blockquote>
+<hr />
+<br />          
+      
+<h2>References</h2>
+
+<p><a href="https://iopscience.iop.org/article/10.1088/1538-3873/aadf6f/pdf" target="_blank">Kempton et al. 2018, PASP, 130, 114401</a></p>
+      
+<p><a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...834...17C/abstract" target="_blank">Chen, J., &amp; Kipping, D. 2017, ApJ, 834, 17</a></p>
+ 
+ 
+<h2>See Also:</h2>
+<ul class="spaced_list">
+<li><a href="/docs/transition.html">Developing a More Integrated NASA Exoplanet Archive</a>: How the archive's data tables and services are changing, and when.</li>
+<li><a href="/docs/ps-pscp_release_notes.html">Archive 2.0 Release Notes</a></li>
+<li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters Interactive Table</a>: The web version of the data table.</li>
+<li><a href="/docs/pscp_about.html">About the Planetary Systems Composite Parameter Table</a>: How this table is built and used.</li>
+<li><a href="/docs/exoplanet_criteria.html">Exoplanet Criteria</a>: The archive's policy on including and excluding planets.</li>
+<li><a href="/docs/API_PS_columns.html">Planetary Systems and Planetary Systems Composite Parameters Table Definitions</a>: A detailed list and description of each parameter in the Planetary Systems and Planetary Systems Composite Parameters tables.</li>
+<li><a href="/docs/TAP/usingTAP.html">Table Access Protocol (TAP) User Guide</a>: Build a a query to automate data downloads from the PS and PSCompPars tables.</li>
+</ul>
+ <br />
+  <br />
+<p>Last updated: 10 June 2026</p>
+</div>
+
+<div id="logoBox" class="tbox">
+  <p><a href="http://www.nasa.gov" title="National Aeronautics and Space Administration">
+        <img src="/images/logos/NASA_small.jpg" alt="NASA" width="87" height="75"/></a>
+
+    <a href="http://www.ipac.caltech.edu" title="Infrared Processing and Analysis Center">
+        <img src="/images/logos/IPAC_small.jpg" alt="IPAC" width="139" height="75" /></a>
+    <a href="http://nexsci.caltech.edu" title="NASA Exoplanet Science Institute">
+        <img src="/images/logos/logo_nexsci.gif" alt="NExScI" /></a>
+     <a href="http://www.caltech.edu" title="California Institute of Technology">
+        <img src="/images/logos/Caltech_LOGO-Orange_PMS165.jpg" alt="Caltech" width="25%" /></a></p>
+
+</div> <!-- end tbox div -->
+
+
+<div id="footerMenu" class="hbox">
+         <div class="home_box">
+           <a href="/index.html">Home</a>
+         </div>
+       
+         <div class="archive_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/about.html">About Us</a>
+         </div>
+       
+         <div class="data_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/data.html">Data</a>
+         </div>
+       
+         <div class="tool_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/tools.html">Tools</a>
+         </div>
+       
+         <div class="help_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/help.html">Support</a>
+         </div>
+           
+         <div class="clear"></div>
+</div> <!-- end hbox -->
+
+
+
+</div> <!-- end b2box -->
+</div> <!-- end bbox -->
+</body>
+</html>

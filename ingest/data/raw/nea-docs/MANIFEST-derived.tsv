@@ -1,0 +1,7 @@
+derived_file	size_bytes	sha256	derived_from	method
+API_PS_columns.txt	38851	ff7c2f44871adf96f6e15c36ef05f67d84fc1ee35ed1552fe206ba3a87319bf5	API_PS_columns.html	html tag strip
+acknowledge.txt	4719	62d9813b8f26ee00402d4f3fd09d0be1e30e923bcab7b1f44c60df39ff93b31b	acknowledge.html	html tag strip
+archive-dois.txt	73050	b698a2da22ab459cf4459d29aa54edd52dec074caa6c0dfdf5de54bffd61a2c4	archive-dois.html	html tag strip
+faq.txt	24589	27768a7da990ffe3bd0925d9577b847bcf2907ba7e94c5c3a601f39e01c80da0	faq.html	html tag strip
+pscp_calc.txt	11614	ee2568a980ad9c5997fb7762626ac823f2f1fa4391f70699d52d5849d7b53527	pscp_calc.html	html tag strip
+transition.txt	7967	4c9c3ea7f42b708d47c96c30f3a94747c36ac87cc9907bbeac0b020ca61a9194	transition.html	html tag strip

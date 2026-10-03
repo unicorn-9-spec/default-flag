@@ -1,0 +1,19 @@
+{
+  "name": "default-flag",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.8.1",
+  "engines": { "node": ">=22.12" },
+  "scripts": {
+    "dev:web": "pnpm --filter @default-flag/web dev",
+    "dev:studio": "pnpm --filter @default-flag/studio dev",
+    "typecheck": "pnpm -r typecheck",
+    "test": "vitest run",
+    "build": "pnpm -r build"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  }
+}

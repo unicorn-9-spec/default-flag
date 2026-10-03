@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Developing a More Integrated NASA Exoplanet Archive</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/fixed.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/docs.css" />
+	<script type="text/javascript" src="/js/local/util.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="bbox">
+	<div class="b2box">
+
+<!-- begin drop down menu banner -->
+<!-- START EXO_BANNER.HTML -->
+<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/css/menu_icons.css" />
+
+<script type="text/javascript" src="/js/navigation.js"></script>
+
+<div id="banner">
+ <a href="/index.html"><img src="/images/nsted_banner.jpg" alt="Exoplanet Archive banner" /></a>
+</div> <!-- end banner -->
+
+<!-- begin navigation.html -->
+<nav id="exo-hrmenu" class="exo-hrmenu" aria-label="Primary">
+   <ul role="list">
+      <li>
+         <a href="/index.html">Home</a>
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-about" href="/docs/about.html">About Us</button>
+         <div class="exo-hrsub" id="exo-hrsub-about">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/intro.html">
+                         <i class="exoplanet-icon-book-borderless"></i>
+                         Overview</a></li>
+                     <li><a href="/docs/holdings.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Holdings</a></li>
+                     <li><a href="/docs/counts_detail.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Exoplanet Counts</a></li>
+                     <li><a href="/docs/users_group.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         User Panel</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/faq.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         FAQ</a></li>
+                     <li><a href="/docs/acknowledge.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Acknowledgements</a></li>
+                     <li><a href="/docs/privacy.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Privacy Notice</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-data" href="/docs/data.html">Data</button>
+         <div class="exo-hrsub" id="exo-hrsub-data">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <h4>Planetary Systems</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems Composite Data</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Stellar Hosts</a></li>
+                     <li><a href="/cgi-bin/atmospheres/nph-firefly?atmospheres">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Atmospheric Spectroscopy</a></li>
+                    <li><a href="/cgi-bin/observations/nph-firefly?data">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         NExoList </a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Microlensing Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=directimaging&constraint=immodeldef=1">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Direct Imaging Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Transiting Planets</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Kepler</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (Cumulative List)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (All Lists)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score>0.3">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Positional Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         False Positive Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                        Certified False Positives</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Threshold-Crossing Events</a></li>
+                     <li><a href="/docs/Kepler_completeness_reliability.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Completeness and Reliability</a></li>
+                     <li><a href="/docs/KeplerSimulated.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Simulated Data</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Kepler Stellar</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Kepler Confirmed Names</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Transit Surveys</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TESS Project Candidates</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=k2targets">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         K2 Targets</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Planets and Candidates</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Confirmed Names</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_astero_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRot Astero-Seismology</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_exo_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRoT Exoplanet</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         SuperWASP Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         KELT Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KELT Praesepe</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/XO">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         XO</a></li>
+                     <li><a href="/applications/ETSS/HATNet_index.html">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HATNet</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/Cluster">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Cluster</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/TrES">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TrES</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Other</h4>
+                  <ul role="list">
+                      <li><a href="/cgi-bin/observations/nph-firefly?datta">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         JWST Observations</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         UKIRT Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/MOA/nph-firefly?MOA">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         MOA Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/ROME/nph-firefly?data&filter=True">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         ROME/REA Microlensing Survey</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=gjstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Gliese-Jahreiss Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=DI_STARS_EXEP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HWO ExEP Precursor Science Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=missionstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=mission_exocat">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars+ExoCat</a></li>
+                     <li><a href="/cgi-bin/FDL/nph-fdl">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Frontier Development Lab Datasets</a></li>
+                     <li><a href="/cgi-bin/CUBESAT/nph-cubesat?cute">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         CUTE Mission</a></li>
+                     <li><a href="/docs/ASTERIAMission.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ASTERIA Mission</a></li>
+                     <li><a href="/docs/contributed_data.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         Contributed Data Sets</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Tables Search and File Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+            &nbsp;<p/><center><i class="exoplanet-icon-table-borderless"></i>&nbsp;&nbsp; <i>Full table display</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="exoplanet-icon-search-borderless"></i>&nbsp;&nbsp;<i>Database search</i></center><p/>
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-tools" href="/docs/tools.html">Tools</button>
+         <div class="exo-hrsub" id="exo-hrsub-tools">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/Inventory/search.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Explore the Archive</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Table Search and File Upload</a></li>
+                     <li><a href="/cgi-bin/TransitView/nph-visibletbls?dataset=transits">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Transit and Ephemeris Service</a></li>
+                     <li><a href="/cgi-bin/CalcQty/nph-calcqty">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Predicted Observables for Exoplanets (POE)</a></li>
+                     <li><a href="/cgi-bin/Pgram/nph-pgram">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Periodogram</a></li>
+                     <li><a href="/ScatterPlot/?config=scatter&table=PS_output.csv&columns=PS_columns.tbl&theme=pres&x=pl_orbper&y=pl_bmassj&symbol-color=discoverymethod&symbol-size-min=8&legendpos=bottomright&link=1">
+                         <i class="exoplanet-icon-plot-simple-borderless"></i>&nbsp;
+                         Confirmed Planets Plotting Tool</a></li>
+                     <li><a href="/cgi-bin/ExoFAST/nph-exofast">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         EXOFAST: Transit and RV Fitting</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="https://astrofetch.ipac.caltech.edu" target="_blank">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         AstroFetch AI</a></li>
+                     <li><a href="/docs/TAP/usingTAP.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                        Table Access Protocol (TAP) Interface</a></li>
+                     <li><a href="/docs/program_interfaces.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                         Application Programming Interface (API)</a></li>
+                     <li><a href="/bulk_data_download">
+                         <i class="exoplanet-icon-download-borderless"></i>&nbsp;
+                         Bulk Data Download</a></li>
+                     <li><a href="https://exofop.ipac.caltech.edu/">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ExoFOP</a></li>
+                     <li><a href="/exoplanetplots/">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Pre-generated Plots</a></li>
+                    <li><a href="/support/upload_param/">
+                         <i class="exoplanet-icon-upload-borderless"></i>&nbsp;
+                         Published Data Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-support" href="/docs/help.html">Support</button>
+         <div class="exo-hrsub" id="exo-hrsub-support">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&startdoc=item_1_01">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Documentation Index</a></li>
+                     <li><a href="/docs/KeplerMission.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Kepler Documentation</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/connect.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Social Media and Newsletter</a></li>
+                     <li><a href="/applications/Helpdesk" target="_blank">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Contact Us</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" id="loginID" aria-live="polite" style="appearance: none; background: none; border: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; padding: 3px 1.5em;">-</button>
+      </li>
+  </ul>
+</nav>
+<!-- end navigation.html -->
+
+<!-- END EXO_BANNER.HTML -->
+
+<!-- end drop down menu banner -->
+<div class="docs">
+
+<h1>Developing a More Integrated NASA Exoplanet Archive</h1>
+
+<p>The NASA Exoplanet Archive team's effort to provide a more integrated and streamlined user experience is now complete.</p> 
+
+<p>A significant part of this transition has been the development of the new  <strong>Planetary Systems</strong> (PS) and the <strong>Planetary Systems Composite Parameters</strong> (PSCompPars) tables, which are more integrated and more complete than the retired <strong>Confirmed Planets</strong>, <strong>Extended Planet Parameters</strong>, and <strong>Composite Parameters </strong>tables.</p>
+
+<p>The <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">PS Table</a> combines data from the Confirmed Planets and Extended Planet Parameters tables (both retired) into a single table, and provides access to all of the planetary solutions served by the NASA Exoplanet Archive in a single location. </p>
+
+<p>The <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">PSCompPars Table</a>  is similar to the retired Composite Parameters Table:  it's a more complete table of planet parameters combined from multiple references and calculations.  The new PSCompPars Table is built from the <em>new </em> PS Table, and is thus more extensive and more complete.</p>
+
+<hr />
+<blockquote>
+  <p>As of April 2021, the Confirmed Planets, Extended Planet Parameters, and Composite Parameters tables are retired and no longer updated. Please use the PS and PSCompPars tables for planetary system data. <strong>Additional details are in the <a hr
+  href="/docs/ps-pscp_release_notes.html">Archive 2.0 Release Notes</a></strong>.</p>
+</blockquote>
+<hr />
+
+<a name="tap"></a>
+<h2>Query-based Data Access with Table Access Protocol (TAP)</h2>
+<p>In addition to the new integrated content of the Planetary Systems tables, the new tables are connected to a new Table Access Protocol (TAP) service for a more IVOA-integrated experience.  </p>
+<p>Read the  <a href="/docs/TAP/usingTAP.html">NASA Exoplanet Archive TAP User Guide </a> to learn  how to use  TAP to extract data from the archive's data tables. A list of which archive tables currently support TAP is at the top of the page. </p>
+<br />
+
+<h2>Which Data Table Should You Use?</h2>
+
+<p>Use the following table and <a href="/images/help/tables-composite-graphic.jpg" target="_new">this graphic</a> as a guide. <em>(Click to enlarge)</em></p>
+
+<p><a href="/images/help/tables-composite-graphic.jpg"><img src="/images/help/tables-composite-graphic_sm.jpg" /></a></p>
+<p>&nbsp;</p>
+
+
+<table>
+<tr>
+<th width="129">Table Name</th><th width="574">Contains...</th><th width="272">Status</th>
+</tr>
+
+<td height="350">Planetary Systems (PS)</td> 
+
+<td>All data from the Confirmed Planets and Extended Planet Data tables. Displays all solutions for planet and host star solutions, regardless of their relationship, including atypical systems such as free-floating planets and those with multiple stars. Also contains Kepler, K2, and TESS candidate solutions for confirmed planet systems, a nearly complete identification of published stellar companions, and projected and true planet obliquities.  Each set of parameters is displayed in a separate row.
+
+  <p>Use this table when you need a self-consistent set of planetary parameters for a given planet, or if you want a comprehensive list of published planet parameters in the archive. </p></td>
+  
+  <td valign="top"><p>Fully operational as of April 2021. See the <a href="/docs/ps-pscp_release_notes.html">Archive 2.0 Release Notes</a> for details.</p>
+    <p>Available as: 
+<ul class="spaced_list">
+    <li> <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">interactive, web-based table</a>
+    <li><a href="/docs/TAP/usingTAP.html">programmatically through Table Access Protocol</a></li>
+    </ul>
+</td>
+</tr>
+
+<tr>
+<td>Planetary Systems Composite Parameters (PSCompPars) </td>
+
+<td >Same data as the Planetary Systems table <strong>except</strong> the confirmed planet data includes parameters or calculations that are combined from different references into one parameter set, or row. References are given for each value.
+  <p>Use this table when you need a more &quot;filled-in&quot; table to enable a statistical view of the known exoplanet population and their host environments.</p>
+  
+ <strong>Differences between the PS and PSCompPars tables</strong>: (<em>Click to enlarge</em>)
+    <p><a href="/images/help/ps-pscp-graphic.png"><img src="/images/help/ps-pscp-graphic_sm.png"></a> </td>
+  
+  <td valign="top">Fully operational as of  April 2021. See the <a href="/docs/ps-pscp_release_notes.html">Archive 2.0 Release Notes</a> for details.
+    <p>Available as: 
+<ul class="spaced_list">
+    <li> <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">interactive, web-based table</a>
+    <li><a href="/docs/TAP/usingTAP.html">programmatically through Table Access Protocol</a></li>
+    </ul>
+    <p>Documentation: </p>
+  <ul class="spaced_list">
+<li><a href="/docs/pscp_about.html">About the PSCompPars Table</a></li>
+  <li><a href="/docs/pscp_calc.html">How the Archive Calculates Values in the Planetary Systems Composite Parameters Table</a></li>
+  </ul></td>    </td>
+</tr>
+<tr>
+<td>Confirmed Planets</td> <td>All confirmed planets with one default set of self-consistent, published parameters. How the archive designates parameter sets as default <a href="/docs/faq.html#missing_params">is explained in our FAQ</a>.</td>
+<td valign="top">Retired in April 2021. Replaced by the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems Table.</a></p>
+  <p>This table is no longer updated and API support  will be discontinued in late August 2021. Please use the <a href="/docs/TAP/usingTAP.html">TAP service</a> to retrieve data from the PS Table. </td>
+</tr>
+
+<tr>
+<td>Extended Planet Data</td> <td>All confirmed planets with all self-consistent sets of published parameters&mdash;those both designated as default by the archive as well as non-default. Each set of parameters is displayed in a separate row. </td>
+
+<td valign="top">
+Retired in April 2021. Replaced by the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems Table.</a>
+  <p>This table is no longer updated and API support  will be discontinued in late August 2021. Please use the <a href="/docs/TAP/usingTAP.html">TAP service</a> to retrieve data from the PS Table.</p></td>
+</tr>
+
+<tr>
+<td>Composite Planet Data (a.k.a. Composite Parameters)</td> <td>All confirmed planets with  parameters or calculations combined from different references.</td>
+
+<td valign="top">
+Retired in April 2021. Replaced by the <a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters Table.</a>
+  <p>This table is no longer updated and API support  will be discontinued in late August 2021. Please use the  <a href="/docs/TAP/usingTAP.html">TAP service</a> to retrieve data from the PSCompPars Table.</p></td>
+</tr>
+
+<tr>
+  <td>K2 Planets and Candidates</td>
+  <td>All information in the archive on K2 planetary objects, both confirmed and candidates. </td>
+  <td valign="top">This is a new table that replaced the K2 Candidates table in November 2021. Please update any API queries to use the <a href="/docs/TAP/usingTAP.html">TAP service</a> to retrieve data from the K2 Planets and Candidates Table.
+    <p>Documentation: </p>
+    <ul class="spaced_list">
+      <li><a href="/docs/API_k2pandc_columns.html">K2 Planets and Candidates Data Column Definitions</a> (PDF)</li>
+      <li>Column names mapping between K2 Candidates and K2 Planets and Candidates (<a href="/docs/k2pandc_k2candidate_mapping.pdf">PDF</a>, <a href="/docs/k2pandc_k2candidate_mapping.csv">CSV</a>)</li>
+    </ul></td>
+</tr>
+</table>
+
+
+<h2>Making the Transition</h2>
+
+
+<p>To help with the  transition, the Exoplanet Archive provides some resources. </p>
+<p>If you used the archive's application programming interface (API) for query-based data retrieval from the retired tables, you need to create new queries to use the archive's <a href="/docs/TAP/usingTAP.html">Table Access Protocol service</a> that point to one of the new tables. The database columns names in the PS and PSCompPars tables are different than those used in the retired tables. The following documents will help you identify which new database names to use for your scripts/queries:</p>
+
+
+<ul class="spaced_list">
+
+<li>Master list of columns in the PS, PSCompPars, Confirmed Planets, Extended Planet Data, and Composite Parameters tables: <a href="/docs/Exoplanet_Archive_Column_Mapping.pdf" target="_blank">PDF</a>&nbsp; <a href="/docs/Exoplanet_Archive_Column_Mapping_CSV.csv" target="_blank">CSV</a></li>
+
+
+<li>Column mapping between the new PS Table and the retired Confirmed Planets, and Extended Planet Data tables</a>:  <a href="/docs/ps-conf-ext-mapping.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/ps-conf-ext-mapping.csv" target="_blank">CSV</a></li>
+
+
+<li>Column mapping between the new PSCompPars Table and the retired Composite Parameters Table: <a href="/docs/old-comp-new-comp-mapping.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/old-comp-new-comp-mapping.csv" target="_blank">CSV</a></li>
+
+
+<li>A list of parameters in the Confirmed Planets, Extended Planet Data and Composite Parameters tables, but not in the PS Table: <a href="/docs/conf-comp-ext-not-in-ps.pdf" target="_blank">PDF</a>&nbsp;&nbsp;<a href="/docs/conf-comp-ext-not-in-ps.csv" target="_blank">CSV</a></li>
+<li>Column names mapping document between old <code>microlensing</code> and new <code>ML</code> tables (for queries created before April 2021): <a href="/docs/microlensing-column-mapping.pdf">PDF</a> <a href="/docs/microlensing-column-mapping-csv.csv">CSV</a></li>
+<li>Column names mapping document between old K2 Candidates and new K2 Planets and Candidates tables (for queries created before November 2021): <a href="/docs/k2pandc_k2candidate_mapping.pdf">PDF</a> <a href="/docs/k2pandc_k2candidate_mapping.csv">CSV</a></li>
+
+</ul>
+
+
+<h2>Tell Us What You Think</h2>
+
+<p><strong></strong>As always, we want to hear your feedback on what is working and what can be improved. Please send us your feedback through the <a href="/cgi-bin/Helpdesk/nph-genTicketForm" target="_blank">Helpdesk</a>, follow the archive on social media, or subscribe to our email list to stay informed. See our <a href="/docs/connect.html">Connect page</a> for links.</p>
+<p>&nbsp;</p>
+<h2>See also:</h2>
+<ul class="spaced_list">
+<li><a href="/docs/ps-pscp_release_notes.html">Archive 2.0 Release Notes</a></li>
+<li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">Planetary Systems interactive table</a>: The web version of the data table.</li>
+<li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">Planetary Systems Composite Parameters interactive table</a>: The web version of the data table</li>
+<li><a href="/docs/ICEexohelp.html">Interactive Table User Guide</a>: How to access, sort, filter, plot and download table data.</li>
+<li><a href="/docs/pscp_calc.html">Planetary Systems Composite Parameters Table Calculations</a>: How the archive calculates values in the Planetary Systems Composite Parameters table.</li>
+<li><a href="/docs/exoplanet_criteria.html">Exoplanet Criteria</a>: The archive's policy on including and excluding planets.</li>
+
+</ul>
+
+<br />
+<br />
+
+<p>Last updated: 19 November 2021</p>
+</div>
+    <!-- end #docs--> 
+
+ 
+  
+<div id="logoBox" class="tbox">
+  <p><a href="http://www.nasa.gov" title="National Aeronautics and Space Administration">
+        <img src="/images/logos/NASA_small.jpg" alt="NASA" width="87" height="75"/></a>
+
+    <a href="http://www.ipac.caltech.edu" title="Infrared Processing and Analysis Center">
+        <img src="/images/logos/IPAC_small.jpg" alt="IPAC" width="139" height="75" /></a>
+    <a href="http://nexsci.caltech.edu" title="NASA Exoplanet Science Institute">
+        <img src="/images/logos/logo_nexsci.gif" alt="NExScI" /></a>
+     <a href="http://www.caltech.edu" title="California Institute of Technology">
+        <img src="/images/logos/Caltech_LOGO-Orange_PMS165.jpg" alt="Caltech" width="25%" /></a></p>
+
+</div> <!-- end tbox div -->
+
+
+<div id="footerMenu" class="hbox">
+         <div class="home_box">
+           <a href="/index.html">Home</a>
+         </div>
+       
+         <div class="archive_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/about.html">About Us</a>
+         </div>
+       
+         <div class="data_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/data.html">Data</a>
+         </div>
+       
+         <div class="tool_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/tools.html">Tools</a>
+         </div>
+       
+         <div class="help_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/help.html">Support</a>
+         </div>
+           
+         <div class="clear"></div>
+</div> <!-- end hbox -->
+
+ 
+</div><!-- end #bbox-->
+</div><!-- end #b2box-->
+
+</body>
+</html>

@@ -1,0 +1,1872 @@
+NOTE: plain-text extraction of API_PS_columns.html
+SOURCE: NASA Exoplanet Archive documentation
+Terms: the archive publishes no explicit licence; its data may be used for research
+with appropriate acknowledgement. NASA archive page, not a journal article.
+
+Planetary Systems and Planetary Systems Composite Parameters Data Column Definitions 
+
+ Planetary Systems and Planetary Systems Composite Parameters Table Definitions 
+
+ This page describes the parameters available in the Planetary Systems ( PS ) and Planetary Systems Composite Parameters ( PSCompPars ) interactive tables. These parameters can also be retrieved programmatically through the archive's Table Access Protocol (TAP) service. 
+
+ _______________________________________________ 
+ Skip to a subsection: 
+
+ Choosing the Right Table For Your Needs 
+ Query-based Table Access 
+ Data Column Definitions 
+ Additional Default Columns 
+ Names 
+ System Composition 
+ Planet Discovery 
+ Detections 
+ Planet Parameters 
+ Stellar Data 
+ System Data 
+ Position 
+ Photometry 
+ Dates 
+ Additional Data 
+ Amospheric Spectroscopy Table 
+ NExoList 
+ 
+ _______________________________________________ 
+
+ Top 
+ 
+ Choosing the Right Table For Your Needs 
+ Choosing data from the PS or PSCompPars tables depends on your use case: 
+ 
+ PS provides a single table view of the all of the ingested planetary systems for each known exoplanet with each row containing a self-contained set of parameters (planet + stellar + system) for each reference. The PS Table contains one row per planet per reference. 
+ PSCompPars is a more filled-in table, with only one row per planet, enabling a more statistical view of the known exoplanet population and their host environments. This table provides a more complete, though not necessarily self-consistent, set of parameters. 
+ 
+ For an explanation on how the archive calculates values for this table, read How the Archive Calculates Values in the Planetary Systems Composite Table 
+
+ For a comparison between the PS and PSComPars tables, see the following graphic: 
+ ( Click to enlarge ) 
+
+ Top 
+ 
+ Query-based Table Access 
+ The PS and PSCompPars tables replaced the Confirmed Planets, Composite Parameters, and Extended Planet Data tables that were retired in April 2021. (For details, see the Transition page .) 
+ If you were using the archive's application programming interface (API) to retrieve data from the retired tables, you need to create a new query to work with the archive's TAP service that points to one of the new tables. Please note the database column names have also changed; refer to the following documents to identify the appropriate database names for your scripts/queries:
+
+ Master list of columns in the PS, PSCompPars, Confirmed Planets, Extended Planet Data, and Composite Parameters tables: PDF CSV 
+
+ Column mapping between the new PS Table and the retired Confirmed Planets and Extended Planet Data tables : PDF CSV 
+
+ Column mapping between the new PSCompPars Table and the retired Composite Parameters Table: PDF CSV 
+
+ Parameters that were in the retired Confirmed Planets, Extended Planet Data and Composite Parameters tables, but NOT in the PS Table: PDF CSV 
+
+ Data Column Definitions 
+ 
+ Top 
+ 
+ Additional Default Columns 
+ The parameters in this section are displayed when the interactive table is first loaded, when Reset Filters is clicked, or when a TAP query when all default columns are retrieved, but do not fit in any of the other categories listed on this page. All default columns on this page are noted with a †. 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ default_flag† 
+ Default Parameter Set 
+ 
+ Boolean flag indicating whether given set of planet 
+ parameters has been selected as default (1=yes, 0=no) 
+ X 
+
+ soltype† 
+ Solution Type 
+ 
+ Disposition of planet according to given planet parameter set 
+ X 
+
+ pl_controv_flag† 
+ Controversial Flag 
+ 
+ Flag indicating whether the confirmation status of a planet 
+ has been questioned in the published literature (1=yes, 0=no) 
+ X 
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+ 
+ Names 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ pl_name† 
+ Planet Name 
+ 
+ Planet name most commonly used in the literature 
+ X 
+ X 
+
+ hostname† 
+ Host Name 
+ 
+ Stellar name most commonly used in the literature 
+ X 
+ X 
+
+ pl_letter 
+ Planet Letter 
+ 
+ Letter assigned to the planetary component of a planetary system 
+ X 
+ X 
+
+ hd_name 
+ HD ID 
+ 
+ Name of the star as given by the Henry Draper Catalog 
+ X 
+ X 
+
+ hip_name 
+ HIP ID 
+ 
+ Name of the star as given by the Hipparcos Catalog 
+ X 
+ X 
+
+ tic_id 
+ TIC ID 
+ 
+ Name of the star as given by the TESS Input Catalog 
+ X 
+ X 
+
+ gaia_dr2_id 
+ Gaia DR2 ID 
+ Name of the star as given by the Gaia DR2 Catalog 
+ X 
+ X 
+
+ gaia_dr3_id 
+ Gaia DR3 ID 
+ Name of the star as given by the Gaia DR3 Catalog 
+ X 
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+ 
+ System Composition 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ sy_snum† 
+ 
+Number of Stars 
+ Number of gravitationally bound stars in the planetary system 
+ X 
+ X 
+
+ sy_pnum† 
+ Number of Planets 
+ 
+Number of confirmed planets in the planetary system 
+ X 
+ X 
+
+ sy_mnum 
+ Number of Moons 
+ 
+Number of moons in the planetary system 
+ X 
+ X 
+
+ cb_flag 
+ Circumbinary Flag 
+ 
+Flag indicating whether the planet orbits a binary system (1=yes, 0=no) 
+ X 
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+
+ Planet Discovery 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ discoverymethod† 
+ Discovery Method 
+ 
+ Method by which the planet was first identified 
+ X 
+ X 
+
+ disc_year† 
+ Discovery Year 
+ 
+ Year the planet was discovered 
+ X 
+ X 
+
+ disc_refname 
+ Discovery Reference 
+ 
+ Reference name for discovery publication 
+ X 
+ X 
+
+ disc_pubdate 
+ Discovery Publication Date 
+ 
+ Publication Date of the planet discovery referee publication 
+ X 
+ X 
+
+ disc_locale 
+ Discovery Locale 
+ 
+ Location of observation of planet discovery (Ground or Space) 
+ X 
+ X 
+
+ disc_facility† 
+ Discovery Facility 
+ 
+ Name of facility of planet discovery observations 
+ X 
+ X 
+
+ disc_telescope 
+ Discovery Telescope 
+ 
+ Name of telescope of planet discovery observations 
+ X 
+ X 
+
+ disc_instrument 
+ Discovery Instrument 
+ 
+ Name of instrument of planet discovery observations 
+ X 
+ X 
+
+ Top 
+ 
+ Detections 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ rv_flag 
+ Detections by Radial Velocity Variations 
+ 
+ Flag indicating if the planet host star exhibits 
+ radial velocity variations due to the planet (1=yes, 0=no) 
+ X 
+ X 
+
+ pul_flag 
+ Detected by Pulsar Timing Variations 
+ 
+ Boolean flag indicating if the planet host star exhibits 
+ pulsar timing variations due to the planet (1=yes, 0=no) 
+ X 
+ X 
+
+ ptv_flag 
+ Detected by Pulsation Timing Variations 
+ 
+ Boolean flag indicating if the planet host star exhibits 
+ pulsation timing variations due to the planet (1=yes, 0=no) 
+ X 
+ X 
+
+ tran_flag 
+ Detected by Transits 
+ 
+ Flag indicating if the planet transits its host star (1=yes, 0=no) 
+ X 
+ X 
+
+ ast_flag 
+ Detected by Astrometric Variations 
+ 
+ Flag indicating if the planet host star exhibits 
+ astrometrical variations due to the planet (1=yes, 0=no) 
+ X 
+ X 
+
+ obm_flag 
+ Detected by Orbital Brightness Modulations 
+ 
+ Flag indicating whether the planet exhibits orbital 
+ modulations on the phase curve (1=yes, 0=no) 
+ X 
+ X 
+
+ micro_flag 
+ Detected by Microlensing 
+ 
+ Boolean flag indicating if the planetary system acted as 
+ a lens during an observed microlensing event (1=yes, 0=no) 
+ X 
+ X 
+
+ etv_flag 
+ Detected by Eclipse Timing Variations 
+ 
+Flag indicating whether a circumbinary planet that orbits 
+an eclipsing binary induces eclipse timing variations (ETVs) 
+in the binary pair (1=yes, 0=no) 
+ X 
+ X 
+
+ ima_flag 
+ Detected by Imaging 
+ 
+ Flag indicating if the planet has been observed 
+ via imaging techniques (1=yes, 0=no) 
+ X 
+ X 
+
+ Detection by Transit Timing Variations 
+ Boolean flag indicating if the planet induces transit timing variations on the orbit of another another planet in the system. (1=yes, 0=no) 
+ 
+--> 
+ 
+ dkin_flag 
+ Detection by Disk Kinematics 
+ 
+ Boolean flag indicating if the presence of the 
+ planet was inferred due to its kinematic influence 
+ on the protoplanetary disk of its host star (1=yes, 0=no) 
+ X 
+ X 
+
+ Top 
+
+ Planet Parameters 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ Uncertainties Column 
+ (positive +) 
+ (negative -) 
+ Limit Column 
+ In PS Table 
+ In PSCompPars Table 
+
+ pl_refname† 
+ Planetary Parameter Reference 
+ 
+Reference of publication used for given planet parameter set 
+
+ X 
+
+ pl_orbper† 
+ Orbital Period [days] 
+ 
+Time the planet takes to make a complete orbit 
+around the host star or system 
+ (+) pl_orbpererr1 
+ (-) pl_orbpererr2 
+ pl_orbperlim 
+ X 
+ X 
+
+ pl_orbper_reflink 
+ Orbital Period Reference 
+ 
+Reference of publication used for given planet parameter set 
+
+ X 
+
+ pl_orbsmax† 
+ Orbit Semi-Major Axis [au] 
+ 
+The longest radius of an elliptic orbit, or, for exoplanets 
+detected via gravitational microlensing or direct imaging, 
+the projected separation in the plane of the sky 
+ (+) pl_orbsmaxerr1 
+ (-) pl_orbsmaxerr2 
+ pl_orbsmaxlim 
+ X 
+ X 
+
+ pl_orbsmax_reflink 
+ Orbit Semi-Major Axis Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_angsep 
+ Angular Separation [mas] 
+ 
+Angular separation on the sky between the star and planet. 
+
+ Note: This may be derived in several ways, 
+but is typically either an actual reported angular separation at 
+a given epoch (for which the literature source will be provided 
+in the reference column), or a calculated angular separation 
+using the semi-major axis and the distance to the system (which 
+may or may not be equivalent to the maximum angular separation, 
+depending on orbital eccentricity and orientation). Refer to 
+original data source for further information. 
+ (+) pl_angseperr1 
+(-) pl_angseperr2 
+ pl_angseplim 
+ 
+ X 
+
+ pl_angsep_reflink 
+ Angular Separation Reference 
+ Reference of publication used for given parameter set 
+
+ X 
+
+ pl_rade† 
+ Planet Radius [Earth Radius] 
+ 
+ Length of a line segment from the center of the planet to 
+ its surface, measured in units of radius of the Earth 
+ (+) pl_radeerr1 
+ (-) pl_radeerr2 
+ pl_radelim 
+ X 
+ X 
+
+ pl_rade_reflink 
+ Planet Radius [Earth Radius] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_radj† 
+ Planet Radius [Jupiter Radius] 
+ 
+Length of a line segment from the center of the planet 
+to its surface, measured in units of radius of Jupiter 
+ (+) pl_radjerr1 
+ (-) pl_radjerr2 
+ pl_radjlim 
+ X 
+ X 
+
+ pl_radj_reflink 
+ Planet Radius [Jupiter Radius] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_masse 
+ Planet Mass [Earth Mass] 
+ 
+Amount of matter contained in the planet, 
+measured in units of masses of the Earth 
+ (+) pl_masseerr1 
+ (-) pl_masseerr2 
+ pl_masselim 
+ X 
+
+ pl_massj 
+ Planet Mass [Jupiter Mass] 
+ 
+Amount of matter contained in the planet, 
+measured in units of masses of Jupiter 
+ (+) pl_massjerr1 
+ (-) pl_massjerr2 
+ pl_massjlim 
+ X 
+
+ pl_msinie 
+ Planet Mass*sin(i) [Earth Mass] 
+ 
+Minimum mass of a planet as measured by radial velocity, 
+measured in units of masses of the Earth 
+ (+) pl_msinieerr1 
+ (-) pl_msinieerr2 
+ pl_msinielim 
+ X 
+
+ pl_msinij 
+ Planet Mass*sin(i) [Jupiter Mass] 
+ 
+Minimum mass of a planet as measured by radial velocity, 
+measured in units of masses of Jupiter 
+ (+) pl_msinijerr1 
+ (-) pl_msinijerr2 
+ pl_msinijlim 
+ X 
+
+ pl_cmasse 
+ Planet Mass*sin(i)/sin(i) [Earth Mass] 
+ 
+A calculated quantity indicating the quotient of the lower limit 
+of the measured planet mass, denoted as its mass times the sine 
+of its inclination, and the sine of its inclination, measured in 
+units of the mass of the Earth. This is specified for references 
+in which the inclination is provided as well as the planet mass 
+limit, but the true mass is not reported. 
+ (+) pl_cmasseerr1 
+ (-) pl_cmasseerr2 
+ pl_cmasselim 
+ X 
+
+ pl_cmassj 
+ Planet Mass*sin(i)/sin(i) [Jupiter Mass] 
+ 
+A calculated quantity indicating the quotient of the 
+lower limit of the measured planet mass, denoted as its 
+mass times the sine of its inclination, and the sine of 
+its inclination, measured in units of the mass of Jupiter. 
+This is specified for references in which the inclination 
+is provided as well as the planet mass limit, but the true 
+mass is not reported. 
+ (+) pl_cmassjerr1 
+ (-) pl_cmassjerr2 
+ pl_cmassjlim 
+ X 
+
+ pl_bmasse† 
+ Planet Mass or Mass*sin(i) [Earth Mass] 
+ 
+Best planet mass estimate available, in order of preference: 
+Mass, M*sin(i)/sin(i), or M*sin(i), depending on availability, 
+and measured in Earth masses 
+ (+) pl_bmasseerr1 
+ (-) pl_bmasseerr2 
+ pl_bmasselim 
+ X 
+ X 
+
+ pl_bmasse_reflink 
+ Planet Mass or Mass*sin(i) [Earth Mass] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_bmassj† 
+ Planet Mass or Mass*sin(i) [Jupiter Mass] 
+ 
+Best planet mass estimate available, in order of preference: 
+Mass, M*sin(i)/sin(i), or M*sin(i), depending on availability, 
+and measured in Jupiter masses 
+ (+) pl_bmassjerr1 
+ (-) pl_bmassjerr2 
+ pl_bmassjlim 
+ X 
+ X 
+
+ pl_bmassj_reflink 
+ Planet Mass or Mass*sin(i) [Jupiter Mass] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_bmassprov† 
+ Planet Mass or Mass*sin(i) Provenance 
+ 
+Provenance of the measurement of the best mass. 
+Options are: Mass, M*sin(i)/sin(i), and M*sini 
+
+ X 
+ X 
+
+ pl_dens 
+ Planet Density [g/cm**3] 
+ 
+Amount of mass per unit of volume of the planet 
+ (+) pl_denserr1 
+ (-) pl_denserr2 
+ pl_denslim 
+ X 
+ X 
+
+ pl_dens_reflink 
+ Planet Density [g/cm**3] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ pl_orbeccen† 
+ Eccentricity 
+ 
+Amount by which the orbit of the planet deviates from a perfect circle 
+ (+) pl_orbeccenerr1 
+ (-) pl_orbeccenerr2 
+ pl_orbeccenlim 
+ X 
+ X 
+
+ pl_orbeccen_reflink 
+ Eccentricity Reference 
+ 
+Reference of publication used for given parameter set 
+
+ pl_insol† 
+ Insolation Flux [Earth Flux] 
+ 
+Insolation flux is another way to give the equilibrium temperature. 
+It's given in units relative to those measured for the Earth from the Sun. 
+ (+) pl_insolerr1 
+ (-) pl_insolerr2 
+ pl_insollim 
+ X 
+ X 
+
+ pl_insol_reflink 
+ Insolation Flux [Earth Flux] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_eqt† 
+ Equilibrium Temperature [K] 
+ 
+The equilibrium temperature of the planet as modeled 
+by a black body heated only by its host star, or for 
+directly imaged planets, the effective temperature 
+of the planet required to match the measured luminosity 
+if the planet were a black body 
+ (+) pl_eqterr1 
+ (-) pl_eqterr2 
+ pl_eqtlim 
+ X 
+ X 
+
+ pl_eqt_reflink 
+ Equilibrium Temperature [K] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_orbincl 
+ Inclination [deg] 
+ 
+Angle of the plane of the orbit relative to the plane 
+perpendicular to the line-of-sight from Earth to the object 
+ (+) pl_orbinclerr1 
+ (-) pl_orbinclerr2 
+ pl_orbincllim 
+ X 
+ X 
+
+ pl_tranmid 
+ Time of Conjunction (Transit Midpoint) [days] 
+ 
+The time given by the average of the time the planet 
+begins to cross the stellar limb and the time the planet 
+finishes crossing the stellar limb. 
+ (+) pl_tranmiderr1 
+ (-) pl_tranmiderr2 
+ pl_tranmidlim 
+ X 
+ X 
+
+ pl_tranmid_systemref 
+ Transit Midpoint Time Reference Frame and Standard 
+ Time system basis for time of conjunction (Transit Midpoint) 
+
+ X 
+
+ pl_tranmid_reflink 
+ Time of Conjunction (Transit Midpoint) Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_tsystemref 
+ Time Reference Frame and Standard 
+ 
+Time system basis for temporal and orbital parameters 
+
+ X 
+
+ ttv_flag† 
+ Data show Transit Timing Variations 
+ 
+ Flag indicating if the planet orbit exhibits transit 
+timing variations from another planet in the system (1=yes, 0=no). 
+ Note: Non-transiting planets discovered 
+via the transit timing variations of another planet in the 
+system will not have their TTV flag set, since they do not 
+themselves demonstrate TTVs. 
+
+ X 
+ X 
+
+ pl_imppar 
+ Impact Parameter 
+ 
+The sky-projected distance between the center of the 
+stellar disc and the center of the planet disc at 
+conjunction, normalized by the stellar radius 
+ (+) pl_impparerr1 
+ (-) pl_impparerr2 
+ pl_impparlim 
+ X 
+ X 
+
+ pl_imppar_reflink 
+ Impact Parameter Reference 
+ 
+ Reference of publication used for given parameter set 
+
+ X 
+
+ pl_trandep 
+ Transit Depth [%] 
+ 
+The size of the relative flux decrement caused by 
+the orbiting body transiting in front of the star 
+ (+) pl_trandeperr1 
+ (-) pl_trandeperr2 
+ pl_trandeplim 
+ X 
+ X 
+
+ pl_trandep_reflink 
+ Transit Depth [%] Reference 
+ 
+ Reference of publication used for given parameter set 
+
+ X 
+
+ pl_trandur 
+ Transit Duration [hrs] 
+ 
+The length of time from the moment the planet begins 
+to cross the stellar limb to the moment the planet 
+finishes crossing the stellar limb 
+ (+) pl_trandurerr1 
+ (-) pl_trandurerr2 
+ pl_trandurlim 
+ X 
+ X 
+
+ pl_trandur_reflink 
+ Transit Duration [hrs] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_ratdor 
+ Ratio of Semi-Major Axis to Stellar Radius 
+ 
+The distance between the planet and the star at 
+mid-transit divided by the stellar radius. For 
+the case of zero orbital eccentricity, the distance 
+at mid-transit is the semi-major axis of the planetary orbit. 
+ (+) pl_ratdorerr1 
+ (-) pl_ratdorerr2 
+ pl_ratdorlim 
+ X 
+ X 
+
+ pl_ratdor_reflink 
+ Ratio of Semi-Major Axis to Stellar Radius Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_ratror 
+ Ratio of Planet to Stellar Radius 
+ 
+The planet radius divided by the stellar radius 
+ (+) pl_ratrorerr1 
+ (-) pl_ratrorerr2 
+ pl_ratrorlim 
+ X 
+ X 
+
+ pl_ratror_reflink 
+ Ratio of Planet to Stellar Radius Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_occdep 
+ Occultation Depth [%] 
+ 
+Depth of occultation of secondary eclipse 
+ (+) pl_occdeperr1 
+ (-) pl_occdeperr2 
+ pl_occdeplim 
+ X 
+ X 
+
+ pl_occdep_reflink 
+ Occultation Depth [%] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_orbtper 
+ Epoch of Periastron [deg] 
+ 
+The time of the planet's periastron passage 
+ (+) pl_orbtpererr1 
+ (-) pl_orbtpererr2 
+ pl_orbtperlim 
+ X 
+ X 
+
+ pl_orbtper_reflink 
+ Epoch of Periastron [deg] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_orblper 
+ Argument of Periastron [deg] 
+ 
+The angular separation between the orbit's ascending node and periastron. 
+Note: there are a varying conventions in the exoplanet literature regarding 
+argument of periastron (or periapsis). For example, some publications refer 
+the planet's orbit, others to the host star's reflex orbit, which differs by 
+180 deg. The values in the Exoplanet Archive are not corrected to a 
+standardized system, but are as-reported for each publication. 
+ (+) pl_orblpererr1 
+ (-) pl_orblpererr2 
+ pl_orblperlim 
+ X 
+ X 
+
+ pl_rvamp 
+ Radial Velocity Amplitude [m/s] 
+ 
+Half the peak-to-peak amplitude of variability 
+in the stellar radial velocity 
+ (+) pl_rvamperr1 
+ (-) pl_rvamperr2 
+ pl_rvamplim 
+ X 
+ X 
+
+ pl_rvamp_reflink 
+ Radial Velocity Amplitude Reference [m/s] 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_projobliq 
+ Projected Obliquity [deg] 
+ 
+The angle between the angular momentum vector of the rotation 
+of the host star and the angular momentum vector of the orbit 
+of the planet, projected into the plane of the sky. Depending 
+on the choice of coordinate system, projected obliquity is 
+represented in the literature as either lambda (λ) or 
+beta (β), where λ is defined as the negative of β (i.e., λ = -β). Since λ is reported more often 
+than β, all values of β have been converted to λ. 
+ (+) pl_projobliqerr1 
+ (-) pl_projobliqerr2 
+ pl_projobliqlim 
+ X 
+ X 
+
+ pl_projobliq_reflink 
+ Projected Obliquity [deg] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_trueobliq 
+ True Obliquity [deg] 
+ 
+The angle between the angular momentum vector of the 
+rotation of the host star and the angular momentum 
+vector of the orbit of the planet 
+ (+) pl_trueobliqerr1 
+ (-) pl_trueobliqerr2 
+ pl_trueobliqlim 
+ X 
+ X 
+
+ pl_trueobliq_reflink 
+ True Obliquity [deg] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_tsm 
+ Transmission Spectroscopy Metric 
+ 
+Transmission Spectroscopy Metric from Kempton+2018 ; see calculations page 
+
+ X 
+
+ pl_esm 
+ Emission Spectroscopy Metric 
+ 
+Emission Spectroscopy Metric from Kempton+2018 , see calculations page 
+
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+
+ Stellar Data 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ Uncertainties Column 
+ (positive +) 
+ (negative -) 
+ Limit Column 
+ In PS Table 
+ In PSCompPars Table 
+
+ st_refname† 
+ Stellar Parameter Reference 
+ 
+Reference of publication used for given stellar parameter set 
+
+ X 
+
+ st_spectype 
+ Spectral Type 
+ 
+Classification of the star based on their spectral 
+characteristics following the Morgan-Keenan system 
+
+ X 
+ X 
+
+ st_spectype_reflink 
+ Spectral Type Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_teff† 
+ Stellar Effective Temperature [K] 
+ 
+Temperature of the star as modeled by a black body 
+emitting the same total amount of electromagnetic radiation 
+ (+) st_tefferr1 
+ (-) st_tefferr2 
+ st_tefflim 
+ X 
+ X 
+
+ st_teff_reflink 
+ Stellar Effective Temperature [K] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_rad† 
+ Stellar Radius [Solar Radius] 
+ 
+Length of a line segment from the center of the star 
+to its surface, measured in units of radius of the Sun 
+ (+) st_raderr1 
+ (-) st_raderr2 
+ st_radlim 
+ X 
+ X 
+
+ st_rad_reflink 
+ Stellar Radius [Solar Radius] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_mass† 
+ Stellar Mass [Solar mass] 
+ 
+Amount of matter contained in the star, 
+measured in units of masses of the Sun 
+ (+) st_masserr1 
+ (-) st_masserr2 
+ st_masslim 
+ X 
+ X 
+
+ st_mass_reflink 
+ Stellar Mass [Solar mass] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_met† 
+ Stellar Metallicity [dex] 
+ 
+Measurement of the metal content of the photosphere 
+of the star as compared to the hydrogen content 
+ (+) st_meterr1 
+ (-) st_meterr2 
+ st_metlim 
+ X 
+ X 
+
+ st_met_reflink 
+ Stellar Metallicity [dex] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_metratio† 
+ Stellar Metallicity Ratio 
+ 
+Ratio for the Metallicity Value ([Fe/H] denotes iron 
+abundance, [M/H] refers to a general metal content) 
+ (+) st_metratioerr1 
+ (-) st_metratioerr2 
+ st_metratiolim 
+ X 
+ X 
+
+ st_lum 
+ Stellar Luminosity [log10(Solar)] 
+ 
+Amount of energy emitted by a star per unit time, 
+measured in units of solar luminosities 
+ (+) st_lumerr1 
+ (-) st_lumerr2 
+ st_lumlim 
+ X 
+ X 
+
+ st_lum_reflink 
+ Stellar Luminosity [log10(Solar)] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_logg† 
+ Stellar Surface Gravity [log10(cm/s**2)] 
+ 
+Gravitational acceleration experienced at the stellar surface 
+ (+) st_loggerr1 
+ (-) st_loggerr2 
+ st_logglim 
+ X 
+ X 
+
+ st_logg_reflink 
+ Stellar Surface Gravity [log10(cm/s**2)] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_age 
+ Stellar Age [Gyr] 
+ 
+The age of the host star 
+ (+) st_ageerr1 
+ (-) st_ageerr2 
+ st_agelim 
+ X 
+ X 
+
+ st_age_reflink 
+ Stellar Age [Gyr] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_dens 
+ Stellar Density [g/cm**3] 
+ 
+Amount of mass per unit of volume of the star 
+ (+) st_denserr1 
+ (-) st_denserr2 
+ st_denslim 
+ X 
+ X 
+
+ st_dens_reflink 
+ Stellar Density [g/cm**3] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_vsin 
+ Stellar Rotational Velocity [km/s] 
+ 
+Rotational velocity at the equator of the star 
+multiplied by the sine of the inclination 
+ (+) st_vsinerr1 
+ (-) st_vsinerr2 
+ st_vsinlim 
+ X 
+ X 
+
+ st_vsin_reflink 
+ Stellar Rotational Velocity [km/s] 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_rotp 
+ Stellar Rotational Period [days] 
+ 
+The time required for the planet host star to 
+complete one rotation, assuming it is a solid body 
+ (+) st_rotperr1 
+ (-) st_rotperr2 
+ st_rotplim 
+ X 
+ X 
+
+ st_rotp_reflink 
+ Stellar Rotational Period [days] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ st_radv 
+ Systemic Radial Velocity [km/s] 
+ 
+Velocity of the star in the direction of the line of sight 
+ (+) st_radverr1 
+ (-) st_radverr2 
+ st_radvlim 
+ X 
+ X 
+
+ st_radv_reflink 
+ Systemic Radial Velocity [km/s] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+ 
+ System Data 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ Uncertainties Column 
+ (positive +) 
+ (negative -) 
+ In PS Table 
+ In PSCompPars Table 
+
+ sy_refname† 
+ System Parameter Reference 
+ 
+Reference of publication used for given system parameter set 
+ 
+ X 
+
+ sy_pm 
+ Total Proper Motion [mas/yr] 
+ 
+Angular change in position over time as seen 
+from the center of mass of the Solar System 
+ (+) sy_pmerr1 
+ (-) sy_pmerr2 
+ X 
+ X 
+
+ sy_pm_reflink 
+ Total Proper Motion [mas/yr] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_pmra 
+ Proper Motion (RA) [mas/yr] 
+ 
+Angular change in right ascension over time as 
+seen from the center of mass of the Solar System 
+ (+) sy_pmraerr1 
+ (-) sy_pmraerr2 
+ X 
+ X 
+
+ sy_pmra_reflink 
+ Proper Motion (RA) [mas/yr] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_pmdec 
+ Proper Motion (Dec) [mas/yr] 
+ 
+Angular change in declination over time as seen 
+from the center of mass of the Solar System 
+ (+) sy_pmdecerr1 
+ (-) sy_pmdecerr2 
+ X 
+ X 
+
+ sy_pmdec_reflink 
+ Proper Motion (Dec) [mas/yr] 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_dist† 
+ Distance [pc] 
+ 
+Distance to the planetary system in units of parsecs 
+ (+) sy_disterr1 
+ (-) sy_disterr2 
+ X 
+ X 
+
+ sy_dist_reflink 
+ Distance [pc] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_plx 
+ Parallax [mas] 
+ 
+Difference in the angular position of a star as measured 
+at two opposite positions within the Earth's orbit 
+ (+) sy_plxerr1 
+ (-) sy_plxerr2 
+ X 
+ X 
+
+ sy_plx_reflink 
+ Parallax [mas] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ pl_nnotes 
+ Number of Notes 
+ 
+Number of Notes associated with the planet. 
+View all notes in the Confirmed Planet Overview page. 
+ 
+ X 
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+ Position (System Data Subset) 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ Uncertainties Column 
+ (positive +) 
+ (negative -) 
+ In PS Table 
+ In PSCompPars Table 
+
+ rastr† 
+ RA [sexagesimal] 
+ 
+Right Ascension of the planetary 
+system in sexagesimal format 
+ 
+ X 
+ X 
+
+ decstr† 
+ Dec [sexagesimal] 
+ 
+Declination of the planetary 
+system in sexagesimal notation 
+ 
+ X 
+ X 
+
+ ra 
+ RA [decimal] 
+ 
+Right Ascension of the planetary 
+system in decimal degrees 
+ (+) raerr1 
+ (-) raerr2 
+ X 
+ X 
+
+ ra_reflink 
+ RA [decimal] Reference 
+ 
+Reference of publication used for given parameter set 
+
+ dec 
+ Dec [decimal] 
+ 
+Declination of the planetary 
+system in decimal degrees 
+ (+) decerr1 
+ (-) decerr2 
+ X 
+ X 
+
+ glat 
+ Galactic Latitude [deg] 
+ 
+Galactic latitude of the planetary 
+system in units of decimal degrees 
+ (+) glaterr1 
+ (-) glaterr2 
+ X 
+ X 
+
+ glon 
+ Galactic Longitude [deg] 
+ 
+Galactic longitude of the planetary 
+system in units of decimal degrees 
+ (+) glonerr1 
+ (-) glonerr2 
+ X 
+ X 
+
+ elat 
+ Ecliptic Latitude [deg] 
+ 
+Ecliptic latitude of the planetary 
+system in units of decimal degrees 
+ (+) elaterr1 
+ (-) elaterr2 
+ X 
+ X 
+
+ elon 
+ Ecliptic Longitude [deg] 
+ 
+Ecliptic longitude of the planetary system 
+in units of decimal degrees 
+ (+) elonerr1 
+ (-) elonerr2 
+ X 
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+ 
+ Photometry (System Data Subset) 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ Uncertainties Column 
+ (positive +) 
+ (negative -) 
+ In PS Table 
+ In PSCompPars Table 
+
+ sy_bmag 
+ B (Johnson) Magnitude 
+ 
+Brightness of the host star as measured using 
+the B (Johnson) band in units of magnitudes 
+ (+) sy_bmagerr1 
+ (-) sy_bmagerr2 
+ X 
+ X 
+
+ sy_bymag_reflink 
+ B (Johnson) Magnitude 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_vmag† 
+ V (Johnson) Magnitude 
+ 
+Brightness of the host star as measured using 
+the V (Johnson) band in units of magnitudes 
+ (+) sy_vmagerr1 
+ (-) sy_vmagerr2 
+ X 
+ X 
+
+ sy_vmag_reflink 
+ V (Johnson) Magnitude 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_jmag 
+ J (2MASS) Magnitude 
+ 
+Brightness of the host star as measured using 
+the J (2MASS) band in units of magnitudes 
+ (+) sy_jmagerr1 
+ (-) sy_jmagerr2 
+ X 
+ X 
+
+ sy_jmag_reflink 
+ J (2MASS) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_hmag 
+ H (2MASS) Magnitude 
+ 
+Brightness of the host star as measured using 
+the H (2MASS) band in units of magnitudes 
+ (+) sy_hmagerr1 
+ (-) sy_hmagerr2 
+ X 
+ X 
+
+ sy_hmag_reflink 
+ H (2MASS) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_kmag† 
+ Ks (2MASS) Magnitude 
+ 
+Brightness of the host star as measured using 
+the K (2MASS) band in units of magnitudes 
+ (+) sy_kmagerr1 
+ (-) sy_kmagerr2 
+ X 
+ X 
+
+ sy_kmag_reflink 
+ Ks (2MASS) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_umag 
+ u (Sloan) Magnitude 
+ 
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) u band, in units 
+of magnitudes 
+ (+) sy_umagerr1 
+ (-) sy_umagerr2 
+ X 
+ X 
+
+ sy_umag_reflink 
+ u (Sloan) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_gmag 
+ g (Sloan) Magnitude 
+ 
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) g band, in units 
+of magnitudes 
+ (+) sy_gmagerr1 
+ (-) sy_gmagerr2 
+ X 
+ X 
+
+ sy_gmag_reflink 
+ g (Sloan) Magnitude 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_rmag 
+ r (Sloan) Magnitude 
+ 
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) r band, in units 
+of magnitudes 
+ (+) sy_rmagerr1 
+ (-) sy_rmagerr2 
+ X 
+ X 
+
+ sy_rmag_reflink 
+ r (Sloan) Magnitude 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_imag 
+ i (Sloan) Magnitude 
+ 
+Brightness of the host star as measured using the 
+Sloan Digital Sky Survey (SDSS) i band, in units 
+of magnitudes 
+ (+) sy_imagerr1 
+ (-) sy_imagerr2 
+ X 
+ X 
+
+ sy_imag_reflink 
+ i (Sloan) Magnitude 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_zmag 
+ z (Sloan) Magnitude 
+ 
+Brightness of the host star as measured using 
+the Sloan Digital Sky Survey (SDSS) z band, 
+in units of magnitudes 
+ (+) sy_zmagerr1 
+ (-) sy_zmagerr2 
+ X 
+ X 
+
+ sy_zmag_reflink 
+ z (Sloan) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_w1mag 
+ W1 (WISE) Magnitude 
+ 
+Brightness of the host star as measured using 
+the 3.4um (WISE) band in units of magnitudes. 
+ (+) sy_w1magerr1 
+ (-) sy_w1magerr2 
+ X 
+ X 
+
+ sy_w1mag_reflink 
+ W1 (WISE) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_w2mag 
+ W2 (WISE) Magnitude 
+ 
+Brightness of the host star as measured using the 
+4.6um (WISE) band in units of magnitudes. 
+ (+) sy_w2magerr1 
+ (-) sy_w2magerr2 
+ X 
+ X 
+
+ sy_w2mag_reflink 
+ W2 (WISE) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_w3mag 
+ W3 (WISE) Magnitude 
+ 
+Brightness of the host star as measured using 
+the 12.um (WISE) band in units of magnitudes 
+ (+) sy_w3magerr1 
+ (-) sy_w3magerr2 
+ X 
+ X 
+
+ sy_w3mag_reflink 
+ W3 (WISE) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_w4mag 
+ W4 (WISE) Magnitude 
+ 
+Brightness of the host star as measured using 
+the 22.um (WISE) band in units of magnitudes 
+ (+) sy_w4magerr1 
+ (-) sy_w4magerr2 
+ X 
+ X 
+
+ sy_w4mag_reflink 
+ W4 (WISE) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_gaiamag† 
+ Gaia Magnitude 
+ 
+Brightness of the host star as measuring using the 
+Gaia band in units of magnitudes. Objects matched 
+to Gaia using the Hipparcos or 2MASS IDs provided 
+in Gaia DR2. 
+ (+) sy_gaiamagerr1 
+ (-) sy_gaiamagerr2 
+ X 
+ X 
+
+ sy_gaiamag_reflink 
+ Gaia Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_icmag 
+ I (Cousins) Magnitude 
+ 
+Brightness of the host star as measured using 
+the I (Cousins) band in units of magnitudes. 
+ (+) sy_icmagerr1 
+ (-) sy_icmagerr2 
+ X 
+ X 
+
+ sy_icmag_reflink 
+ I (Cousins) Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_tmag 
+ TESS Magnitude 
+ 
+Brightness of the host star as measured using 
+the TESS bandpass, in units of magnitudes 
+ (+) sy_tmagerr1 
+ (-) sy_tmagerr2 
+ X 
+ X 
+
+ sy_tmag_reflink 
+ TESS Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ sy_kepmag 
+ Kepler Magnitude 
+ 
+Brightness of the host star as measured using 
+the Kepler bandpass, in units of magnitudes 
+ (+) sy_kepmagerr1 
+ (-) sy_kepmagerr2 
+ X 
+ X 
+
+ sy_kepmag_reflink 
+ Kepler Magnitude Reference 
+ 
+Reference of publication used for given parameter set 
+
+ X 
+
+ † Default column: These columns display in the interactive table when the table is first loaded, and when Reset Filters is clicked. 
+
+ Top 
+
+ Dates (System Data Subset) 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ rowupdate† 
+ Date of Last Update 
+ 
+Date of last update of the planet parameters 
+ X 
+
+ pl_pubdate† 
+ Planetary Parameter Reference Publication 
+ 
+Date of the publication of the given planet parameter set 
+ X 
+
+ releasedate† 
+ Release Date 
+ 
+Date that the given planet parameter set was 
+publicly released by the NASA Exoplanet Archive 
+ X 
+
+ Top 
+ 
+ Additional Data 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ st_nphot 
+ Number of Photometry Time Series 
+ 
+Number of photometric time series records, including 
+planet transit light curves, general transit light curves, 
+and amateur light curves. 
+ X 
+ X 
+
+ st_nrvc 
+ Number of Radial Velocity Time Series 
+ 
+Number of literature radial velocity curves available 
+for this star in the NASA Exoplanet Archive. 
+ X 
+ X 
+
+ st_nspec 
+ Number of Stellar Spectra Measurements 
+ 
+Number of literature spectra available for 
+this star in the NASA Exoplanet Archive 
+ X 
+ X 
+
+ Top 
+ 
+ Atmospheric Spectroscopy Table Data 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ pl_nespec 
+ Number of Eclipse Spectra 
+ 
+Number of literature eclipse spectrum measurements 
+for this planet in the NASA Exoplanet Archive
+ 
+ X 
+ X 
+
+ pl_ntranspec 
+ Number of Transmission Spectra 
+ 
+Number of literature transmission spectrum measurements 
+for this planet in the NASA Exoplanet Archive
+ 
+ X 
+ X 
+
+ pl_ndispec 
+ Number of Direct Imaging Spectra 
+ 
+Number of literature direct imaging spectrum measurements 
+for this planet in the NASA Exoplanet Archive 
+ X 
+ X 
+
+ Top 
+ 
+ NExoList 
+
+ Database Column Name 
+ Table Label 
+ Description 
+ In PS Table 
+ In PSCompPars Table 
+
+ pl_nobs_jwst_tran 
+ Number of JWST Transit Observations 
+ 
+Number of approved JWST transit observations 
+for this planet in the NExoList table 
+
+ X 
+
+ pl_nobs_jwst_e 
+ Number of JWST Eclipse Observations 
+ 
+Number of approved JWST eclipse observations 
+for this planet in the NExoList table 
+
+ X 
+
+ pl_nobs_jwst_pc 
+ Number of JWST Phase Curve Observations 
+ 
+Number of approved JWST phase curve observations 
+for this planet in the NExoList table 
+
+ X 
+
+ Last updated: 4 June 2026 
+
+ Home 
+
+ About Us 
+
+ Data 
+
+ Tools 
+
+ Support

@@ -1,0 +1,2 @@
+# Snapshot bytes must match MANIFEST sha256 exactly: never convert line endings.
+ingest/data/raw/** -text

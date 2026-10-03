@@ -1,0 +1,12 @@
+{
+  "name": "@default-flag/ingest",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node --env-file-if-exists=../.env.local fetch.ts",
+    "select": "node select.ts",
+    "normalise": "node normalise.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": { "typescript": "5.9.3" }
+}

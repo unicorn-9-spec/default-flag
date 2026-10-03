@@ -1,0 +1,90 @@
+NOTE: plain-text extraction of acknowledge.html
+SOURCE: NASA Exoplanet Archive documentation
+Terms: the archive publishes no explicit licence; its data may be used for research
+with appropriate acknowledgement. NASA archive page, not a journal article.
+
+Acknowledging the NASA Exoplanet Archive 
+
+ Acknowledging the NASA Exoplanet Archive in Publications 
+
+ Acknowledgment Text 
+
+ Please include the following standard acknowledgment in any published material that makes use of the NASA Exoplanet Archive's services. 
+ 
+ This research has made use of the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. 
+
+ In addition, if you use data from a specific literature reference, please acknowledge that reference directly. 
+
+ Citing the Archive as a Published Reference 
+
+ Please cite Christiansen et al. (2025) , the NASA Exoplanet Archive's published paper accepted by the Planetary Science Journal that provides an extensive overview of the archive's data, services and tools. Christiansen et al. (2025) replaces Akeson et al. (2013), our earlier publication. 
+
+ Using AAS Facility Keywords 
+
+ The American Astronomical Society (AAS) has a standardized list of facility keywords that include the NASA Exoplanet Archive and ExoFOP: 
+ 
+ When preparing a LaTeX manuscript for submission, use \facility{Exoplanet Archive} . 
+ For the Exoplanet Follow-up Observing Program (ExoFOP), use \facility{ExoFOP} . 
+ 
+ For more usage tips and the full list of standardized facility names, see the AAS web site . 
+
+ Using Digital Object Identifiers (DOI) 
+
+ If you use DOIs to cite and link to archive data and services in your published work, consult the list of all active and retired Exoplanet Archive DOIs on our Citing the Archive With Digial Object Identifiers (DOI) page. 
+
+ To request a new DOI for an archive data set or service, please submit a Helpdesk ticket. 
+
+ Acknowledging Specific Datasets 
+
+ WASP Data 
+ If you make use of WASP data from the NASA Exoplanet Archive, please include the following acknowledgment: 
+
+ This paper makes use of data from the first public release of the WASP data (Butters et al. 2010) as provided by the WASP consortium and services at the NASA Exoplanet Archive, which is operated by the California Institute of Technology, under contract with the National Aeronautics and Space Administration under the Exoplanet Exploration Program. 
+ UKIRT Data 
+ Requested data acknowledgments for UKIRT Microlensing Survey data served through the NASA Exoplanet Archive are described on the UKIRT Mission Summary page. 
+
+ KELT Data 
+
+ Early work on KELT-North was supported by NASA Grant NNG04GO70G. 
+ Work on KELT-North was partially supported by NSF CAREER Grant AST-1056524 to S. Gaudi. 
+ Work on KELT-North received support from the Vanderbilt Office of the Provost through the Vanderbilt Initiative in Data-intensive Astrophysics. 
+ 
+ If you make use of data from the NASA Exoplanet Archive, please include the following acknowledgement: 
+
+ "These data are made available to the community through the Exoplanet Archive on behalf of the KELT project team." 
+
+ Frontier Development Lab (FDL) INARA Data 
+
+ If you make use of the FDL INARA dataset from the NASA Exoplanet Archive, please include the following acknowledgement: 
+
+ This research makes use of data generated via the INARA framework, funded by the Frontier Development Lab and supported by the NASA Goddard Space Flight Center and Google Cloud. 
+
+ MOA Data 
+
+ The project's requested data acknowledgment for MOA data served through the NASA Exoplanet Archive is described on the MOA summary page . 
+
+ CUTE Mission Data 
+ If you make use of the Colorado Ultraviolet Transit Experiment (CUTE) dataset from the NASA Exoplanet Archive, please include the following acknowledgement: 
+
+ This research makes use of data from the Colorado Ultraviolet Transit Experiment, which is managed by the University of Colorado Boulder under a research grant from NASA. 
+
+ ROME/REA 
+
+When using ROME/REA data, please cite the papers describing the original survey design, Tsapras et al. (2019), PASP, 131, pp. 124401 , and the survey and data reduction, Street et al. (2024), PASP, 136, id.064501M , and include an acknowledgment to the project. 
+ 
+ The following digital object identifiers (DOI) are assigned to the dataset and archive service: 
+ 
+ Street et al. 2024: 10.1088/1538-3873/ad4e69 
+ Exoplanet Archive service: 10.26133/NEA45 
+
+ Last updated: 13 August 2025 
+
+ Home 
+
+ About Us 
+
+ Data 
+
+ Tools 
+
+ Support

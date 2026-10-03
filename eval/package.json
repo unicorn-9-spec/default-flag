@@ -1,0 +1,8 @@
+{
+  "name": "@default-flag/eval",
+  "private": true,
+  "type": "module",
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": { "@default-flag/agent": "workspace:*" },
+  "devDependencies": { "typescript": "5.9.3" }
+}
