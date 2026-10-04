@@ -6,6 +6,7 @@
 import { spawnSync } from 'node:child_process'
 import { mkdirSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import { chromium } from '@playwright/test'
+import { synth } from './tts.mjs'
 
 const BASE = process.argv[2] ?? 'https://default-flag.vercel.app'
 const REPO = 'https://github.com/unicorn-9-spec/default-flag'
@@ -49,8 +50,10 @@ async function caption(text, minMs) {
   if (current) srt.push({ ...current, end: now })
   current = text ? { start: now, text } : null
   await page.evaluate((t) => { window.__pendingCaption = t; window.__setCaption?.(t) }, text ?? '')
-  // Readable pace: ~16.5 characters per second, at least 3 s (keeps the video under 3 minutes).
-  await page.waitForTimeout(minMs ?? Math.max(3000, ((text ?? '').length / 16.5) * 1000))
+  // Hold each caption for its spoken line (male TTS voice, see tts.mjs) plus a short pause,
+  // so scripts/voiceover.mjs can lay the voice in without overlaps.
+  const voice = text ? synth(text).seconds * 1000 + 450 : 0
+  await page.waitForTimeout(Math.max(voice, minMs ?? 0))
 }
 async function go(path) {
   await page.goto(path.startsWith('http') ? path : BASE + path, { waitUntil: 'networkidle' })
