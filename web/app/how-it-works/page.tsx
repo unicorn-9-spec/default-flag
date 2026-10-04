@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import fs from 'node:fs'
 import path from 'node:path'
 import { sanity } from '@default-flag/agent'
@@ -13,6 +14,11 @@ const TYPES: [string, string][] = [
   ['constant / threshold / hzLimit', 'reference values, each with a source citation, URL and location'],
   ['derivedAnswer', 'question, parameterSet, quantity, inputs[] {field, value, set}, result {median, p16, p84}, codeVersion'],
 ]
+
+const CAPTIONS: Record<string, string> = {
+  '1-sources.png': "Knowledge Base source: one GROQ query over the production dataset, 62 documents (each planet's default parameter set and its composite row).",
+  '2-entry.png': "Built entry planet_catalogue/mini_neptunes: default sets and composite alternatives in separate tables, with Kepler-139 d's disagreement stated.",
+}
 
 function screenshots(): string[] {
   const dir = path.join(process.cwd(), 'public', 'conflict')
@@ -48,15 +54,6 @@ export default async function HowItWorks() {
       </p>
 
       <h2>Knowledge Base conflict, before and after</h2>
-      {shots.length ? (
-        shots.map((s) => (
-          <figure key={s}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/conflict/${s}`} alt={`Knowledge Base conflict screenshot: ${s.replace(/[-_]/g, ' ').replace(/\.\w+$/, '')}`} style={{ maxWidth: '100%' }} />
-            <figcaption className="muted">{s}</figcaption>
-          </figure>
-        ))
-      ) : (
         <div>
           <p>
             The Knowledge Base reads one dataset source with two documents per planet: its default parameter set and its composite row.
@@ -73,10 +70,16 @@ export default async function HowItWorks() {
             What changed: before the dataset source, the Knowledge Base held only methodology and could not say anything about Kepler-139 d.
             Now, asked which mass to use, the agent answers 4.66 M⊕ from Weiss et al. 2024 and explains that the composite&rsquo;s 2 M⊕ comes from
             another paper. The computed density does not change, by design: numbers come only from the dataset and deterministic code.{' '}
-            <a href="/planet/kepler-139-d">See both rows side by side.</a>
+            <Link href="/planet/kepler-139-d">See both rows side by side.</Link>
           </p>
         </div>
-      )}
+      {shots.map((s) => (
+        <figure key={s}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`/conflict/${s}`} alt={CAPTIONS[s] ?? `Knowledge Base screenshot ${s}`} style={{ maxWidth: '100%', border: '1px solid var(--border)' }} />
+          <figcaption className="muted">{CAPTIONS[s] ?? s}</figcaption>
+        </figure>
+      ))}
 
       <h2>Schema</h2>
       <dl>
@@ -96,7 +99,7 @@ export default async function HowItWorks() {
 
       <h2>Snapshots</h2>
       <p className="muted">The app reads this snapshot from Sanity; it never queries the archive at answer time.</p>
-      <div className="table-wrap">
+      <div className="table-wrap" tabIndex={0} role="region" aria-label="Table (scrolls sideways on small screens)">
         <table>
           <caption className="sr-only">Raw snapshot files</caption>
           <thead><tr><th scope="col">File</th><th scope="col">Rows</th><th scope="col">Retrieved</th><th scope="col">SHA-256</th></tr></thead>

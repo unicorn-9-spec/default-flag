@@ -37,7 +37,7 @@ export default async function PlanetPage({ params }: { params: Promise<{ slug: s
       {planet.selection && (
         <p className="muted">Why this planet is in the demo: {planet.selection.reasons.join('; ')}.</p>
       )}
-      <div className="table-wrap">
+      <div className="table-wrap" tabIndex={0} role="region" aria-label="Table (scrolls sideways on small screens)">
         <table>
           <caption className="sr-only">Parameter sets for {planet.name}</caption>
           <thead>
@@ -73,7 +73,7 @@ export default async function PlanetPage({ params }: { params: Promise<{ slug: s
           The archive&rsquo;s Planetary Systems Composite Parameters table keeps one row per planet and fills each value from whichever reference its
           rules pick, so a single row can mix papers.
         </p>
-        <div className="table-wrap">
+        <div className="table-wrap" tabIndex={0} role="region" aria-label="Table (scrolls sideways on small screens)">
           <table>
             <caption className="sr-only">Composite values and their references</caption>
             <thead><tr><th scope="col">Value</th><th scope="col">Composite</th><th scope="col">Reference</th></tr></thead>

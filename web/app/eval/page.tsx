@@ -40,7 +40,7 @@ export default function EvalPage() {
             Model <code>{r.model}</code>, version <code>{r.modelVersion}</code> (responses reported {r.responseModelIds.join(', ')}) · run {r.date.slice(0, 10)} · semantic arm embeddings{' '}
             <code>{r.embeddingModel}</code>
           </p>
-          <div className="table-wrap">
+          <div className="table-wrap" tabIndex={0} role="region" aria-label="Table (scrolls sideways on small screens)">
             <table>
               <caption className="sr-only">Results by arm</caption>
               <thead>

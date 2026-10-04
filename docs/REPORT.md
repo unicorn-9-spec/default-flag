@@ -89,3 +89,10 @@ BLOCKED_ON: owner: GitHub access (all commits local); trial expiry; two fallback
 - Finding for other Path One builds: **Context allows one source per dataset.** Combine document kinds in one GROQ query (a `select()` projection works) and give the preview rows a `title`.
 - Finding: **a Purpose rule can pre-empt the Issues queue.** With a clear default-wins rule in the Purpose, the build wrote both values into separate labelled tables and raised no issue. If a build needs a visible Keep/Accept moment, the Purpose may have to be less prescriptive. I did not do that, because staging a conflict would be dishonest.
 - Honest eval framing for the post: the structured agent's edge is refusals and default-set adherence, not a big mixing gap; the baselines' failure was a silent paper switch.
+
+## 2026-10-05T00:30Z — agent
+STATE: KB evidence screenshots on /how-it-works (live); full e2e suite 12/12 on desktop and mobile with axe; everything committed locally.
+BLOCKED_ON: owner: GitHub access, trial expiry, video, agent session export.
+
+- Owner supplied the two fallback screenshots (Sources tab GROQ query with 62 documents; the `planet_catalogue/mini_neptunes` entry with both tables). Now in `web/public/conflict/`, captioned on /how-it-works alongside the explanation.
+- axe on mobile found `scrollable-region-focusable` on /eval (a wide table scrolls sideways but can't be focused). All scroll regions now have tabIndex, a region role and a label.

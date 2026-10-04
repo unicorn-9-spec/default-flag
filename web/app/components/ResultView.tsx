@@ -108,10 +108,10 @@ export function TracePanel({ run }: { run: AgentRun }) {
         {run.trace.map((t, i) => (
           <li key={i}>
             <p><code>{t.name}</code> <span className="muted">{t.source} · {t.ms} ms{t.error ? ` · error: ${t.error}` : ''}</span></p>
-            <pre>{JSON.stringify(t.input, null, 1)}</pre>
+            <pre tabIndex={0}>{JSON.stringify(t.input, null, 1)}</pre>
             <details>
               <summary>Output</summary>
-              <pre>{truncate(JSON.stringify(t.output, null, 1))}</pre>
+              <pre tabIndex={0}>{truncate(JSON.stringify(t.output, null, 1))}</pre>
             </details>
           </li>
         ))}
