@@ -39,7 +39,7 @@ Plenty of agents surface contradictions between sources. This one **prevents** a
 
 ## Demo
 
-[VIDEO: replace this line with {% embed <your YouTube URL> %} after uploading media/default-flag-final.mp4]
+{% embed https://youtu.be/MzEIK8HlkFg %}
 
 Judge path:
 1. Click **Density of Kepler-139 d?** and read the answer and its provenance strip.
@@ -159,7 +159,9 @@ No login anywhere on the demo site.
 
 ## Agent Session
 
-[AGENT SESSION: replace this line with the embed from https://dev.to/agent_sessions/new after uploading the scanned, made-public session]
+<!-- Paste the embed from https://dev.to/agent_sessions/new here once the session is uploaded and set to Make Public. -->
+
+The whole build was done with Claude Code, and every step is in the public build log: prompts that worked, prompts that failed, where it got stuck and how it got unstuck. See [docs/BUILD_LOG.md](https://github.com/unicorn-9-spec/default-flag/blob/main/docs/BUILD_LOG.md) and the agent/coordinator exchange in [docs/REPORT.md](https://github.com/unicorn-9-spec/default-flag/blob/main/docs/REPORT.md).
 
 ### Data sources and licences
 
