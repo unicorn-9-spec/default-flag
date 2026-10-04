@@ -11,12 +11,13 @@ The NASA Exoplanet Archive keeps one row per planet per paper and flags one as t
 | Density of Kepler-139 d | 5.29 g/cm³ (Weiss et al. 2024; mass is M·sin i, so a lower limit) | 2.40 g/cm³ (mass from Lammers & Winn 2025, radius from Weiss et al. 2024) |
 | Density of Proxima Cen b | Refuses: no measured radius | 5.49 g/cm³, from a radius the archive *calculated* from the minimum mass |
 | Insolation of TOI-700 d | Refuses: no stellar temperature in that paper | 0.81 S⊕, mixing Pass et al. 2026 and Gilbert et al. 2023 |
+| Density of ups And c (compounding case) | Refuses: no radius (Curiel et al. 2011) | 13.19 g/cm³ from a true mass (McArthur et al. 2010) and a radius the archive calculated *from that same mass* |
 
 Path One entry for the Sanity Challenge on DEV (`#sanitychallenge`).
 
 ## How it works
 
-- **Sanity Content Lake** holds a snapshot of the archive: 22 planets, 97 per-paper parameter sets, their stellar solutions and publications, each planet's composite row with the reference behind every value, and hand-checked constants and habitable-zone limits with sources. Dataset `production` is publicly readable.
+- **Sanity Content Lake** holds a snapshot of the archive: 31 planets, 129 per-paper parameter sets, their stellar solutions and publications, each planet's composite row with the reference behind every value, and hand-checked constants and habitable-zone limits with sources. Dataset `production` is publicly readable.
 - **Sanity Context, two MCP endpoints.** `defaultflag-data` (dataset/GROQ mode) for structured facts and `defaultflag-kb` (Knowledge Base mode, `kbhX0D4yDJok`) for the archive's own rules. Tools are discovered with `tools/list` at runtime.
 - **Agent** (`agent/`): Vercel AI SDK + Gemini (`gemini-3.7-flash`, version `3.7-flash-08-2026`). The model finds the planet and its parameter sets through Context, then calls `compute(setId, quantity)`, which reads exactly one set and the stellar solution published with it. `composite_counterfactual` runs the same physics on the composite row.
 - **Code computes, the model explains.** Density, insolation, equilibrium temperature and habitable-zone status (Kopparapu et al. 2014) with 10,000 seeded Monte Carlo draws from split-normal errors. An output guard rejects any answer containing a number no tool returned, an id that was not read, or an inexact quote; it retries once, then withholds the answer.
@@ -65,7 +66,7 @@ Public GROQ (no token): `https://<projectId>.api.sanity.io/v2026-10-03/data/quer
 
 ## Known limitations
 
-- 22 planets, chosen by the rules in `ingest/select.ts` (reasons in `ingest/data/selection.json`), not a population study.
+- 31 planets and 129 parameter sets, chosen by the rules in `ingest/select.ts` (reasons in `ingest/data/selection.json`), not a population study. The spec asked for about 30 planets and under about 90 sets; both are not possible here because the six planets the spec names carry 39 sets between them, so the planet target was kept and the set count stated.
 - Bond albedo is fixed at 0.3 for every planet, a modelling assumption.
 - Habitable-zone limits are extrapolated outside 2600–7200 K (e.g. TRAPPIST-1, 2566 K), and the answer says so.
 - The archive's limit-flag sign convention is not defined in the documentation we snapshotted, so any value with a non-zero flag is treated as "not a measurement" and refused.

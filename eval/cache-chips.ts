@@ -2,7 +2,7 @@
 // the site, labelled "cached". Each must pass the output guard to be cached.
 import fs from 'node:fs'
 import { runAgent } from '../agent/agent.ts'
-import { loadEnv } from '../agent/config.ts'
+import { loadEnv } from '../agent/env.ts'
 import { sanity } from '../agent/tools/content.ts'
 
 const CHIPS = ['Density of Kepler-139 d?', 'Is TRAPPIST-1 e in the habitable zone?', 'Density of Proxima Cen b?']

@@ -60,7 +60,7 @@ Studio validation and CI GROQ checks enforce one default per planet, and single-
 
 **Two Sanity Context endpoints**, because an endpoint serves one mode (attach both and the dataset wins):
 - `defaultflag-data`: dataset/GROQ mode. Tools discovered at runtime: `initial_context`, `schema_explorer`, `groq_query`, `array_field_reader`.
-- `defaultflag-kb`: Knowledge Base `kbhX0D4yDJok`, with `initial_context`, `knowledge_base_search` and `knowledge_base_read`. Sources: a GROQ query over the default sets, a GROQ query over the composite snapshots, and five archive documentation pages, 49 documents in total (CI keeps it ≤ 150).
+- `defaultflag-kb`: Knowledge Base `kbhX0D4yDJok`, with `initial_context`, `knowledge_base_search` and `knowledge_base_read`. Sources: a GROQ query over the default sets, a GROQ query over the composite snapshots, and six archive documentation pages (including the DOI page that carries the table DOIs), 68 documents in total (CI keeps it ≤ 150).
 
 **Knowledge Base conflict.** <BEFORE/AFTER SCREENSHOTS + which planet + Keep/Accept choice + the answer that changed>
 
@@ -93,7 +93,7 @@ Plenty of entries surface contradictions between sources. This one *prevents* a 
 
 ## Known limitations
 
-- 22 planets chosen by explicit rules, not a population study.
+- 31 planets and 129 parameter sets chosen by explicit rules, not a population study. The spec asked for about 30 planets and under about 90 sets; the six planets it names carry 39 sets, so I kept the planet target and say so here.
 - Fixed Bond albedo of 0.3.
 - Habitable-zone limits are extrapolated below 2600 K (TRAPPIST-1), and the answer says so.
 - The archive's limit-flag sign convention isn't documented in the pages I snapshotted, so any flagged value is refused.

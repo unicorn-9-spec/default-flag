@@ -9,13 +9,16 @@ import type { Row } from './lib/archive.ts'
 
 const SPEC_WELL_KNOWN = ['K2-18 b', 'TRAPPIST-1 e', 'LHS 1140 b', 'TOI-700 d', 'Kepler-452 b']
 const SPEC_REFUSAL = ['Proxima Cen b']
-// Owner decision 2026-10-03 (docs/BUILD_LOG.md §9, §11).
+// Owner decisions 2026-10-03/04 (docs/BUILD_LOG.md §9, §11, §14; GUIDANCE 2026-10-04T00:18Z).
 const OWNER_PINNED = ['HD 10180 c']
+// Compounding case: composite best mass from another paper AND a radius the archive
+// calculated from that swapped mass, so the composite density is built on itself.
+const OWNER_COMPOUNDING = ['ups And c']
 
 const MAX_SETS_SWAP = 5
-const TOP_SWAP = 6
+const TOP_SWAP = 10
 const MAX_SETS_SPREAD = 3
-const TOP_SPREAD = 8
+const TOP_SPREAD = 12
 
 for (const r of verifyManifest(TABLES_DIR)) {
   if (!r.ok) throw new Error(`snapshot check failed for ${r.file}: ${r.reason}`)
@@ -54,6 +57,11 @@ const describeSwap = (s: (typeof swaps)[number]) =>
 for (const name of OWNER_PINNED) {
   const s = swaps.find((x) => x.name === name)
   picks.push({ name, rule: 'owner-pinned-mass-swap', reason: s ? describeSwap(s) : 'owner pinned' })
+}
+for (const name of OWNER_COMPOUNDING) {
+  const s = swaps.find((x) => x.name === name)
+  const radius = s ? refText(text(s.comp, 'pl_rade_reflink')) : null
+  picks.push({ name, rule: 'owner-pinned-compounding', reason: s ? `${describeSwap(s)}; composite radius from ${radius}` : 'owner pinned' })
 }
 swaps
   .filter((s) => num(s.comp, 'pl_bmasselim') === 0 && s.sets <= MAX_SETS_SWAP)
@@ -111,7 +119,8 @@ const manifest = readManifest(TABLES_DIR)
 const out = {
   snapshot: manifest.map(({ file, sha256 }) => ({ file, sha256 })),
   rules: {
-    'owner-pinned-mass-swap': 'Pinned by the owner as the flagship mass-provenance case.',
+    'owner-pinned-mass-swap': 'Pinned by the owner: the composite best mass is a value carrying a limit flag.',
+    'owner-pinned-compounding': 'Pinned by the owner: composite mass from another paper plus a radius the archive calculated from that mass.',
     'mass-swap-measured': `Composite best mass differs from the default row and comes from another reference, composite limit flag 0, <=${MAX_SETS_SWAP} sets; top ${TOP_SWAP} by |ln(composite/default)|.`,
     'mass-swap-with-measured-radius': 'Mass swap where default and composite both carry a measured radius (limit flag 0).',
     'spec-well-known': 'Named in the spec.',

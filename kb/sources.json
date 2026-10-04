@@ -22,7 +22,8 @@
         "ingest/data/raw/nea-docs/pscp_calc.html",
         "ingest/data/raw/nea-docs/transition.html",
         "ingest/data/raw/nea-docs/API_PS_columns.html",
-        "ingest/data/raw/nea-docs/acknowledge.html"
+        "ingest/data/raw/nea-docs/acknowledge.html",
+        "ingest/data/raw/nea-docs/archive-dois.html"
       ]
     }
   ]

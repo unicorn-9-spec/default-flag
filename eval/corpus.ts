@@ -80,7 +80,6 @@ export function buildCorpus(): CorpusDoc[] {
 
   // Archive documentation, chunked by paragraph runs of about 1,500 characters.
   for (const entry of readManifest(DOCS_DIR)) {
-    if (entry.file === 'archive-dois.html') continue // not a Knowledge Base source
     const txt = fs.readFileSync(new URL(`txt/${entry.file.replace(/\.html$/, '.txt')}`, DOCS_DIR), 'utf8')
     const paras = txt.split(/\n\s*\n/).map((p) => p.replace(/\s+/g, ' ').trim()).filter(Boolean)
     let buf = ''

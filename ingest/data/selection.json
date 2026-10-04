@@ -10,16 +10,17 @@
     }
   ],
   "rules": {
-    "owner-pinned-mass-swap": "Pinned by the owner as the flagship mass-provenance case.",
-    "mass-swap-measured": "Composite best mass differs from the default row and comes from another reference, composite limit flag 0, <=5 sets; top 6 by |ln(composite/default)|.",
+    "owner-pinned-mass-swap": "Pinned by the owner: the composite best mass is a value carrying a limit flag.",
+    "owner-pinned-compounding": "Pinned by the owner: composite mass from another paper plus a radius the archive calculated from that mass.",
+    "mass-swap-measured": "Composite best mass differs from the default row and comes from another reference, composite limit flag 0, <=5 sets; top 10 by |ln(composite/default)|.",
     "mass-swap-with-measured-radius": "Mass swap where default and composite both carry a measured radius (limit flag 0).",
     "spec-well-known": "Named in the spec.",
     "spec-refusal": "Named in the spec as a refusal case.",
-    "set-choice-changes-density": "Default is a true mass with measured radius and complete orbit/stellar inputs, <=3 sets, >=2 measured sets; top 8 by max/min density."
+    "set-choice-changes-density": "Default is a true mass with measured radius and complete orbit/stellar inputs, <=3 sets, >=2 measured sets; top 12 by max/min density."
   },
   "totals": {
-    "planets": 22,
-    "parameterSets": 97,
+    "planets": 31,
+    "parameterSets": 129,
     "swapPopulation": 100,
     "swapPopulationMeasured": 75
   },
@@ -36,6 +37,17 @@
       "defaults": 1
     },
     {
+      "name": "GJ 3929 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 4.39-7.45 g/cm3 (default 7.45), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
       "name": "HD 10180 c",
       "rules": [
         "owner-pinned-mass-swap"
@@ -47,6 +59,28 @@
       "defaults": 1
     },
     {
+      "name": "HD 103891 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 457.67290608 M_earth (Msini, Sreenivas et al. 2022) vs composite 918.52409623 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 2.01"
+      ],
+      "parameterSets": 2,
+      "defaults": 1
+    },
+    {
+      "name": "HD 129445 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 508.507 M_earth (Msini, Arriagada et al. 2010) vs composite 797.74930157 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 1.57"
+      ],
+      "parameterSets": 2,
+      "defaults": 1
+    },
+    {
       "name": "HD 142 b",
       "rules": [
         "mass-swap-measured"
@@ -55,6 +89,17 @@
         "default 396.96768034 M_earth (Msini, Feng et al. 2022) vs composite 2256.5816897 M_earth (Mass, limit flag 0, Gaia Collaboration et al. 2023); ratio 5.68"
       ],
       "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "HD 20794 d",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 2.98 M_earth (Msini, Nari et al. 2025) vs composite 4.8 M_earth (Msin(i)/sin(i), limit flag 0, Pepe et al. 2011); ratio 1.61"
+      ],
+      "parameterSets": 4,
       "defaults": 1
     },
     {
@@ -110,6 +155,17 @@
         "default 975.7381 M_earth (Msini, Jenkins et al. 2017) vs composite 2510.8444153 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 2.57"
       ],
       "parameterSets": 2,
+      "defaults": 1
+    },
+    {
+      "name": "HD 70642 b",
+      "rules": [
+        "mass-swap-measured"
+      ],
+      "reasons": [
+        "default 633.43519 M_earth (Msini, Barbato et al. 2018) vs composite 1239.5307873 M_earth (Mass, limit flag 0, Xiao et al. 2023); ratio 1.96"
+      ],
+      "parameterSets": 5,
       "defaults": 1
     },
     {
@@ -212,6 +268,39 @@
       "defaults": 1
     },
     {
+      "name": "TOI-1468 c",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 2.35-4.16 g/cm3 (default 2.35), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-199 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 0.23-0.40 g/cm3 (default 0.40), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
+      "name": "TOI-2015 b",
+      "rules": [
+        "set-choice-changes-density"
+      ],
+      "reasons": [
+        "density across measured sets 1.40-2.32 g/cm3 (default 1.40), 3 sets"
+      ],
+      "parameterSets": 3,
+      "defaults": 1
+    },
+    {
       "name": "TOI-4860 b",
       "rules": [
         "set-choice-changes-density"
@@ -253,6 +342,17 @@
         "named in spec planet selection rule 2"
       ],
       "parameterSets": 5,
+      "defaults": 1
+    },
+    {
+      "name": "ups And c",
+      "rules": [
+        "owner-pinned-compounding"
+      ],
+      "reasons": [
+        "default 629.595 M_earth (Msini, Curiel et al. 2011) vs composite 4443.24112986 M_earth (Mass, limit flag 0, McArthur et al. 2010); ratio 7.06; composite radius from Calculated Value"
+      ],
+      "parameterSets": 7,
       "defaults": 1
     },
     {

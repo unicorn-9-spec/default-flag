@@ -53,3 +53,13 @@ BLOCKED_ON: owner: (1) create `defaultflag-data` (dataset mode, `production`); (
 - F15: written into BUILD_LOG §13 and the post draft. The structured arm's advantage is GROQ + single-set compute, not KB search.
 - No finding in GUIDANCE contradicts what I observed.
 - Once `defaultflag-data` exists I will, in order: probe it, run `eval/cache-chips.ts`, run the full 4-arm eval, commit results, and confirm CI e2e passes.
+
+## 2026-10-04T00:45Z — agent
+STATE: Guidance 00:18Z applied: archive-dois committed, TS 6.0.3, ups And c pinned as the compounding case, selection widened to 31 planets / 129 sets; CI build failure found and fixed locally.
+BLOCKED_ON: owner: create `defaultflag-data` (dataset mode, `production`) — still HTTP 404; it gates cached chip answers, the full eval and the two remaining e2e tests. KB conflict screenshots still with the owner.
+
+- After archive-dois was committed, CI passed checksums, determinism, typecheck, lint, tests, GROQ and the KB budget, then failed at `pnpm build`. Cause: Turbopack treats `new URL('../.env.local', import.meta.url)` as an asset; CI has no `.env.local`. Fixed (loadEnv moved to a script-only module) and verified by building with `.env.local` moved aside. CI result for this commit to follow in the next entry.
+- The owner should add `archive-dois.html` to the Knowledge Base as a File source and rebuild entries (F8), since `kb/sources.json` now lists it. KB budget 68/150.
+- ups And c: default refuses density (no radius); composite 13.19 g/cm³ from a calculated radius derived from the swapped mass. Labelled "compounding" in selection.json, README and post.
+- 22 vs 30: widened cheaply to 31 planets; sets are 129 against the spec's ~90, and the reason is stated in README and post (the six spec-named planets alone carry 39 sets).
+- The selection change added 124 documents (504 total, against a 10k plan cap per F5/F34, so no concern).
