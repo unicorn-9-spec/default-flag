@@ -1,0 +1,12 @@
+{
+  "mup8xyordino8q37oly0": "Kepler-139 d planet page: ten published parameter sets side by side, the archive default (Weiss et al. 2024) highlighted, with density, insolation, equilibrium temperature and habitable-zone status computed separately for each set",
+  "ovjm4va3lxmznhph780w": "Four-arm evaluation table: structured agent 98% accuracy, 0% mixed provenance, 5 of 5 correct refusals; semantic search 93%, 3%, 3 of 5; keyword BM25 98%, 3%, 4 of 5; no content 45%, 35%, 3 of 5",
+  "dkc7r6bnr8ir2953dre9": "Default Flag home page: a short description, three example question chips (Density of Kepler-139 d?, Is TRAPPIST-1 e in the habitable zone?, Density of Proxima Cen b?) and an ask box, no login",
+  "7vg6c7r0s91eduabake3": "Live answer card for Density of Kepler-139 d: 5.29 g/cm3 with its 16th to 84th percentile range 3.05 to 7.69, a lower-limit caveat for the minimum mass, and a provenance strip naming the planet, parameter set id, paper Weiss et al. 2024 (archive default), mass kind and snapshot checksum",
+  "mxwify1h6kn27asbqc1q": "The 'What the composite table would give' toggle switched on for Kepler-139 d: 2.40 g/cm3, built from two papers (Lammers and Winn 2025 for mass, Weiss et al. 2024 for radius) that never published together",
+  "nczeg9yvhdfwr7jdtc2z": "Proxima Cen b answer card: a polite refusal naming the missing planet radius, and below it the composite table answering 5.49 g/cm3 from a radius the archive calculated rather than measured",
+  "xuv00w7qnmu0cobhzrxj": "Trace panel under an answer: MCP tools discovered at runtime on both Sanity Context endpoints, each GROQ query, Knowledge Base entries read, the compute output, and the output guard result",
+  "98c0kycyk9ia5sxaefn8": "Default Flag on a phone-sized screen: the description, the three example chips and the ask box stacked in one column",
+  "j9gyg7rxqtammmusl78e": "Sanity Knowledge Base source editor: a GROQ query over the production dataset selecting each planet's default parameter set and composite row, with a preview showing 62 documents",
+  "1748ydx53wqvabord71y": "Built Knowledge Base entry: a 'Default parameter sets (self-consistent, preferred for derived quantities)' table and a separate 'Composite table (mixed-source alternatives)' table, noting that Kepler-139 d's composite mass of 2 Earth masses differs from its default of 4.658"
+}
