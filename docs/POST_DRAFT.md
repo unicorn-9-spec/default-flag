@@ -48,7 +48,7 @@ Plenty of agents surface contradictions between sources. This one **prevents** a
 
 ## Demo
 
-[VIDEO: upload media/default-flag-walkthrough-voiced.mp4 (2–3 min, male voiceover, captions burned in; .srt alongside) and embed the YouTube/DEV link here]
+[VIDEO: upload media/default-flag-final.mp4 (2:59, male voiceover, captions burned in; media/default-flag-final.srt alongside) and embed the YouTube link here]
 
 Judge path:
 1. Click **Density of Kepler-139 d?** and read the answer and its provenance strip.

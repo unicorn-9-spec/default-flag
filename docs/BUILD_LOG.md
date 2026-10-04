@@ -292,3 +292,13 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - **Answer that changes:** asked which mass to use for Kepler-139 d, the agent now answers 4.66 M⊕ from Weiss et al. 2024 and explains the composite's 2 M⊕ comes from Lammers & Winn 2025, citing `kb:parameter_sets/default`. The density itself stays 5.29 by design.
 - **Entry paths changed on rebuild** (`parameter_provenance` disappeared), confirming F11 independently.
 - Guard false positive seen once more: "-1" (probably from a hyphenated designation) on a first draft; the retry passed. Not yet fixed.
+
+### 18. Video, screenshots, post on the official template (2026-10-05)
+
+- **Video:** `scripts/record-video.mjs` drives the live site with Playwright along the judge path and burns captions into the page.
+  - `scripts/tts.mjs` voices each caption with Windows SAPI ("Microsoft David", male, rate 2), cached by content. Each caption is held for its spoken length, so `scripts/voiceover.mjs` mixes the voice with zero overlaps.
+  - First attempt: the voice was fitted into fixed caption slots and needed SAPI rate 4 on many lines (rushed, one overlap). Timing the captions from the voice instead fixed it.
+  - The voiced cut ran 3:12 (page loads and live agent waits), so the final is played 1.07× to 2:59.8, with loudness normalised to −16 LUFS and a limiter (peak −0.4 dB). Output: `media/default-flag-final.mp4` + `.srt` (gitignored; upload to YouTube).
+- **Stuck:** the previous session ended mid-recording and left an orphaned `node record-video.mjs` holding the partial `.webm` (rm: "Device or resource busy"). Found it by command line, stopped its process tree, re-recorded.
+- **Screenshots:** `scripts/screenshots.mjs` takes 11 Playwright screenshots of the live site into `docs/screenshots/`.
+- **Post:** rebuilt on the official DEV Path One template (exact intro line and the six headings in order), with honesty sections as subsections. The long public GROQ URL moved to `docs/PUBLIC_QUERY.md` (tested: 5 planets, no token).
