@@ -7,6 +7,7 @@
 **Live demo, no login:** https://default-flag.vercel.app · **Code:** https://github.com/unicorn-9-spec/default-flag · **Sanity project:** `0eu544dk`, dataset `production` (public)
 
 ![Kepler-139 d planet page: ten published parameter sets side by side, the archive default (Weiss et al. 2024) highlighted, with density, insolation, equilibrium temperature and habitable-zone status computed separately for each set](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/mup8xyordino8q37oly0.png)
+
 The NASA Exoplanet Archive keeps every published solution for a planet as its own row and flags one as the default. It also publishes a composite table with one row per planet, filled parameter by parameter from whichever paper its rules pick. The archive itself calls that table "a more complete, though not necessarily self-consistent, set of parameters". Answers built on the composite row can combine a mass from one paper with a radius from another, or with a radius the archive calculated from that mass.
 
 Default Flag never does that. Every number comes from deterministic code reading exactly one parameter set (plus the stellar values published with it). The composite answer appears only behind a "What the composite table would give" toggle.
@@ -20,6 +21,7 @@ Default Flag never does that. Every number comes from deterministic code reading
 40 frozen questions (15 density, 10 insolation or equilibrium temperature, 5 habitable zone, 5 provenance, 5 refusals). Ground truth comes from the archive's default row in the raw snapshot CSV, independent of Sanity and the model. Same model, step budget and compute tool for every arm; only retrieval differs. Model `gemini-3.7-flash`, version `3.7-flash-08-2026`.
 
 ![Four-arm evaluation table: structured agent 98% accuracy, 0% mixed provenance, 5 of 5 correct refusals; semantic search 93%, 3%, 3 of 5; keyword BM25 98%, 3%, 4 of 5; no content 45%, 35%, 3 of 5](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/ovjm4va3lxmznhph780w.png)
+
 | Arm | Accuracy | Mixed-provenance rate | Correct refusals | Valid citations |
 | --- | --- | --- | --- | --- |
 | Structured agent (Sanity Context) | 98% (39/40) | **0%** (0/29) | **5/5** | 98% |
@@ -49,11 +51,17 @@ Judge path:
 5. Open `/how-it-works` for the Knowledge Base section.
 
 ![Default Flag home page: a short description, three example question chips (Density of Kepler-139 d?, Is TRAPPIST-1 e in the habitable zone?, Density of Proxima Cen b?) and an ask box, no login](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/dkc7r6bnr8ir2953dre9.png)
+
 ![Live answer card for Density of Kepler-139 d: 5.29 g/cm3 with its 16th to 84th percentile range 3.05 to 7.69, a lower-limit caveat for the minimum mass, and a provenance strip naming the planet, parameter set id, paper Weiss et al. 2024 (archive default), mass kind and snapshot checksum](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/7vg6c7r0s91eduabake3.png)
+
 ![The 'What the composite table would give' toggle switched on for Kepler-139 d: 2.40 g/cm3, built from two papers (Lammers and Winn 2025 for mass, Weiss et al. 2024 for radius) that never published together](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/mxwify1h6kn27asbqc1q.png)
+
 ![Proxima Cen b answer card: a polite refusal naming the missing planet radius, and below it the composite table answering 5.49 g/cm3 from a radius the archive calculated rather than measured](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/nczeg9yvhdfwr7jdtc2z.png)
+
 ![Trace panel under an answer: MCP tools discovered at runtime on both Sanity Context endpoints, each GROQ query, Knowledge Base entries read, the compute output, and the output guard result](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/xuv00w7qnmu0cobhzrxj.png)
+
 ![Default Flag on a phone-sized screen: the description, the three example chips and the ask box stacked in one column](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/98c0kycyk9ia5sxaefn8.png)
+
 The other pages:
 - `/planet/<slug>` puts every published parameter set side by side.
 - `/eval` has a drill-down per question.
@@ -136,7 +144,9 @@ Studio validation and CI GROQ checks enforce one default per planet and single-s
 **Context did not raise it in the Issues tab.** The Knowledge Base Purpose states the rule: "the self-consistent single-source set governs; composite values are recorded only as explicitly labelled alternatives". The build applied it directly. The planet entries hold a "Default parameter sets (preferred for derived quantities)" table and a separate "Composite table (mixed-source alternatives)" table, and say outright that Kepler-139 d's composite mass differs from its default.
 
 ![Sanity Knowledge Base source editor: a GROQ query over the production dataset selecting each planet's default parameter set and composite row, with a preview showing 62 documents](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/j9gyg7rxqtammmusl78e.png)
+
 ![Built Knowledge Base entry: a 'Default parameter sets (self-consistent, preferred for derived quantities)' table and a separate 'Composite table (mixed-source alternatives)' table, noting that Kepler-139 d's composite mass of 2 Earth masses differs from its default of 4.658](https://dev-to-uploads.s3.us-east-2.amazonaws.com/uploads/articles/1748ydx53wqvabord71y.png)
+
 **The answer that changed.** Before that source existed, the Knowledge Base held only methodology and could say nothing about Kepler-139 d. Now, asked "Which mass should I use for Kepler-139 d, and why does the composite table give a different one?", the agent answers:
 - 4.66 M⊕ from Weiss et al. 2024;
 - the composite's 2 M⊕ comes from a different paper;
