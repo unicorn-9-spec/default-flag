@@ -6,13 +6,8 @@
   "sources": [
     {
       "type": "dataset",
-      "name": "Default parameter set per planet",
-      "query": "*[_type == \"planet\"]{name, \"default\": defaultParameterSet->{_id, massKind, radiusEarth, massEarth, \"paper\": publication->citation}}"
-    },
-    {
-      "type": "dataset",
-      "name": "Composite snapshot per planet",
-      "query": "*[_type == \"planet\"]{name, compositeSnapshot}"
+      "name": "Default parameter set and composite row per planet (one dataset source; Context allows one source per dataset)",
+      "query": "*[(_type == \"parameterSet\" && defaultFlag == true) || _type == \"planet\"]{_id, ...select(_type == \"parameterSet\" => {\"title\": planet->name + \" — default parameter set\", \"name\": planet->name, \"planet\": planet->name, \"source\": \"NASA Exoplanet Archive default parameter set (one paper, self-consistent)\", \"paper\": publication->citation, \"massEarth\": massEarth.value, \"massKind\": massKind, \"radiusEarth\": radiusEarth.value, \"semiMajorAxisAu\": semiMajorAxisAu.value}, {\"title\": name + \" — composite table\", \"name\": name, \"planet\": name, \"source\": \"NASA Exoplanet Archive composite table (values may come from different papers)\", \"massEarth\": compositeSnapshot.massEarth.measurement.value, \"massKind\": compositeSnapshot.massKind, \"massPaper\": compositeSnapshot.massEarth.referenceText, \"radiusEarth\": compositeSnapshot.radiusEarth.measurement.value, \"radiusPaper\": compositeSnapshot.radiusEarth.referenceText, \"semiMajorAxisAu\": compositeSnapshot.semiMajorAxisAu.measurement.value, \"semiMajorAxisPaper\": compositeSnapshot.semiMajorAxisAu.referenceText})}"
     },
     {
       "type": "files",

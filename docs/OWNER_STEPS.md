@@ -37,6 +37,8 @@ Knowledge Base `kbhX0D4yDJok` (endpoint `defaultflag-kb`).
 
 ## 3. Resolve one real default-vs-composite conflict, with screenshots
 
+> **Outcome 2026-10-05: no issue was raised.** The Purpose rule was applied at build time (see `docs/KB_CONFLICT.md`). Take the fallback screenshots instead: `1-sources.png` (the Sources tab with the 62-document dataset source) and `2-entry.png` (the `planet_catalogue/mini_neptunes` entry showing both tables and the Kepler-139 d line). Save them in `web/public/conflict/`. The steps below apply only if an issue appears after a future rebuild.
+
 After the build, open **Issues**. The two dataset sources disagree wherever the composite row swapped a value. The expected candidates are:
 
 - **Kepler-139 d mass:** default 4.66 M⊕ (M·sin i, Weiss et al. 2024) vs composite 2.00 M⊕ (Lammers & Winn 2025). This is the flagship.

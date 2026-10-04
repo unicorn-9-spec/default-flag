@@ -9,7 +9,18 @@ tags: sanitychallenge, ai, astronomy, agents
 
 **Demo:** https://default-flag.vercel.app · **Code:** https://github.com/unicorn-9-spec/default-flag · **Sanity project ID:** `0eu544dk` (dataset `production`, public)
 
-<!-- RESULTS_TABLE: paste eval/results/<date>.md table here after the full run -->
+**Four-arm evaluation** (40 frozen questions, same model and compute tool for every arm; only retrieval differs):
+
+Model: `gemini-3.7-flash`, version `3.7-flash-08-2026` (responses reported: gemini-3.7-flash) · 2026-10-04 · embeddings for semantic arm: `gemini-embedding-2`
+
+| Arm | Accuracy | Mixed-provenance rate | Correct refusals | Valid citations |
+| --- | --- | --- | --- | --- |
+| Structured agent (Sanity Context) | 98% (39/40) | 0% (0/29) | 5/5 | 98% |
+| Semantic search | 93% (37/40) | 3% (1/32) | 3/5 | 100% |
+| Keyword (BM25) | 98% (39/40) | 3% (1/31) | 4/5 | 100% |
+| No content | 45% (18/40) | 35% (7/20) | 3/5 | 0% |
+
+What the numbers say, plainly. The structured agent never mixed papers (0%) and refused all five unanswerable questions. The search baselines read the same *structured* documents (each parameter set is one self-contained document), and they mixed far less than I expected: 3%. Their failure is different. On questions the archive's default set can't answer, they quietly answered from another paper's set instead of saying so. That is a provenance error the mixed-provenance metric does not count. With no content at all, the model mixed or invented inputs 35% of the time. The structured agent's one miss was an answer its own output guard withheld.
 
 ## What I Built
 
@@ -62,7 +73,9 @@ Studio validation and CI GROQ checks enforce one default per planet, and single-
 - `default-flag-data`: dataset/GROQ mode. Tools discovered at runtime: `initial_context`, `schema_explorer`, `groq_query`, `array_field_reader`.
 - `defaultflag-kb`: Knowledge Base `kbhX0D4yDJok`, with `initial_context`, `knowledge_base_search` and `knowledge_base_read`. Sources: a GROQ query over the default sets, a GROQ query over the composite snapshots, and six archive documentation pages (including the DOI page that carries the table DOIs), 68 documents in total (CI keeps it ≤ 150).
 
-**Knowledge Base conflict.** <BEFORE/AFTER SCREENSHOTS + which planet + Keep/Accept choice + the answer that changed>
+**Knowledge Base conflict.** The Knowledge Base reads one dataset query that gives every planet two documents: its default parameter set and its composite row. For Kepler-139 d they disagree: 4.658 M⊕ (M·sin i, Weiss et al. 2024) against 2 M⊕ (Lammers & Winn 2025). **Context did not raise it in the Issues tab.** The Purpose text states the rule, and the build applied it directly: the planet entries hold a "Default parameter sets (preferred for derived quantities)" table and a separate "Composite table (mixed-source alternatives)" table, and say outright that Kepler-139 d's composite mass differs from its default. Before that source existed, the Knowledge Base could say nothing about Kepler-139 d. Now, asked which mass to use, the agent answers 4.66 M⊕ from Weiss et al. 2024 and explains that the composite's 2 M⊕ comes from another paper, citing `kb:parameter_sets/default`. The computed density stays 5.29 g/cm³, by design. <SCREENSHOTS: Sources tab with the 62-document dataset source; the planet_catalogue entry with both tables>
+
+One more honest note: the rebuild renamed entry paths (`parameter_provenance` disappeared). The agent resolves paths at runtime, so nothing broke.
 
 Where the advantage comes from: the Knowledge Base's own search tool is BM25 keyword search, so the structured agent's edge over the BM25 baseline is not better KB retrieval. It is GROQ over typed documents plus a compute tool that can only read one parameter set.
 

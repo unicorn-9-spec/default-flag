@@ -270,3 +270,25 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - **Guard false positive, fixed:** both first drafts were rejected for "number 16" and "number 84", the *ordinals* in "16th–84th percentile" that my own prompt asked for. The guard now ignores ordinals, and accepts a percentage when the tool returned the matching fraction (e.g. 96% for 0.9625). A regression test caught my first fix silently letting sentence-final numbers ("42.0.") through; fixed. 38 tests.
 - The guard result now keeps `firstViolations` when it retries, so the trace shows what was rejected.
 - Prompt now asks for three significant figures and plain text: one draft printed 15-digit medians, another LaTeX.
+
+### 17. Evaluation run 2 and the Knowledge Base conflict (2026-10-05)
+
+- **Eval run 2** (`eval/results/2026-10-04.md`, model gemini-3.7-flash, version 3.7-flash-08-2026):
+
+  | Arm | Accuracy | Mixed-provenance | Refusals |
+  | --- | --- | --- | --- |
+  | Structured | 98% | 0% (0/29) | 5/5 |
+  | Semantic | 93% | 3% | 3/5 |
+  | BM25 | 98% | 3% | 4/5 |
+  | No content | 45% | 35% | 3/5 |
+
+  Run 1 is kept as `2026-10-04-run1.*`. Its only structured miss (t10) was a guard false positive on 3-s.f. rounding ("1240" for 1244), fixed before run 2. Run 2's only structured miss (h01) was withheld by the guard; two manual reruns passed, so it is intermittent. The results file did not record guard reasons. TODO: store them.
+- **The spec's expected headline did not hold.** Baselines over the same structured documents rarely mix (3%), because each parameter set is a self-contained document. Their real failure: on r02 and r05 they silently answered from a non-default paper's set (Rodriguez et al. 2020, Wittenmyer et al. 2012) instead of refusing. The mixed-provenance metric doesn't count that. Reported in the post as an observation, not as a new metric added after seeing the results.
+- **Knowledge Base dataset source:**
+  - **Context allows one source per dataset** ("production already a source"), so the two planned GROQ sources became one query, `kb/query-combined.groq`. It gives every planet two documents (default set and composite row) with identical field names; 62 documents.
+  - The preview rows were blank until the projection had `title`/`name` fields.
+  - The first attach produced "Rebuild required … no per-planet branch"; a rebuild made 8 entries, including `planet_catalogue/*`.
+- **No conflict was raised in Issues.** The build applied the Purpose rule directly: separate "Default parameter sets (preferred…)" and "Composite table (mixed-source alternatives)" tables, plus an explicit line that Kepler-139 d's composite mass differs from its default. Spec fallback used; evidence in `docs/KB_CONFLICT.md`.
+- **Answer that changes:** asked which mass to use for Kepler-139 d, the agent now answers 4.66 M⊕ from Weiss et al. 2024 and explains the composite's 2 M⊕ comes from Lammers & Winn 2025, citing `kb:parameter_sets/default`. The density itself stays 5.29 by design.
+- **Entry paths changed on rebuild** (`parameter_provenance` disappeared), confirming F11 independently.
+- Guard false positive seen once more: "-1" (probably from a hyphenated designation) on a first draft; the retry passed. Not yet fixed.

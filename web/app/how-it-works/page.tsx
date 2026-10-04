@@ -57,7 +57,25 @@ export default async function HowItWorks() {
           </figure>
         ))
       ) : (
-        <div className="banner" role="status">The conflict screenshots have not been added yet.</div>
+        <div>
+          <p>
+            The Knowledge Base reads one dataset source with two documents per planet: its default parameter set and its composite row.
+            For Kepler-139 d they disagree: <strong>4.658 M⊕</strong> (M·sin i, Weiss et al. 2024, the default) against <strong>2 M⊕</strong>{' '}
+            (Lammers &amp; Winn 2025, composite).
+          </p>
+          <p>
+            <strong>Context did not raise this as an issue.</strong> The Knowledge Base Purpose states the rule (&ldquo;the self-consistent
+            single-source set governs; composite values are recorded only as explicitly labelled alternatives&rdquo;), and the build applied it
+            directly. The planet entries keep a &ldquo;Default parameter sets (preferred for derived quantities)&rdquo; table and a separate
+            &ldquo;Composite table (mixed-source alternatives)&rdquo; table, and state that Kepler-139 d&rsquo;s composite mass differs from its default.
+          </p>
+          <p>
+            What changed: before the dataset source, the Knowledge Base held only methodology and could not say anything about Kepler-139 d.
+            Now, asked which mass to use, the agent answers 4.66 M⊕ from Weiss et al. 2024 and explains that the composite&rsquo;s 2 M⊕ comes from
+            another paper. The computed density does not change, by design: numbers come only from the dataset and deterministic code.{' '}
+            <a href="/planet/kepler-139-d">See both rows side by side.</a>
+          </p>
+        </div>
       )}
 
       <h2>Schema</h2>

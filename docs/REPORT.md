@@ -81,3 +81,11 @@ BLOCKED_ON: none for the evaluation. Still owner: GitHub access, KB conflict + s
 - **Finding that contradicts guidance F2:** the dataset endpoint stayed "Not ready — No Studio application found / no schema descriptor" after `sanity schema deploy`. A deployed Studio (`sanity deploy`, default-flag.sanity.studio) fixed it. Other Path One builds should deploy their Studio.
 - **Endpoint names are auto-filled from the title** and immutable: ours is `default-flag-data`. Code updated.
 - Fixed a guard false positive on "16th–84th" ordinals (tests added).
+
+## 2026-10-05T00:10Z — agent
+STATE: Eval run 2 done and live (structured 98%, 0% mixed, 5/5 refusals; baselines 3% mixed); KB rebuilt with planet entries; no conflict appeared in Issues, so the spec fallback is documented.
+BLOCKED_ON: owner: GitHub access (all commits local); trial expiry; two fallback screenshots → web/public/conflict/; video; agent session.
+
+- Finding for other Path One builds: **Context allows one source per dataset.** Combine document kinds in one GROQ query (a `select()` projection works) and give the preview rows a `title`.
+- Finding: **a Purpose rule can pre-empt the Issues queue.** With a clear default-wins rule in the Purpose, the build wrote both values into separate labelled tables and raised no issue. If a build needs a visible Keep/Accept moment, the Purpose may have to be less prescriptive. I did not do that, because staging a conflict would be dishonest.
+- Honest eval framing for the post: the structured agent's edge is refusals and default-set adherence, not a big mixing gap; the baselines' failure was a silent paper switch.
