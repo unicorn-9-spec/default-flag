@@ -1,0 +1,8703 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Digital Object Identifiers | IPAC
+
+</title>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width,initial-scale=1' name='viewport'>
+<link href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" media="screen" rel="stylesheet" type="text/css" />
+<script src='https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' rel='stylesheet'>
+<link href='/favicon/apple-icon-57x57.png' rel='apple-touch-icon' sizes='57x57'>
+<link href='/favicon/apple-icon-60x60.png' rel='apple-touch-icon' sizes='60x60'>
+<link href='/favicon/apple-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+<link href='/favicon/apple-icon-76x76.png' rel='apple-touch-icon' sizes='76x76'>
+<link href='/favicon/apple-icon-114x114.png' rel='apple-touch-icon' sizes='114x114'>
+<link href='/favicon/apple-icon-120x120.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='/favicon/apple-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='/favicon/apple-icon-152x152.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='/favicon/apple-icon-180x180.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/favicon/android-icon-192x192.png' rel='icon' sizes='192x192' type='image/png'>
+<link href='/favicon/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/favicon/favicon-96x96.png' rel='icon' sizes='96x96' type='image/png'>
+<link href='/favicon/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/favicon/manifest.json' rel='manifest'>
+<meta content='#ffffff' name='msapplication-TileColor'>
+<meta content='/favicon/ms-icon-144x144.png' name='msapplication-TileImage'>
+<meta content='#ffffff' name='theme-color'>
+<meta content='IPAC' property='og:site_name'>
+<meta content='https://www.ipac.caltech.edu/assets/hero_images/NED-allsky-ce8c69df9e88c4487d806c6bc3d8e346.jpg' property='og:image'>
+<meta content='https://www.ipac.caltech.edu/assets/hero_images/NED-allsky-ce8c69df9e88c4487d806c6bc3d8e346.jpg' name='image'>
+<meta content='website' property='og:type'>
+<meta content='IPAC at Caltech partners with NASA, NSF, JPL and the world-wide research community to advance exploration of our Universe.' name='description'>
+<meta content='IPAC at Caltech partners with NASA, NSF, JPL and the world-wide research community to advance exploration of our Universe.' property='og:description'>
+<!-- This indicates to Google which image to use for homepage. Increases the odds but not 100% -->
+<script type='application/ld+json'>
+{"@context" : "http://schema.org",
+"@type" : "Organization",
+"name" : "IPAC",
+"url" : "https://ipac.caltech.edu",
+"logo": "https://ipac.caltech.edu/assets/hero_images/NED-allsky.jpg"}
+</script>
+
+
+<link href="/assets/application-1bca00f47c11ee33922ffe4b93ccb64f.css" media="screen" rel="stylesheet" type="text/css" />
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="WaIucNVnpY53r4SdGMkZv7jHmFhoyKvo6Hm15chnJyI=" name="csrf-token" />
+</head>
+<body>
+<div class='flex_wrapper'>
+<!-- = render :partial => "layouts/service_message" -->
+<div class='alert_messages'>
+</div>
+<div class='ipac_bar'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='ipac_global_navigation'>
+<form accept-charset="UTF-8" action="/search" class="form-inline left" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WaIucNVnpY53r4SdGMkZv7jHmFhoyKvo6Hm15chnJyI=" /></div>
+<div class='input-group'>
+<input class='form-control input-sm' name='search[keywords]' placeholder='Search' type='text'>
+<span class='input-group-btn'>
+<button class='btn btn-sm' type='submit'>
+<i class='fa fa-search'></i>
+</button>
+</span>
+</div>
+</form>
+
+<a href="https://www.facebook.com/caltechipac/" target="_IPAC"><i class='fa fa-facebook'></i>
+</a><a href="https://twitter.com/caltechipac" target="_IPAC"><i class='fa fa-twitter'></i>
+</a><a href="https://www.instagram.com/caltech_ipac" target="_IPAC"><i class='fa fa-instagram'></i>
+</a><a href="https://bsky.app/profile/caltechipac.bsky.social" target="_IPAC"><svg aria-hidden='true' class='icon' focusable='false' viewBox='0 0 512 512' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<!-- !Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. -->
+<path d='M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z' fill='currentColor'></path>
+</svg>
+</a><a href="https://www.linkedin.com/showcase/ipac-at-caltech" target="_IPAC"><i class='fa fa-linkedin'></i>
+</a><div class='clearfix'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='navigation_wrapper'>
+<div class='nav_container'>
+<div class='nav_brand'>
+<a href="/" class="brand_content"><img alt="Main_ipac_logo" src="/assets/main_ipac_logo-ea4b4e2692a00c68ff2f446d8d468f85.png" />
+</a><div class='navbar-burger'>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class='nav_buttons hidden-sm hidden-xs'>
+<div class='tab' data-target='about_subnav'>
+About
+</div>
+<div class='tab' data-target='research_subnav'>
+Science
+</div>
+<div class='active tab' data-target='projects_subnav'>
+Projects & Data
+</div>
+<div class='tab' data-target='future_subnav'>
+Future
+</div>
+<div class='tab' data-target='education_subnav'>
+Outreach
+</div>
+<div class='tab' data-target='news_subnav'>
+News
+</div>
+<div class='tab' data-target='events_subnav'>
+Events
+</div>
+<div class='tab' data-target='community_subnav'>
+Community
+</div>
+</div>
+</div>
+<div class='secondary_navigation'>
+<div class='sub_navigation'>
+<div class='container'>
+<div class='sub_nav_pane offset_left' id='about_subnav'>
+<div class='row'>
+<div class='col-md-2'>
+<ul>
+<li>
+<a href="/page/mission" class="nav_header">Our Mission</a>
+</li>
+<li>
+<a href="/page/history" class="nav_header">History</a>
+</li>
+<li>
+<a href="/page/organization" class="nav_header">Organization</a>
+</li>
+<li>
+<a href="/page/committee" class="nav_header">Committees</a>
+</li>
+<li>
+<a href="/staff" class="nav_header">Staff Directory</a>
+</li>
+<li>
+<a href="/meet-the-staff" class="nav_header">Meet the Staff</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/page/opportunities" class="nav_header">Job Opportunities</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/page/contact" class="nav_header">Contact Us</a>
+</li>
+<li>
+<a href="/page/contact#general-information">General Information</a>
+</li>
+<li>
+<a href="/page/contact#media-contacts">Media Contacts</a>
+</li>
+<li>
+<a href="/page/contact#social-media">Social Media</a>
+</li>
+<li>
+<a href="/page/contact#visitor-information">Visitor Information</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane offset_left' id='research_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/science" class="nav_header">Overview</a>
+</li>
+<li>
+<a href="/science/staff">Science Staff</a>
+</li>
+<li>
+<a href="/meet-the-staff?category=featured-scientists">Meet the Scientists</a>
+</li>
+<li>
+<a href="/science/ipac-space-sciences-seminar">IPAC Space Sciences Seminars</a>
+</li>
+<li>
+<a href="/science/fellowships">Fellowships</a>
+</li>
+<li>
+<a href="/publications">Publications</a>
+</li>
+</ul>
+</div>
+<div class='col-md-4'>
+<ul>
+<li>
+<a href="/science/collaborations" class="nav_header">Science Collaborations</a>
+</li>
+<li>
+<a href="/project/111">Beacon-JWST
+</a></li>
+<li>
+<a href="/project/goals">GOALS
+<div class='small'>
+Great Observatories All-sky LIRG Survey
+</div>
+</a></li>
+<li>
+<a href="/project/passage">PASSAGE
+<div class='small'>
+Parallel Application of Slitless Spectroscopy to Analyze Galaxy Evolution
+</div>
+</a></li>
+<li>
+<a href="/project/rapid">RAPID PIT
+<div class='small'>
+Roman Alerts Promptly from Image Differencing
+</div>
+</a></li>
+<li>
+<a href="/project/roman-grs-pit">Roman GRS PIT
+<div class='small'>
+Roman Galaxy Redshift Survey Project Infrastructure Team
+</div>
+</a></li>
+<li>
+<a href="/project/romanhliscosmopit">Roman HLIS Cosmology PIT
+<div class='small'>
+Roman Project Infrastructure Team: Cosmology with the Roman High Latitude Imaging Survey
+</div>
+</a></li>
+
+<li>
+<a href="/science/collaborations">More
+<i class='fa fa-angle-double-right'></i>
+</a></li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/page/students" class="nav_header">Students</a>
+</li>
+<li>
+<a href="/page/students#graduate-students">Graduate Students</a>
+</li>
+<li>
+<a href="/page/students#undergraduate-students">Undergraduate Students</a>
+</li>
+<li>
+<a href="/page/students#high-school-students">High School Students</a>
+</li>
+<li>
+<a href="/page/students#citizen-scientist">Citizen Science</a>
+</li>
+<li>
+<a href="/page/students#working-at-IPAC">Working at IPAC</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane' id='projects_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/projects/category/archives-and-data-science" class="nav_header">Archives &amp; Data Science</a>
+</li>
+<li>
+<a href="/project/irsa">IRSA
+<div class='small'>
+Infrared Science Archive
+</div>
+</a></li>
+<li>
+<a href="/project/keck-archive">KOA
+<div class='small'>
+Keck Observatory Archive
+</div>
+</a></li>
+<li>
+<a href="/project/exoplanet-archive">NASA Exoplanet Archive
+</a></li>
+<li>
+<a href="/project/ned">NED
+<div class='small'>
+NASA/IPAC Extragalactic Database
+</div>
+</a></li>
+
+<div class='nav_divider'></div>
+<li>
+<a href="/project/exofop">ExoFOP
+<div class='small'>
+Exoplanet Follow-up Observing Program
+</div>
+</a></li>
+<li>
+<a href="/project/fornax">Fornax
+<div class='small'>
+The Fornax Initiative
+</div>
+</a></li>
+<li>
+<a href="/project/neid">NEID
+<div class='small'>
+NN-explore Exoplanet Investigations with Doppler spectroscopy
+</div>
+</a></li>
+
+<li>
+<a href="/dois" alt="Digitial Object Indentifiers" class="nav_header" title="Digitial Object Indentifiers">DOIs</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/projects/category/missions-and-centers" class="nav_header">Missions &amp; Centers</a>
+</li>
+<li>
+<a href="/project/euclid">Euclid
+<div class='small'>
+Euclid NASA Science Center at IPAC
+</div>
+</a></li>
+<li>
+<a href="/project/nexsci">NExScI
+<div class='small'>
+NASA Exoplanet Science Institute
+</div>
+</a></li>
+<li>
+<a href="/project/roman">Roman
+<div class='small'>
+Nancy Grace Roman Space Telescope
+</div>
+</a></li>
+<li>
+<a href="/project/rubin">Rubin
+<div class='small'>
+Vera C. Rubin Observatory
+</div>
+</a></li>
+<li>
+<a href="/project/spherex">SPHEREx
+<div class='small'>
+Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer
+</div>
+</a></li>
+<li>
+<a href="/project/ztf">ZTF
+<div class='small'>
+Zwicky Transient Facility
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/projects/status/in-development" class="nav_header">In Development</a>
+</li>
+<li>
+<a href="/project/ariel-case">ARIEL/CASE
+<div class='small'>
+Atmospheric Remote-sensing Infrared Exoplanet Large-survey
+</div>
+</a></li>
+<li>
+<a href="/project/neo-surveyor">NEO Surveyor
+<div class='small'>
+Near-Earth Object Surveyor
+</div>
+</a></li>
+<li>
+<a href="/project/prima">PRIMA
+<div class='small'>
+Probe Far-Infrared Mission for Astrophysics
+</div>
+</a></li>
+<li>
+<a href="/project/uvex">UVEX
+<div class='small'>
+Ultraviolet Explorer
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/projects/status/legacy" class="nav_header">Legacy</a>
+</li>
+<li>
+<a href="/project/2mass">2MASS
+<div class='small'>
+Two Micron All Sky Survey
+</div>
+</a></li>
+<li>
+<a href="/project/herschel">Herschel
+<div class='small'>
+NASA Herschel Science Center
+</div>
+</a></li>
+<li>
+<a href="/project/iras">IRAS
+<div class='small'>
+Infrared Astronomical Satellite
+</div>
+</a></li>
+<li>
+<a href="/project/iso">ISO
+<div class='small'>
+Infrared Space Observatory
+</div>
+</a></li>
+<li>
+<a href="/project/lunar-trailblazer">LTB
+<div class='small'>
+Lunar Trailblazer
+</div>
+</a></li>
+<li>
+<a href="/project/neowise">NEOWISE
+<div class='small'>
+Near-Earth Object Wide-field Infrared Survey Explorer
+</div>
+</a></li>
+<li>
+<a href="/project/planck">Planck
+<div class='small'>
+ U.S. Planck Data Center
+</div>
+</a></li>
+<li>
+<a href="/project/sofia">SOFIA
+<div class='small'>
+Stratospheric Observatory for Infrared Astronomy
+</div>
+</a></li>
+<li>
+<a href="/project/spitzer">Spitzer
+<div class='small'>
+Spitzer Science Center
+</div>
+</a></li>
+<li>
+<a href="/project/tmt">TMT
+<div class='small'>
+Thirty Meter Telescope
+</div>
+</a></li>
+<li>
+<a href="/project/wise">WISE
+<div class='small'>
+Wide-field Infrared Survey Explorer
+</div>
+</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane offset_left' id='future_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/future/projects/in-development" class="nav_header">In Development</a>
+</li>
+<li>
+<a href="/project/ariel-case">ARIEL/CASE
+<div class='small'>
+Atmospheric Remote-sensing Infrared Exoplanet Large-survey
+</div>
+</a></li>
+<li>
+<a href="/project/neo-surveyor">NEO Surveyor
+<div class='small'>
+Near-Earth Object Surveyor
+</div>
+</a></li>
+<li>
+<a href="/project/prima">PRIMA
+<div class='small'>
+Probe Far-Infrared Mission for Astrophysics
+</div>
+</a></li>
+<li>
+<a href="/project/uvex">UVEX
+<div class='small'>
+Ultraviolet Explorer
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/future/projects/mission-studies-and-proposals" class="nav_header">Mission Studies &amp; Proposals</a>
+</li>
+<li>
+<a href="/project/iscea">ISCEA
+<div class='small'>
+Infrared SmallSat for Cluster Evolution Astrophysics
+</div>
+</a></li>
+<li>
+<a href="/project/joint-survey-processing">JSP
+<div class='small'>
+Joint Survey Processing
+</div>
+</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane' id='education_subnav'>
+<div class='row'>
+<div class='col-md-3 right'>
+<ul>
+<li>
+<a href="/outreach#more-epo-projects" class="nav_header">More EPO Projects</a>
+</li>
+<li>
+<a href="/project/cool-cosmos">Cool Cosmos
+</a></li>
+<li>
+<a href="/project/explore-exoplanets">Explore Exoplanets: The Discoverers
+</a></li>
+<li>
+<a href="/project/nitarp">NITARP
+<div class='small'>
+NASA/IPAC Teacher  Archive Research Program
+</div>
+</a></li>
+
+</ul>
+</div>
+<div class='col-md-3 right'>
+<ul>
+<li>
+<a href="/outreach#universe-of-learning" class="nav_header">NASA Universe of Learning</a>
+</li>
+<li>
+<a href="/project/astropix">AstroPix
+</a></li>
+<li>
+<a href="/project/uol-astrovisualization">Astrovisualization Community of Practice
+</a></li>
+<li>
+<a href="/project/universe-unplugged">Universe Unplugged
+</a></li>
+
+</ul>
+</div>
+<div class='col-md-3 right'>
+<ul>
+<li>
+<a href="/outreach" class="nav_header">Overview</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href="/outreach#key_expertise" class="nav_header">Key Expertise</a>
+</li>
+<li>
+<a href="/page/education">Education</a>
+</li>
+<li>
+<a href="/page/animation-video">Animation/Video Production </a>
+</li>
+<li>
+<a href="/page/visualization">Science Visualization &amp; Illustration </a>
+</li>
+<li>
+<a href="/page/virtual-reality">Virtual Reality</a>
+</li>
+<li>
+<a href="/page/outreach-and-communications">Outreach &amp; Communications</a>
+</li>
+<li>
+<a href="/page/website-development">Website Development </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane offset_left' id='news_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/news" class="nav_header">All News</a>
+</li>
+<li>
+<a href="/news">Featured News</a>
+</li>
+<li>
+<a href="/news#ipac_news">IPAC News</a>
+</li>
+<li>
+<a href="/news#project_news">Project News</a>
+</li>
+<li>
+<a href="/page/newsletters">Uplink Newsletters</a>
+</li>
+<li>
+<a href="/meet-the-staff">Meet the Staff</a>
+</li>
+<li>
+<a href="/page/contact#media-contacts">Media Contacts</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane offset_left' id='events_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/events" class="nav_header">All Events</a>
+</li>
+<li>
+<a href="/events/category/public-event">Public Event</a>
+</li>
+<li>
+<a href="/events/category/symposium">Symposium</a>
+</li>
+<li>
+<a href="/events/category/conferences">Conference</a>
+</li>
+<li>
+<a href="/events/category/workshops">Workshop</a>
+</li>
+<li>
+<a href="/events/category/panel-discussion">Panel Discussion</a>
+</li>
+<li>
+<a href="/events/category/ipac-space-sciences-seminar">IPAC Space Sciences Seminar</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='sub_nav_pane offset_left' id='community_subnav'>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href="/community" class="nav_header">Overview</a>
+</li>
+<li>
+<a href="/science/fellowships">Fellowships</a>
+</li>
+<li>
+<a href="/community#conferences_and_workshops">Conferences</a>
+</li>
+<li>
+<a href="/page/decadal-survey">Decadal Survey</a>
+</li>
+<li>
+<a href="/page/ipac-at-aas-dps">IPAC at AAS / DPS meetings</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='mobile_navigation hidden-md hidden-lg'>
+<div class='nav_buttons'>
+<div class='mobile_tab' data-target='mobile_about_menu'>
+About
+</div>
+<ul class='mobile_menu mobile_about_menu'>
+<li>
+<a href="/page/mission">Our Mission</a>
+</li>
+<li>
+<a href="/page/history">History</a>
+</li>
+<li>
+<a href="/page/organization">Organization</a>
+</li>
+<li>
+<a href="/page/committee">Committees</a>
+</li>
+<li>
+<a href="/staff">Staff Directory</a>
+</li>
+<li>
+<a href="/meet-the-staff">Meet the Staff</a>
+</li>
+<li>
+<a href="/page/opportunities" class="nav_header">Job Opportunities</a>
+</li>
+<li>
+<a href="/page/contact" class="nav_header">Contact Us</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_science_menu'>
+Science
+</div>
+<ul class='mobile_menu mobile_science_menu'>
+<li>
+<a href="/science">Overview</a>
+</li>
+<li>
+<a href="/science/staff">Science Staff</a>
+</li>
+<li>
+<a href="/meet-the-staff?category=featured-scientists">Meet the Scientists</a>
+</li>
+<li>
+<a href="/science/ipac-space-sciences-seminar">IPAC Space Sciences Seminars</a>
+</li>
+<li>
+<a href="/science/fellowships">Fellowships</a>
+</li>
+<li>
+<a href="/publications">Publications</a>
+</li>
+<li>
+<a href="/science/collaborations">Science Collaborations</a>
+</li>
+<li>
+<a href="/page/students">Students</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_projects_menu'>
+Projects & Data
+</div>
+<ul class='mobile_menu mobile_projects_menu'>
+<li>
+<a href="/projects/category/archives-and-data-science">Archive &amp; Data Science</a>
+</li>
+<li>
+<a href="/projects/category/missions-and-centers">Missions &amp; Centers</a>
+</li>
+<li>
+<a href="/projects/status/in-development">In Development</a>
+</li>
+<li>
+<a href="/projects/status/legacy">Legacy</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_future_menu'>
+Future
+</div>
+<ul class='mobile_menu mobile_future_menu'>
+<li>
+<a href="/projects/status/in-development">In Development</a>
+</li>
+<li>
+<a href="/projects/status/mission-studies-and-proposals">Mission Studies &amp; Proposals</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_outreach_menu'>
+Outreach
+</div>
+<ul class='mobile_menu mobile_outreach_menu'>
+<li>
+<a href="/outreach">Overview</a>
+</li>
+<li>
+<a href="/page/education">Education</a>
+</li>
+<li>
+<a href="/page/animation-video">Animation/Video Production </a>
+</li>
+<li>
+<a href="/page/visualization">Science Visualization &amp; Illustration </a>
+</li>
+<li>
+<a href="/page/virtual-reality">Virtual Reality</a>
+</li>
+<li>
+<a href="/page/outreach-and-communications">Outreach &amp; Communications</a>
+</li>
+<li>
+<a href="/page/website-development">Website Development </a>
+</li>
+<li>
+<a href="/outreach/projects">Education &amp; Outreach</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_news_menu'>
+News
+</div>
+<ul class='mobile_menu mobile_news_menu'>
+<li>
+<a href="/news">All News</a>
+</li>
+<li>
+<a href="/news">Featured News</a>
+</li>
+<li>
+<a href="/news#ipac_news">IPAC News</a>
+</li>
+<li>
+<a href="/news#project_news">Project News</a>
+</li>
+<li>
+<a href="/page/newsletters">Uplink Newsletters</a>
+</li>
+<li>
+<a href="/meet-the-staff">Meet the Staff</a>
+</li>
+<li>
+<a href="/page/contact#media-contacts">Media Contacts</a>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_events_menu'>
+Events
+</div>
+<ul class='mobile_menu mobile_events_menu'>
+<li>
+<a href="/events">All Events</a>
+<li>
+<a href="/events/category/public-event">Public Event</a>
+</li>
+<li>
+<a href="/events/category/symposium">Symposium</a>
+</li>
+<li>
+<a href="/events/category/conferences">Conference</a>
+</li>
+<li>
+<a href="/events/category/workshops">Workshop</a>
+</li>
+<li>
+<a href="/events/category/panel-discussion">Panel Discussion</a>
+</li>
+<li>
+<a href="/events/category/ipac-space-sciences-seminar">IPAC Space Sciences Seminar</a>
+</li>
+</li>
+</ul>
+<div class='mobile_tab' data-target='mobile_community_menu'>
+Community
+</div>
+<ul class='mobile_menu mobile_community_menu'>
+<li>
+<a href="/community">Overview</a>
+</li>
+<li>
+<a href="/science/fellowships">Fellowships</a>
+</li>
+<li>
+<a href="/community#conferences_and_workshops">Conferences</a>
+</li>
+<li>
+<a href="/page/decadal-survey">Decadal Survey</a>
+</li>
+<li>
+<a href="/page/ipac-at-aas-dps">IPAC at AAS / DPS meetings</a>
+</li>
+</ul>
+<div class='mobile_tab'>
+<form accept-charset="UTF-8" action="/search" class="form-inline left" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WaIucNVnpY53r4SdGMkZv7jHmFhoyKvo6Hm15chnJyI=" /></div>
+<div class='input-group'>
+<input class='form-control input-sm' name='search[keywords]' placeholder='Search' type='text'>
+<span class='input-group-btn'>
+<button class='btn btn-sm' type='submit'>
+<i class='fa fa-search'></i>
+</button>
+</span>
+</div>
+</form>
+
+<div class='clearfix'></div>
+</div>
+<div class='mobile_tab mobile_icons'>
+<a href="https://www.facebook.com/caltechipac/" target="_IPAC"><i class='fa fa-facebook'></i>
+</a><a href="https://twitter.com/caltechipac" target="_IPAC"><i class='fa fa-twitter'></i>
+</a><a href="https://www.instagram.com/caltech_ipac" target="_IPAC"><i class='fa fa-instagram'></i>
+</a><a href="https://bsky.app/profile/caltechipac.bsky.social" target="_IPAC"><svg aria-hidden='true' class='icon' focusable='false' viewBox='0 0 512 512' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<!-- !Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. -->
+<path d='M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z' fill='currentColor'></path>
+</svg>
+</a><a href="https://www.linkedin.com/showcase/ipac-at-caltech" target="_IPAC"><i class='fa fa-linkedin'></i>
+</a><div class='clearfix'></div>
+</div>
+</div>
+</div>
+
+
+<div class='page basic_page dois_page'>
+<button class='btn btn-sm btn-warning back_to_top hidden' type='button'>
+<i class='fa fa-arrow-up'></i>
+Back to Top
+</button>
+<div class='hero_image'>
+<img alt="Asteroidscomets" src="/assets/hero_images/AsteroidsComets-783acd151eaf1e0a1f625cbdee64b55b.jpg" />
+<div class='container'>
+<div class='row'>
+<div class='col-md-12'>
+<h1 class='page_title'>
+NASA Exoplanet Archive
+Digital Object Identifiers
+</h1>
+</div>
+</div>
+</div>
+</div>
+<div class='container offset_container'>
+<a class='offset_anchor back_to_top_target' name='doi_search_box'></a>
+<div class='row'>
+<div class='col-md-12'>
+<div class='raw'>
+<div class='content_box'>
+<div class='abstract_box'>
+<p>
+	A Digital Object Identifier (DOI) is a permanent and unique string used to identify a digital resource and link to it on the web. IPAC has created DOIs for many astronomical data sets and for its data or collection services, e.g., NED. If you are writing a manuscript that uses one of these data sets or services, we recommend that you reference the corresponding DOI in your manuscript&rsquo;s bibliography, in addition to the appropriate refereed journal article. If you are submitting to an AAS Journal, instructions for referencing IPAC DOIs in your manuscript are provided here: <a href="https://journals.aas.org/aastexguide/#softwareandthirdparty">https://journals.aas.org/aastexguide/#softwareandthirdparty</a>. Tools such as <a href="http://doi2bib.org">doi2bib.org</a> are useful for quickly generating BibTeX markup for these DOIs.</p>
+
+<div class='input-group' data-total='46'>
+<div class='input-group-addon doi_search_feedback'>
+<span class='doi_search_feedback_text'>
+46
+DOIs
+</span>
+<i class='fa fa-gear fa-spin hidden'></i>
+</div>
+<input class='doi_search form-control' placeholder='Search for Author, Title, Abstract or DOI (3 characters minimum)' type='text'>
+<div class='input-group-btn'>
+<button class='btn btn-primary run_doi_search' type='button'>
+<i class='fa fa-search'></i>
+Search
+</button>
+<button class='btn btn-info clear_doi_search' type='button'>
+<i class='fa fa-remove'></i>
+Reset
+</button>
+</div>
+</div>
+<ul class='doi_project_links'>
+<li>
+DOIs by project:
+</li>
+<li>
+<a href="/dois" class="">All</a>
+</li>
+<li>
+<a href="/dois/irsa" class="">IRSA</a>
+</li>
+<li>
+<a href="/dois/exoplanet-archive" class="active">NASA Exoplanet Archive</a>
+</li>
+<li>
+<a href="/dois/ned" class="">NED</a>
+</li>
+<li>
+<a href="/dois/exofop" class="">ExoFOP</a>
+</li>
+<li>
+<a href="/dois/keck-archive" class="">KOA</a>
+</li>
+<li>
+<a href="/dois/nn-explore" class="">NN-EXPLORE</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-12'>
+<div class='content_box'>
+<div class='doi_group'>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA1'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA1
+</strong>
+Confirmed Planets Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA1" target="_blank">https://doi.org/10.26133/NEA1</a>
+<br>
+<a href="/doi/10.26133/NEA1" alt="10.26133/NEA1 Permalink" title="10.26133/NEA1 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA1</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Confirmed Planets Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Confirmed Planets table contains physical and orbital parameters for the planet and the host star, as available from the default literature reference for each planet.   This table has been retired as of 2021 and it has been replaced by the Planetary Systems table (10.26133/NEA12).
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=planets" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=planets</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA2'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA2
+</strong>
+Composite Planet Data Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA2" target="_blank">https://doi.org/10.26133/NEA2</a>
+<br>
+<a href="/doi/10.26133/NEA2" alt="10.26133/NEA2 Permalink" title="10.26133/NEA2 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA2</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Composite Planet Data Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Composite Planet Data table provides a collection of stellar and planetary parameters for confirmed exoplanets, one row per planet. The table automatically selects the data from other available literature references for the same planet to fill in gaps from the default literature reference. This table has been retired as of 2021 and it has been replaced by the Planetary Systems Composite Parameters table (10.26133/NEA13).
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=compositepars" target="_blank">http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=compositepars</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA3'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA3
+</strong>
+K2 Candidates Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA3" target="_blank">https://doi.org/10.26133/NEA3</a>
+<br>
+<a href="/doi/10.26133/NEA3" alt="10.26133/NEA3 Permalink" title="10.26133/NEA3 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA3</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA3
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+K2 Candidates Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The K2 candidates table lists objects from the published literature identified as candidates or false positives. If objects are confirmed as planets, their status in this table is updated but the objects remain. This table has been retired as of 2021 and it has been replaced by the K2 Planets and Candidates table (10.26133/NEA19).
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=k2candidates" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=k2candidates</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA4'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA4
+</strong>
+Kepler Objects of Interest Cumulative Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA4" target="_blank">https://doi.org/10.26133/NEA4</a>
+<br>
+<a href="/doi/10.26133/NEA4" alt="10.26133/NEA4 Permalink" title="10.26133/NEA4 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA4</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA4
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Objects of Interest Cumulative Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Kepler Objects of Interest (KOI) cumulative table gathers information from the individual KOI activity tables that describe the current results of different searches of the Kepler light curves. The intent of the cumulative table is to provide the most accurate dispositions and stellar and planetary information for all KOIs in one place. All the information in this table has provenance in other KOI activity tables. 
+</p>
+<p>
+Please note that the Kepler Objects of Interest table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA4, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA4 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+@misc{cumulative,
+</p>
+<p>
+doi = {10.26133/NEA4},
+</p>
+<p>
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA4},
+</p>
+<p>
+author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+title = {Kepler Objects of Interest Cumulative Table},
+</p>
+<p>
+publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+version = {Version: 20YY-MM-DD HH:MM},
+</p>
+<p>
+year = {yyyy}
+</p>
+<p>
+}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(yyyy)}]{k2pandc}
+</p>
+<p>
+{NASA Exoplanet Archive}. yyyy, Kepler Objects of Interest Cumulative Table,
+</p>
+<p>
+Version: YYYY-MM-DD HH:MM, NExScI-Caltech/IPAC, \href{https://doi.org/10.26133/NEA4}{doi:10.26133/NEA4}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{cumulative}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=cumulative" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=cumulative</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA5'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA5
+</strong>
+Kepler Objects of Interest DR 25 Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA5" target="_blank">https://doi.org/10.26133/NEA5</a>
+<br>
+<a href="/doi/10.26133/NEA5" alt="10.26133/NEA5 Permalink" title="10.26133/NEA5 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA5</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA5
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Mission
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Objects of Interest DR 25 Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Q1–Q17 Data Release 25 (DR25) Supplemental Kepler Objects-of-Interest (KOI) activity table reports dispositions based on the final processing (DR25) of the Kepler data and a combination of automated and human-based vetting to produce a &quot;best-knowledge&quot; catalog of planetary CANDIDATEs and FALSE POSITIVEs for use by the Astronomical community in selecting KOIs for follow-up observations and further study. 
+</p>
+<p>
+Please note that the Kepler Objects of Interest DR 25 Table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA5, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+	bibtex (built from https://doi2bib.org/bib/10.26133/NEA5 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{koidr25,
+</p>
+<p>
+	doi = {10.26133/NEA5},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA19},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Kepler Objects of Interest DR25},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+	AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{k2pandc}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Kepler Objects of Interest DR25,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, NExScI-Caltech/IPAC, \href{https://doi.org/10.26133/NEA5}{doi:10.26133/NEA5}
+</p>
+<p>
+	Recommended text snippet:
+</p>
+<p>
+	We obtain the data set from the NASA Exoplanet Archive \citep{k2pandc}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=q1_q17_dr25_koi" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=q1_q17_dr25_koi</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA6'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA6
+</strong>
+Kepler Stellar Properties Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA6" target="_blank">https://doi.org/10.26133/NEA6</a>
+<br>
+<a href="/doi/10.26133/NEA6" alt="10.26133/NEA6 Permalink" title="10.26133/NEA6 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA6</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA6
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Mission
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Stellar Properties Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Kepler Stellar interactive table contains parameters for all targets observed by Kepler for the purpose of finding transiting planets. Individual tables include the values used for that specific processing, including the Q1-12, Q1-16, Q1-17 DR 24, and Q1-17 DR 25 pipeline runs. One additional table, the Q1-17 DR 25 Supplemental Stellar, includes values provided by the Kepler Stellar Properties Working Group (SPWG) independent of any pipeline processing in order to report their most current stellar values.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=keplerstellar" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=keplerstellar</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA7'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA7
+</strong>
+UKIRT Microlensing Survey
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA7" target="_blank">https://doi.org/10.26133/NEA7</a>
+<br>
+<a href="/doi/10.26133/NEA7" alt="10.26133/NEA7 Permalink" title="10.26133/NEA7 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA7</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA7
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+UKIRT Microlensing Team
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+UKIRT Microlensing Survey
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Light curves from the ongoing UKIRT microlensing survey made available with help from the UKIRT Microlensing Team.The Wide Field Camera (WFCAM) on the United Kingdom Infrared Telescope (UKIRT), located at Mauna Kea Observatory, has been used to conduct microlensing surveys with a variety of science goals.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=ukirttimeseries" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=ukirttimeseries</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA8'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA8
+</strong>
+KELT Survey Light Curves
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA8" target="_blank">https://doi.org/10.26133/NEA8</a>
+<br>
+<a href="/doi/10.26133/NEA8" alt="10.26133/NEA8 Permalink" title="10.26133/NEA8 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA8</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA8
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+KELT Team
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+KELT Survey Light Curves
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Kilodegree Extremely Little Telescope (KELT) survey consists of two robotic telescopes that are conducting a survey for transiting exoplanets around bright stars. The NASA Exoplanet Archive currently contains about 1.1 million light curves in selected Northern fields.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=kelttimeseries" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=kelttimeseries</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA9'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA9
+</strong>
+SuperWASP Survey Light Curves
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA9" target="_blank">https://doi.org/10.26133/NEA9</a>
+<br>
+<a href="/doi/10.26133/NEA9" alt="10.26133/NEA9 Permalink" title="10.26133/NEA9 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA9</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA9
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+SuperWASP Consortium
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+SuperWASP Survey Light Curves
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+SuperWASP consists of two robotic observatories that operate continuously throughout the year, allowing coverage of both hemispheres of the sky. The first, SuperWASP-North, is located on the island of La Palma among the Isaac Newton Group (ING) of telescopes. The second, SuperWASP-South, is located at the site of the South African Astronomical Observatory (SAAO), just outside Sutherland, South Africa.  The NASA Exoplanet Archive hosts over 18 million light curves collected between 2004 and 2008.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=superwasptimeseries" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&amp;config=superwasptimeseries</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA10'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA10
+</strong>
+Transmission Spectroscopy Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA10" target="_blank">https://doi.org/10.26133/NEA10</a>
+<br>
+<a href="/doi/10.26133/NEA10" alt="10.26133/NEA10 Permalink" title="10.26133/NEA10 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA10</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA10
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Transmission Spectroscopy Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The transmission spectroscopy table contains wavelength-dependent transit measurements from the published literature. The transit measurements are published as either transit depths, planet-to-star radius ratios, or planet radii, and span wavelengths across the electromagnetic spectrum. 
+</p>
+<p>
+	
+</p>
+<p>
+Please note that the Transit Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA10, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA10 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{transitspec,
+</p>
+<p>
+	doi = {10.26133/NEA10},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA10},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Transmission Spectroscopy Table},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{transitspec}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Transmission Spectroscopy Table,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA10}{doi:10.26133/NEA10}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{transitspec}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+<p>
+	
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=transitspec" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=transitspec</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA11'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA11
+</strong>
+Emission Spectroscopy Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA11" target="_blank">https://doi.org/10.26133/NEA11</a>
+<br>
+<a href="/doi/10.26133/NEA11" alt="10.26133/NEA11 Permalink" title="10.26133/NEA11 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA11</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA11
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Emission Spectroscopy Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The emission spectroscopy table contains wavelength-dependent eclipse measurements from the published literature. The eclipse measurements are published as either eclipse depths or brightness temperature, and span wavelengths across the electromagnetic spectrum.
+</p>
+<p>
+Please note that the Emission Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA11, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA11 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{emissionspec,
+</p>
+<p>
+	doi = {10.26133/NEA11},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA11},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Emission Spectroscopy Table},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{emissionspec}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Emission Spectroscopy Table,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA11}{doi:10.26133/NEA11}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{emissionspec}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+	This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=emissionspec" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=emissionspec</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2019
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA12'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA12
+</strong>
+Planetary Systems Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA12" target="_blank">https://doi.org/10.26133/NEA12</a>
+<br>
+<a href="/doi/10.26133/NEA12" alt="10.26133/NEA12 Permalink" title="10.26133/NEA12 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA12</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA12
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Science Institute
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Planetary Systems Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Planetary Systems Table contains, for all published confirmed exoplanets, the physical and orbital parameters for the exoplanets and the host stars. This table replaced the now-retired Confirmed Planets table (10.26133/NEA1).
+</p>
+<p>
+Please note that the Planetary Systems table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA12, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA12 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{ps,
+</p>
+<p>
+	doi = {10.26133/NEA12},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA12},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Planetary Systems},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ps}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Planetary Systems,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA12}{doi:10.26133/NEA12}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{ps}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Collection
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PS" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PS</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Table is updated wee
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA13'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA13
+</strong>
+Planetary Systems Composite Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA13" target="_blank">https://doi.org/10.26133/NEA13</a>
+<br>
+<a href="/doi/10.26133/NEA13" alt="10.26133/NEA13 Permalink" title="10.26133/NEA13 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA13</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA13
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Science Institute
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Planetary Systems Composite Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Planetary Systems Composite Table provides, for all confirmed exoplanetary systems, a compilation of planetary and stellar parameters. The table pulls data from the Planetary Systems Table (10.26133/NEA12) and uses multiple references to fill in gaps to produce as &quot;full&quot; of a table as possible. This table is updated in parallel with Planetary Systems Table updates.  This table replaced the now-retired Composite Parameters table (10.26133/NEA2).
+</p>
+<p>
+Please note that the Planetary Systems table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA12, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA13 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{PSCompPars,
+</p>
+<p>
+	doi = {10.26133/NEA13},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA13},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Planetary Systems Composite Parameters},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{PSCompPars}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Planetary Systems,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA13}{doi:10.26133/NEA13}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{PSCompPars}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Collection
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PSCompPars" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=PSCompPars</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Table updated weekly
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA14'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA14
+</strong>
+Kepler Mission Completeness and Reliability Products
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA14" target="_blank">https://doi.org/10.26133/NEA14</a>
+<br>
+<a href="/doi/10.26133/NEA14" alt="10.26133/NEA14 Permalink" title="10.26133/NEA14 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA14</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA14
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Mission Completeness and Reliability Products
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This dataset contains data products produced by the Kepler Project related to completeness and reliability of the Kepler pipeline.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_completeness_reliability.html" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_completeness_reliability.html</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+DR24 and DR25 (Final
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2022
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA15'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA15
+</strong>
+Kepler Threshold Crossing Events DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA15" target="_blank">https://doi.org/10.26133/NEA15</a>
+<br>
+<a href="/doi/10.26133/NEA15" alt="10.26133/NEA15 Permalink" title="10.26133/NEA15 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA15</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA15
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Threshold Crossing Events DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This is a table of the Threshold Crossing Events (TCEs) which are a sequence of transit-like features in the Kepler flux time series of a given target that resembles the signature of a transiting planet to a sufficient degree that the target is passed on for further analysis.  There are four versions of this product [Q1-Q12], [Q1-Q16], [Q1-Q17, DR24] and [Q1-Q17, DR25].  The DR25 version is the final version
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_TCE_docs.html" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_TCE_docs.html</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Multiple Versions
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA16'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA16
+</strong>
+Kepler KOI Positional Probabilities
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA16" target="_blank">https://doi.org/10.26133/NEA16</a>
+<br>
+<a href="/doi/10.26133/NEA16" alt="10.26133/NEA16 Permalink" title="10.26133/NEA16 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA16</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA16
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler KOI Positional Probabilities
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Mission product that contains information on the possibility of the transit signal arising from an astrophysical source other than the target star. 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=koiapp&amp;constraint=pp_host_prob_score%3E0.3" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=koiapp&amp;constraint=pp_host_prob_score%3E0.3</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA17'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA17
+</strong>
+Kepler Misson False Positive Probabilities
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA17" target="_blank">https://doi.org/10.26133/NEA17</a>
+<br>
+<a href="/doi/10.26133/NEA17" alt="10.26133/NEA17 Permalink" title="10.26133/NEA17 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA17</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA17
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Misson False Positive Probabilities
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Kepler Project False Positive Probabilities table contains the results of running an automated transit false-positive-probability (FPP) calculating procedure on all KOIs.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=koifpp" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=koifpp</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA18'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA18
+</strong>
+Kepler Certified False Positives
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA18" target="_blank">https://doi.org/10.26133/NEA18</a>
+<br>
+<a href="/doi/10.26133/NEA18" alt="10.26133/NEA18 Permalink" title="10.26133/NEA18 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA18</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA18
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Certified False Positives
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This Kepler Mission product contains information about the False Positive nature of Kepler Objects of Interest as determined by the Kepler False Positive Working Group.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=fpwg" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=fpwg</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2020
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA19'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA19
+</strong>
+K2 Planets and Candidates Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA19" target="_blank">https://doi.org/10.26133/NEA19</a>
+<br>
+<a href="/doi/10.26133/NEA19" alt="10.26133/NEA19 Permalink" title="10.26133/NEA19 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA19</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA19
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+David Ciardi
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+K2 Planets and Candidates Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The K2 Planets and Candidates table lists objects from the published literature identified as confirmed planets, candidates or false positives discovered by the K2 Mission. If objects are confirmed as planets, their status in this table is updated but the objects remain. 
+</p>
+<p>
+Please note that the K2 Planets and Candidates table is continuously updated. When referring to it, please cite the DOI: 10.26133/NEA19, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA19 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+@misc{k2pandc,
+</p>
+<p>
+  doi = {10.26133/NEA19},
+</p>
+<p>
+  url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA19},
+</p>
+<p>
+  author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+  title = {K2 Planets and Candidates},
+</p>
+<p>
+  publisher = {IPAC},
+</p>
+<p>
+  version = {Version: 20YY-MM-DD HH:MM},
+</p>
+<p>
+  year = {2021}
+</p>
+<p>
+}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(2021)}]{k2pandc}                                                                                 
+</p>
+<p>
+{NASA Exoplanet Archive}. 2021, K2 Planets and Candidates Table,
+</p>
+<p>
+Version: 20YY-MM-DD HH:MM,  IPAC, \href{https://doi.org/10.26133/NEA19}{doi:10.26133/NEA19}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{k2pandc}\footnote{Accessed on 20YY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Collection
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=k2pandc" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=k2pandc</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA20'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA20
+</strong>
+Kepler Project Document: Uniform Modeling of KOIs - MCMC Data Release Notes
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA20" target="_blank">https://doi.org/10.26133/NEA20</a>
+<br>
+<a href="/doi/10.26133/NEA20" alt="10.26133/NEA20 Permalink" title="10.26133/NEA20 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA20</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA20
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: Uniform Modeling of KOIs - MCMC Data Release Notes
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes data products related to the reported planetary parameters and uncertainties for the Kepler Objects of Interest (KOIs) based on a Markov-Chain-Monte- Carlo (MCMC) analysis.  Reported parameters, uncertainties and data products can be found at the NASA Exoplanet Archive. The relevant paper for details of the calculations is Rowe et al. 2015.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19084-001.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19084-001.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+02 Mar 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA21'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA21
+</strong>
+Kepler Project Document: Planet Detection Metrics: Automatic Detection of Background Objects Using the Centroid Robovetter
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA21" target="_blank">https://doi.org/10.26133/NEA21</a>
+<br>
+<a href="/doi/10.26133/NEA21" alt="10.26133/NEA21 Permalink" title="10.26133/NEA21 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA21</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA21
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: Planet Detection Metrics: Automatic Detection of Background Objects Using the Centroid Robovetter
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+An overview of the automated method of identifying background eclipsing binaries masquerading as planet candidates in the Kepler planet candidate catalogs is described. The manual vetting process for Kepler Objects of Interest (KOIs) described in Bryson et al. (2013) with a series of measurements and tests that can be performed algorithmically is codified. The automated results are compared with a sample of manually vetted KOIs from the catalog of Burke et al. (2014).
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19115-001.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19115-001.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+22 May 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA22'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA22
+</strong>
+Kepler Project Document: KSCI-19085 Planet Detection Metrics: Window and 1sigma Depth Functions for DR24
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA22" target="_blank">https://doi.org/10.26133/NEA22</a>
+<br>
+<a href="/doi/10.26133/NEA22" alt="10.26133/NEA22 Permalink" title="10.26133/NEA22 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA22</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA22
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19085 Planet Detection Metrics: Window and 1sigma Depth Functions for DR24
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the window and one-sigma depth functions produced by the Transiting Planet Search (TPS) algorithm in the Kepler pipeline (Jenkins 2002).  The window function specifies the fraction of phase space over which three transits are observable as a function of orbital period.  The one-sigma depth function specifies the depth of a signal (in ppm) for a given light curve that results in a one-sigma detection of a transit signature as a function of orbital period when averaged over phase.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19085-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19085-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+15 Dec 2016
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA23'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA23
+</strong>
+Kepler Project Document: KSCI-19091 Autovetter Planet Candidate Catalog for Q1-Q17 DR24
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA23" target="_blank">https://doi.org/10.26133/NEA23</a>
+<br>
+<a href="/doi/10.26133/NEA23" alt="10.26133/NEA23 Permalink" title="10.26133/NEA23 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA23</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA23
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19091 Autovetter Planet Candidate Catalog for Q1-Q17 DR24
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Kepler autovetter, and how it is used to produce a catalog of Planet Candidates from the Q1-Q17 DR24 TCEs (Threshold Crossing Events) that are identified in the Kepler SOC (Science Operations Center) pipeline [Jenkins 2010ab] version 9.2 [Seader et al. 2015].
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19091-001.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19091-001.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+20 Jul 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA24'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA24
+</strong>
+Kepler Project Document: KSCI-19092: Planet Reliability Metrics: Astrophysical Positional Probabilities
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA24" target="_blank">https://doi.org/10.26133/NEA24</a>
+<br>
+<a href="/doi/10.26133/NEA24" alt="10.26133/NEA24 Permalink" title="10.26133/NEA24 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA24</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA24
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19092: Planet Reliability Metrics: Astrophysical Positional Probabilities
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Kepler astrophysical positional probabilities (APP) table hosted at the Exoplanet Archive1. This table lists the stars with the highest probability of being co-located with the source of an observed transit, as well as the probability of the transit being on an unknown background source. The position of the transit signal source relative to the target star is found in the KOI tables at the Exoplanet Archive. These probabilities measure how well a star’s location matches the location of the transit signal – they do not measure the probability that the transit signal is consistent with a planet orbiting that star. 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19092-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19092-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+13 Nov 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA25'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA25
+</strong>
+Kepler Project Document: KSCI-19093 Kepler Certified False Positive Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA25" target="_blank">https://doi.org/10.26133/NEA25</a>
+<br>
+<a href="/doi/10.26133/NEA25" alt="10.26133/NEA25 Permalink" title="10.26133/NEA25 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA25</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19093 Kepler Certified False Positive Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Kepler Certified False Positive table hosted at the Exoplanet Archive1, herein referred to as the “CFP table”. This table is the result of detailed examina- tion by the Kepler False Positive Working Group (FPWG) of declared false positives in the Kepler Object of Interest (KOI) tables at the Exoplanet Archive.  A KOI is considered a false positive in the CFP table if it is not due to a planet orbiting the KOI’s target star. The CFP table contains all KOIs in the Exoplanet Archive cumulative KOI table.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19093-004.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19093-004.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+4
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+04 Oct 2019
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA26'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA26
+</strong>
+Kepler Project Document: KSCI-19094 Planet Detection Metrics: Pipeline Detection Efficiency
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA26" target="_blank">https://doi.org/10.26133/NEA26</a>
+<br>
+<a href="/doi/10.26133/NEA26" alt="10.26133/NEA26 Permalink" title="10.26133/NEA26 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA26</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA26
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19094 Planet Detection Metrics: Pipeline Detection Efficiency
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the results of the third pixel-level transit injection experiment designed to measure the detection efficiency of the Kepler pipeline.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19094-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19094-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+22 Oct 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA27'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA27
+</strong>
+Kepler Project Document: KSCI-19096 Planet Detection Metrics: Vetting Detection Efficiency
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA27" target="_blank">https://doi.org/10.26133/NEA27</a>
+<br>
+<a href="/doi/10.26133/NEA27" alt="10.26133/NEA27 Permalink" title="10.26133/NEA27 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA27</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA27
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19096 Planet Detection Metrics: Vetting Detection Efficiency
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the results of running the Kepler robovetter on the recovered injected TCEs to determine the TCERT detection efficiency. The results of both exercises are available at the NASA Exoplanet Archive.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19096-002-Vetting-Detection-Efficiency.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19096-002-Vetting-Detection-Efficiency.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+19 Nov 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA28'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA28
+</strong>
+Kepler Project Document: KSCI-19101 Planet Detection Metrics: Window and 1sigma Depth Functions for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA28" target="_blank">https://doi.org/10.26133/NEA28</a>
+<br>
+<a href="/doi/10.26133/NEA28" alt="10.26133/NEA28 Permalink" title="10.26133/NEA28 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA28</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA28
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19101 Planet Detection Metrics: Window and 1sigma Depth Functions for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the window and one-sigma depth functions relevant to the Transiting Planet Search (TPS) algorithm in the Kepler pipeline. The window function specifies the fraction of unique orbital ephemeris epochs over which three transits are observable as a function of orbital period.  In this context, the epoch and orbital period, together, comprise the ephemeris of an orbiting companion, and ephemerides with the same period are considered equivalent if their epochs differ by an integer multiple of the period.  The one-sigma depth function specifies the depth of a signal (in ppm) for a given light curve that results in a one-sigma detection of a transit signature as a function of orbital period when averaged over all unique orbital ephemerides.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19101-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19101-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+03 May 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA29'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA29
+</strong>
+Kepler Project Document: KSCI-19108 Planet Detection Metrics: Astrophysical Positional Probabilties for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA29" target="_blank">https://doi.org/10.26133/NEA29</a>
+<br>
+<a href="/doi/10.26133/NEA29" alt="10.26133/NEA29 Permalink" title="10.26133/NEA29 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA29</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA29
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19108 Planet Detection Metrics: Astrophysical Positional Probabilties for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Kepler astrophysical positional probabilities (APP) table hosted at the Exoplanet Archive updated for DR25. This table lists the stars with the highest probability of being co-located with the source of an observed transit, as well as the probability of the transit being on an unknown background source. The position of the transit signal source relative to the target star is found in the KOI tables at the Exoplanet Archive. These probabilities measure how well a star’s location matches the location of the transit signal – they do not measure the probability that the transit signal is consistent with a planet orbiting that star.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19108-001.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19108-001.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+28 Feb 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA30'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA30
+</strong>
+Kepler Project Document: KSCI-19111 Planet Detection Metrics: Per Target Detection Contours for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA30" target="_blank">https://doi.org/10.26133/NEA30</a>
+<br>
+<a href="/doi/10.26133/NEA30" alt="10.26133/NEA30 Permalink" title="10.26133/NEA30 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA30</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA30
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19111 Planet Detection Metrics: Per Target Detection Contours for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the use of the Kepler planet occurrence rate products in order to calculate a per-target detection contour for the measured Data Re- lease 25 (DR25) pipeline performance. A per-target detection contour measures for a given combination of orbital period, Porb, and planet radius, Rp, what fraction of transit signals are recoverable by the Kepler pipeline.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19111-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19111-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+13 Jun 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA31'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA31
+</strong>
+Kepler Project Document: KSCI-19104: Description of the TCERT Vetting Products for Q1-Q17 DR24 Catalog
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA31" target="_blank">https://doi.org/10.26133/NEA31</a>
+<br>
+<a href="/doi/10.26133/NEA31" alt="10.26133/NEA31 Permalink" title="10.26133/NEA31 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA31</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA31
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19104: Description of the TCERT Vetting Products for Q1-Q17 DR24 Catalog
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Q1-Q17 DR24 TCERT Vetting products - a collection of plots and diagnostics used by the Threshold Crossing Event Review Team (TCERT) to evaluate threshold crossing events (TCEs).  While designation of Kepler Objects of Interest (KOIs) and classification of them as Planet Candidates (PCs) or False Positives (FPs) is completely automated via a robotic vetting procedure for the Q1-Q17 DR24 planet catalog described in Coughlin et al. (2015), these products help to evaluate those robotic decisions for individual objects. For each TCE identified in the Q1-Q17 DR24 transit search, these products collect in one readily accessible place: (a) the DV one-page summary, (b) selected pertinent diagnostics and plots from the full DV report, and (c) supplemental plots and diagnostics not included in the full DV report, including an alternate means of data detrending. This document describes each plot in detail, and how it can be used to evaluate the various data sources to determine if a TCE is a PC or FP.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/TCERTCompanion_q1_q17_dr24.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/TCERTCompanion_q1_q17_dr24.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+22 Jun 2015
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA32'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA32
+</strong>
+Kepler Project Document: KSCI-19105: Description of the TCERT Vetting Products for Q1-Q17 DR25 Catalog
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA32" target="_blank">https://doi.org/10.26133/NEA32</a>
+<br>
+<a href="/doi/10.26133/NEA32" alt="10.26133/NEA32 Permalink" title="10.26133/NEA32 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA32</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA32
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19105: Description of the TCERT Vetting Products for Q1-Q17 DR25 Catalog
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Q1–Q17 DR25 TCERT Vetting Reports: a collection of plots and diagnostics used by the Threshold Crossing Event Review Team (TCERT) to evaluate threshold crossing events (TCEs).  While designation of Kepler Objects of Interest (KOIs) and classification of them as Planet Candidates (PCs) or False Positives (FPs) is completely automated via a robotic vetting procedure (the Robovetter) for the Q1–Q17 DR25 planet catalog, as described in Thompson et al. (2017), these reports help to visualize the metrics used by the Robovetter and evaluate those robotic decisions for individual objects. For each Q1–Q17 DR25 TCE, these reports include the following products: (a) the DV one-page summary, (b) selected pertinent diagnostics and plots from the full DV report, and (c) additional plots and diagnostics not included in the full DV report, including an alternate means of data detrending.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19105-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19105-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+21 Sep 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA33'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA33
+</strong>
+Kepler Project Document: KSCI-19109 Planet Detection Metrics: Per-Target Flux-Level Transit Injection Tests of TPS for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA33" target="_blank">https://doi.org/10.26133/NEA33</a>
+<br>
+<a href="/doi/10.26133/NEA33" alt="10.26133/NEA33 Permalink" title="10.26133/NEA33 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA33</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA33
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19109 Planet Detection Metrics: Per-Target Flux-Level Transit Injection Tests of TPS for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the Flux Level Transit Injection (FLTI) techniques used in the Kepler Pipeline, defines the output file format of the simulated products, and details the various tests run. The document also describes sample python code for calculating pipeline completeness using the FLTI results and provides some worked examples.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19109-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19109-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+13 Jun 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA34'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA34
+</strong>
+Kepler Project Document: KSCI-19110 Planet Detection Metrics: Pixel-Level Transit Injection Tests of Pipeline Detection Efficiency for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA34" target="_blank">https://doi.org/10.26133/NEA34</a>
+<br>
+<a href="/doi/10.26133/NEA34" alt="10.26133/NEA34 Permalink" title="10.26133/NEA34 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA34</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA34
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19110 Planet Detection Metrics: Pixel-Level Transit Injection Tests of Pipeline Detection Efficiency for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the results of the fourth pixel-level transit injection experiment, which was designed to measure the detection efficiency of both the Kepler pipeline and the Robovetter. 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19110-001.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19110-001.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+01 June 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA35'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA35
+</strong>
+Kepler Project Document: KSCI-19114: Planet Detection Metrics: Robovetter Completeness and Effectiveness for DR25
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA35" target="_blank">https://doi.org/10.26133/NEA35</a>
+<br>
+<a href="/doi/10.26133/NEA35" alt="10.26133/NEA35 Permalink" title="10.26133/NEA35 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA35</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA35
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Kepler Project Document: KSCI-19114: Planet Detection Metrics: Robovetter Completeness and Effectiveness for DR25
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This document describes the results of running the Robovetter on the Kepler observed, injected, inverted, and scrambled populations, which are available at the NASA Exoplanet Archive. The document describes the experimental design to calculate the Robovetter completeness and effectiveness, the tables that contain the results of running the Robovetter on the observed, injected, inverted, and scrambled TCEs, and some example results that can be used to compute accurate occurrence rates. 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Text
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19114-002.pdf" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19114-002.pdf</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+31 Aug 2017
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2021
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA36'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA36
+</strong>
+Atmospheric Spectroscopy Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA36" target="_blank">https://doi.org/10.26133/NEA36</a>
+<br>
+<a href="/doi/10.26133/NEA36" alt="10.26133/NEA36 Permalink" title="10.26133/NEA36 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA36</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA36
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Atmospheric Spectroscopy Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The NASA Exoplanet Archive Atmospheric Spectroscopy Table provides a unified interface to browse, visualize, plot, and download exoplanet emission and transmission spectra. 
+</p>
+<p>
+Please note that the Atmospheric Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA36, e.g. in your reference list, and record the date/time of access. 
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA36 but edited to include a version tag, which works with AASTeX aasjournal.bst style file) 
+</p>
+<p>
+@misc{spectra, 
+</p>
+<p>
+doi = {10.26133/NEA36}, 
+</p>
+<p>
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA36}, 
+</p>
+<p>
+author = {{NASA Exoplanet Archive}}, 
+</p>
+<p>
+title = {Atmospheric Spectroscopy Table}, 
+</p>
+<p>
+publisher = {NExScI-Caltech/IPAC}, 
+</p>
+<p>
+version = {Version: YYYY-MM-DD HH:MM}, 
+</p>
+<p>
+year = {YYYY} 
+</p>
+<p>
+} 
+</p>
+<p>
+AASTeX (no bibtex) 
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{spectra} 
+</p>
+<p>
+{NASA Exoplanet Archive}. YYYY, Atmospheric Spectroscopy Table, 
+</p>
+<p>
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA36}{doi:10.26133/NEA36} 
+</p>
+<p>
+Recommended text snippet: 
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{spectra}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)} 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Service
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2023
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA37'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA37
+</strong>
+Transiting Planets Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA37" target="_blank">https://doi.org/10.26133/NEA37</a>
+<br>
+<a href="/doi/10.26133/NEA37" alt="10.26133/NEA37 Permalink" title="10.26133/NEA37 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA37</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA37
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Science Institute
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Transiting Planets Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Transiting Planets Table is a simpler interface for accessing all of the transit-specific observables currently in the Exoplanet Archive. These data are a subset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. 
+</p>
+<p>
+Please note that the Transiting Planets table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA37, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA37 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+@misc{td,
+</p>
+<p>
+doi = {10.26133/NEA37},
+</p>
+<p>
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA37},
+</p>
+<p>
+author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+title = {Transiting Planets Table},
+</p>
+<p>
+publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+year = {YYYY}
+</p>
+<p>
+}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{td}
+</p>
+<p>
+{NASA Exoplanet Archive}. YYYY, Transit Detection Table,
+</p>
+<p>
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA37}{doi:10.26133/NEA37}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{td}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Collection
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=TD" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=TD</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Updated Weekly
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2023
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA38'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA38
+</strong>
+Microlensing Planets Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA38" target="_blank">https://doi.org/10.26133/NEA38</a>
+<br>
+<a href="/doi/10.26133/NEA38" alt="10.26133/NEA38 Permalink" title="10.26133/NEA38 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA38</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA38
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Science Institute
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Microlensing Planets Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Microlensing Planets Table is a simpler interface for accessing all of the microlensing-specific observables currently in the Exoplanet Archive. These data are a subset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. 
+</p>
+<p>
+Please note that the Microlensing Planets table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA38, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA38 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+@misc{ml,
+</p>
+<p>
+doi = {10.26133/NEA38},
+</p>
+<p>
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA38},
+</p>
+<p>
+author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+title = {Microlensing Planets Table},
+</p>
+<p>
+publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+year = {YYYY}
+</p>
+<p>
+}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ml}
+</p>
+<p>
+{NASA Exoplanet Archive}. YYYY, Microlensing Detection Table,
+</p>
+<p>
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA38}{doi:10.26133/NEA38}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{ml}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Collection
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=ML&amp;constraint=ml_modeldef=1" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=ML&amp;constraint=ml_modeldef=1</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Updated Weekly
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2015
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA39'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA39
+</strong>
+Habitable Worlds Observatory Preliminary Input Catalog
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA39" target="_blank">https://doi.org/10.26133/NEA39</a>
+<br>
+<a href="/doi/10.26133/NEA39" alt="10.26133/NEA39 Permalink" title="10.26133/NEA39 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA39</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA39
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Tuchow, Stark, and Mamajek (2024)
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Habitable Worlds Observatory Preliminary Input Catalog
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+This is a list of ∼13,000 bright, nearby objects from TESS and Gaia DR3 that are potential targets for space-based direct imaging with the Habitable Worlds Observatory.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/docs/MissionStellar.html" target="_blank">https://exoplanetarchive.ipac.caltech.edu/docs/MissionStellar.html</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2024
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA40'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA40
+</strong>
+Stellar Parameters for Planetary Hosts Table
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA40" target="_blank">https://doi.org/10.26133/NEA40</a>
+<br>
+<a href="/doi/10.26133/NEA40" alt="10.26133/NEA40 Permalink" title="10.26133/NEA40 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA40</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA40
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Stellar Parameters for Planetary Hosts Table
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Stellar Parameters Table lists all of the stellar parameters for a planetary system currently in the Exoplanet Archive. These data are a superset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. In addition to listing stellar solutions associated with a given planetary solution (as is the case for the Planetary Systems table), the stellar parameters table also includes stellar parameters that are in the Exoplanet Archive for a planet hosting star but the parameters are not associated with a specific planetary solution and stellar parameters of non-planet hosting stars in a planetary system.
+</p>
+<p>
+Please note that the Stellar Parameters table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA40, e.g. in your reference list, and record the date/time of access. 
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA40 but edited to include a version tag, which works with AASTeX aasjournal.bst style file) 
+</p>
+<p>
+@misc{STELLARHOSTS, 
+</p>
+<p>
+doi = {10.26133/NEA40}, 
+</p>
+<p>
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA40}, 
+</p>
+<p>
+author = {{NASA Exoplanet Archive}}, 
+</p>
+<p>
+title = {Stellar Parameters Table}, 
+</p>
+<p>
+publisher = {NExScI-Caltech/IPAC}, 
+</p>
+<p>
+version = {Version: YYYY-MM-DD HH:MM}, 
+</p>
+<p>
+year = {YYYY} 
+</p>
+<p>
+} 
+</p>
+<p>
+AASTeX (no bibtex) 
+</p>
+<p>
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{STELLARHOSTS} 
+</p>
+<p>
+{NASA Exoplanet Archive}. YYYY, Stellar Parameters Table, 
+</p>
+<p>
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA40}{doi:10.26133/NEA40} 
+</p>
+<p>
+Recommended text snippet: 
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{STELLARHOSTS}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)} 
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Service
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=STELLARHOSTS" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&amp;config=STELLARHOSTS</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2024
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA41'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA41
+</strong>
+Frontier Data Labs (FDL) PyATMOS Model Atmospheres
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA41" target="_blank">https://doi.org/10.26133/NEA41</a>
+<br>
+<a href="/doi/10.26133/NEA41" alt="10.26133/NEA41 Permalink" title="10.26133/NEA41 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA41</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA41
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Frontier Data Labs (FDL) PyATMOS Model Atmospheres
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The PyATMOS dataset is the result of the work from the FDL 2018 Astrobiology challenge. It comprises a set of model earth-like exoplanet atmospheres, spanning a range of plausible parameter space.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?atmos" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?atmos</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2022
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA42'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA42
+</strong>
+Frontier Data Labs (FDL) INARA Data
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA42" target="_blank">https://doi.org/10.26133/NEA42</a>
+<br>
+<a href="/doi/10.26133/NEA42" alt="10.26133/NEA42 Permalink" title="10.26133/NEA42 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA42</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA42
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Frontier Data Labs (FDL) INARA Data
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The INARA dataset is the result of the work from the FDL 2018 Astrobiology challenge. It comprises a set of 3,112,820 synthetic rocky exoplanetary spectra generated using the NASA Planetary Spectrum Generator (PSG).
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?psg" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?psg</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2023
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA43'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA43
+</strong>
+Colorado Ultraviolet Transit Experiment (CUTE) Exoplanet Transits
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA43" target="_blank">https://doi.org/10.26133/NEA43</a>
+<br>
+<a href="/doi/10.26133/NEA43" alt="10.26133/NEA43 Permalink" title="10.26133/NEA43 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA43</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA43
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+CUTE Team
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Colorado Ultraviolet Transit Experiment (CUTE) Exoplanet Transits
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Colorado Ultraviolet Transit Experiment (CUTE) is a 6U NASA CubeSat launched in 2021 carrying on-board a low-resolution, near-ultraviolet (2479-3306 angstrom) spectrograph. CUTE is designed to monitor transiting extra-solar planets orbiting bright, nearby stars to improve our understanding of planet atmospheric escape and star-planet interaction processes. The CUTE data is processed with the CUTE autONomous daTa ReductiOn pipeLine (CONTROL). The details of the pipeline are described in Sreejith et al., 2022.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/CUBESAT/nph-cubesat?cute" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/CUBESAT/nph-cubesat?cute</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2024
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA44'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA44
+</strong>
+Excalibur:
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA44" target="_blank">https://doi.org/10.26133/NEA44</a>
+<br>
+<a href="/doi/10.26133/NEA44" alt="10.26133/NEA44 Permalink" title="10.26133/NEA44 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA44</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA44
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Excalibur Team
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Excalibur:
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+EXCALIBUR (Exoplanet Calibration Bayesian Unified Retrieval) Pipeline reduces extrasolar system data into an exoplanet spectrum. It includes CERBERUS, a line by line, plane parallel radiative transfer code modeling exoplanet atmospheres and a Bayesian parameter retrievial / model selection package.
+</p>
+<p>
+Please note that the Excalibur data are periodically updated. When referring to it, please cite the DOI: 10.26133/NEA44, e.g. in your reference list, and record the date/time of access.
+</p>
+<p>
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA44 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+</p>
+<p>
+	@misc{ps,
+</p>
+<p>
+	doi = {10.26133/NEA44},
+</p>
+<p>
+	url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA44},
+</p>
+<p>
+	author = {{NASA Exoplanet Archive}},
+</p>
+<p>
+	title = {Excalibur},
+</p>
+<p>
+	publisher = {NExScI-Caltech/IPAC},
+</p>
+<p>
+	version = {Version: YYYY-MM-DD HH:MM},
+</p>
+<p>
+	year = {YYYY}
+</p>
+<p>
+	}
+</p>
+<p>
+AASTeX (no bibtex)
+</p>
+<p>
+	\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ps}
+</p>
+<p>
+	{NASA Exoplanet Archive}. YYYY, Excalibur,
+</p>
+<p>
+	Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA44}{doi:10.26133/NEA44}
+</p>
+<p>
+Recommended text snippet:
+</p>
+<p>
+We obtain the data set from the NASA Exoplanet Archive \citep{ps}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://excalibur.ipac.caltech.edu/" target="_blank">https://excalibur.ipac.caltech.edu/</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2025
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA45'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA45
+</strong>
+Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA45" target="_blank">https://doi.org/10.26133/NEA45</a>
+<br>
+<a href="/doi/10.26133/NEA45" alt="10.26133/NEA45 Permalink" title="10.26133/NEA45 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA45</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA45
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey conducted time series imaging of 20 non-overlapping fields (see the ROME/REA Fields table in the Data Products and Table Columns section) in the Galactic Bulge using the Las Cumbres Observatory 1-meter telescope network.  
+</p>
+<p>
+Description of survey in Street, R.A., Bachelet, E., Tsapras, Y., et al.  2024, PASP, ROME/REA: Three-year, Tri-color Timeseries Photometry of the Galactic Bulge, 136, 6, 064501. doi:10.1088/1538-3873/ad4e69
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu:8001/cgi-bin/ROME/nph-firefly?data" target="_blank">https://exoplanetarchive.ipac.caltech.edu:8001/cgi-bin/ROME/nph-firefly?data</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+v1
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2024
+</p>
+</div>
+</div>
+</div>
+
+</div>
+<div class='doi_item'>
+<a class='offset_anchor' name='10-26133-NEA46'></a>
+<h5>
+<i alt='Show More Information' class='fa fa-caret-right doi_toggler' title='Show More Information'></i>
+<strong>
+10.26133/NEA46
+</strong>
+NASA Exoplanet Archive Atmospheric Observation List (NExoList)
+</h5>
+<div class='doi_info'>
+<div class='mission_brand'>
+<a href="http://exoplanetarchive.ipac.caltech.edu/"><img alt="Nea_logo" class="project_logo" src="/system/activities/logos/24/thumb/nea_logo.png?1565396365" /></a>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Permalinks
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://doi.org/10.26133/NEA46" target="_blank">https://doi.org/10.26133/NEA46</a>
+<br>
+<a href="/doi/10.26133/NEA46" alt="10.26133/NEA46 Permalink" title="10.26133/NEA46 Permalink">https://www.ipac.caltech.edu/doi/10.26133/NEA46</a>
+</p>
+</div>
+<div class='col-sm-2 doi_header'>
+<p>
+DOI
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+10.26133/NEA46
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Publisher
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+IPAC
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Author(s)
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Title
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+NASA Exoplanet Archive Atmospheric Observation List (NExoList)
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Description
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+The NExoList table records accepted telescope programs to observe transiting exoplanet atmospheres. The current table contains all archived and planned JWST atmospheric programs from NIRSpec, NIRISS, NIRCam and MIRI, with future augmentations supporting other facilities (e.g., HST). Much of the information is sourced from the Transiting Exoplanets List of Space Telescope Spectroscopy (TRExoLiSTS) table, which is described in the following publication, Nikolay K. Nikolov et al 2022 Res. Notes AAS 6 272. We have augmented the TRExoLiSTS content with system, stellar, and planetary parameters from the NASA Exoplanet Archive for easier exploration of the data.
+</p>
+<p>
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Data type
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+Dataset
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Url
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+<a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/observations/nph-firefly?data" target="_blank">https://exoplanetarchive.ipac.caltech.edu/cgi-bin/observations/nph-firefly?data</a>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Version
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Date of data collection
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-2 doi_header'>
+<p>
+Year of publication
+</p>
+</div>
+<div class='col-sm-10'>
+<p>
+2026
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+
+</div>
+
+
+<div class='footer_box'>
+<div class='container'>
+<div class='row'>
+<div class='col-md-4'>
+<div class='footer_group affiliates'>
+<a href="http://www.ipac.caltech.edu" alt="Infrared Processing and Analysis Center" title="Infrared Processing and Analysis Center"><img alt="Ipac" src="/assets/ipac-4c1a46bd7efc14226bcc882880fc2871.png" /></a>
+<a href="http://www.caltech.edu" alt="California Institute of Technology" title="California Institute of Technology"><img alt="Caltech" src="/assets/caltech-8ad9780e54d034d665af4a3dbd37d62c.png" /></a>
+</div>
+</div>
+<div class='col-md-8 footer_wrapper'>
+<div class='row'>
+<div class='col-xs-6 col-md-3'>
+<div class='footer_group'>
+<p class='list_header'>
+Policies
+</p>
+<ul class='page_links'>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/page/privacy">Privacy Policy</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/page/image-use-policy">Image Use Policy</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='col-xs-6 col-md-3'>
+<div class='footer_group'>
+<p class='list_header'>
+Get in Touch
+</p>
+<ul class='page_links'>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/page/contact#visitor-information">Visit IPAC</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/page/contact">Contact Us</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/staff">People</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="/page/opportunities">Job Opportunities</a>
+</li>
+</ul>
+</div>
+</div>
+<div class='col-xs-6 col-md-3'>
+<div class='footer_group'>
+<p class='list_header'>
+Stay in Touch
+</p>
+<ul class='page_links'>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="http://www.facebook.com/caltechipac">Facebook</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="http://www.x.com/caltechipac">X</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="https://www.instagram.com/caltech_ipac">Instagram</a>
+</li>
+<li>
+<i class='fa fa-angle-right'></i>
+<a href="https://bsky.app/profile/caltechipac.bsky.social">Bluesky</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script async='' src='https://www.googletagmanager.com/gtag/js?id=G-06EX5FK74M'></script>
+<script>
+  //<![CDATA[
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-06EX5FK74M');
+  //]]>
+</script>
+
+<script>
+  //<![CDATA[
+    var _ctct_m = "82df4d7b71d2a1e4480591e64e4ec24a";
+  //]]>
+</script>
+<script async='' defer='defer' id='signupScript' src='//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'></script>
+
+<script src="/assets/application-aa44f37d66992aa8ef2ebf46f6ab70d7.js" type="text/javascript"></script>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      setTimeout(function(){
+        levelSections();
+      }, 25)
+    });
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    $(document).ready(function() {
+      var doi = ""
+      if (doi) {
+        scrollToAnchor(doi);
+      }
+      $(window).scroll(doiScrollHandler);
+    })
+  //]]>
+</script>
+
+
+</div>
+</body>
+</html>
+<script>
+  //<![CDATA[
+    var _ctct_m = "82df4d7b71d2a1e4480591e64e4ec24a";
+  //]]>
+</script>
+<script async='' defer='defer' id='signupScript' src='//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js'></script>

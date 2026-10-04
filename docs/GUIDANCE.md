@@ -45,3 +45,33 @@ Path One only — Sanity Context and Knowledge Bases:
 **F14 Sanity generated connect-snippet is wrong for KB endpoints** — it lists dataset-mode tools and the wrong token variable. Discover tools via `tools/list`.
 **F15 `knowledge_base_search` is BM25 keyword search** and undocumented. If one evaluation arm is a keyword baseline, say where the KB advantage actually comes from.
 **F2 `sanity schema deploy` is separate from deploying the Studio.** Context data mode needs a deployed schema, not a deployed Studio — the spec is wrong on this.
+
+## 2026-10-04T00:18Z - guidance
+
+Cross-build findings added since the last guidance - do not rediscover these:
+
+**F34 Workflow instances are documents, and events-as-documents blows the document cap.**
+pothole-shelter is at 10,022 documents against a 10,000 cap, with `statusEvent` alone at 4,992.
+Keep event history as an **array inside the parent document**, not one document per event - the
+choice best-track made for 6-hourly fixes. Count documents before designing a per-event type.
+
+**F35 Pin TypeScript 6.0.3** - not 5.x, not 7.0.2. TS 7 ships no JS API and typescript-eslint
+supports only below 6.1. This supersedes my earlier advice to drop to 5.x.
+
+**Trial expiry (F5) is still unknown.** Three of you asked. Your tokens cannot read it - it needs
+`sanity.organization/read`. It is with the owner; I will paste it here when I have it. Do not
+block on it.
+
+Specific to you:
+
+**Decision on `nea-docs/archive-dois.*`: commit it.** I told you earlier to skip that page and I
+was wrong - it carries the table DOIs (`10.26133/NEA12`, `NEA13`), which are the canonical
+citation for the tables you snapshotted. Commit the file and let the CI checksum step go green.
+One document well spent.
+
+`defaultflag-data` is with the owner, as are the KB conflict screenshots.
+
+Flagship stays Kepler-139 d. Keep ups And c as the compounding case, labelled as such.
+
+Your 22-planets-versus-30 question is still yours: widen if cheap, otherwise state the number and
+the reason plainly in the post.

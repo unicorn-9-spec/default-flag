@@ -1,0 +1,3186 @@
+NOTE: plain-text extraction of archive-dois.html
+SOURCE: NASA Exoplanet Archive documentation
+Terms: the archive publishes no explicit licence; its data may be used for research
+with appropriate acknowledgement. NASA archive page, not a journal article.
+
+Digital Object Identifiers | IPAC
+
+ "layouts/service_message" -->
+
+About
+
+Science
+
+Projects & Data
+
+Future
+
+Outreach
+
+News
+
+Events
+
+Community
+
+ Our Mission 
+
+ History 
+
+ Organization 
+
+ Committees 
+
+ Staff Directory 
+
+ Meet the Staff 
+
+ Job Opportunities 
+
+ Contact Us 
+
+ General Information 
+
+ Media Contacts 
+
+ Social Media 
+
+ Visitor Information 
+
+ Overview 
+
+ Science Staff 
+
+ Meet the Scientists 
+
+ IPAC Space Sciences Seminars 
+
+ Fellowships 
+
+ Publications 
+
+ Science Collaborations 
+
+ Beacon-JWST
+
+ GOALS
+ 
+Great Observatories All-sky LIRG Survey
+
+ PASSAGE
+ 
+Parallel Application of Slitless Spectroscopy to Analyze Galaxy Evolution
+
+ RAPID PIT
+ 
+Roman Alerts Promptly from Image Differencing
+
+ Roman GRS PIT
+ 
+Roman Galaxy Redshift Survey Project Infrastructure Team
+
+ Roman HLIS Cosmology PIT
+ 
+Roman Project Infrastructure Team: Cosmology with the Roman High Latitude Imaging Survey
+
+ More
+
+ Students 
+
+ Graduate Students 
+
+ Undergraduate Students 
+
+ High School Students 
+
+ Citizen Science 
+
+ Working at IPAC 
+
+ Archives & Data Science 
+
+ IRSA
+ 
+Infrared Science Archive
+
+ KOA
+ 
+Keck Observatory Archive
+
+ NASA Exoplanet Archive
+
+ NED
+ 
+NASA/IPAC Extragalactic Database
+
+ ExoFOP
+ 
+Exoplanet Follow-up Observing Program
+
+ Fornax
+ 
+The Fornax Initiative
+
+ NEID
+ 
+NN-explore Exoplanet Investigations with Doppler spectroscopy
+
+ DOIs 
+
+ Missions & Centers 
+
+ Euclid
+ 
+Euclid NASA Science Center at IPAC
+
+ NExScI
+ 
+NASA Exoplanet Science Institute
+
+ Roman
+ 
+Nancy Grace Roman Space Telescope
+
+ Rubin
+ 
+Vera C. Rubin Observatory
+
+ SPHEREx
+ 
+Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer
+
+ ZTF
+ 
+Zwicky Transient Facility
+
+ In Development 
+
+ ARIEL/CASE
+ 
+Atmospheric Remote-sensing Infrared Exoplanet Large-survey
+
+ NEO Surveyor
+ 
+Near-Earth Object Surveyor
+
+ PRIMA
+ 
+Probe Far-Infrared Mission for Astrophysics
+
+ UVEX
+ 
+Ultraviolet Explorer
+
+ Legacy 
+
+ 2MASS
+ 
+Two Micron All Sky Survey
+
+ Herschel
+ 
+NASA Herschel Science Center
+
+ IRAS
+ 
+Infrared Astronomical Satellite
+
+ ISO
+ 
+Infrared Space Observatory
+
+ LTB
+ 
+Lunar Trailblazer
+
+ NEOWISE
+ 
+Near-Earth Object Wide-field Infrared Survey Explorer
+
+ Planck
+ 
+ U.S. Planck Data Center
+
+ SOFIA
+ 
+Stratospheric Observatory for Infrared Astronomy
+
+ Spitzer
+ 
+Spitzer Science Center
+
+ TMT
+ 
+Thirty Meter Telescope
+
+ WISE
+ 
+Wide-field Infrared Survey Explorer
+
+ In Development 
+
+ ARIEL/CASE
+ 
+Atmospheric Remote-sensing Infrared Exoplanet Large-survey
+
+ NEO Surveyor
+ 
+Near-Earth Object Surveyor
+
+ PRIMA
+ 
+Probe Far-Infrared Mission for Astrophysics
+
+ UVEX
+ 
+Ultraviolet Explorer
+
+ Mission Studies & Proposals 
+
+ ISCEA
+ 
+Infrared SmallSat for Cluster Evolution Astrophysics
+
+ JSP
+ 
+Joint Survey Processing
+
+ More EPO Projects 
+
+ Cool Cosmos
+
+ Explore Exoplanets: The Discoverers
+
+ NITARP
+ 
+NASA/IPAC Teacher Archive Research Program
+
+ NASA Universe of Learning 
+
+ AstroPix
+
+ Astrovisualization Community of Practice
+
+ Universe Unplugged
+
+ Overview 
+
+ Key Expertise 
+
+ Education 
+
+ Animation/Video Production 
+
+ Science Visualization & Illustration 
+
+ Virtual Reality 
+
+ Outreach & Communications 
+
+ Website Development 
+
+ All News 
+
+ Featured News 
+
+ IPAC News 
+
+ Project News 
+
+ Uplink Newsletters 
+
+ Meet the Staff 
+
+ Media Contacts 
+
+ All Events 
+
+ Public Event 
+
+ Symposium 
+
+ Conference 
+
+ Workshop 
+
+ Panel Discussion 
+
+ IPAC Space Sciences Seminar 
+
+ Overview 
+
+ Fellowships 
+
+ Conferences 
+
+ Decadal Survey 
+
+ IPAC at AAS / DPS meetings 
+
+About
+
+ Our Mission 
+
+ History 
+
+ Organization 
+
+ Committees 
+
+ Staff Directory 
+
+ Meet the Staff 
+
+ Job Opportunities 
+
+ Contact Us 
+
+Science
+
+ Overview 
+
+ Science Staff 
+
+ Meet the Scientists 
+
+ IPAC Space Sciences Seminars 
+
+ Fellowships 
+
+ Publications 
+
+ Science Collaborations 
+
+ Students 
+
+Projects & Data
+
+ Archive & Data Science 
+
+ Missions & Centers 
+
+ In Development 
+
+ Legacy 
+
+Future
+
+ In Development 
+
+ Mission Studies & Proposals 
+
+Outreach
+
+ Overview 
+
+ Education 
+
+ Animation/Video Production 
+
+ Science Visualization & Illustration 
+
+ Virtual Reality 
+
+ Outreach & Communications 
+
+ Website Development 
+
+ Education & Outreach 
+
+News
+
+ All News 
+
+ Featured News 
+
+ IPAC News 
+
+ Project News 
+
+ Uplink Newsletters 
+
+ Meet the Staff 
+
+ Media Contacts 
+
+Events
+
+ All Events 
+ 
+ Public Event 
+
+ Symposium 
+
+ Conference 
+
+ Workshop 
+
+ Panel Discussion 
+
+ IPAC Space Sciences Seminar 
+
+Community
+
+ Overview 
+
+ Fellowships 
+
+ Conferences 
+
+ Decadal Survey 
+
+ IPAC at AAS / DPS meetings 
+
+Back to Top
+
+NASA Exoplanet Archive
+Digital Object Identifiers
+
+ A Digital Object Identifier (DOI) is a permanent and unique string used to identify a digital resource and link to it on the web. IPAC has created DOIs for many astronomical data sets and for its data or collection services, e.g., NED. If you are writing a manuscript that uses one of these data sets or services, we recommend that you reference the corresponding DOI in your manuscript’s bibliography, in addition to the appropriate refereed journal article. If you are submitting to an AAS Journal, instructions for referencing IPAC DOIs in your manuscript are provided here: https://journals.aas.org/aastexguide/#softwareandthirdparty . Tools such as doi2bib.org are useful for quickly generating BibTeX markup for these DOIs. 
+
+46
+DOIs
+
+Search
+
+Reset
+
+DOIs by project:
+
+ All 
+
+ IRSA 
+
+ NASA Exoplanet Archive 
+
+ NED 
+
+ ExoFOP 
+
+ KOA 
+
+ NN-EXPLORE 
+
+10.26133/NEA1
+ 
+Confirmed Planets Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA1 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA1 
+
+DOI
+
+10.26133/NEA1
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Confirmed Planets Table
+
+Description
+
+The Confirmed Planets table contains physical and orbital parameters for the planet and the host star, as available from the default literature reference for each planet. This table has been retired as of 2021 and it has been replaced by the Planetary Systems table (10.26133/NEA12).
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA2
+ 
+Composite Planet Data Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA2 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA2 
+
+DOI
+
+10.26133/NEA2
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Composite Planet Data Table
+
+Description
+
+The Composite Planet Data table provides a collection of stellar and planetary parameters for confirmed exoplanets, one row per planet. The table automatically selects the data from other available literature references for the same planet to fill in gaps from the default literature reference. This table has been retired as of 2021 and it has been replaced by the Planetary Systems Composite Parameters table (10.26133/NEA13).
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=compositepars 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA3
+ 
+K2 Candidates Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA3 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA3 
+
+DOI
+
+10.26133/NEA3
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+K2 Candidates Table
+
+Description
+
+The K2 candidates table lists objects from the published literature identified as candidates or false positives. If objects are confirmed as planets, their status in this table is updated but the objects remain. This table has been retired as of 2021 and it has been replaced by the K2 Planets and Candidates table (10.26133/NEA19).
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2candidates 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA4
+ 
+Kepler Objects of Interest Cumulative Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA4 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA4 
+
+DOI
+
+10.26133/NEA4
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Kepler Objects of Interest Cumulative Table
+
+Description
+
+The Kepler Objects of Interest (KOI) cumulative table gathers information from the individual KOI activity tables that describe the current results of different searches of the Kepler light curves. The intent of the cumulative table is to provide the most accurate dispositions and stellar and planetary information for all KOIs in one place. All the information in this table has provenance in other KOI activity tables. 
+
+Please note that the Kepler Objects of Interest table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA4, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA4 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+@misc{cumulative,
+
+doi = {10.26133/NEA4},
+
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA4},
+
+author = {{NASA Exoplanet Archive}},
+
+title = {Kepler Objects of Interest Cumulative Table},
+
+publisher = {NExScI-Caltech/IPAC},
+
+version = {Version: 20YY-MM-DD HH:MM},
+
+year = {yyyy}
+
+}
+
+AASTeX (no bibtex)
+
+\bibitem[{{NASA Exoplanet Archive}(yyyy)}]{k2pandc}
+
+{NASA Exoplanet Archive}. yyyy, Kepler Objects of Interest Cumulative Table,
+
+Version: YYYY-MM-DD HH:MM, NExScI-Caltech/IPAC, \href{https://doi.org/10.26133/NEA4}{doi:10.26133/NEA4}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{cumulative}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA5
+ 
+Kepler Objects of Interest DR 25 Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA5 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA5 
+
+DOI
+
+10.26133/NEA5
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Mission
+
+Title
+
+Kepler Objects of Interest DR 25 Table
+
+Description
+
+The Q1–Q17 Data Release 25 (DR25) Supplemental Kepler Objects-of-Interest (KOI) activity table reports dispositions based on the final processing (DR25) of the Kepler data and a combination of automated and human-based vetting to produce a "best-knowledge" catalog of planetary CANDIDATEs and FALSE POSITIVEs for use by the Astronomical community in selecting KOIs for follow-up observations and further study. 
+
+Please note that the Kepler Objects of Interest DR 25 Table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA5, e.g. in your reference list, and record the date/time of access.
+
+ bibtex (built from https://doi2bib.org/bib/10.26133/NEA5 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{koidr25,
+
+ doi = {10.26133/NEA5},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA19},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Kepler Objects of Interest DR25},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+ AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{k2pandc}
+
+ {NASA Exoplanet Archive}. YYYY, Kepler Objects of Interest DR25,
+
+ Version: YYYY-MM-DD HH:MM, NExScI-Caltech/IPAC, \href{https://doi.org/10.26133/NEA5}{doi:10.26133/NEA5}
+
+ Recommended text snippet:
+
+ We obtain the data set from the NASA Exoplanet Archive \citep{k2pandc}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=q1_q17_dr25_koi 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA6
+ 
+Kepler Stellar Properties Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA6 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA6 
+
+DOI
+
+10.26133/NEA6
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Mission
+
+Title
+
+Kepler Stellar Properties Table
+
+Description
+
+The Kepler Stellar interactive table contains parameters for all targets observed by Kepler for the purpose of finding transiting planets. Individual tables include the values used for that specific processing, including the Q1-12, Q1-16, Q1-17 DR 24, and Q1-17 DR 25 pipeline runs. One additional table, the Q1-17 DR 25 Supplemental Stellar, includes values provided by the Kepler Stellar Properties Working Group (SPWG) independent of any pipeline processing in order to report their most current stellar values.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA7
+ 
+UKIRT Microlensing Survey
+
+Permalinks
+
+ https://doi.org/10.26133/NEA7 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA7 
+
+DOI
+
+10.26133/NEA7
+
+Publisher
+
+IPAC
+
+Author(s)
+
+UKIRT Microlensing Team
+
+Title
+
+UKIRT Microlensing Survey
+
+Description
+
+Light curves from the ongoing UKIRT microlensing survey made available with help from the UKIRT Microlensing Team.The Wide Field Camera (WFCAM) on the United Kingdom Infrared Telescope (UKIRT), located at Mauna Kea Observatory, has been used to conduct microlensing surveys with a variety of science goals.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA8
+ 
+KELT Survey Light Curves
+
+Permalinks
+
+ https://doi.org/10.26133/NEA8 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA8 
+
+DOI
+
+10.26133/NEA8
+
+Publisher
+
+IPAC
+
+Author(s)
+
+KELT Team
+
+Title
+
+KELT Survey Light Curves
+
+Description
+
+The Kilodegree Extremely Little Telescope (KELT) survey consists of two robotic telescopes that are conducting a survey for transiting exoplanets around bright stars. The NASA Exoplanet Archive currently contains about 1.1 million light curves in selected Northern fields.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA9
+ 
+SuperWASP Survey Light Curves
+
+Permalinks
+
+ https://doi.org/10.26133/NEA9 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA9 
+
+DOI
+
+10.26133/NEA9
+
+Publisher
+
+IPAC
+
+Author(s)
+
+SuperWASP Consortium
+
+Title
+
+SuperWASP Survey Light Curves
+
+Description
+
+SuperWASP consists of two robotic observatories that operate continuously throughout the year, allowing coverage of both hemispheres of the sky. The first, SuperWASP-North, is located on the island of La Palma among the Isaac Newton Group (ING) of telescopes. The second, SuperWASP-South, is located at the site of the South African Astronomical Observatory (SAAO), just outside Sutherland, South Africa. The NASA Exoplanet Archive hosts over 18 million light curves collected between 2004 and 2008.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA10
+ 
+Transmission Spectroscopy Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA10 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA10 
+
+DOI
+
+10.26133/NEA10
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Transmission Spectroscopy Table
+
+Description
+
+The transmission spectroscopy table contains wavelength-dependent transit measurements from the published literature. The transit measurements are published as either transit depths, planet-to-star radius ratios, or planet radii, and span wavelengths across the electromagnetic spectrum. 
+
+Please note that the Transit Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA10, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA10 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{transitspec,
+
+ doi = {10.26133/NEA10},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA10},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Transmission Spectroscopy Table},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{transitspec}
+
+ {NASA Exoplanet Archive}. YYYY, Transmission Spectroscopy Table,
+
+ Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA10}{doi:10.26133/NEA10}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{transitspec}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=transitspec 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA11
+ 
+Emission Spectroscopy Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA11 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA11 
+
+DOI
+
+10.26133/NEA11
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Emission Spectroscopy Table
+
+Description
+
+The emission spectroscopy table contains wavelength-dependent eclipse measurements from the published literature. The eclipse measurements are published as either eclipse depths or brightness temperature, and span wavelengths across the electromagnetic spectrum.
+
+Please note that the Emission Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA11, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA11 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{emissionspec,
+
+ doi = {10.26133/NEA11},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA11},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Emission Spectroscopy Table},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{emissionspec}
+
+ {NASA Exoplanet Archive}. YYYY, Emission Spectroscopy Table,
+
+ Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA11}{doi:10.26133/NEA11}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{emissionspec}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+ This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=emissionspec 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2019
+
+10.26133/NEA12
+ 
+Planetary Systems Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA12 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA12 
+
+DOI
+
+10.26133/NEA12
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Science Institute
+
+Title
+
+Planetary Systems Table
+
+Description
+
+The Planetary Systems Table contains, for all published confirmed exoplanets, the physical and orbital parameters for the exoplanets and the host stars. This table replaced the now-retired Confirmed Planets table (10.26133/NEA1).
+
+Please note that the Planetary Systems table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA12, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA12 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{ps,
+
+ doi = {10.26133/NEA12},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA12},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Planetary Systems},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ps}
+
+ {NASA Exoplanet Archive}. YYYY, Planetary Systems,
+
+ Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA12}{doi:10.26133/NEA12}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{ps}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration. 
+
+Data type
+
+Collection
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS 
+
+Version
+
+Table is updated wee
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA13
+ 
+Planetary Systems Composite Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA13 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA13 
+
+DOI
+
+10.26133/NEA13
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Science Institute
+
+Title
+
+Planetary Systems Composite Table
+
+Description
+
+The Planetary Systems Composite Table provides, for all confirmed exoplanetary systems, a compilation of planetary and stellar parameters. The table pulls data from the Planetary Systems Table (10.26133/NEA12) and uses multiple references to fill in gaps to produce as "full" of a table as possible. This table is updated in parallel with Planetary Systems Table updates. This table replaced the now-retired Composite Parameters table (10.26133/NEA2).
+
+Please note that the Planetary Systems table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA12, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA13 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{PSCompPars,
+
+ doi = {10.26133/NEA13},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA13},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Planetary Systems Composite Parameters},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{PSCompPars}
+
+ {NASA Exoplanet Archive}. YYYY, Planetary Systems,
+
+ Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA13}{doi:10.26133/NEA13}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{PSCompPars}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Collection
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars 
+
+Version
+
+Table updated weekly
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA14
+ 
+Kepler Mission Completeness and Reliability Products
+
+Permalinks
+
+ https://doi.org/10.26133/NEA14 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA14 
+
+DOI
+
+10.26133/NEA14
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Mission Completeness and Reliability Products
+
+Description
+
+This dataset contains data products produced by the Kepler Project related to completeness and reliability of the Kepler pipeline.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_completeness_reliability.html 
+
+Version
+
+DR24 and DR25 (Final
+
+Date of data collection
+
+Year of publication
+
+2022
+
+10.26133/NEA15
+ 
+Kepler Threshold Crossing Events DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA15 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA15 
+
+DOI
+
+10.26133/NEA15
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Threshold Crossing Events DR25
+
+Description
+
+This is a table of the Threshold Crossing Events (TCEs) which are a sequence of transit-like features in the Kepler flux time series of a given target that resembles the signature of a transiting planet to a sufficient degree that the target is passed on for further analysis. There are four versions of this product [Q1-Q12], [Q1-Q16], [Q1-Q17, DR24] and [Q1-Q17, DR25]. The DR25 version is the final version
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/Kepler_TCE_docs.html 
+
+Version
+
+Multiple Versions
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA16
+ 
+Kepler KOI Positional Probabilities
+
+Permalinks
+
+ https://doi.org/10.26133/NEA16 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA16 
+
+DOI
+
+10.26133/NEA16
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler KOI Positional Probabilities
+
+Description
+
+Kepler Mission product that contains information on the possibility of the transit signal arising from an astrophysical source other than the target star. 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score%3E0.3 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA17
+ 
+Kepler Misson False Positive Probabilities
+
+Permalinks
+
+ https://doi.org/10.26133/NEA17 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA17 
+
+DOI
+
+10.26133/NEA17
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Misson False Positive Probabilities
+
+Description
+
+The Kepler Project False Positive Probabilities table contains the results of running an automated transit false-positive-probability (FPP) calculating procedure on all KOIs.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp 
+
+Version
+
+DR25
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA18
+ 
+Kepler Certified False Positives
+
+Permalinks
+
+ https://doi.org/10.26133/NEA18 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA18 
+
+DOI
+
+10.26133/NEA18
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Certified False Positives
+
+Description
+
+This Kepler Mission product contains information about the False Positive nature of Kepler Objects of Interest as determined by the Kepler False Positive Working Group.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2020
+
+10.26133/NEA19
+ 
+K2 Planets and Candidates Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA19 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA19 
+
+DOI
+
+10.26133/NEA19
+
+Publisher
+
+IPAC
+
+Author(s)
+
+David Ciardi
+
+Title
+
+K2 Planets and Candidates Table
+
+Description
+
+The K2 Planets and Candidates table lists objects from the published literature identified as confirmed planets, candidates or false positives discovered by the K2 Mission. If objects are confirmed as planets, their status in this table is updated but the objects remain. 
+
+Please note that the K2 Planets and Candidates table is continuously updated. When referring to it, please cite the DOI: 10.26133/NEA19, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA19 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+@misc{k2pandc,
+
+ doi = {10.26133/NEA19},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA19},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {K2 Planets and Candidates},
+
+ publisher = {IPAC},
+
+ version = {Version: 20YY-MM-DD HH:MM},
+
+ year = {2021}
+
+}
+
+AASTeX (no bibtex)
+
+\bibitem[{{NASA Exoplanet Archive}(2021)}]{k2pandc} 
+
+{NASA Exoplanet Archive}. 2021, K2 Planets and Candidates Table,
+
+Version: 20YY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA19}{doi:10.26133/NEA19}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{k2pandc}\footnote{Accessed on 20YY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Collection
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2021
+
+10.26133/NEA20
+ 
+Kepler Project Document: Uniform Modeling of KOIs - MCMC Data Release Notes
+
+Permalinks
+
+ https://doi.org/10.26133/NEA20 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA20 
+
+DOI
+
+10.26133/NEA20
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: Uniform Modeling of KOIs - MCMC Data Release Notes
+
+Description
+
+This document describes data products related to the reported planetary parameters and uncertainties for the Kepler Objects of Interest (KOIs) based on a Markov-Chain-Monte- Carlo (MCMC) analysis. Reported parameters, uncertainties and data products can be found at the NASA Exoplanet Archive. The relevant paper for details of the calculations is Rowe et al. 2015.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19084-001.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+02 Mar 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA21
+ 
+Kepler Project Document: Planet Detection Metrics: Automatic Detection of Background Objects Using the Centroid Robovetter
+
+Permalinks
+
+ https://doi.org/10.26133/NEA21 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA21 
+
+DOI
+
+10.26133/NEA21
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: Planet Detection Metrics: Automatic Detection of Background Objects Using the Centroid Robovetter
+
+Description
+
+An overview of the automated method of identifying background eclipsing binaries masquerading as planet candidates in the Kepler planet candidate catalogs is described. The manual vetting process for Kepler Objects of Interest (KOIs) described in Bryson et al. (2013) with a series of measurements and tests that can be performed algorithmically is codified. The automated results are compared with a sample of manually vetted KOIs from the catalog of Burke et al. (2014).
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19115-001.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+22 May 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA22
+ 
+Kepler Project Document: KSCI-19085 Planet Detection Metrics: Window and 1sigma Depth Functions for DR24
+
+Permalinks
+
+ https://doi.org/10.26133/NEA22 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA22 
+
+DOI
+
+10.26133/NEA22
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19085 Planet Detection Metrics: Window and 1sigma Depth Functions for DR24
+
+Description
+
+This document describes the window and one-sigma depth functions produced by the Transiting Planet Search (TPS) algorithm in the Kepler pipeline (Jenkins 2002). The window function specifies the fraction of phase space over which three transits are observable as a function of orbital period. The one-sigma depth function specifies the depth of a signal (in ppm) for a given light curve that results in a one-sigma detection of a transit signature as a function of orbital period when averaged over phase.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19085-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+15 Dec 2016
+
+Year of publication
+
+2021
+
+10.26133/NEA23
+ 
+Kepler Project Document: KSCI-19091 Autovetter Planet Candidate Catalog for Q1-Q17 DR24
+
+Permalinks
+
+ https://doi.org/10.26133/NEA23 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA23 
+
+DOI
+
+10.26133/NEA23
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19091 Autovetter Planet Candidate Catalog for Q1-Q17 DR24
+
+Description
+
+This document describes the Kepler autovetter, and how it is used to produce a catalog of Planet Candidates from the Q1-Q17 DR24 TCEs (Threshold Crossing Events) that are identified in the Kepler SOC (Science Operations Center) pipeline [Jenkins 2010ab] version 9.2 [Seader et al. 2015].
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19091-001.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+20 Jul 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA24
+ 
+Kepler Project Document: KSCI-19092: Planet Reliability Metrics: Astrophysical Positional Probabilities
+
+Permalinks
+
+ https://doi.org/10.26133/NEA24 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA24 
+
+DOI
+
+10.26133/NEA24
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19092: Planet Reliability Metrics: Astrophysical Positional Probabilities
+
+Description
+
+This document describes the Kepler astrophysical positional probabilities (APP) table hosted at the Exoplanet Archive1. This table lists the stars with the highest probability of being co-located with the source of an observed transit, as well as the probability of the transit being on an unknown background source. The position of the transit signal source relative to the target star is found in the KOI tables at the Exoplanet Archive. These probabilities measure how well a star’s location matches the location of the transit signal – they do not measure the probability that the transit signal is consistent with a planet orbiting that star. 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19092-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+13 Nov 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA25
+ 
+Kepler Project Document: KSCI-19093 Kepler Certified False Positive Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA25 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA25 
+
+DOI
+
+10.26133/NEA25
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19093 Kepler Certified False Positive Table
+
+Description
+
+This document describes the Kepler Certified False Positive table hosted at the Exoplanet Archive1, herein referred to as the “CFP table”. This table is the result of detailed examina- tion by the Kepler False Positive Working Group (FPWG) of declared false positives in the Kepler Object of Interest (KOI) tables at the Exoplanet Archive. A KOI is considered a false positive in the CFP table if it is not due to a planet orbiting the KOI’s target star. The CFP table contains all KOIs in the Exoplanet Archive cumulative KOI table.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19093-004.pdf 
+
+Version
+
+4
+
+Date of data collection
+
+04 Oct 2019
+
+Year of publication
+
+2021
+
+10.26133/NEA26
+ 
+Kepler Project Document: KSCI-19094 Planet Detection Metrics: Pipeline Detection Efficiency
+
+Permalinks
+
+ https://doi.org/10.26133/NEA26 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA26 
+
+DOI
+
+10.26133/NEA26
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19094 Planet Detection Metrics: Pipeline Detection Efficiency
+
+Description
+
+This document describes the results of the third pixel-level transit injection experiment designed to measure the detection efficiency of the Kepler pipeline.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19094-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+22 Oct 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA27
+ 
+Kepler Project Document: KSCI-19096 Planet Detection Metrics: Vetting Detection Efficiency
+
+Permalinks
+
+ https://doi.org/10.26133/NEA27 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA27 
+
+DOI
+
+10.26133/NEA27
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19096 Planet Detection Metrics: Vetting Detection Efficiency
+
+Description
+
+This document describes the results of running the Kepler robovetter on the recovered injected TCEs to determine the TCERT detection efficiency. The results of both exercises are available at the NASA Exoplanet Archive.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19096-002-Vetting-Detection-Efficiency.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+19 Nov 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA28
+ 
+Kepler Project Document: KSCI-19101 Planet Detection Metrics: Window and 1sigma Depth Functions for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA28 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA28 
+
+DOI
+
+10.26133/NEA28
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19101 Planet Detection Metrics: Window and 1sigma Depth Functions for DR25
+
+Description
+
+This document describes the window and one-sigma depth functions relevant to the Transiting Planet Search (TPS) algorithm in the Kepler pipeline. The window function specifies the fraction of unique orbital ephemeris epochs over which three transits are observable as a function of orbital period. In this context, the epoch and orbital period, together, comprise the ephemeris of an orbiting companion, and ephemerides with the same period are considered equivalent if their epochs differ by an integer multiple of the period. The one-sigma depth function specifies the depth of a signal (in ppm) for a given light curve that results in a one-sigma detection of a transit signature as a function of orbital period when averaged over all unique orbital ephemerides.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19101-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+03 May 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA29
+ 
+Kepler Project Document: KSCI-19108 Planet Detection Metrics: Astrophysical Positional Probabilties for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA29 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA29 
+
+DOI
+
+10.26133/NEA29
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19108 Planet Detection Metrics: Astrophysical Positional Probabilties for DR25
+
+Description
+
+This document describes the Kepler astrophysical positional probabilities (APP) table hosted at the Exoplanet Archive updated for DR25. This table lists the stars with the highest probability of being co-located with the source of an observed transit, as well as the probability of the transit being on an unknown background source. The position of the transit signal source relative to the target star is found in the KOI tables at the Exoplanet Archive. These probabilities measure how well a star’s location matches the location of the transit signal – they do not measure the probability that the transit signal is consistent with a planet orbiting that star.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19108-001.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+28 Feb 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA30
+ 
+Kepler Project Document: KSCI-19111 Planet Detection Metrics: Per Target Detection Contours for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA30 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA30 
+
+DOI
+
+10.26133/NEA30
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19111 Planet Detection Metrics: Per Target Detection Contours for DR25
+
+Description
+
+This document describes the use of the Kepler planet occurrence rate products in order to calculate a per-target detection contour for the measured Data Re- lease 25 (DR25) pipeline performance. A per-target detection contour measures for a given combination of orbital period, Porb, and planet radius, Rp, what fraction of transit signals are recoverable by the Kepler pipeline.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19111-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+13 Jun 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA31
+ 
+Kepler Project Document: KSCI-19104: Description of the TCERT Vetting Products for Q1-Q17 DR24 Catalog
+
+Permalinks
+
+ https://doi.org/10.26133/NEA31 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA31 
+
+DOI
+
+10.26133/NEA31
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19104: Description of the TCERT Vetting Products for Q1-Q17 DR24 Catalog
+
+Description
+
+This document describes the Q1-Q17 DR24 TCERT Vetting products - a collection of plots and diagnostics used by the Threshold Crossing Event Review Team (TCERT) to evaluate threshold crossing events (TCEs). While designation of Kepler Objects of Interest (KOIs) and classification of them as Planet Candidates (PCs) or False Positives (FPs) is completely automated via a robotic vetting procedure for the Q1-Q17 DR24 planet catalog described in Coughlin et al. (2015), these products help to evaluate those robotic decisions for individual objects. For each TCE identified in the Q1-Q17 DR24 transit search, these products collect in one readily accessible place: (a) the DV one-page summary, (b) selected pertinent diagnostics and plots from the full DV report, and (c) supplemental plots and diagnostics not included in the full DV report, including an alternate means of data detrending. This document describes each plot in detail, and how it can be used to evaluate the various data sources to determine if a TCE is a PC or FP.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/TCERTCompanion_q1_q17_dr24.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+22 Jun 2015
+
+Year of publication
+
+2021
+
+10.26133/NEA32
+ 
+Kepler Project Document: KSCI-19105: Description of the TCERT Vetting Products for Q1-Q17 DR25 Catalog
+
+Permalinks
+
+ https://doi.org/10.26133/NEA32 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA32 
+
+DOI
+
+10.26133/NEA32
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19105: Description of the TCERT Vetting Products for Q1-Q17 DR25 Catalog
+
+Description
+
+This document describes the Q1–Q17 DR25 TCERT Vetting Reports: a collection of plots and diagnostics used by the Threshold Crossing Event Review Team (TCERT) to evaluate threshold crossing events (TCEs). While designation of Kepler Objects of Interest (KOIs) and classification of them as Planet Candidates (PCs) or False Positives (FPs) is completely automated via a robotic vetting procedure (the Robovetter) for the Q1–Q17 DR25 planet catalog, as described in Thompson et al. (2017), these reports help to visualize the metrics used by the Robovetter and evaluate those robotic decisions for individual objects. For each Q1–Q17 DR25 TCE, these reports include the following products: (a) the DV one-page summary, (b) selected pertinent diagnostics and plots from the full DV report, and (c) additional plots and diagnostics not included in the full DV report, including an alternate means of data detrending.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19105-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+21 Sep 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA33
+ 
+Kepler Project Document: KSCI-19109 Planet Detection Metrics: Per-Target Flux-Level Transit Injection Tests of TPS for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA33 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA33 
+
+DOI
+
+10.26133/NEA33
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19109 Planet Detection Metrics: Per-Target Flux-Level Transit Injection Tests of TPS for DR25
+
+Description
+
+This document describes the Flux Level Transit Injection (FLTI) techniques used in the Kepler Pipeline, defines the output file format of the simulated products, and details the various tests run. The document also describes sample python code for calculating pipeline completeness using the FLTI results and provides some worked examples.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19109-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+13 Jun 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA34
+ 
+Kepler Project Document: KSCI-19110 Planet Detection Metrics: Pixel-Level Transit Injection Tests of Pipeline Detection Efficiency for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA34 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA34 
+
+DOI
+
+10.26133/NEA34
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19110 Planet Detection Metrics: Pixel-Level Transit Injection Tests of Pipeline Detection Efficiency for DR25
+
+Description
+
+This document describes the results of the fourth pixel-level transit injection experiment, which was designed to measure the detection efficiency of both the Kepler pipeline and the Robovetter. 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19110-001.pdf 
+
+Version
+
+1
+
+Date of data collection
+
+01 June 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA35
+ 
+Kepler Project Document: KSCI-19114: Planet Detection Metrics: Robovetter Completeness and Effectiveness for DR25
+
+Permalinks
+
+ https://doi.org/10.26133/NEA35 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA35 
+
+DOI
+
+10.26133/NEA35
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Kepler Project
+
+Title
+
+Kepler Project Document: KSCI-19114: Planet Detection Metrics: Robovetter Completeness and Effectiveness for DR25
+
+Description
+
+This document describes the results of running the Robovetter on the Kepler observed, injected, inverted, and scrambled populations, which are available at the NASA Exoplanet Archive. The document describes the experimental design to calculate the Robovetter completeness and effectiveness, the tables that contain the results of running the Robovetter on the observed, injected, inverted, and scrambled TCEs, and some example results that can be used to compute accurate occurrence rates. 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Text
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/KSCI-19114-002.pdf 
+
+Version
+
+2
+
+Date of data collection
+
+31 Aug 2017
+
+Year of publication
+
+2021
+
+10.26133/NEA36
+ 
+Atmospheric Spectroscopy Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA36 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA36 
+
+DOI
+
+10.26133/NEA36
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Atmospheric Spectroscopy Table
+
+Description
+
+The NASA Exoplanet Archive Atmospheric Spectroscopy Table provides a unified interface to browse, visualize, plot, and download exoplanet emission and transmission spectra. 
+
+Please note that the Atmospheric Spectroscopy table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA36, e.g. in your reference list, and record the date/time of access. 
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA36 but edited to include a version tag, which works with AASTeX aasjournal.bst style file) 
+
+@misc{spectra, 
+
+doi = {10.26133/NEA36}, 
+
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA36}, 
+
+author = {{NASA Exoplanet Archive}}, 
+
+title = {Atmospheric Spectroscopy Table}, 
+
+publisher = {NExScI-Caltech/IPAC}, 
+
+version = {Version: YYYY-MM-DD HH:MM}, 
+
+year = {YYYY} 
+
+} 
+
+AASTeX (no bibtex) 
+
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{spectra} 
+
+{NASA Exoplanet Archive}. YYYY, Atmospheric Spectroscopy Table, 
+
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA36}{doi:10.26133/NEA36} 
+
+Recommended text snippet: 
+
+We obtain the data set from the NASA Exoplanet Archive \citep{spectra}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)} 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Service
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/atmospheres/nph-firefly?atmospheres 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2023
+
+10.26133/NEA37
+ 
+Transiting Planets Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA37 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA37 
+
+DOI
+
+10.26133/NEA37
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Science Institute
+
+Title
+
+Transiting Planets Table
+
+Description
+
+The Transiting Planets Table is a simpler interface for accessing all of the transit-specific observables currently in the Exoplanet Archive. These data are a subset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. 
+
+Please note that the Transiting Planets table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA37, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA37 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+@misc{td,
+
+doi = {10.26133/NEA37},
+
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA37},
+
+author = {{NASA Exoplanet Archive}},
+
+title = {Transiting Planets Table},
+
+publisher = {NExScI-Caltech/IPAC},
+
+version = {Version: YYYY-MM-DD HH:MM},
+
+year = {YYYY}
+
+}
+
+AASTeX (no bibtex)
+
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{td}
+
+{NASA Exoplanet Archive}. YYYY, Transit Detection Table,
+
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA37}{doi:10.26133/NEA37}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{td}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Collection
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD 
+
+Version
+
+Updated Weekly
+
+Date of data collection
+
+Year of publication
+
+2023
+
+10.26133/NEA38
+ 
+Microlensing Planets Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA38 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA38 
+
+DOI
+
+10.26133/NEA38
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Science Institute
+
+Title
+
+Microlensing Planets Table
+
+Description
+
+The Microlensing Planets Table is a simpler interface for accessing all of the microlensing-specific observables currently in the Exoplanet Archive. These data are a subset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. 
+
+Please note that the Microlensing Planets table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA38, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA38 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+@misc{ml,
+
+doi = {10.26133/NEA38},
+
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA38},
+
+author = {{NASA Exoplanet Archive}},
+
+title = {Microlensing Planets Table},
+
+publisher = {NExScI-Caltech/IPAC},
+
+version = {Version: YYYY-MM-DD HH:MM},
+
+year = {YYYY}
+
+}
+
+AASTeX (no bibtex)
+
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ml}
+
+{NASA Exoplanet Archive}. YYYY, Microlensing Detection Table,
+
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA38}{doi:10.26133/NEA38}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{ml}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Collection
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML&constraint=ml_modeldef=1 
+
+Version
+
+Updated Weekly
+
+Date of data collection
+
+Year of publication
+
+2015
+
+10.26133/NEA39
+ 
+Habitable Worlds Observatory Preliminary Input Catalog
+
+Permalinks
+
+ https://doi.org/10.26133/NEA39 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA39 
+
+DOI
+
+10.26133/NEA39
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Tuchow, Stark, and Mamajek (2024)
+
+Title
+
+Habitable Worlds Observatory Preliminary Input Catalog
+
+Description
+
+This is a list of ∼13,000 bright, nearby objects from TESS and Gaia DR3 that are potential targets for space-based direct imaging with the Habitable Worlds Observatory.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/docs/MissionStellar.html 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2024
+
+10.26133/NEA40
+ 
+Stellar Parameters for Planetary Hosts Table
+
+Permalinks
+
+ https://doi.org/10.26133/NEA40 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA40 
+
+DOI
+
+10.26133/NEA40
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Stellar Parameters for Planetary Hosts Table
+
+Description
+
+The Stellar Parameters Table lists all of the stellar parameters for a planetary system currently in the Exoplanet Archive. These data are a superset of what is available in the Planetary Systems (10.26133/NEA12) and Planetary Systems Composite Data (10.26133/NEA13) tables. In addition to listing stellar solutions associated with a given planetary solution (as is the case for the Planetary Systems table), the stellar parameters table also includes stellar parameters that are in the Exoplanet Archive for a planet hosting star but the parameters are not associated with a specific planetary solution and stellar parameters of non-planet hosting stars in a planetary system.
+
+Please note that the Stellar Parameters table is periodically updated. When referring to it, please cite the DOI: 10.26133/NEA40, e.g. in your reference list, and record the date/time of access. 
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA40 but edited to include a version tag, which works with AASTeX aasjournal.bst style file) 
+
+@misc{STELLARHOSTS, 
+
+doi = {10.26133/NEA40}, 
+
+url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA40}, 
+
+author = {{NASA Exoplanet Archive}}, 
+
+title = {Stellar Parameters Table}, 
+
+publisher = {NExScI-Caltech/IPAC}, 
+
+version = {Version: YYYY-MM-DD HH:MM}, 
+
+year = {YYYY} 
+
+} 
+
+AASTeX (no bibtex) 
+
+\bibitem[{{NASA Exoplanet Archive}(YYYY)}]{STELLARHOSTS} 
+
+{NASA Exoplanet Archive}. YYYY, Stellar Parameters Table, 
+
+Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA40}{doi:10.26133/NEA40} 
+
+Recommended text snippet: 
+
+We obtain the data set from the NASA Exoplanet Archive \citep{STELLARHOSTS}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)} 
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Service
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2024
+
+10.26133/NEA41
+ 
+Frontier Data Labs (FDL) PyATMOS Model Atmospheres
+
+Permalinks
+
+ https://doi.org/10.26133/NEA41 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA41 
+
+DOI
+
+10.26133/NEA41
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Frontier Data Labs (FDL) PyATMOS Model Atmospheres
+
+Description
+
+The PyATMOS dataset is the result of the work from the FDL 2018 Astrobiology challenge. It comprises a set of model earth-like exoplanet atmospheres, spanning a range of plausible parameter space.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?atmos 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2022
+
+10.26133/NEA42
+ 
+Frontier Data Labs (FDL) INARA Data
+
+Permalinks
+
+ https://doi.org/10.26133/NEA42 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA42 
+
+DOI
+
+10.26133/NEA42
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Frontier Data Labs (FDL) INARA Data
+
+Description
+
+The INARA dataset is the result of the work from the FDL 2018 Astrobiology challenge. It comprises a set of 3,112,820 synthetic rocky exoplanetary spectra generated using the NASA Planetary Spectrum Generator (PSG).
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/FDL/nph-fdl?psg 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2023
+
+10.26133/NEA43
+ 
+Colorado Ultraviolet Transit Experiment (CUTE) Exoplanet Transits
+
+Permalinks
+
+ https://doi.org/10.26133/NEA43 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA43 
+
+DOI
+
+10.26133/NEA43
+
+Publisher
+
+IPAC
+
+Author(s)
+
+CUTE Team
+
+Title
+
+Colorado Ultraviolet Transit Experiment (CUTE) Exoplanet Transits
+
+Description
+
+The Colorado Ultraviolet Transit Experiment (CUTE) is a 6U NASA CubeSat launched in 2021 carrying on-board a low-resolution, near-ultraviolet (2479-3306 angstrom) spectrograph. CUTE is designed to monitor transiting extra-solar planets orbiting bright, nearby stars to improve our understanding of planet atmospheric escape and star-planet interaction processes. The CUTE data is processed with the CUTE autONomous daTa ReductiOn pipeLine (CONTROL). The details of the pipeline are described in Sreejith et al., 2022.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/CUBESAT/nph-cubesat?cute 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2024
+
+10.26133/NEA44
+ 
+Excalibur:
+
+Permalinks
+
+ https://doi.org/10.26133/NEA44 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA44 
+
+DOI
+
+10.26133/NEA44
+
+Publisher
+
+IPAC
+
+Author(s)
+
+Excalibur Team
+
+Title
+
+Excalibur:
+
+Description
+
+EXCALIBUR (Exoplanet Calibration Bayesian Unified Retrieval) Pipeline reduces extrasolar system data into an exoplanet spectrum. It includes CERBERUS, a line by line, plane parallel radiative transfer code modeling exoplanet atmospheres and a Bayesian parameter retrievial / model selection package.
+
+Please note that the Excalibur data are periodically updated. When referring to it, please cite the DOI: 10.26133/NEA44, e.g. in your reference list, and record the date/time of access.
+
+bibtex (built from https://doi2bib.org/bib/10.26133/NEA44 but edited to include a version tag, which works with AASTeX aasjournal.bst style file)
+
+ @misc{ps,
+
+ doi = {10.26133/NEA44},
+
+ url = {https://catcopy.ipac.caltech.edu/dois/doi.php?id=10.26133/NEA44},
+
+ author = {{NASA Exoplanet Archive}},
+
+ title = {Excalibur},
+
+ publisher = {NExScI-Caltech/IPAC},
+
+ version = {Version: YYYY-MM-DD HH:MM},
+
+ year = {YYYY}
+
+ }
+
+AASTeX (no bibtex)
+
+ \bibitem[{{NASA Exoplanet Archive}(YYYY)}]{ps}
+
+ {NASA Exoplanet Archive}. YYYY, Excalibur,
+
+ Version: YYYY-MM-DD HH:MM, IPAC, \href{https://doi.org/10.26133/NEA44}{doi:10.26133/NEA44}
+
+Recommended text snippet:
+
+We obtain the data set from the NASA Exoplanet Archive \citep{ps}\footnote{Accessed on YYYY-MM-DD at HH:MM, returning NNNN rows.)}
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://excalibur.ipac.caltech.edu/ 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2025
+
+10.26133/NEA45
+ 
+Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey
+
+Permalinks
+
+ https://doi.org/10.26133/NEA45 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA45 
+
+DOI
+
+10.26133/NEA45
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey
+
+Description
+
+The Robotic Observations of Microlensing Events/Reactive Event Assessment (ROME/REA) Survey conducted time series imaging of 20 non-overlapping fields (see the ROME/REA Fields table in the Data Products and Table Columns section) in the Galactic Bulge using the Las Cumbres Observatory 1-meter telescope network. 
+
+Description of survey in Street, R.A., Bachelet, E., Tsapras, Y., et al. 2024, PASP, ROME/REA: Three-year, Tri-color Timeseries Photometry of the Galactic Bulge, 136, 6, 064501. doi:10.1088/1538-3873/ad4e69
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu:8001/cgi-bin/ROME/nph-firefly?data 
+
+Version
+
+v1
+
+Date of data collection
+
+Year of publication
+
+2024
+
+10.26133/NEA46
+ 
+NASA Exoplanet Archive Atmospheric Observation List (NExoList)
+
+Permalinks
+
+ https://doi.org/10.26133/NEA46 
+ 
+ https://www.ipac.caltech.edu/doi/10.26133/NEA46 
+
+DOI
+
+10.26133/NEA46
+
+Publisher
+
+IPAC
+
+Author(s)
+
+NASA Exoplanet Archive
+
+Title
+
+NASA Exoplanet Archive Atmospheric Observation List (NExoList)
+
+Description
+
+The NExoList table records accepted telescope programs to observe transiting exoplanet atmospheres. The current table contains all archived and planned JWST atmospheric programs from NIRSpec, NIRISS, NIRCam and MIRI, with future augmentations supporting other facilities (e.g., HST). Much of the information is sourced from the Transiting Exoplanets List of Space Telescope Spectroscopy (TRExoLiSTS) table, which is described in the following publication, Nikolay K. Nikolov et al 2022 Res. Notes AAS 6 272. We have augmented the TRExoLiSTS content with system, stellar, and planetary parameters from the NASA Exoplanet Archive for easier exploration of the data.
+
+This dataset or service is made available by the NASA Exoplanet Science Institute at IPAC, which is operated by the California Institute of Technology under contract with the National Aeronautics and Space Administration.
+
+Data type
+
+Dataset
+
+Url
+
+ https://exoplanetarchive.ipac.caltech.edu/cgi-bin/observations/nph-firefly?data 
+
+Version
+
+Date of data collection
+
+Year of publication
+
+2026
+
+Policies
+
+ Privacy Policy 
+
+ Image Use Policy 
+
+Get in Touch
+
+ Visit IPAC 
+
+ Contact Us 
+
+ People 
+
+ Job Opportunities 
+
+Stay in Touch
+
+ Facebook 
+
+ X 
+
+ Instagram 
+
+ Bluesky
