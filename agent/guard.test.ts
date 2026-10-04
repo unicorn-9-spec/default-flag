@@ -50,3 +50,14 @@ describe('guard', () => {
     expect(check('See kb:derived_quantities/density.', [kb], 'q').ok).toBe(false)
   })
 })
+
+describe('Context error messages', async () => {
+  const { ContextUnavailableError } = await import('./agent.ts')
+  it('names a missing endpoint without the raw JSON-RPC body', () => {
+    const raw = 'MCP HTTP Transport Error: POSTing to endpoint (HTTP 404): {"jsonrpc":"2.0","error":{"code":-32001,"message":"MCP endpoint not found: defaultflag-data"},"id":null}. This server does not support HTTP transport. Try using `sse` transport instead'
+    expect(ContextUnavailableError.describe('data', raw)).toBe('The Sanity Context dataset endpoint "defaultflag-data" does not exist (HTTP 404), so the agent cannot read the data.')
+  })
+  it('reports a rejected token', () => {
+    expect(ContextUnavailableError.describe('kb', 'POSTing to endpoint (HTTP 403): {"message":"contextGrantRequired"}')).toContain('rejected the organization token (HTTP 403)')
+  })
+})

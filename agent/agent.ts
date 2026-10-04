@@ -41,8 +41,20 @@ export interface AgentRun {
 export class ContextUnavailableError extends Error {
   endpoint: 'data' | 'kb'
   constructor(endpoint: 'data' | 'kb', cause: unknown) {
-    super(`Sanity Context ${endpoint === 'data' ? 'dataset' : 'Knowledge Base'} endpoint unavailable: ${(cause as Error)?.message ?? cause}`)
+    super(ContextUnavailableError.describe(endpoint, String((cause as Error)?.message ?? cause)))
     this.endpoint = endpoint
+  }
+
+  // The MCP transport's raw error embeds a JSON-RPC body and a misleading "try sse" hint;
+  // turn it into a sentence that names the endpoint and the actual problem.
+  static describe(endpoint: 'data' | 'kb', raw: string): string {
+    const kind = endpoint === 'data' ? 'dataset' : 'Knowledge Base'
+    const missing = /MCP endpoint not found: ([\w-]+)/.exec(raw)?.[1]
+    if (missing) return `The Sanity Context ${kind} endpoint "${missing}" does not exist (HTTP 404), so the agent cannot read the data.`
+    const status = /\(HTTP (\d{3})\)/.exec(raw)?.[1]
+    if (status === '401' || status === '403') return `The Sanity Context ${kind} endpoint rejected the organization token (HTTP ${status}).`
+    const message = /"message":"([^"]+)"/.exec(raw)?.[1] ?? raw.split('. ')[0]!.slice(0, 200)
+    return `The Sanity Context ${kind} endpoint is unavailable${status ? ` (HTTP ${status})` : ''}: ${message}`
   }
 }
 
