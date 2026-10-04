@@ -7,7 +7,7 @@ tags: sanitychallenge, ai, astronomy, agents
 
 **One-line pitch:** ask for an exoplanet's density, insolation, temperature or habitable-zone status, and get an answer computed from one self-consistent published parameter set, next to what mixing several papers would have said instead.
 
-**Demo:** <DEMO_URL> · **Code:** https://github.com/unicorn-9-spec/default-flag · **Sanity project ID:** `<PROJECT_ID>` (dataset `production`, public)
+**Demo:** https://default-flag.vercel.app · **Code:** https://github.com/unicorn-9-spec/default-flag · **Sanity project ID:** `0eu544dk` (dataset `production`, public)
 
 <!-- RESULTS_TABLE: paste eval/results/<date>.md table here after the full run -->
 
@@ -68,11 +68,11 @@ Where the advantage comes from: the Knowledge Base's own search tool is BM25 key
 
 The KB's Purpose states the rule: for derived quantities the default set governs, and composite values are a counterfactual. It rests on the archive's own words, not mine. The KB explains rules only; the output guard refuses to treat any number from it as a source.
 
-**Public GROQ:** `https://<PROJECT_ID>.api.sanity.io/v2026-10-03/data/query/production?query=*[_type=="planet"][0...5]`
+**Public GROQ:** `https://0eu544dk.api.sanity.io/v2026-10-03/data/query/production?query=*[_type=="planet"][0...5]`
 
 ## Sanity Project Details
 
-Project `<PROJECT_ID>`, dataset `production` (public read). No login anywhere on the site.
+Project `0eu544dk`, dataset `production` (public read). No login anywhere on the site.
 
 ## Agent Session
 

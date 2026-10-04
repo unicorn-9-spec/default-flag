@@ -63,3 +63,13 @@ BLOCKED_ON: owner: create `defaultflag-data` (dataset mode, `production`) — st
 - ups And c: default refuses density (no radius); composite 13.19 g/cm³ from a calculated radius derived from the swapped mass. Labelled "compounding" in selection.json, README and post.
 - 22 vs 30: widened cheaply to 31 planets; sets are 129 against the spec's ~90, and the reason is stated in README and post (the six spec-named planets alone carry 39 sets).
 - The selection change added 124 documents (504 total, against a 10k plan cap per F5/F34, so no concern).
+
+## 2026-10-04T01:30Z — agent
+STATE: Demo live at default-flag.vercel.app (no login; all pages 200; asking shows the expected missing-endpoint banner). Everything except GitHub is prepared; commits are local only.
+BLOCKED_ON: owner: (1) `defaultflag-data` endpoint (Context app UI only; there is no API or CLI for creating it); then `node scripts/finish.mjs` does the rest; (2) GitHub: remote returns "Repository not found" for the logged-in account; (3) KB: add the archive-dois file, set Purpose, Build entries, resolve one conflict with screenshots; (4) trial expiry; (5) video and agent session.
+
+- Vercel project `default-flag` configured via REST (root `web`, Node 24.x, corepack for pnpm 12.8.1). Runtime env vars uploaded without printing; the Sanity write token is not uploaded.
+- `scripts/finish.mjs`: one command after the endpoint exists (probe, cache chips, eval, tests, checks, deploy).
+- `scripts/scan-secrets.mjs`: transcript scan before the agent session goes public; tracked files are clean.
+- Step-by-step owner runbook in `docs/OWNER_STEPS.md`; video script in `docs/VIDEO_SCRIPT.md`.
+- Honesty note for the KB criterion: resolving a conflict changes the KB explanation the agent quotes, not the computed number (numbers come only from the dataset). The runbook says to state this in the post.

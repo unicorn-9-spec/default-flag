@@ -246,3 +246,17 @@ Cite **Christiansen et al. (2025), Planetary Science Journal** for the PS and PS
 - **Selection widened** (TOP_SWAP 6→10, TOP_SPREAD 8→12, per-planet set caps unchanged so every eval planet stays): **31 planets, 129 parameter sets**; no planet dropped; 504 documents (88 derived answers). The spec's "about 30 planets" and "under about 90 sets" cannot both hold, since its six named planets carry 39 sets. Planet target kept; stated in README and post.
 - KB sources now 31 + 31 + 6 = **68 / 150**. Import rerun: 0 changes. GROQ checks: 0 violations.
 - Probe script fixed: it now uses the agent's thinking setting (it printed empty replies before).
+
+### 15. Deployed; submission prep without GitHub (2026-10-04)
+
+- **GitHub became unreachable:** `git ls-remote origin` → "Repository not found" for the logged-in account. Owner asked to prepare everything except GitHub; commits stay local until access returns.
+- **Context endpoints can only be created in the Context app UI.** The configure-MCP docs mention no CLI or API, and our org token is Context Viewer. `defaultflag-data` is still 404, so `scripts/finish.mjs` does everything after it in one command: probe → cache chips → full eval → tests → dataset checks → deploy. Verified it stops cleanly at the probe today.
+- **Vercel:** linked a new project `default-flag` (team `lk-c2be`) from the repo root.
+  - Settings set via REST: root directory `web`, framework Next.js, Node 24.x, `sourceFilesOutsideRootDirectory` on (the app imports `agent/`).
+  - Env vars set via REST from a script that never prints values. The two credentials are stored as Vercel "sensitive" vars. Only the five runtime vars plus `ENABLE_EXPERIMENTAL_COREPACK=1` (so the build uses `packageManager: pnpm@12.8.1`) are uploaded; the Sanity write token stays local.
+  - `.vercelignore` excludes `.env*`, raw snapshots and build output.
+  - Deployed to https://default-flag.vercel.app. All pages return 200 anonymously. `/api/ask` returns the visible "Sanity Context … endpoint unavailable" error, as designed.
+  - The local CLI printed "Error while parsing config file pnpm-lock.yaml" (pnpm 12 lockfile vs the CLI's parser); the remote build was unaffected.
+- **Stuck:** in this session `pnpm` failed from bash: Anaconda's `cygpath` is now first on PATH, so the shell wrapper resolves `pnpm.exe` to a bogus `C:\ProgramData\anaconda3\Library\c\...` path. PowerShell's `pnpm.cmd` works. Not fixed (machine PATH, not repo); Windows-side pnpm commands go through PowerShell.
+- **`scripts/scan-secrets.mjs`** for the public agent session: matches the literal values of every credential in `.env.local` plus token shapes, prints only file:line and which secret. All 89 tracked files clean.
+- Owner runbook `docs/OWNER_STEPS.md`; captioned video script `docs/VIDEO_SCRIPT.md`. The post draft now has the demo URL and project ID.

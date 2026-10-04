@@ -1,0 +1,15 @@
+# Never upload secrets
+.env
+.env.*
+!.env.local.example
+# Not needed at runtime (the app reads the snapshot from Sanity)
+ingest/data/raw
+ingest/data/out
+eval/cache
+eval/results
+studio/dist
+**/.next
+**/node_modules
+test-results
+playwright-report
+*.tsbuildinfo

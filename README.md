@@ -13,6 +13,8 @@ The NASA Exoplanet Archive keeps one row per planet per paper and flags one as t
 | Insolation of TOI-700 d | Refuses: no stellar temperature in that paper | 0.81 S⊕, mixing Pass et al. 2026 and Gilbert et al. 2023 |
 | Density of ups And c (compounding case) | Refuses: no radius (Curiel et al. 2011) | 13.19 g/cm³ from a true mass (McArthur et al. 2010) and a radius the archive calculated *from that same mass* |
 
+**Live demo (no login): https://default-flag.vercel.app** · Sanity project `0eu544dk`, dataset `production` (public read).
+
 Path One entry for the Sanity Challenge on DEV (`#sanitychallenge`).
 
 ## How it works

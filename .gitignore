@@ -40,3 +40,7 @@ Thumbs.db
 
 # eval embedding cache (derived; rebuilt on demand)
 eval/cache/
+
+# vercel link metadata
+.vercel
+
