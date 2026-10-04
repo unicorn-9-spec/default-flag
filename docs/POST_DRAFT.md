@@ -11,6 +11,8 @@ tags: sanitychallenge, ai, astronomy, agents
 
 **Four-arm evaluation** (40 frozen questions, same model and compute tool for every arm; only retrieval differs):
 
+[SCREENSHOT: docs/screenshots/08-eval-table.png — the four-arm results table from /eval]
+
 Model: `gemini-3.7-flash`, version `3.7-flash-08-2026` (responses reported: gemini-3.7-flash) · 2026-10-04 · embeddings for semantic arm: `gemini-embedding-2`
 
 | Arm | Accuracy | Mixed-provenance rate | Correct refusals | Valid citations |
@@ -23,6 +25,8 @@ Model: `gemini-3.7-flash`, version `3.7-flash-08-2026` (responses reported: gemi
 What the numbers say, plainly. The structured agent never mixed papers (0%) and refused all five unanswerable questions. The search baselines read the same *structured* documents (each parameter set is one self-contained document), and they mixed far less than I expected: 3%. Their failure is different. On questions the archive's default set can't answer, they quietly answered from another paper's set instead of saying so. That is a provenance error the mixed-provenance metric does not count. With no content at all, the model mixed or invented inputs 35% of the time. The structured agent's one miss was an answer its own output guard withheld.
 
 ## What I Built
+
+[SCREENSHOT: docs/screenshots/06-planet-parameter-sets.png — Kepler-139 d: ten published parameter sets, default highlighted, derived values per set]
 
 The NASA Exoplanet Archive keeps every published solution for a planet as its own row and flags one as the default. It also publishes a composite table with one row per planet, filled parameter by parameter from whichever paper its rules pick. The archive itself calls that table "a more complete, though not necessarily self-consistent, set of parameters".
 
@@ -43,7 +47,19 @@ Under each answer:
 
 `/planet/<slug>` puts every published parameter set side by side with the default highlighted. `/eval` has the four-arm table. `/how-it-works` has the endpoints, schema, snapshot checksums and the Knowledge Base conflict before and after.
 
-Video (2–3 min, captioned): <VIDEO_URL>
+[VIDEO: upload media/default-flag-walkthrough.mp4 (silent, captions burned in; add voiceover), paste the YouTube/DEV link here]
+
+[SCREENSHOT: docs/screenshots/01-home-chips.png — first screen: three example chips, no login]
+
+[SCREENSHOT: docs/screenshots/02-answer-provenance.png — live answer with the provenance strip]
+
+[SCREENSHOT: docs/screenshots/03-composite-toggle.png — "What the composite table would give" toggle for Kepler-139 d]
+
+[SCREENSHOT: docs/screenshots/05-refusal-and-composite.png — Proxima Cen b: polite refusal, while the composite row answers from a calculated radius]
+
+[SCREENSHOT: docs/screenshots/04-trace.png — trace panel: MCP tools, GROQ, Knowledge Base reads, compute output]
+
+[SCREENSHOT: docs/screenshots/11-mobile-home.png — mobile layout]
 
 ## Code
 
@@ -59,6 +75,8 @@ https://github.com/unicorn-9-spec/default-flag. CI runs on every push:
 ## How I Used Sanity
 
 **Structured content.** These are the document types:
+
+[SCREENSHOT: docs/screenshots/10-schema-snapshots.png — schema and snapshot checksums from /how-it-works]
 - `planet`: with a `compositeSnapshot` holding every composite value and its reference, or "Calculated Value".
 - `parameterSet`: one archive row.
 - `stellarSolution`: the star values published with that row.
@@ -73,7 +91,13 @@ Studio validation and CI GROQ checks enforce one default per planet, and single-
 - `default-flag-data`: dataset/GROQ mode. Tools discovered at runtime: `initial_context`, `schema_explorer`, `groq_query`, `array_field_reader`.
 - `defaultflag-kb`: Knowledge Base `kbhX0D4yDJok`, with `initial_context`, `knowledge_base_search` and `knowledge_base_read`. Sources: a GROQ query over the default sets, a GROQ query over the composite snapshots, and six archive documentation pages (including the DOI page that carries the table DOIs), 68 documents in total (CI keeps it ≤ 150).
 
-**Knowledge Base conflict.** The Knowledge Base reads one dataset query that gives every planet two documents: its default parameter set and its composite row. For Kepler-139 d they disagree: 4.658 M⊕ (M·sin i, Weiss et al. 2024) against 2 M⊕ (Lammers & Winn 2025). **Context did not raise it in the Issues tab.** The Purpose text states the rule, and the build applied it directly: the planet entries hold a "Default parameter sets (preferred for derived quantities)" table and a separate "Composite table (mixed-source alternatives)" table, and say outright that Kepler-139 d's composite mass differs from its default. Before that source existed, the Knowledge Base could say nothing about Kepler-139 d. Now, asked which mass to use, the agent answers 4.66 M⊕ from Weiss et al. 2024 and explains that the composite's 2 M⊕ comes from another paper, citing `kb:parameter_sets/default`. The computed density stays 5.29 g/cm³, by design. <SCREENSHOTS: Sources tab with the 62-document dataset source; the planet_catalogue entry with both tables>
+**Knowledge Base conflict.** The Knowledge Base reads one dataset query that gives every planet two documents: its default parameter set and its composite row. For Kepler-139 d they disagree: 4.658 M⊕ (M·sin i, Weiss et al. 2024) against 2 M⊕ (Lammers & Winn 2025). **Context did not raise it in the Issues tab.** The Purpose text states the rule, and the build applied it directly: the planet entries hold a "Default parameter sets (preferred for derived quantities)" table and a separate "Composite table (mixed-source alternatives)" table, and say outright that Kepler-139 d's composite mass differs from its default. Before that source existed, the Knowledge Base could say nothing about Kepler-139 d. Now, asked which mass to use, the agent answers 4.66 M⊕ from Weiss et al. 2024 and explains that the composite's 2 M⊕ comes from another paper, citing `kb:parameter_sets/default`. The computed density stays 5.29 g/cm³, by design. 
+
+[IMAGE: web/public/conflict/1-sources.png — Knowledge Base source: one GROQ query, 62 documents]
+
+[IMAGE: web/public/conflict/2-entry.png — built entry with default and composite tables; Kepler-139 d disagreement stated]
+
+[SCREENSHOT: docs/screenshots/09-how-it-works-kb.png — the Knowledge Base section on /how-it-works]
 
 One more honest note: the rebuild renamed entry paths (`parameter_provenance` disappeared). The agent resolves paths at runtime, so nothing broke.
 
@@ -89,7 +113,7 @@ Project `0eu544dk`, dataset `production` (public read). No login anywhere on the
 
 ## Agent Session
 
-<AGENT_SESSION_EMBED>
+[AGENT SESSION: upload the exported session (scan it first: node scripts/scan-secrets.mjs <file>), set Make Public, paste the embed here]
 
 ## Why it's new
 
@@ -105,6 +129,8 @@ Plenty of entries surface contradictions between sources. This one *prevents* a 
 - A stale `next start` served HTML pointing at deleted CSS, and my accessibility test "passed" on the unstyled page.
 
 ## Known limitations
+
+- The output guard checks numbers, document ids and quotes, not free-prose claims. One live answer added "detected via radial velocity", which is true but came from the model, not a tool result.
 
 - 31 planets and 129 parameter sets chosen by explicit rules, not a population study. The spec asked for about 30 planets and under about 90 sets; the six planets it names carry 39 sets, so I kept the planet target and say so here.
 - Fixed Bond albedo of 0.3.

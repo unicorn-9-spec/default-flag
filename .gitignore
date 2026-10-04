@@ -44,3 +44,6 @@ eval/cache/
 # vercel link metadata
 .vercel
 
+
+# recorded walkthrough video (large; upload to YouTube/DEV instead)
+media/
