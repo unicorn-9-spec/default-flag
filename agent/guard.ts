@@ -17,7 +17,8 @@ export interface GuardResult {
 const ID_PATTERN = /\b(?:planet|pset|pub|stsol|star|snapshot|constant|threshold|hzlimit)-[a-z0-9]+(?:-[a-z0-9]+)*\b/g
 const KB_CITE_PATTERN = /\bkb:([A-Za-z0-9_./-]+)/g
 // Numbers, including decimals, thousands separators and scientific notation (e.g. 1.3e-4).
-const NUMBER_PATTERN = /(?<![\w.])-?\d{1,3}(?:,\d{3})+(?:\.\d+)?|(?<![\w.])-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?/g
+// Ordinals such as "16th" (percentile labels) are words, not quantities.
+const NUMBER_PATTERN = /(?<![\w.])-?\d{1,3}(?:,\d{3})+(?:\.\d+)?(?!\d|\.\d|st\b|nd\b|rd\b|th\b)|(?<![\w.])-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?(?!\d|\.\d|st\b|nd\b|rd\b|th\b)/g
 
 const asText = (v: unknown): string => (typeof v === 'string' ? v : JSON.stringify(v) ?? '')
 const normalise = (s: string) => s.replace(/\s+/g, ' ').trim()
@@ -38,7 +39,9 @@ export function matchesRounded(shown: number, source: number): boolean {
   const d = decimals(shown)
   if (Math.abs(Number(source.toFixed(Math.min(d, 20))) - shown) < 1e-12) return true
   if (shown === 0 || source === 0) return false
-  const sig = String(Math.abs(shown)).replace('.', '').replace(/^0+/, '').length
+  // Trailing zeros of a whole number are rounding, not precision: 1240 is 1244 at 3 s.f.
+  const digits = String(Math.abs(shown))
+  const sig = (digits.includes('.') ? digits.replace('.', '') : digits.replace(/0+$/, '')).replace(/^0+/, '').length
   return Number(source.toPrecision(Math.max(1, sig))) === shown
 }
 
@@ -50,8 +53,10 @@ export function check(answer: string, records: ToolRecord[], question: string): 
     ...numbersIn(question),
   ]
 
+  const percents = new Set([...answer.matchAll(/(\d+(?:\.\d+)?)\s?%/g)].map((m) => Number(m[1])))
   for (const n of new Set(numbersIn(answer))) {
-    if (!numericSources.some((s) => matchesRounded(n, s))) violations.push(`number ${n} does not appear in any data or compute result from this turn`)
+    const asFraction = percents.has(n) && numericSources.some((s) => matchesRounded(n, s * 100))
+    if (!asFraction && !numericSources.some((s) => matchesRounded(n, s))) violations.push(`number ${n} does not appear in any data or compute result from this turn`)
   }
   for (const id of new Set(answer.match(ID_PATTERN) ?? [])) {
     if (!allText.includes(id)) violations.push(`cited id ${id} was not read this turn`)

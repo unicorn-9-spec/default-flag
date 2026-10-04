@@ -1,0 +1,859 @@
+{
+  "Density of Kepler-139 d?": {
+    "run": {
+      "question": "Density of Kepler-139 d?",
+      "status": "answered",
+      "answer": "Kepler-139 d has a derived density of 5.29 g/cm3, with a 16th-84th percentile range of 3.05 to 7.69 g/cm3. These values are computed from the planet's default parameter set from Weiss et al. 2024 [pset-kepler-139-d-weiss-et-al-2024], following the single-source rules outlined in kb:derived_quantities. Because the reported mass in the archive is a minimum mass (M*sin(i)), this calculated density represents a lower limit.",
+      "trace": [
+        {
+          "name": "kb_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag provenance KB: Context\n\n## Context Instructions\n\nThis endpoint serves explanations of how exoplanet parameter provenance works: how the NASA Exoplanet Archive chooses a default parameter set, how its composite table fills gaps from other papers, and why a composite row is not necessarily self-consistent.\n\nA derived quantity must be computed from inputs that all come from one published parameter set. Where a default set and a composite value disagree, the self-consistent single-source set governs. Composite values may be shown only as explicitly labelled alternatives demonstrating what mixing provenance produces, never as the primary answer.\n\nPlanets are identified by catalogue designation. Sibling planets share a host star and must never have their parameters mixed.\n\nFigures in this knowledge base are documentation, not data. Never quote a planet parameter from here — all planet values come from the snapshotted archive tables via the dataset endpoint.\n\nNot in scope: population statistics, atmospheric composition, and any parameter without a citable published source.\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **knowledge_base_read**: Read full entries from a knowledge base by its id and entry paths (both shown in the Knowledge bases outline below).\n- **knowledge_base_search**: Keyword-search a knowledge base's entry content and get ranked entry paths with scores. Use it when the outline alone does not tell you where an answer lives, then read the winning paths with `knowledge_base_read`.\n\n\n# Knowledge bases\n\nKnowledge base id: `kbhX0D4yDJok`\n\n## exoplan et — Readers are people asking derived questions about exoplanets: a planet's density, insolation, equilibrium temperature, and whether it sits inside the habitable zone. They need to know which published parameter set an answer came from, and how the answer would differ if values from several papers were mixed together.\n\nLead with provenance. For each planet: which published parameter sets exist, which paper each value came from, and which set is self-consistent. A derived quantity must be computed from inputs that all come from the same parameter set.\n\nWhere a default parameter set disagrees with a composite or aggregated value, the self-consistent single-source set governs. Composite values are recorded only as explicitly labelled alternatives showing what mixing provenance would produce, never as the primary answer.\n\nPlanets are identified by their catalogue designation, not by nickname or host-star name alone. Different planets orbit the same star and must never be merged or have their parameters mixed.\n\nNot part of this: population statistics across all known exoplanets, atmospheric composition and spectra, and any parameter without a citable published source.\n7 entries.\n\ncomposite_parameters [core]\n\ndata_citation\n\nderived_quantities [core]\n\nmission_candidates\n\nparameter_provenance [core]\n\nplanet_identification [core]\n\ntable_schema"
+              }
+            ],
+            "isError": false
+          },
+          "source": "kb",
+          "ms": 366
+        },
+        {
+          "name": "data_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag data: Context & Schema\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **schema_explorer**: Inspect a type's fields in detail. Use when you need to understand field structure before writing a query.\n- **groq_query**: Query the dataset with GROQ. Always use projections and slices to control response size.\n\n## Schema\n\n**Schema overview**: document types, their fields, relationships between types, and document counts.\n\nQuery this content using GROQ. The schema shows you:\n- **References**: follow with `->` for single refs (`author->name`) or `[]->{field}` for arrays (`categories[]->{title}`)\n- **Incoming reference counts**: find related content with `count(*[references(^._id)])`\n- **Document counts**: understand data distribution before querying\n\n<resource-schema>\n- constant (title: key, depth: 2, count: 4)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n- derivedAnswer (title: question, depth: 2, count: 88)\n  - fields: question<string>, parameterSet<reference>, quantity<string>, inputs<array>, result<object>, codeVersion<string>\n  - references: parameterSet->parameterSet×88\n- hzLimit (title: name, depth: 2, count: 2)\n  - fields: name<string>, edge<inner|outer>, seffSun<number>, a<number>, b<number>, c<number>, d<number>, teffMinK<number>, teffMaxK<number>, source<object>\n- parameterSet (title: massKind, depth: 2, count: 129)\n  - fields: planet<reference>, publication<reference>, defaultFlag<boolean>, radiusEarth<object>, massEarth<object>, massKind<Mass|Msini|Msin(i)/sin(i)>, semiMajorAxisAu<object>, archiveInsolationEarth<object>, archiveEqTempK<object>, stellarSolution<reference>, +5 more fields\n  - references: planet->planet×129, publication->publication×129, snapshot->snapshot×129, stellarSolution->stellarSolution×122\n  - referenced by: derivedAnswer×88, planet×62\n- planet (title: name, depth: 4, count: 31)\n  - fields: name<string>, slug<slug>, host<reference>, parameterSets<array>, defaultParameterSet<reference>, compositeSnapshot<object>, selection<object>\n  - references: compositeSnapshot.snapshot->snapshot×31, defaultParameterSet->parameterSet×31, host->star×31, parameterSets[]->parameterSet×31\n  - referenced by: parameterSet×129\n- publication (title: citation, depth: 1, count: 102)\n  - fields: citation<string>, refname<text>, refstr<string>, bibcode<string>, year<number>, adsUrl<url>\n  - referenced by: parameterSet×129, stellarSolution×115\n- snapshot (title: file, depth: 1, count: 2)\n  - fields: file<string>, table<string>, sha256<string>, sizeBytes<number>, rows<number>, sourceUrl<url>, retrievedAt<datetime>\n  - referenced by: parameterSet×129, planet×31, stellarSolution×115\n- star (title: name, depth: 1, count: 30)\n  - fields: name<string>, slug<slug>\n  - referenced by: planet×31, stellarSolution×115\n- stellarSolution (title: _id, depth: 2, count: 115)\n  - fields: star<reference>, publication<reference>, radiusSun<object>, massSun<object>, teffK<object>, snapshot<reference>\n  - references: publication->publication×115, snapshot->snapshot×115, star->star×115\n  - referenced by: parameterSet×122\n- threshold (title: key, depth: 2, count: 1)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n</resource-schema>"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 411
+        },
+        {
+          "name": "data_groq_query",
+          "input": {
+            "query": "*[_type == \"planet\" && name match \"Kepler-139*\"]{\n  _id,\n  name,\n  \"defaultSet\": defaultParameterSet->{\n    _id,\n    defaultFlag,\n    \"paper\": publication->citation,\n    massEarth,\n    radiusEarth,\n    massKind\n  },\n  \"sets\": parameterSets[]->{\n    _id,\n    defaultFlag,\n    \"paper\": publication->citation\n  }\n}"
+          },
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"meta\":{\"executedQuery\":\"*[_type != \\\"sanity.agentContext\\\" && _type == \\\"planet\\\" && name match \\\"Kepler-139*\\\"]{\\\"_id\\\": global::coalesce(_originalId, _id), \\\"name\\\": name, \\\"defaultSet\\\": defaultParameterSet->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"paper\\\": publication->.citation, \\\"massEarth\\\": massEarth, \\\"radiusEarth\\\": radiusEarth, \\\"massKind\\\": massKind}, \\\"sets\\\": parameterSets[]->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"paper\\\": publication->.citation}}\",\"perspective\":\"published\",\"resultCount\":1,\"returnedCount\":1},\"result\":[{\"_id\":\"planet-kepler-139-d\",\"defaultSet\":{\"_id\":\"pset-kepler-139-d-weiss-et-al-2024\",\"defaultFlag\":true,\"massEarth\":{\"errMinus\":2.00176302,\"errPlus\":2.00176302,\"limitFlag\":0,\"value\":4.65807623},\"massKind\":\"Msini\",\"paper\":\"Weiss et al. 2024\",\"radiusEarth\":{\"errMinus\":0.061,\"errPlus\":0.061,\"limitFlag\":0,\"value\":1.695}},\"name\":\"Kepler-139 d\",\"sets\":[{\"_id\":\"pset-kepler-139-d-fulton-petigura-2018\",\"defaultFlag\":false,\"paper\":\"Fulton & Petigura 2018\"},{\"_id\":\"pset-kepler-139-d-holczer-et-al-2016\",\"defaultFlag\":false,\"paper\":\"Holczer et al. 2016\"},{\"_id\":\"pset-kepler-139-d-lammers-winn-2025\",\"defaultFlag\":false,\"paper\":\"Lammers & Winn 2025\"},{\"_id\":\"pset-kepler-139-d-q1-q12-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q12 KOI Table\"},{\"_id\":\"pset-kepler-139-d-q1-q16-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q16 KOI Table\"},{\"_id\":\"pset-kepler-139-d-q1-q17-dr24-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q17 DR24 KOI Table\"},{\"_id\":\"pset-kepler-139-d-q1-q17-dr25-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q17 DR25 KOI Table\"},{\"_id\":\"pset-kepler-139-d-q1-q17-dr25-supplemental-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q17 DR25 Supplemental KOI Table\"},{\"_id\":\"pset-kepler-139-d-q1-q8-koi-table\",\"defaultFlag\":false,\"paper\":\"Q1-Q8 KOI Table\"},{\"_id\":\"pset-kepler-139-d-weiss-et-al-2024\",\"defaultFlag\":true,\"paper\":\"Weiss et al. 2024\"}]}]}"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 382
+        },
+        {
+          "name": "compute",
+          "input": {
+            "setId": "pset-kepler-139-d-weiss-et-al-2024",
+            "quantity": "density"
+          },
+          "output": {
+            "ok": true,
+            "quantity": "density",
+            "unit": "g/cm3",
+            "inputs": [
+              {
+                "field": "massEarth",
+                "label": "planet mass",
+                "value": 4.65807623,
+                "unit": "M_earth",
+                "provenance": {
+                  "kind": "parameterSet",
+                  "id": "pset-kepler-139-d-weiss-et-al-2024",
+                  "setId": "pset-kepler-139-d-weiss-et-al-2024",
+                  "citation": "Weiss et al. 2024"
+                },
+                "errPlus": 2.00176302,
+                "errMinus": 2.00176302
+              },
+              {
+                "field": "radiusEarth",
+                "label": "planet radius",
+                "value": 1.695,
+                "unit": "R_earth",
+                "provenance": {
+                  "kind": "parameterSet",
+                  "id": "pset-kepler-139-d-weiss-et-al-2024",
+                  "setId": "pset-kepler-139-d-weiss-et-al-2024",
+                  "citation": "Weiss et al. 2024"
+                },
+                "errPlus": 0.061,
+                "errMinus": 0.061
+              }
+            ],
+            "flags": [
+              "minimum-mass: the archive mass is M*sin(i), a lower limit, so this density is a lower limit"
+            ],
+            "distinctSources": [
+              "Weiss et al. 2024"
+            ],
+            "codeVersion": "physics-1",
+            "result": {
+              "median": 5.289565281837035,
+              "p16": 3.046552113789991,
+              "p84": 7.694169463938237
+            },
+            "massKind": "Msini",
+            "densityClass": {
+              "rockyRadiusEarth": 1.6,
+              "radiusAboveRockyLimit": true
+            },
+            "constantsUsed": [
+              "constant-earth-density",
+              "threshold-rocky-radius"
+            ],
+            "setId": "pset-kepler-139-d-weiss-et-al-2024",
+            "planet": "Kepler-139 d",
+            "publication": "Weiss et al. 2024",
+            "defaultFlag": true
+          },
+          "source": "compute",
+          "ms": 1148
+        },
+        {
+          "name": "kb_knowledge_base_read",
+          "input": {
+            "paths": [
+              "derived_quantities",
+              "parameter_provenance"
+            ],
+            "knowledgeBase": "kbhX0D4yDJok"
+          },
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Derived Quantities: Density, Teq, Insolation, HZ\n\nFormulas and methodology for computing density, equilibrium temperature, insolation flux, and habitable-zone assessment; requirement that inputs share a single parameter set\n\nAll derived quantities in this knowledge base must be computed from inputs drawn from a single, self-consistent published parameter set. Mixing values from different papers (e.g., using a radius from one study and a mass from another) produces a result that is not self-consistent and must be labelled as a composite alternative, never presented as the primary answer. For how the NASA Exoplanet Archive constructs its composite (mixed-provenance) PSCompPars table, see `composite_parameters`; for tracing any value to its source paper, see `parameter_provenance`.\n\n## Planet Density ρ_p\n\nWhen both planetary radius R_p and planetary mass M_p are available from the **same** parameter set, density is calculated assuming a spherical planet [1]:\n\n$$\\rho_p = \\frac{3 M_p}{4\\pi R_p^3}$$\n\nThe archive calculates this value only when it is not already empirically reported, and does not report uncertainties on calculated values [1].\n\n## Planet Equilibrium Temperature T_eq\n\nRequires stellar radius R_★, stellar effective temperature T_eff, and orbital semi-major axis a — all from the same parameter set [1]:\n\n$$T_{eq} = T_{\\star} \\sqrt{\\frac{R_{\\star}}{a}} \\left(\\frac{1}{4}\\right)^{1/4}$$\n\nR_★ and a must be in the same units (both converted to km using IAU standards) [1]. This formula assumes zero albedo and efficient heat redistribution. No uncertainty is reported on the calculated result.\n\n## Planet Insolation Flux S\n\nRequires stellar luminosity L_★ and semi-major axis a [1]:\n\n$$\\frac{S}{S_{\\oplus}} = \\left(\\frac{L_{\\star}}{L_{\\odot}}\\right)\\left(\\frac{\\mathrm{AU}}{a}\\right)^2$$\n\nIf L_★ is not empirically available but R_★ and T_eff are, the archive first calculates L_★ via the Stefan-Boltzmann law [1]:\n\n$$L_{\\star} = 4\\pi R_{\\star}^{2}\\, \\sigma\\, T_{\\mathrm{eff}}^{4}$$\n\nBoth L_★ inputs must originate from the same parameter set as a to preserve self-consistency.\n\n## Stellar Luminosity L_★ (intermediate derived value)\n\nCalculated from R_★ and T_eff using the Stefan-Boltzmann law (formula above) when an empirical L_★ is not available [1]. This intermediate is then used in the insolation calculation.\n\n## Habitable-Zone Assessment\n\nHabitable-zone placement is evaluated using the insolation flux S/S_⊕ computed above. A planet's HZ status depends on which stellar and orbital inputs are used; switching parameter sets (e.g., using a revised stellar radius) changes S and therefore the HZ boundary comparison. Always confirm that R_★, T_eff, and a all come from the same published solution before reporting HZ status.\n\n## Derived Planet Mass and Radius (when one is missing)\n\nWhen a planet has an empirical radius but no empirical mass, or vice versa, the archive applies the Chen & Kipping (2017) mass–radius relation [1]:\n\n**Radius from mass:**\n$$\\log_{10}(R_p/R_{\\oplus}) = \\mathcal{C} + \\mathcal{S}\\cdot\\log_{10}(M_p/M_{\\oplus})$$\n\n**Mass from radius (inverse):**\n$$\\log_{10}(M_p/M_{\\oplus}) = (\\log_{10}(R_p/R_{\\oplus}) - \\mathcal{C})\\,/\\,\\mathcal{S}$$\n\nThe piecewise coefficients {C; S} from Chen & Kipping (2017) Table 2 used by the archive are [1]:\n\n| Mass regime | C | S |\n|---|---|---|\n| M_p < 2.04 M_⊕ | 0.00346 | 0.2790 |\n| (higher regimes) | (per C&K 2017) | (per C&K 2017) |\n\nThe third term of the mass-radius relation has a **negative slope**, so the radius-to-mass inversion uses a restricted set of coefficients to avoid unphysical results [1]. These mass/radius values are marked as \"Calculated Value\" in the archive's reference column, not attributed to a literature source.\n\n## Key calculation rules (archive policy)\n\n- A derived parameter is **not calculated** if any required input is a limit rather than a central value [1].\n- **No uncertainties** are reported for any calculated parameter [1].\n- The reference column for a calculated parameter reads **\"Calculated Value\"** [1].\n\nWhen answering questions about a specific planet, confirm which parameter set supplies R_p, M_p, R_★, T_eff, and a. If values come from different papers, the derived quantities are composite estimates; identify them as such and note what a self-consistent single-source calculation would yield instead.\n\n## Sources\n\n1. pscp_calc.txt — File\n\n\n---\n\n# Parameter Sets, Defaults, and Source Tracing\n\nWhich published parameter sets exist for a planet, how the archive picks a default set, and how to trace every value to its citable paper\n\nEvery confirmed planet in the NASA Exoplanet Archive has at least one published parameter set, and may have many. Understanding how sets are defined, selected as default, and traced to their source papers is essential before computing any derived quantity (density, insolation, equilibrium temperature, or habitable-zone position). Derived quantities must always be computed from a single, self-consistent parameter set (see composite_parameters for the PSCompPars alternative).\n\n## What constitutes a parameter set\n\nA parameter set is a coherent group of planet, stellar, and system values drawn from **a single peer-reviewed publication**. In the Planetary Systems (PS) table, each row represents exactly one such set for one planet: one row per planet per reference [1]. The `pl_refname` column (database name) identifies the publication backing the planet parameters in that row; individual parameters also carry their own `_reflink` columns (e.g., `pl_rade_reflink`, `pl_eqt_reflink`) pointing to the source of that specific value [2].\n\nParameters are ingested from two categories of source [1]:\n- **Published peer-reviewed literature** — evaluated case-by-case by archive science staff.\n- **NASA mission deliveries** — for Kepler Objects of Interest (KOIs) and TESS Objects of Interest; these appear with `soltype` = `Kepler Project Candidate` or `TESS Project Candidate` rather than `Published Confirmed`.\n\nA new parameter set is ingested only if it **extends** (adds parameters not already held) or **improves** (higher precision, updated ephemerides) the existing holdings. Sets that do neither are not ingested, though the archive is responsive to community requests [1].\n\n## Default parameter set selection\n\nEvery planet has exactly one parameter set flagged as default (`default_flag = 1` in the PS table) [2]. Archive science staff weigh three factors when choosing it [1]:\n\n| Factor | Description |\n|---|---|\n| **Completeness** | How many planet parameters the set provides. A more complete single-source set reduces mixing when it feeds the PSCompPars table. |\n| **Precision** | Quality of measurements; a paper may demonstrate improved precision despite larger formal uncertainties (e.g., by better modelling stellar variability). |\n| **Large uniform surveys** | Re-analyses covering many planets simultaneously receive additional weight for their scientific utility as self-consistent catalogues. |\n\n> **Important:** The default parameter set is not guaranteed to contain the most precise published value for any individual parameter. It is chosen for overall completeness and consistency [1].\n\nThe Transit and Ephemeris Service does **not** use the default set for its calculations; it uses whichever set has the most precise ephemeris [1].\n\n## How to trace a value to its source paper\n\n1. **Planetary Systems (PS) table** — filter on `default_flag = 1` for a one-row-per-planet view of default sets, or browse all rows to see every ingested parameter set. The `pl_refname` column identifies the publication for each row. Individual parameter reference columns (e.g., `pl_orbper_reflink`, `pl_rade_reflink`, `pl_eqt_reflink`, `pl_insol_reflink`, `pl_dens_reflink`) pin each value to its specific source [2].\n2. **System Overview page** — click any planet name in the PS table to reach its System Overview. Expand the Stellar Parameters and Planetary Parameters sections (click the `+` signs) to view and compare all archived parameter sets side by side [1].\n3. **`soltype` column** — distinguishes `Published Confirmed` (literature) from `Kepler Project Candidate` / `TESS Project Candidate` (mission pipeline) rows [2].\n4. **`pl_controv_flag`** — set to `1` when the confirmation status of a planet has been questioned in the published literature [2].\n\n## Why stellar parameters may differ across planets in the same system\n\nThe archive records the stellar parameters **used to derive the planetary parameters** for each row. If two planets in the same system come from different papers, their rows will carry the stellar values from their respective publications — those values may differ from each other [1]. This is expected behaviour, not an error: it preserves the self-consistency of each parameter set.\n\n## Retracted and refuted planets\n\nConfirmed planets later refuted in the literature receive a `False Positive Planet (FPP)` disposition. Their data remain on their System Overview pages (flagged as FPPs) but are removed from the PS and PSCompPars tables. Retracted objects are also listed on the Exoplanet Archive's Excluded Targets page [1].\n\n## Key provenance columns at a glance\n\n| Column | Table | What it records |\n|---|---|---|\n| `default_flag` | PS only | 1 = this row is the default parameter set for the planet |\n| `pl_refname` | PS only | Publication backing the planet parameter row |\n| `soltype` | PS only | Published Confirmed / Kepler Project Candidate / TESS Project Candidate |\n| `pl_controv_flag` | PS + PSCompPars | 1 = confirmation status questioned in literature |\n| `pl_bmassprov` | PS + PSCompPars | Provenance of best-mass estimate (Mass, M×sin(i)/sin(i), or M×sin(i)) |\n| `*_reflink` | PS only | Per-parameter source reference (e.g., `pl_eqt_reflink`) |\n\nFor how the archive constructs a single filled-in row from multiple parameter sets, see composite_parameters.\n\n## Sources\n\n1. faq.txt — File\n2. API_PS_columns.txt — File\n"
+              }
+            ],
+            "isError": false
+          },
+          "source": "kb",
+          "ms": 737
+        }
+      ],
+      "guard": {
+        "ok": true,
+        "violations": [],
+        "retried": false
+      },
+      "primary": {
+        "ok": true,
+        "quantity": "density",
+        "unit": "g/cm3",
+        "inputs": [
+          {
+            "field": "massEarth",
+            "label": "planet mass",
+            "value": 4.65807623,
+            "unit": "M_earth",
+            "provenance": {
+              "kind": "parameterSet",
+              "id": "pset-kepler-139-d-weiss-et-al-2024",
+              "setId": "pset-kepler-139-d-weiss-et-al-2024",
+              "citation": "Weiss et al. 2024"
+            },
+            "errPlus": 2.00176302,
+            "errMinus": 2.00176302
+          },
+          {
+            "field": "radiusEarth",
+            "label": "planet radius",
+            "value": 1.695,
+            "unit": "R_earth",
+            "provenance": {
+              "kind": "parameterSet",
+              "id": "pset-kepler-139-d-weiss-et-al-2024",
+              "setId": "pset-kepler-139-d-weiss-et-al-2024",
+              "citation": "Weiss et al. 2024"
+            },
+            "errPlus": 0.061,
+            "errMinus": 0.061
+          }
+        ],
+        "flags": [
+          "minimum-mass: the archive mass is M*sin(i), a lower limit, so this density is a lower limit"
+        ],
+        "distinctSources": [
+          "Weiss et al. 2024"
+        ],
+        "codeVersion": "physics-1",
+        "result": {
+          "median": 5.289565281837035,
+          "p16": 3.046552113789991,
+          "p84": 7.694169463938237
+        },
+        "massKind": "Msini",
+        "densityClass": {
+          "rockyRadiusEarth": 1.6,
+          "radiusAboveRockyLimit": true
+        },
+        "constantsUsed": [
+          "constant-earth-density",
+          "threshold-rocky-radius"
+        ],
+        "setId": "pset-kepler-139-d-weiss-et-al-2024",
+        "planet": "Kepler-139 d",
+        "publication": "Weiss et al. 2024",
+        "defaultFlag": true
+      },
+      "composite": {
+        "ok": true,
+        "quantity": "density",
+        "unit": "g/cm3",
+        "inputs": [
+          {
+            "field": "massEarth",
+            "label": "planet mass",
+            "value": 2,
+            "unit": "M_earth",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-lammers-winn-2025",
+              "citation": "Lammers & Winn 2025",
+              "calculated": false
+            },
+            "errPlus": 2,
+            "errMinus": 1
+          },
+          {
+            "field": "radiusEarth",
+            "label": "planet radius",
+            "value": 1.695,
+            "unit": "R_earth",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-weiss-et-al-2024",
+              "citation": "Weiss et al. 2024",
+              "calculated": false
+            },
+            "errPlus": 0.061,
+            "errMinus": 0.061
+          }
+        ],
+        "flags": [],
+        "distinctSources": [
+          "Lammers & Winn 2025",
+          "Weiss et al. 2024"
+        ],
+        "codeVersion": "physics-1",
+        "result": {
+          "median": 2.398181095598991,
+          "p16": 1.2236430704743948,
+          "p84": 4.599955662863595
+        },
+        "massKind": "Mass",
+        "densityClass": {
+          "rockyRadiusEarth": 1.6,
+          "radiusAboveRockyLimit": true
+        },
+        "constantsUsed": [
+          "constant-earth-density",
+          "threshold-rocky-radius"
+        ],
+        "planet": "Kepler-139 d",
+        "source": "pscomppars"
+      },
+      "toolNames": {
+        "data": [
+          "initial_context",
+          "groq_query",
+          "schema_explorer",
+          "array_field_reader"
+        ],
+        "kb": [
+          "initial_context",
+          "knowledge_base_read",
+          "knowledge_base_search"
+        ]
+      },
+      "model": "gemini-3.7-flash",
+      "responseModelId": "gemini-3.7-flash",
+      "usage": {
+        "inputTokens": 45446,
+        "outputTokens": 1471
+      }
+    },
+    "snapshots": [
+      {
+        "file": "ingest/data/raw/nea-tables/nea-ps.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 40194,
+        "sha256": "bbb513419ed5d36078221641517730d8ca3b83e32006554aae640fc5fa35a711",
+        "table": "ps"
+      },
+      {
+        "file": "ingest/data/raw/nea-tables/nea-pscomppars.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 6375,
+        "sha256": "75d9a617442b876babf088bbef3a7095e8c5725c70a363d082081faa9331503c",
+        "table": "pscomppars"
+      }
+    ],
+    "computedAt": "2026-10-04T22:02:15.816Z"
+  },
+  "Is TRAPPIST-1 e in the habitable zone?": {
+    "run": {
+      "question": "Is TRAPPIST-1 e in the habitable zone?",
+      "status": "answered",
+      "answer": "TRAPPIST-1 e is classified as inside the habitable zone with a probability inside of 0.963, based on an insolation flux of 0.650 S_earth, 16th-84th percentile 0.546 to 0.781. These calculations are drawn from the default parameter set published by Agol",
+      "trace": [
+        {
+          "name": "kb_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag provenance KB: Context\n\n## Context Instructions\n\nThis endpoint serves explanations of how exoplanet parameter provenance works: how the NASA Exoplanet Archive chooses a default parameter set, how its composite table fills gaps from other papers, and why a composite row is not necessarily self-consistent.\n\nA derived quantity must be computed from inputs that all come from one published parameter set. Where a default set and a composite value disagree, the self-consistent single-source set governs. Composite values may be shown only as explicitly labelled alternatives demonstrating what mixing provenance produces, never as the primary answer.\n\nPlanets are identified by catalogue designation. Sibling planets share a host star and must never have their parameters mixed.\n\nFigures in this knowledge base are documentation, not data. Never quote a planet parameter from here — all planet values come from the snapshotted archive tables via the dataset endpoint.\n\nNot in scope: population statistics, atmospheric composition, and any parameter without a citable published source.\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **knowledge_base_read**: Read full entries from a knowledge base by its id and entry paths (both shown in the Knowledge bases outline below).\n- **knowledge_base_search**: Keyword-search a knowledge base's entry content and get ranked entry paths with scores. Use it when the outline alone does not tell you where an answer lives, then read the winning paths with `knowledge_base_read`.\n\n\n# Knowledge bases\n\nKnowledge base id: `kbhX0D4yDJok`\n\n## exoplan et — Readers are people asking derived questions about exoplanets: a planet's density, insolation, equilibrium temperature, and whether it sits inside the habitable zone. They need to know which published parameter set an answer came from, and how the answer would differ if values from several papers were mixed together.\n\nLead with provenance. For each planet: which published parameter sets exist, which paper each value came from, and which set is self-consistent. A derived quantity must be computed from inputs that all come from the same parameter set.\n\nWhere a default parameter set disagrees with a composite or aggregated value, the self-consistent single-source set governs. Composite values are recorded only as explicitly labelled alternatives showing what mixing provenance would produce, never as the primary answer.\n\nPlanets are identified by their catalogue designation, not by nickname or host-star name alone. Different planets orbit the same star and must never be merged or have their parameters mixed.\n\nNot part of this: population statistics across all known exoplanets, atmospheric composition and spectra, and any parameter without a citable published source.\n7 entries.\n\ncomposite_parameters [core]\n\ndata_citation\n\nderived_quantities [core]\n\nmission_candidates\n\nparameter_provenance [core]\n\nplanet_identification [core]\n\ntable_schema"
+              }
+            ],
+            "isError": false
+          },
+          "source": "kb",
+          "ms": 382
+        },
+        {
+          "name": "data_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag data: Context & Schema\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **schema_explorer**: Inspect a type's fields in detail. Use when you need to understand field structure before writing a query.\n- **groq_query**: Query the dataset with GROQ. Always use projections and slices to control response size.\n\n## Schema\n\n**Schema overview**: document types, their fields, relationships between types, and document counts.\n\nQuery this content using GROQ. The schema shows you:\n- **References**: follow with `->` for single refs (`author->name`) or `[]->{field}` for arrays (`categories[]->{title}`)\n- **Incoming reference counts**: find related content with `count(*[references(^._id)])`\n- **Document counts**: understand data distribution before querying\n\n<resource-schema>\n- constant (title: key, depth: 2, count: 4)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n- derivedAnswer (title: question, depth: 2, count: 88)\n  - fields: question<string>, parameterSet<reference>, quantity<string>, inputs<array>, result<object>, codeVersion<string>\n  - references: parameterSet->parameterSet×88\n- hzLimit (title: name, depth: 2, count: 2)\n  - fields: name<string>, edge<inner|outer>, seffSun<number>, a<number>, b<number>, c<number>, d<number>, teffMinK<number>, teffMaxK<number>, source<object>\n- parameterSet (title: massKind, depth: 2, count: 129)\n  - fields: planet<reference>, publication<reference>, defaultFlag<boolean>, radiusEarth<object>, massEarth<object>, massKind<Mass|Msini|Msin(i)/sin(i)>, semiMajorAxisAu<object>, archiveInsolationEarth<object>, archiveEqTempK<object>, stellarSolution<reference>, +5 more fields\n  - references: planet->planet×129, publication->publication×129, snapshot->snapshot×129, stellarSolution->stellarSolution×122\n  - referenced by: derivedAnswer×88, planet×62\n- planet (title: name, depth: 4, count: 31)\n  - fields: name<string>, slug<slug>, host<reference>, parameterSets<array>, defaultParameterSet<reference>, compositeSnapshot<object>, selection<object>\n  - references: compositeSnapshot.snapshot->snapshot×31, defaultParameterSet->parameterSet×31, host->star×31, parameterSets[]->parameterSet×31\n  - referenced by: parameterSet×129\n- publication (title: citation, depth: 1, count: 102)\n  - fields: citation<string>, refname<text>, refstr<string>, bibcode<string>, year<number>, adsUrl<url>\n  - referenced by: parameterSet×129, stellarSolution×115\n- snapshot (title: file, depth: 1, count: 2)\n  - fields: file<string>, table<string>, sha256<string>, sizeBytes<number>, rows<number>, sourceUrl<url>, retrievedAt<datetime>\n  - referenced by: parameterSet×129, planet×31, stellarSolution×115\n- star (title: name, depth: 1, count: 30)\n  - fields: name<string>, slug<slug>\n  - referenced by: planet×31, stellarSolution×115\n- stellarSolution (title: _id, depth: 2, count: 115)\n  - fields: star<reference>, publication<reference>, radiusSun<object>, massSun<object>, teffK<object>, snapshot<reference>\n  - references: publication->publication×115, snapshot->snapshot×115, star->star×115\n  - referenced by: parameterSet×122\n- threshold (title: key, depth: 2, count: 1)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n</resource-schema>"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 412
+        },
+        {
+          "name": "data_groq_query",
+          "input": {
+            "query": "*[_type == \"planet\" && name match \"TRAPPIST-1 e*\"]{_id, name, defaultParameterSet->{_id, defaultFlag, publication->{citation, bibcode}}, \"sets\": parameterSets[]->{_id, defaultFlag, publication->{citation, bibcode}}}"
+          },
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"meta\":{\"executedQuery\":\"*[_type != \\\"sanity.agentContext\\\" && _type == \\\"planet\\\" && name match \\\"TRAPPIST-1 e*\\\"]{\\\"_id\\\": global::coalesce(_originalId, _id), \\\"name\\\": name, \\\"defaultParameterSet\\\": defaultParameterSet->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"publication\\\": publication->{\\\"citation\\\": citation, \\\"bibcode\\\": bibcode}}, \\\"sets\\\": parameterSets[]->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"publication\\\": publication->{\\\"citation\\\": citation, \\\"bibcode\\\": bibcode}}}\",\"perspective\":\"published\",\"resultCount\":1,\"returnedCount\":1},\"result\":[{\"_id\":\"planet-trappist-1-e\",\"defaultParameterSet\":{\"_id\":\"pset-trappist-1-e-agol-et-al-2021\",\"defaultFlag\":true,\"publication\":{\"bibcode\":\"2021PSJ.....2....1A\",\"citation\":\"Agol et al. 2021\"}},\"name\":\"TRAPPIST-1 e\",\"sets\":[{\"_id\":\"pset-trappist-1-e-agol-et-al-2021\",\"defaultFlag\":true,\"publication\":{\"bibcode\":\"2021PSJ.....2....1A\",\"citation\":\"Agol et al. 2021\"}},{\"_id\":\"pset-trappist-1-e-ducrot-et-al-2020\",\"defaultFlag\":false,\"publication\":{\"bibcode\":\"2020A&A...640A.112D\",\"citation\":\"Ducrot et al. 2020\"}},{\"_id\":\"pset-trappist-1-e-gillon-et-al-2017-2017natur-542-456g\",\"defaultFlag\":false,\"publication\":{\"bibcode\":\"2017Natur.542..456G\",\"citation\":\"Gillon et al. 2017\"}},{\"_id\":\"pset-trappist-1-e-grimm-et-al-2018\",\"defaultFlag\":false,\"publication\":{\"bibcode\":\"2018A&A...613A..68G\",\"citation\":\"Grimm et al. 2018\"}},{\"_id\":\"pset-trappist-1-e-hirano-et-al-2020-2020apj-890l-27h\",\"defaultFlag\":false,\"publication\":{\"bibcode\":\"2020ApJ...890L..27H\",\"citation\":\"Hirano et al. 2020\"}}]}]}"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 346
+        },
+        {
+          "name": "compute",
+          "input": {
+            "setId": "pset-trappist-1-e-agol-et-al-2021",
+            "quantity": "hzStatus"
+          },
+          "output": {
+            "ok": true,
+            "quantity": "hzStatus",
+            "unit": "S_earth",
+            "inputs": [
+              {
+                "field": "stellarRadiusSun",
+                "label": "stellar radius",
+                "value": 0.1192,
+                "unit": "R_sun",
+                "provenance": {
+                  "kind": "stellarSolution",
+                  "id": "stsol-trappist-1-agol-et-al-2021",
+                  "setId": "pset-trappist-1-e-agol-et-al-2021",
+                  "citation": "Agol et al. 2021"
+                },
+                "errPlus": 0.0013,
+                "errMinus": 0.0013
+              },
+              {
+                "field": "stellarTeffK",
+                "label": "stellar effective temperature",
+                "value": 2566,
+                "unit": "K",
+                "provenance": {
+                  "kind": "stellarSolution",
+                  "id": "stsol-trappist-1-agol-et-al-2021",
+                  "setId": "pset-trappist-1-e-agol-et-al-2021",
+                  "citation": "Agol et al. 2021"
+                },
+                "errPlus": 26,
+                "errMinus": 26
+              },
+              {
+                "field": "semiMajorAxisAu",
+                "label": "semi-major axis",
+                "value": 0.02925,
+                "unit": "AU",
+                "provenance": {
+                  "kind": "parameterSet",
+                  "id": "pset-trappist-1-e-agol-et-al-2021",
+                  "setId": "pset-trappist-1-e-agol-et-al-2021",
+                  "citation": "Agol et al. 2021"
+                },
+                "errPlus": 0.0025,
+                "errMinus": 0.0025
+              }
+            ],
+            "flags": [
+              "teff-outside-hz-fit: Teff 2566 K is outside the 2600-7200 K range the Kopparapu et al. 2014 fit covers, so the limits are extrapolated"
+            ],
+            "distinctSources": [
+              "Agol et al. 2021"
+            ],
+            "codeVersion": "physics-1",
+            "result": {
+              "median": 0.6499127383759468,
+              "p16": 0.5456757731435489,
+              "p84": 0.7805382430278669
+            },
+            "hz": {
+              "class": "inside",
+              "probabilityInside": 0.9625,
+              "innerSeff": 0.9118845330594314,
+              "outerSeff": 0.22188967746871105,
+              "limits": [
+                "Runaway Greenhouse (1 M_earth)",
+                "Maximum Greenhouse"
+              ]
+            },
+            "constantsUsed": [
+              "constant-solar-teff",
+              "hzlimit-runaway-greenhouse-1me",
+              "hzlimit-maximum-greenhouse"
+            ],
+            "setId": "pset-trappist-1-e-agol-et-al-2021",
+            "planet": "TRAPPIST-1 e",
+            "publication": "Agol et al. 2021",
+            "defaultFlag": true
+          },
+          "source": "compute",
+          "ms": 1096
+        },
+        {
+          "name": "kb_knowledge_base_read",
+          "input": {
+            "paths": [
+              "derived_quantities",
+              "parameter_provenance"
+            ],
+            "knowledgeBase": "kbhX0D4yDJok"
+          },
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Derived Quantities: Density, Teq, Insolation, HZ\n\nFormulas and methodology for computing density, equilibrium temperature, insolation flux, and habitable-zone assessment; requirement that inputs share a single parameter set\n\nAll derived quantities in this knowledge base must be computed from inputs drawn from a single, self-consistent published parameter set. Mixing values from different papers (e.g., using a radius from one study and a mass from another) produces a result that is not self-consistent and must be labelled as a composite alternative, never presented as the primary answer. For how the NASA Exoplanet Archive constructs its composite (mixed-provenance) PSCompPars table, see `composite_parameters`; for tracing any value to its source paper, see `parameter_provenance`.\n\n## Planet Density ρ_p\n\nWhen both planetary radius R_p and planetary mass M_p are available from the **same** parameter set, density is calculated assuming a spherical planet [1]:\n\n$$\\rho_p = \\frac{3 M_p}{4\\pi R_p^3}$$\n\nThe archive calculates this value only when it is not already empirically reported, and does not report uncertainties on calculated values [1].\n\n## Planet Equilibrium Temperature T_eq\n\nRequires stellar radius R_★, stellar effective temperature T_eff, and orbital semi-major axis a — all from the same parameter set [1]:\n\n$$T_{eq} = T_{\\star} \\sqrt{\\frac{R_{\\star}}{a}} \\left(\\frac{1}{4}\\right)^{1/4}$$\n\nR_★ and a must be in the same units (both converted to km using IAU standards) [1]. This formula assumes zero albedo and efficient heat redistribution. No uncertainty is reported on the calculated result.\n\n## Planet Insolation Flux S\n\nRequires stellar luminosity L_★ and semi-major axis a [1]:\n\n$$\\frac{S}{S_{\\oplus}} = \\left(\\frac{L_{\\star}}{L_{\\odot}}\\right)\\left(\\frac{\\mathrm{AU}}{a}\\right)^2$$\n\nIf L_★ is not empirically available but R_★ and T_eff are, the archive first calculates L_★ via the Stefan-Boltzmann law [1]:\n\n$$L_{\\star} = 4\\pi R_{\\star}^{2}\\, \\sigma\\, T_{\\mathrm{eff}}^{4}$$\n\nBoth L_★ inputs must originate from the same parameter set as a to preserve self-consistency.\n\n## Stellar Luminosity L_★ (intermediate derived value)\n\nCalculated from R_★ and T_eff using the Stefan-Boltzmann law (formula above) when an empirical L_★ is not available [1]. This intermediate is then used in the insolation calculation.\n\n## Habitable-Zone Assessment\n\nHabitable-zone placement is evaluated using the insolation flux S/S_⊕ computed above. A planet's HZ status depends on which stellar and orbital inputs are used; switching parameter sets (e.g., using a revised stellar radius) changes S and therefore the HZ boundary comparison. Always confirm that R_★, T_eff, and a all come from the same published solution before reporting HZ status.\n\n## Derived Planet Mass and Radius (when one is missing)\n\nWhen a planet has an empirical radius but no empirical mass, or vice versa, the archive applies the Chen & Kipping (2017) mass–radius relation [1]:\n\n**Radius from mass:**\n$$\\log_{10}(R_p/R_{\\oplus}) = \\mathcal{C} + \\mathcal{S}\\cdot\\log_{10}(M_p/M_{\\oplus})$$\n\n**Mass from radius (inverse):**\n$$\\log_{10}(M_p/M_{\\oplus}) = (\\log_{10}(R_p/R_{\\oplus}) - \\mathcal{C})\\,/\\,\\mathcal{S}$$\n\nThe piecewise coefficients {C; S} from Chen & Kipping (2017) Table 2 used by the archive are [1]:\n\n| Mass regime | C | S |\n|---|---|---|\n| M_p < 2.04 M_⊕ | 0.00346 | 0.2790 |\n| (higher regimes) | (per C&K 2017) | (per C&K 2017) |\n\nThe third term of the mass-radius relation has a **negative slope**, so the radius-to-mass inversion uses a restricted set of coefficients to avoid unphysical results [1]. These mass/radius values are marked as \"Calculated Value\" in the archive's reference column, not attributed to a literature source.\n\n## Key calculation rules (archive policy)\n\n- A derived parameter is **not calculated** if any required input is a limit rather than a central value [1].\n- **No uncertainties** are reported for any calculated parameter [1].\n- The reference column for a calculated parameter reads **\"Calculated Value\"** [1].\n\nWhen answering questions about a specific planet, confirm which parameter set supplies R_p, M_p, R_★, T_eff, and a. If values come from different papers, the derived quantities are composite estimates; identify them as such and note what a self-consistent single-source calculation would yield instead.\n\n## Sources\n\n1. pscp_calc.txt — File\n\n\n---\n\n# Parameter Sets, Defaults, and Source Tracing\n\nWhich published parameter sets exist for a planet, how the archive picks a default set, and how to trace every value to its citable paper\n\nEvery confirmed planet in the NASA Exoplanet Archive has at least one published parameter set, and may have many. Understanding how sets are defined, selected as default, and traced to their source papers is essential before computing any derived quantity (density, insolation, equilibrium temperature, or habitable-zone position). Derived quantities must always be computed from a single, self-consistent parameter set (see composite_parameters for the PSCompPars alternative).\n\n## What constitutes a parameter set\n\nA parameter set is a coherent group of planet, stellar, and system values drawn from **a single peer-reviewed publication**. In the Planetary Systems (PS) table, each row represents exactly one such set for one planet: one row per planet per reference [1]. The `pl_refname` column (database name) identifies the publication backing the planet parameters in that row; individual parameters also carry their own `_reflink` columns (e.g., `pl_rade_reflink`, `pl_eqt_reflink`) pointing to the source of that specific value [2].\n\nParameters are ingested from two categories of source [1]:\n- **Published peer-reviewed literature** — evaluated case-by-case by archive science staff.\n- **NASA mission deliveries** — for Kepler Objects of Interest (KOIs) and TESS Objects of Interest; these appear with `soltype` = `Kepler Project Candidate` or `TESS Project Candidate` rather than `Published Confirmed`.\n\nA new parameter set is ingested only if it **extends** (adds parameters not already held) or **improves** (higher precision, updated ephemerides) the existing holdings. Sets that do neither are not ingested, though the archive is responsive to community requests [1].\n\n## Default parameter set selection\n\nEvery planet has exactly one parameter set flagged as default (`default_flag = 1` in the PS table) [2]. Archive science staff weigh three factors when choosing it [1]:\n\n| Factor | Description |\n|---|---|\n| **Completeness** | How many planet parameters the set provides. A more complete single-source set reduces mixing when it feeds the PSCompPars table. |\n| **Precision** | Quality of measurements; a paper may demonstrate improved precision despite larger formal uncertainties (e.g., by better modelling stellar variability). |\n| **Large uniform surveys** | Re-analyses covering many planets simultaneously receive additional weight for their scientific utility as self-consistent catalogues. |\n\n> **Important:** The default parameter set is not guaranteed to contain the most precise published value for any individual parameter. It is chosen for overall completeness and consistency [1].\n\nThe Transit and Ephemeris Service does **not** use the default set for its calculations; it uses whichever set has the most precise ephemeris [1].\n\n## How to trace a value to its source paper\n\n1. **Planetary Systems (PS) table** — filter on `default_flag = 1` for a one-row-per-planet view of default sets, or browse all rows to see every ingested parameter set. The `pl_refname` column identifies the publication for each row. Individual parameter reference columns (e.g., `pl_orbper_reflink`, `pl_rade_reflink`, `pl_eqt_reflink`, `pl_insol_reflink`, `pl_dens_reflink`) pin each value to its specific source [2].\n2. **System Overview page** — click any planet name in the PS table to reach its System Overview. Expand the Stellar Parameters and Planetary Parameters sections (click the `+` signs) to view and compare all archived parameter sets side by side [1].\n3. **`soltype` column** — distinguishes `Published Confirmed` (literature) from `Kepler Project Candidate` / `TESS Project Candidate` (mission pipeline) rows [2].\n4. **`pl_controv_flag`** — set to `1` when the confirmation status of a planet has been questioned in the published literature [2].\n\n## Why stellar parameters may differ across planets in the same system\n\nThe archive records the stellar parameters **used to derive the planetary parameters** for each row. If two planets in the same system come from different papers, their rows will carry the stellar values from their respective publications — those values may differ from each other [1]. This is expected behaviour, not an error: it preserves the self-consistency of each parameter set.\n\n## Retracted and refuted planets\n\nConfirmed planets later refuted in the literature receive a `False Positive Planet (FPP)` disposition. Their data remain on their System Overview pages (flagged as FPPs) but are removed from the PS and PSCompPars tables. Retracted objects are also listed on the Exoplanet Archive's Excluded Targets page [1].\n\n## Key provenance columns at a glance\n\n| Column | Table | What it records |\n|---|---|---|\n| `default_flag` | PS only | 1 = this row is the default parameter set for the planet |\n| `pl_refname` | PS only | Publication backing the planet parameter row |\n| `soltype` | PS only | Published Confirmed / Kepler Project Candidate / TESS Project Candidate |\n| `pl_controv_flag` | PS + PSCompPars | 1 = confirmation status questioned in literature |\n| `pl_bmassprov` | PS + PSCompPars | Provenance of best-mass estimate (Mass, M×sin(i)/sin(i), or M×sin(i)) |\n| `*_reflink` | PS only | Per-parameter source reference (e.g., `pl_eqt_reflink`) |\n\nFor how the archive constructs a single filled-in row from multiple parameter sets, see composite_parameters.\n\n## Sources\n\n1. faq.txt — File\n2. API_PS_columns.txt — File\n"
+              }
+            ],
+            "isError": false
+          },
+          "source": "kb",
+          "ms": 657
+        }
+      ],
+      "guard": {
+        "ok": true,
+        "violations": [],
+        "retried": false
+      },
+      "primary": {
+        "ok": true,
+        "quantity": "hzStatus",
+        "unit": "S_earth",
+        "inputs": [
+          {
+            "field": "stellarRadiusSun",
+            "label": "stellar radius",
+            "value": 0.1192,
+            "unit": "R_sun",
+            "provenance": {
+              "kind": "stellarSolution",
+              "id": "stsol-trappist-1-agol-et-al-2021",
+              "setId": "pset-trappist-1-e-agol-et-al-2021",
+              "citation": "Agol et al. 2021"
+            },
+            "errPlus": 0.0013,
+            "errMinus": 0.0013
+          },
+          {
+            "field": "stellarTeffK",
+            "label": "stellar effective temperature",
+            "value": 2566,
+            "unit": "K",
+            "provenance": {
+              "kind": "stellarSolution",
+              "id": "stsol-trappist-1-agol-et-al-2021",
+              "setId": "pset-trappist-1-e-agol-et-al-2021",
+              "citation": "Agol et al. 2021"
+            },
+            "errPlus": 26,
+            "errMinus": 26
+          },
+          {
+            "field": "semiMajorAxisAu",
+            "label": "semi-major axis",
+            "value": 0.02925,
+            "unit": "AU",
+            "provenance": {
+              "kind": "parameterSet",
+              "id": "pset-trappist-1-e-agol-et-al-2021",
+              "setId": "pset-trappist-1-e-agol-et-al-2021",
+              "citation": "Agol et al. 2021"
+            },
+            "errPlus": 0.0025,
+            "errMinus": 0.0025
+          }
+        ],
+        "flags": [
+          "teff-outside-hz-fit: Teff 2566 K is outside the 2600-7200 K range the Kopparapu et al. 2014 fit covers, so the limits are extrapolated"
+        ],
+        "distinctSources": [
+          "Agol et al. 2021"
+        ],
+        "codeVersion": "physics-1",
+        "result": {
+          "median": 0.6499127383759468,
+          "p16": 0.5456757731435489,
+          "p84": 0.7805382430278669
+        },
+        "hz": {
+          "class": "inside",
+          "probabilityInside": 0.9625,
+          "innerSeff": 0.9118845330594314,
+          "outerSeff": 0.22188967746871105,
+          "limits": [
+            "Runaway Greenhouse (1 M_earth)",
+            "Maximum Greenhouse"
+          ]
+        },
+        "constantsUsed": [
+          "constant-solar-teff",
+          "hzlimit-runaway-greenhouse-1me",
+          "hzlimit-maximum-greenhouse"
+        ],
+        "setId": "pset-trappist-1-e-agol-et-al-2021",
+        "planet": "TRAPPIST-1 e",
+        "publication": "Agol et al. 2021",
+        "defaultFlag": true
+      },
+      "composite": {
+        "ok": true,
+        "quantity": "hzStatus",
+        "unit": "S_earth",
+        "inputs": [
+          {
+            "field": "stellarRadiusSun",
+            "label": "stellar radius",
+            "value": 0.1192,
+            "unit": "R_sun",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-agol-et-al-2021",
+              "citation": "Agol et al. 2021",
+              "calculated": false
+            },
+            "errPlus": 0.0013,
+            "errMinus": 0.0013
+          },
+          {
+            "field": "stellarTeffK",
+            "label": "stellar effective temperature",
+            "value": 2566,
+            "unit": "K",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-agol-et-al-2021",
+              "citation": "Agol et al. 2021",
+              "calculated": false
+            },
+            "errPlus": 26,
+            "errMinus": 26
+          },
+          {
+            "field": "semiMajorAxisAu",
+            "label": "semi-major axis",
+            "value": 0.02925,
+            "unit": "AU",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-agol-et-al-2021",
+              "citation": "Agol et al. 2021",
+              "calculated": false
+            },
+            "errPlus": 0.0025,
+            "errMinus": 0.0025
+          }
+        ],
+        "flags": [
+          "teff-outside-hz-fit: Teff 2566 K is outside the 2600-7200 K range the Kopparapu et al. 2014 fit covers, so the limits are extrapolated"
+        ],
+        "distinctSources": [
+          "Agol et al. 2021"
+        ],
+        "codeVersion": "physics-1",
+        "result": {
+          "median": 0.6499127383759468,
+          "p16": 0.5456757731435489,
+          "p84": 0.7805382430278669
+        },
+        "hz": {
+          "class": "inside",
+          "probabilityInside": 0.9625,
+          "innerSeff": 0.9118845330594314,
+          "outerSeff": 0.22188967746871105,
+          "limits": [
+            "Runaway Greenhouse (1 M_earth)",
+            "Maximum Greenhouse"
+          ]
+        },
+        "constantsUsed": [
+          "constant-solar-teff",
+          "hzlimit-runaway-greenhouse-1me",
+          "hzlimit-maximum-greenhouse"
+        ],
+        "planet": "TRAPPIST-1 e",
+        "source": "pscomppars"
+      },
+      "toolNames": {
+        "data": [
+          "initial_context",
+          "groq_query",
+          "schema_explorer",
+          "array_field_reader"
+        ],
+        "kb": [
+          "initial_context",
+          "knowledge_base_read",
+          "knowledge_base_search"
+        ]
+      },
+      "model": "gemini-3.7-flash",
+      "responseModelId": "gemini-3.7-flash",
+      "usage": {
+        "inputTokens": 45191,
+        "outputTokens": 2313
+      }
+    },
+    "snapshots": [
+      {
+        "file": "ingest/data/raw/nea-tables/nea-ps.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 40194,
+        "sha256": "bbb513419ed5d36078221641517730d8ca3b83e32006554aae640fc5fa35a711",
+        "table": "ps"
+      },
+      {
+        "file": "ingest/data/raw/nea-tables/nea-pscomppars.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 6375,
+        "sha256": "75d9a617442b876babf088bbef3a7095e8c5725c70a363d082081faa9331503c",
+        "table": "pscomppars"
+      }
+    ],
+    "computedAt": "2026-10-04T22:02:36.983Z"
+  },
+  "Density of Proxima Cen b?": {
+    "run": {
+      "question": "Density of Proxima Cen b?",
+      "status": "answered",
+      "answer": "Proxima Cen b has no measured planet radius in the default archive parameter set from Suárez Mascareño et al. 2025 [pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m], so its density cannot be computed. Because the planet was detected via radial velocity rather than a transit, no radius is available in this publication.",
+      "trace": [
+        {
+          "name": "kb_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag provenance KB: Context\n\n## Context Instructions\n\nThis endpoint serves explanations of how exoplanet parameter provenance works: how the NASA Exoplanet Archive chooses a default parameter set, how its composite table fills gaps from other papers, and why a composite row is not necessarily self-consistent.\n\nA derived quantity must be computed from inputs that all come from one published parameter set. Where a default set and a composite value disagree, the self-consistent single-source set governs. Composite values may be shown only as explicitly labelled alternatives demonstrating what mixing provenance produces, never as the primary answer.\n\nPlanets are identified by catalogue designation. Sibling planets share a host star and must never have their parameters mixed.\n\nFigures in this knowledge base are documentation, not data. Never quote a planet parameter from here — all planet values come from the snapshotted archive tables via the dataset endpoint.\n\nNot in scope: population statistics, atmospheric composition, and any parameter without a citable published source.\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **knowledge_base_read**: Read full entries from a knowledge base by its id and entry paths (both shown in the Knowledge bases outline below).\n- **knowledge_base_search**: Keyword-search a knowledge base's entry content and get ranked entry paths with scores. Use it when the outline alone does not tell you where an answer lives, then read the winning paths with `knowledge_base_read`.\n\n\n# Knowledge bases\n\nKnowledge base id: `kbhX0D4yDJok`\n\n## exoplan et — Readers are people asking derived questions about exoplanets: a planet's density, insolation, equilibrium temperature, and whether it sits inside the habitable zone. They need to know which published parameter set an answer came from, and how the answer would differ if values from several papers were mixed together.\n\nLead with provenance. For each planet: which published parameter sets exist, which paper each value came from, and which set is self-consistent. A derived quantity must be computed from inputs that all come from the same parameter set.\n\nWhere a default parameter set disagrees with a composite or aggregated value, the self-consistent single-source set governs. Composite values are recorded only as explicitly labelled alternatives showing what mixing provenance would produce, never as the primary answer.\n\nPlanets are identified by their catalogue designation, not by nickname or host-star name alone. Different planets orbit the same star and must never be merged or have their parameters mixed.\n\nNot part of this: population statistics across all known exoplanets, atmospheric composition and spectra, and any parameter without a citable published source.\n7 entries.\n\ncomposite_parameters [core]\n\ndata_citation\n\nderived_quantities [core]\n\nmission_candidates\n\nparameter_provenance [core]\n\nplanet_identification [core]\n\ntable_schema"
+              }
+            ],
+            "isError": false
+          },
+          "source": "kb",
+          "ms": 366
+        },
+        {
+          "name": "data_initial_context",
+          "input": {},
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "# Default Flag data: Context & Schema\n\n## Efficiency\n\nPrefer well-constructed queries over multiple exploratory calls.\n\n## Accuracy\n\nOnly state what the data explicitly says. Don't infer, extrapolate, or connect dots that aren't there. Every claim should be grounded in content you retrieved.\n\nIf your query results are incomplete:\n- Answer with what you found\n- Be explicit about what's missing rather than guessing\n\nWhen uncertain, acknowledge it. Better to say \"I'm not certain\" than to confidently state something wrong.\n\n## Tools\n\n- **schema_explorer**: Inspect a type's fields in detail. Use when you need to understand field structure before writing a query.\n- **groq_query**: Query the dataset with GROQ. Always use projections and slices to control response size.\n\n## Schema\n\n**Schema overview**: document types, their fields, relationships between types, and document counts.\n\nQuery this content using GROQ. The schema shows you:\n- **References**: follow with `->` for single refs (`author->name`) or `[]->{field}` for arrays (`categories[]->{title}`)\n- **Incoming reference counts**: find related content with `count(*[references(^._id)])`\n- **Document counts**: understand data distribution before querying\n\n<resource-schema>\n- constant (title: key, depth: 2, count: 4)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n- derivedAnswer (title: question, depth: 2, count: 88)\n  - fields: question<string>, parameterSet<reference>, quantity<string>, inputs<array>, result<object>, codeVersion<string>\n  - references: parameterSet->parameterSet×88\n- hzLimit (title: name, depth: 2, count: 2)\n  - fields: name<string>, edge<inner|outer>, seffSun<number>, a<number>, b<number>, c<number>, d<number>, teffMinK<number>, teffMaxK<number>, source<object>\n- parameterSet (title: massKind, depth: 2, count: 129)\n  - fields: planet<reference>, publication<reference>, defaultFlag<boolean>, radiusEarth<object>, massEarth<object>, massKind<Mass|Msini|Msin(i)/sin(i)>, semiMajorAxisAu<object>, archiveInsolationEarth<object>, archiveEqTempK<object>, stellarSolution<reference>, +5 more fields\n  - references: planet->planet×129, publication->publication×129, snapshot->snapshot×129, stellarSolution->stellarSolution×122\n  - referenced by: derivedAnswer×88, planet×62\n- planet (title: name, depth: 4, count: 31)\n  - fields: name<string>, slug<slug>, host<reference>, parameterSets<array>, defaultParameterSet<reference>, compositeSnapshot<object>, selection<object>\n  - references: compositeSnapshot.snapshot->snapshot×31, defaultParameterSet->parameterSet×31, host->star×31, parameterSets[]->parameterSet×31\n  - referenced by: parameterSet×129\n- publication (title: citation, depth: 1, count: 102)\n  - fields: citation<string>, refname<text>, refstr<string>, bibcode<string>, year<number>, adsUrl<url>\n  - referenced by: parameterSet×129, stellarSolution×115\n- snapshot (title: file, depth: 1, count: 2)\n  - fields: file<string>, table<string>, sha256<string>, sizeBytes<number>, rows<number>, sourceUrl<url>, retrievedAt<datetime>\n  - referenced by: parameterSet×129, planet×31, stellarSolution×115\n- star (title: name, depth: 1, count: 30)\n  - fields: name<string>, slug<slug>\n  - referenced by: planet×31, stellarSolution×115\n- stellarSolution (title: _id, depth: 2, count: 115)\n  - fields: star<reference>, publication<reference>, radiusSun<object>, massSun<object>, teffK<object>, snapshot<reference>\n  - references: publication->publication×115, snapshot->snapshot×115, star->star×115\n  - referenced by: parameterSet×122\n- threshold (title: key, depth: 2, count: 1)\n  - fields: key<string>, value<number>, unit<string>, source<object>\n</resource-schema>"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 512
+        },
+        {
+          "name": "data_groq_query",
+          "input": {
+            "query": "*[_type == \"planet\" && name match \"Proxima*\"]{\n  _id,\n  name,\n  \"defaultParameterSetId\": defaultParameterSet._ref,\n  \"defaultParameterSet\": defaultParameterSet->{\n    _id,\n    defaultFlag,\n    \"paper\": publication->citation,\n    radiusEarth,\n    massEarth,\n    massKind\n  },\n  \"sets\": parameterSets[]->{\n    _id,\n    defaultFlag,\n    \"paper\": publication->citation,\n    radiusEarth,\n    massEarth,\n    massKind\n  }\n}"
+          },
+          "output": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"meta\":{\"executedQuery\":\"*[_type != \\\"sanity.agentContext\\\" && _type == \\\"planet\\\" && name match \\\"Proxima*\\\"]{\\\"_id\\\": global::coalesce(_originalId, _id), \\\"name\\\": name, \\\"defaultParameterSetId\\\": defaultParameterSet._ref, \\\"defaultParameterSet\\\": defaultParameterSet->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"paper\\\": publication->.citation, \\\"radiusEarth\\\": radiusEarth, \\\"massEarth\\\": massEarth, \\\"massKind\\\": massKind}, \\\"sets\\\": parameterSets[]->{\\\"_id\\\": _id, \\\"defaultFlag\\\": defaultFlag, \\\"paper\\\": publication->.citation, \\\"radiusEarth\\\": radiusEarth, \\\"massEarth\\\": massEarth, \\\"massKind\\\": massKind}}\",\"perspective\":\"published\",\"resultCount\":1,\"returnedCount\":1},\"result\":[{\"_id\":\"planet-proxima-cen-b\",\"defaultParameterSet\":{\"_id\":\"pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m\",\"defaultFlag\":true,\"massEarth\":{\"errMinus\":0.055,\"errPlus\":0.055,\"limitFlag\":0,\"value\":1.055},\"massKind\":\"Msini\",\"paper\":\"Suárez Mascareño et al. 2025\",\"radiusEarth\":null},\"defaultParameterSetId\":\"pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m\",\"name\":\"Proxima Cen b\",\"sets\":[{\"_id\":\"pset-proxima-cen-b-anglada-escude-et-al-2016\",\"defaultFlag\":false,\"massEarth\":{\"errMinus\":0.17,\"errPlus\":0.19,\"limitFlag\":0,\"value\":1.27},\"massKind\":\"Msini\",\"paper\":\"Anglada-Escudé et al. 2016\",\"radiusEarth\":null},{\"_id\":\"pset-proxima-cen-b-damasso-et-al-2020-2020scia-6-7467d\",\"defaultFlag\":false,\"massEarth\":{\"errMinus\":0.1,\"errPlus\":0.1,\"limitFlag\":0,\"value\":1},\"massKind\":\"Msini\",\"paper\":\"Damasso et al. 2020\",\"radiusEarth\":null},{\"_id\":\"pset-proxima-cen-b-faria-et-al-2022\",\"defaultFlag\":false,\"massEarth\":{\"errMinus\":0.06,\"errPlus\":0.06,\"limitFlag\":0,\"value\":1.07},\"massKind\":\"Msini\",\"paper\":\"Faria et al. 2022\",\"radiusEarth\":null},{\"_id\":\"pset-proxima-cen-b-jenkins-et-al-2019\",\"defaultFlag\":false,\"massEarth\":null,\"massKind\":null,\"paper\":\"Jenkins et al. 2019\",\"radiusEarth\":null},{\"_id\":\"pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m\",\"defaultFlag\":true,\"massEarth\":{\"errMinus\":0.055,\"errPlus\":0.055,\"limitFlag\":0,\"value\":1.055},\"massKind\":\"Msini\",\"paper\":\"Suárez Mascareño et al. 2025\",\"radiusEarth\":null}]}]}"
+              }
+            ],
+            "isError": false
+          },
+          "source": "data",
+          "ms": 335
+        },
+        {
+          "name": "compute",
+          "input": {
+            "setId": "pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m",
+            "quantity": "density"
+          },
+          "output": {
+            "ok": false,
+            "quantity": "density",
+            "reason": "missing",
+            "field": "radiusEarth",
+            "fieldLabel": "planet radius",
+            "message": "Proxima Cen b has no planet radius in this source, so its density can't be computed.",
+            "setId": "pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m",
+            "planet": "Proxima Cen b",
+            "publication": "Suárez Mascareño et al. 2025",
+            "defaultFlag": true
+          },
+          "source": "compute",
+          "ms": 1113
+        }
+      ],
+      "guard": {
+        "ok": true,
+        "violations": [],
+        "retried": false
+      },
+      "primary": {
+        "ok": false,
+        "quantity": "density",
+        "reason": "missing",
+        "field": "radiusEarth",
+        "fieldLabel": "planet radius",
+        "message": "Proxima Cen b has no planet radius in this source, so its density can't be computed.",
+        "setId": "pset-proxima-cen-b-suarez-mascareno-et-al-2025-2025a-a-700a-11m",
+        "planet": "Proxima Cen b",
+        "publication": "Suárez Mascareño et al. 2025",
+        "defaultFlag": true
+      },
+      "composite": {
+        "ok": true,
+        "quantity": "density",
+        "unit": "g/cm3",
+        "inputs": [
+          {
+            "field": "massEarth",
+            "label": "planet mass",
+            "value": 1.055,
+            "unit": "M_earth",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-suarez-mascareno-et-al-2025-2025a-a-700a-11m",
+              "citation": "Suárez Mascareño et al. 2025",
+              "calculated": false
+            },
+            "errPlus": 0.055,
+            "errMinus": 0.055
+          },
+          {
+            "field": "radiusEarth",
+            "label": "planet radius",
+            "value": 1.02,
+            "unit": "R_earth",
+            "provenance": {
+              "kind": "composite",
+              "id": "pub-calculated-value",
+              "citation": "Calculated Value",
+              "calculated": false
+            }
+          }
+        ],
+        "flags": [
+          "no-uncertainty:radiusEarth",
+          "minimum-mass: the archive mass is M*sin(i), a lower limit, so this density is a lower limit"
+        ],
+        "distinctSources": [
+          "Calculated Value",
+          "Suárez Mascareño et al. 2025"
+        ],
+        "codeVersion": "physics-1",
+        "result": {
+          "median": 5.485494678286602,
+          "p16": 5.195110446427801,
+          "p84": 5.769463376904306
+        },
+        "massKind": "Msini",
+        "densityClass": {
+          "rockyRadiusEarth": 1.6,
+          "radiusAboveRockyLimit": false
+        },
+        "constantsUsed": [
+          "constant-earth-density",
+          "threshold-rocky-radius"
+        ],
+        "planet": "Proxima Cen b",
+        "source": "pscomppars"
+      },
+      "toolNames": {
+        "data": [
+          "initial_context",
+          "groq_query",
+          "schema_explorer",
+          "array_field_reader"
+        ],
+        "kb": [
+          "initial_context",
+          "knowledge_base_read",
+          "knowledge_base_search"
+        ]
+      },
+      "model": "gemini-3.7-flash",
+      "responseModelId": "gemini-3.7-flash",
+      "usage": {
+        "inputTokens": 32711,
+        "outputTokens": 336
+      }
+    },
+    "snapshots": [
+      {
+        "file": "ingest/data/raw/nea-tables/nea-ps.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 40194,
+        "sha256": "bbb513419ed5d36078221641517730d8ca3b83e32006554aae640fc5fa35a711",
+        "table": "ps"
+      },
+      {
+        "file": "ingest/data/raw/nea-tables/nea-pscomppars.csv",
+        "retrievedAt": "2026-10-03T16:52:21Z",
+        "rows": 6375,
+        "sha256": "75d9a617442b876babf088bbef3a7095e8c5725c70a363d082081faa9331503c",
+        "table": "pscomppars"
+      }
+    ],
+    "computedAt": "2026-10-04T22:02:51.026Z"
+  }
+}

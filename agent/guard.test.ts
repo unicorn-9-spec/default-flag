@@ -18,10 +18,14 @@ const kb: ToolRecord = {
 describe('numbers', () => {
   it('extracts decimals, separators and exponents', () => expect(numbersIn('5.27, 2,741.6 and 1.3e-4')).toEqual([5.27, 2741.6, 1.3e-4]))
   it('ignores digits inside document ids', () => expect(numbersIn('see pset-k2-18-b-x')).toEqual([]))
+  it('ignores ordinals such as percentile labels', () => expect(numbersIn('16th-84th percentile 3.05 to 7.69')).toEqual([3.05, 7.69]))
   it('accepts rounding to the shown precision', () => {
     expect(matchesRounded(5.27, 5.2691)).toBe(true)
     expect(matchesRounded(5.3, 5.2691)).toBe(true)
     expect(matchesRounded(5.28, 5.2691)).toBe(false)
+    expect(matchesRounded(1240, 1244.0215)).toBe(true)
+    expect(matchesRounded(1200, 1197.97)).toBe(true)
+    expect(matchesRounded(1250, 1244.0215)).toBe(false)
   })
 })
 
@@ -29,6 +33,11 @@ describe('guard', () => {
   it('passes an answer whose numbers and ids come from this turn', () => {
     const r = check('Kepler-139 d has a density of 5.27 g/cm3 (4.31 to 6.4) [pset-kepler-139-d-weiss-et-al-2024].', [compute], 'Density of Kepler-139 d?')
     expect(r).toEqual({ ok: true, violations: [] })
+  })
+  it('accepts a percentage of a returned fraction, and only that', () => {
+    const hz: ToolRecord = { name: 'compute', source: 'compute', input: {}, output: { hz: { probabilityInside: 0.9625 } } }
+    expect(check('Inside, in 96% of draws.', [hz], 'q').ok).toBe(true)
+    expect(check('Inside, in 90% of draws.', [hz], 'q').ok).toBe(false)
   })
   it('rejects a number no tool returned', () => {
     const r = check('The density is 7.1 g/cm3.', [compute], 'q')

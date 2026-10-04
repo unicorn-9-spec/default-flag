@@ -8,7 +8,7 @@ Live demo: https://default-flag.vercel.app (no login). Until step 1 is done, ask
 
 In the Sanity Dashboard → Context app → create an MCP endpoint:
 
-- **Name:** `defaultflag-data` (exactly; the code reads this name)
+- **Name:** `default-flag-data` (exactly; the code reads this name)
 - **Source:** dataset `production` of this project. **No Knowledge Base source** on this endpoint: an endpoint with a dataset source serves dataset mode only and ignores any KB sources.
 - No GROQ filter needed. The schema is already deployed.
 - Grant: the same organization token as `defaultflag-kb` (`SANITY_ORGANIZATION_TOKEN`, Context Viewer).

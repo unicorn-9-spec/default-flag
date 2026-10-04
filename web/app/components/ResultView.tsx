@@ -97,7 +97,7 @@ export function CompositePanel({ run }: { run: AgentRun }) {
 export function TracePanel({ run }: { run: AgentRun }) {
   return (
     <details className="trace">
-      <summary>Trace: {run.trace.length} tool calls · {run.model} · guard {run.guard.ok ? 'passed' : 'failed'}{run.guard.retried ? ' after retry' : ''}</summary>
+      <summary>Trace: {run.trace.length} tool calls · {run.model} · guard {run.guard.ok ? 'passed' : 'failed'}{run.guard.retried ? ' after one retry' : ''}</summary>
       <p className="muted">
         Tools discovered via tools/list — dataset: {run.toolNames.data.join(', ')}; Knowledge Base: {run.toolNames.kb.join(', ')}.
       </p>

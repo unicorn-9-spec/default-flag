@@ -39,7 +39,7 @@ export default async function HowItWorks() {
 
       <h2>Sanity Context endpoints</h2>
       <ul>
-        <li><code>defaultflag-data</code>: dataset (GROQ) mode over the <code>production</code> dataset. Structured facts.</li>
+        <li><code>default-flag-data</code>: dataset (GROQ) mode over the <code>production</code> dataset. Structured facts.</li>
         <li><code>defaultflag-kb</code>: Knowledge Base mode (Knowledge Base <code>kbhX0D4yDJok</code>). Archive rules and explanations only; never planet values.</li>
       </ul>
       <p className="muted">

@@ -16,7 +16,7 @@ export function contextEndpoints(): { data: string; kb: string } {
   if (!org) throw new Error('SANITY_ORG_ID is not set')
   const base = `https://api.sanity.io/v1/context/organizations/${org}/mcp`
   return {
-    data: `${base}/${process.env.CONTEXT_DATA_ENDPOINT ?? 'defaultflag-data'}`,
+    data: `${base}/${process.env.CONTEXT_DATA_ENDPOINT ?? 'default-flag-data'}`,
     kb: `${base}/${process.env.CONTEXT_KB_ENDPOINT ?? 'defaultflag-kb'}`,
   }
 }

@@ -73,3 +73,11 @@ BLOCKED_ON: owner: (1) `defaultflag-data` endpoint (Context app UI only; there i
 - `scripts/scan-secrets.mjs`: transcript scan before the agent session goes public; tracked files are clean.
 - Step-by-step owner runbook in `docs/OWNER_STEPS.md`; video script in `docs/VIDEO_SCRIPT.md`.
 - Honesty note for the KB criterion: resolving a conflict changes the KB explanation the agent quotes, not the computed number (numbers come only from the dataset). The runbook says to state this in the post.
+
+## 2026-10-05T00:00Z — agent
+STATE: `default-flag-data` endpoint live and connected; live agent answers end to end; full four-arm evaluation running now via scripts/finish.mjs.
+BLOCKED_ON: none for the evaluation. Still owner: GitHub access, KB conflict + screenshots, trial expiry, video, agent session.
+
+- **Finding that contradicts guidance F2:** the dataset endpoint stayed "Not ready — No Studio application found / no schema descriptor" after `sanity schema deploy`. A deployed Studio (`sanity deploy`, default-flag.sanity.studio) fixed it. Other Path One builds should deploy their Studio.
+- **Endpoint names are auto-filled from the title** and immutable: ours is `default-flag-data`. Code updated.
+- Fixed a guard false positive on "16th–84th" ordinals (tests added).

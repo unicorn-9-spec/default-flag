@@ -1,4 +1,4 @@
-// One command to finish the build once the `defaultflag-data` Context endpoint exists:
+// One command to finish the build once the `default-flag-data` Context endpoint exists:
 //   node scripts/finish.mjs            (all steps)
 //   node scripts/finish.mjs --no-deploy
 // Steps: probe both Context endpoints -> cache the three chip answers -> full four-arm
@@ -25,7 +25,7 @@ function step(name, cmd, args, opts = {}) {
 
 const probe = step('Probe Sanity Context endpoints', 'node', ['agent/scripts/probe.ts'], { capture: true })
 if (/^data: FAILED/m.test(probe)) {
-  console.error('\nThe dataset endpoint is still unavailable. Create `defaultflag-data` in the Context app (see docs/OWNER_STEPS.md).')
+  console.error('\nThe dataset endpoint is still unavailable. Create `default-flag-data` in the Context app (see docs/OWNER_STEPS.md).')
   process.exit(1)
 }
 step('Cache the three chip answers (live agent, guard must pass)', 'node', ['eval/cache-chips.ts'])

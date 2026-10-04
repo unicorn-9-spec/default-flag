@@ -59,7 +59,7 @@ https://github.com/unicorn-9-spec/default-flag. CI runs on every push:
 Studio validation and CI GROQ checks enforce one default per planet, and single-set inputs for every derived answer.
 
 **Two Sanity Context endpoints**, because an endpoint serves one mode (attach both and the dataset wins):
-- `defaultflag-data`: dataset/GROQ mode. Tools discovered at runtime: `initial_context`, `schema_explorer`, `groq_query`, `array_field_reader`.
+- `default-flag-data`: dataset/GROQ mode. Tools discovered at runtime: `initial_context`, `schema_explorer`, `groq_query`, `array_field_reader`.
 - `defaultflag-kb`: Knowledge Base `kbhX0D4yDJok`, with `initial_context`, `knowledge_base_search` and `knowledge_base_read`. Sources: a GROQ query over the default sets, a GROQ query over the composite snapshots, and six archive documentation pages (including the DOI page that carries the table DOIs), 68 documents in total (CI keeps it ≤ 150).
 
 **Knowledge Base conflict.** <BEFORE/AFTER SCREENSHOTS + which planet + Keep/Accept choice + the answer that changed>

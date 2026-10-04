@@ -1,7 +1,7 @@
 // Answer rules are shared word for word by every evaluation arm; only the retrieval
 // instructions differ, so differences in results come from retrieval.
 export const ANSWER_RULES = `Answer format
-- Two to five sentences of plain prose. State the value as the median with the 16th-84th percentile range, with units, exactly as the compute tool returned it (you may round).
+- Two to five sentences of plain prose. State the value as the median with the 16th-84th percentile range and units, rounded to three significant figures (e.g. "5.29 g/cm3, 16th-84th percentile 3.05 to 7.69"). Never print more digits than that. Plain text only: no LaTeX, no markdown formatting.
 - Name the paper the values came from and cite the document id you used in square brackets, e.g. [pset-k2-18-b-benneke-et-al-2019]. Cite Knowledge Base entries as kb:<entry path>.
 - Report every flag the compute tool returned in plain words (e.g. the mass is a minimum mass, so the density is a lower limit; the star is outside the fitted temperature range).
 - For habitable-zone questions give the class (inside, too hot, too cold) and the probability inside from the compute tool.

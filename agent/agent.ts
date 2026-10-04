@@ -28,7 +28,8 @@ export interface AgentRun {
   status: 'answered' | 'guard-failed'
   answer: string
   trace: TraceEntry[]
-  guard: { ok: boolean; violations: string[]; retried: boolean }
+  /** firstViolations: what the guard rejected in the first draft, when it retried. */
+  guard: { ok: boolean; violations: string[]; retried: boolean; firstViolations?: string[] }
   primary?: PrimaryResult
   composite?: Awaited<ReturnType<typeof compositeCounterfactual>>
   toolNames: { data: string[]; kb: string[] }
@@ -147,9 +148,11 @@ export async function runAgent(question: string, opts: { signal?: AbortSignal } 
     let usage = { inputTokens: first.totalUsage.inputTokens ?? 0, outputTokens: first.totalUsage.outputTokens ?? 0 }
     let guard = check(answer, trace, question)
     let retried = false
+    let firstViolations: string[] | undefined
 
     if (!guard.ok) {
       retried = true
+      firstViolations = guard.violations
       const messages: ModelMessage[] = [
         { role: 'user', content: question },
         ...first.response.messages,
@@ -178,7 +181,7 @@ export async function runAgent(question: string, opts: { signal?: AbortSignal } 
       status: guard.ok ? 'answered' : 'guard-failed',
       answer: guard.ok ? answer : 'This answer was withheld: it failed the output guard twice (see the violations in the trace).',
       trace,
-      guard: { ...guard, retried },
+      guard: { ...guard, retried, ...(firstViolations && { firstViolations }) },
       primary,
       composite,
       toolNames: { data: data.names, kb: kb.names },
